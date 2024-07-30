@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * ExternalAddTransactionRuleRequest Class Doc Comment
  *
  * @description Body of a request to add transaction rule.
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class ExternalAddTransactionRuleRequest implements ModelInterface, ArrayAccess, 
     protected static array $openAPITypes = [
         'expires_in' => 'int',
         'name' => 'string',
-        'rule_details' => '\OpenAPI\Client\Model\RuleDetails',
+        'rule_details' => '\Shaype\Client\Model\RuleDetails',
         'rule_type' => 'string'
     ];
 
@@ -413,9 +413,9 @@ class ExternalAddTransactionRuleRequest implements ModelInterface, ArrayAccess, 
     /**
      * Gets rule_details
      *
-     * @return \OpenAPI\Client\Model\RuleDetails
+     * @return \Shaype\Client\Model\RuleDetails
      */
-    public function getRuleDetails(): \OpenAPI\Client\Model\RuleDetails
+    public function getRuleDetails(): \Shaype\Client\Model\RuleDetails
     {
         return $this->container['rule_details'];
     }
@@ -423,11 +423,11 @@ class ExternalAddTransactionRuleRequest implements ModelInterface, ArrayAccess, 
     /**
      * Sets rule_details
      *
-     * @param \OpenAPI\Client\Model\RuleDetails $rule_details rule_details
+     * @param \Shaype\Client\Model\RuleDetails $rule_details rule_details
      *
      * @return $this
      */
-    public function setRuleDetails(\OpenAPI\Client\Model\RuleDetails $rule_details): static
+    public function setRuleDetails(\Shaype\Client\Model\RuleDetails $rule_details): static
     {
         if (is_null($rule_details)) {
             throw new InvalidArgumentException('non-nullable rule_details cannot be null');

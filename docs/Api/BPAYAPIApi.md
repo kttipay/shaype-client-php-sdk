@@ -1,4 +1,4 @@
-# OpenAPI\Client\BPAYAPIApi
+# Shaype\Client\BPAYAPIApi
 
 All URIs are relative to http://localhost:8080, except if the operation defines another base path.
 
@@ -15,7 +15,7 @@ All URIs are relative to http://localhost:8080, except if the operation defines 
 ## `createBPayBiller()`
 
 ```php
-createBPayBiller($account_id, $b_pay_biller_add_request_body): \OpenAPI\Client\Model\BPayBillerResponse
+createBPayBiller($account_id, $b_pay_biller_add_request_body): \Shaype\Client\Model\BPayBillerResponse
 ```
 
 Create BPAY Biller for Account ID
@@ -28,13 +28,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\BPAYAPIApi(
+$apiInstance = new Shaype\Client\Api\BPAYAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $account_id = 'account_id_example'; // string | Unique identifier (UUID) of the Account
-$b_pay_biller_add_request_body = new \OpenAPI\Client\Model\BPayBillerAddRequestBody(); // \OpenAPI\Client\Model\BPayBillerAddRequestBody
+$b_pay_biller_add_request_body = new \Shaype\Client\Model\BPayBillerAddRequestBody(); // \Shaype\Client\Model\BPayBillerAddRequestBody
 
 try {
     $result = $apiInstance->createBPayBiller($account_id, $b_pay_biller_add_request_body);
@@ -49,11 +49,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **account_id** | **string**| Unique identifier (UUID) of the Account | |
-| **b_pay_biller_add_request_body** | [**\OpenAPI\Client\Model\BPayBillerAddRequestBody**](../Model/BPayBillerAddRequestBody.md)|  | |
+| **b_pay_biller_add_request_body** | [**\Shaype\Client\Model\BPayBillerAddRequestBody**](../Model/BPayBillerAddRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BPayBillerResponse**](../Model/BPayBillerResponse.md)
+[**\Shaype\Client\Model\BPayBillerResponse**](../Model/BPayBillerResponse.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ No authorization required
 ## `makeBpayPayment()`
 
 ```php
-makeBpayPayment($account_id, $b_pay_payment_request_body): \OpenAPI\Client\Model\BpayPaymentResponseBody
+makeBpayPayment($account_id, $b_pay_payment_request_body): \Shaype\Client\Model\BpayPaymentResponseBody
 ```
 
 Initiate BPAY payment
@@ -84,13 +84,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\BPAYAPIApi(
+$apiInstance = new Shaype\Client\Api\BPAYAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $account_id = 'account_id_example'; // string | Unique identifier (UUID) of the Account
-$b_pay_payment_request_body = new \OpenAPI\Client\Model\BPayPaymentRequestBody(); // \OpenAPI\Client\Model\BPayPaymentRequestBody
+$b_pay_payment_request_body = new \Shaype\Client\Model\BPayPaymentRequestBody(); // \Shaype\Client\Model\BPayPaymentRequestBody
 
 try {
     $result = $apiInstance->makeBpayPayment($account_id, $b_pay_payment_request_body);
@@ -105,11 +105,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **account_id** | **string**| Unique identifier (UUID) of the Account | |
-| **b_pay_payment_request_body** | [**\OpenAPI\Client\Model\BPayPaymentRequestBody**](../Model/BPayPaymentRequestBody.md)|  | |
+| **b_pay_payment_request_body** | [**\Shaype\Client\Model\BPayPaymentRequestBody**](../Model/BPayPaymentRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BpayPaymentResponseBody**](../Model/BpayPaymentResponseBody.md)
+[**\Shaype\Client\Model\BpayPaymentResponseBody**](../Model/BpayPaymentResponseBody.md)
 
 ### Authorization
 
@@ -127,7 +127,7 @@ No authorization required
 ## `retrieveBillers()`
 
 ```php
-retrieveBillers($account_id, $limit, $offset): \OpenAPI\Client\Model\BPayBillerResponse
+retrieveBillers($account_id, $limit, $offset): \Shaype\Client\Model\BPayBillerResponse
 ```
 
 BPAY billers for account
@@ -140,7 +140,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\BPAYAPIApi(
+$apiInstance = new Shaype\Client\Api\BPAYAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -167,7 +167,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BPayBillerResponse**](../Model/BPayBillerResponse.md)
+[**\Shaype\Client\Model\BPayBillerResponse**](../Model/BPayBillerResponse.md)
 
 ### Authorization
 
@@ -185,7 +185,7 @@ No authorization required
 ## `retrieveBpayBiller()`
 
 ```php
-retrieveBpayBiller($biller_id): \OpenAPI\Client\Model\BPayBillerResponse
+retrieveBpayBiller($biller_id): \Shaype\Client\Model\BPayBillerResponse
 ```
 
 Retrieve BPAY Biller
@@ -198,7 +198,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\BPAYAPIApi(
+$apiInstance = new Shaype\Client\Api\BPAYAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -221,7 +221,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BPayBillerResponse**](../Model/BPayBillerResponse.md)
+[**\Shaype\Client\Model\BPayBillerResponse**](../Model/BPayBillerResponse.md)
 
 ### Authorization
 
@@ -252,13 +252,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\BPAYAPIApi(
+$apiInstance = new Shaype\Client\Api\BPAYAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $biller_id = 'biller_id_example'; // string | Unique identifier (UUID) of the Biller.
-$b_pay_biller_update_request_body = new \OpenAPI\Client\Model\BPayBillerUpdateRequestBody(); // \OpenAPI\Client\Model\BPayBillerUpdateRequestBody
+$b_pay_biller_update_request_body = new \Shaype\Client\Model\BPayBillerUpdateRequestBody(); // \Shaype\Client\Model\BPayBillerUpdateRequestBody
 
 try {
     $result = $apiInstance->updateBpayBiller($biller_id, $b_pay_biller_update_request_body);
@@ -273,7 +273,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **biller_id** | **string**| Unique identifier (UUID) of the Biller. | |
-| **b_pay_biller_update_request_body** | [**\OpenAPI\Client\Model\BPayBillerUpdateRequestBody**](../Model/BPayBillerUpdateRequestBody.md)|  | |
+| **b_pay_biller_update_request_body** | [**\Shaype\Client\Model\BPayBillerUpdateRequestBody**](../Model/BPayBillerUpdateRequestBody.md)|  | |
 
 ### Return type
 
@@ -295,7 +295,7 @@ No authorization required
 ## `validateBpay()`
 
 ```php
-validateBpay($b_pay_biller_request_body): \OpenAPI\Client\Model\BPayBillerDetails
+validateBpay($b_pay_biller_request_body): \Shaype\Client\Model\BPayBillerDetails
 ```
 
 Validate BPAY
@@ -308,12 +308,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\BPAYAPIApi(
+$apiInstance = new Shaype\Client\Api\BPAYAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$b_pay_biller_request_body = new \OpenAPI\Client\Model\BPayBillerRequestBody(); // \OpenAPI\Client\Model\BPayBillerRequestBody
+$b_pay_biller_request_body = new \Shaype\Client\Model\BPayBillerRequestBody(); // \Shaype\Client\Model\BPayBillerRequestBody
 
 try {
     $result = $apiInstance->validateBpay($b_pay_biller_request_body);
@@ -327,11 +327,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **b_pay_biller_request_body** | [**\OpenAPI\Client\Model\BPayBillerRequestBody**](../Model/BPayBillerRequestBody.md)|  | |
+| **b_pay_biller_request_body** | [**\Shaype\Client\Model\BPayBillerRequestBody**](../Model/BPayBillerRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\BPayBillerDetails**](../Model/BPayBillerDetails.md)
+[**\Shaype\Client\Model\BPayBillerDetails**](../Model/BPayBillerDetails.md)
 
 ### Authorization
 

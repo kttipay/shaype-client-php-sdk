@@ -3,7 +3,7 @@
  * TransactionsAPIApi
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Shaype\Client\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ApiException;
+use Shaype\Client\Configuration;
+use Shaype\Client\HeaderSelector;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * TransactionsAPIApi Class Doc Comment
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -142,18 +142,18 @@ class TransactionsAPIApi
      *
      * Create Credit Transaction for Account (DEPRECATED)
      *
-     * @param  \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body create_transaction_request_body (required)
+     * @param  \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body create_transaction_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCreditTransactionV0'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TransactionOutcome|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\TransactionOutcome|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      * @deprecated
      */
     public function createCreditTransactionV0(
-        \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body,
+        \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body,
         string $contentType = self::contentTypes['createCreditTransactionV0'][0]
-    ): \OpenAPI\Client\Model\TransactionOutcome
+    ): \Shaype\Client\Model\TransactionOutcome
     {
         list($response) = $this->createCreditTransactionV0WithHttpInfo($create_transaction_request_body, $contentType);
         return $response;
@@ -164,16 +164,16 @@ class TransactionsAPIApi
      *
      * Create Credit Transaction for Account (DEPRECATED)
      *
-     * @param  \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
+     * @param  \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCreditTransactionV0'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TransactionOutcome|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\TransactionOutcome|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      * @deprecated
      */
     public function createCreditTransactionV0WithHttpInfo(
-        \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body,
+        \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body,
         string $contentType = self::contentTypes['createCreditTransactionV0'][0]
     ): array
     {
@@ -216,11 +216,11 @@ class TransactionsAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TransactionOutcome' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\TransactionOutcome' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TransactionOutcome' !== 'string') {
+                        if ('\Shaype\Client\Model\TransactionOutcome' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -238,16 +238,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TransactionOutcome', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\TransactionOutcome', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -265,16 +265,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -292,16 +292,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -319,16 +319,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -346,16 +346,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -373,13 +373,13 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TransactionOutcome';
+            $returnType = '\Shaype\Client\Model\TransactionOutcome';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -412,7 +412,7 @@ class TransactionsAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TransactionOutcome',
+                        '\Shaype\Client\Model\TransactionOutcome',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -420,7 +420,7 @@ class TransactionsAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -428,7 +428,7 @@ class TransactionsAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -436,7 +436,7 @@ class TransactionsAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -444,7 +444,7 @@ class TransactionsAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -452,7 +452,7 @@ class TransactionsAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -467,7 +467,7 @@ class TransactionsAPIApi
      *
      * Create Credit Transaction for Account (DEPRECATED)
      *
-     * @param  \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
+     * @param  \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCreditTransactionV0'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -475,7 +475,7 @@ class TransactionsAPIApi
      * @deprecated
      */
     public function createCreditTransactionV0Async(
-        \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body,
+        \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body,
         string $contentType = self::contentTypes['createCreditTransactionV0'][0]
     ): PromiseInterface
     {
@@ -492,7 +492,7 @@ class TransactionsAPIApi
      *
      * Create Credit Transaction for Account (DEPRECATED)
      *
-     * @param  \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
+     * @param  \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCreditTransactionV0'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -504,7 +504,7 @@ class TransactionsAPIApi
         string $contentType = self::contentTypes['createCreditTransactionV0'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\TransactionOutcome';
+        $returnType = '\Shaype\Client\Model\TransactionOutcome';
         $request = $this->createCreditTransactionV0Request($create_transaction_request_body, $contentType);
 
         return $this->client
@@ -546,7 +546,7 @@ class TransactionsAPIApi
     /**
      * Create request for operation 'createCreditTransactionV0'
      *
-     * @param  \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
+     * @param  \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCreditTransactionV0'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -643,17 +643,17 @@ class TransactionsAPIApi
      *
      * Create Credit Transaction for Account
      *
-     * @param  \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body create_transaction_request_body (required)
+     * @param  \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body create_transaction_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCreditTransactionV1'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TransactionOutcome|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\TransactionOutcome|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function createCreditTransactionV1(
-        \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body,
+        \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body,
         string $contentType = self::contentTypes['createCreditTransactionV1'][0]
-    ): \OpenAPI\Client\Model\TransactionOutcome
+    ): \Shaype\Client\Model\TransactionOutcome
     {
         list($response) = $this->createCreditTransactionV1WithHttpInfo($create_transaction_request_body, $contentType);
         return $response;
@@ -664,15 +664,15 @@ class TransactionsAPIApi
      *
      * Create Credit Transaction for Account
      *
-     * @param  \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
+     * @param  \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCreditTransactionV1'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TransactionOutcome|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\TransactionOutcome|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCreditTransactionV1WithHttpInfo(
-        \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body,
+        \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body,
         string $contentType = self::contentTypes['createCreditTransactionV1'][0]
     ): array
     {
@@ -715,11 +715,11 @@ class TransactionsAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TransactionOutcome' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\TransactionOutcome' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TransactionOutcome' !== 'string') {
+                        if ('\Shaype\Client\Model\TransactionOutcome' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -737,16 +737,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TransactionOutcome', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\TransactionOutcome', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -764,16 +764,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -791,16 +791,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -818,16 +818,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -845,16 +845,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -872,13 +872,13 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TransactionOutcome';
+            $returnType = '\Shaype\Client\Model\TransactionOutcome';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -911,7 +911,7 @@ class TransactionsAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TransactionOutcome',
+                        '\Shaype\Client\Model\TransactionOutcome',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -919,7 +919,7 @@ class TransactionsAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -927,7 +927,7 @@ class TransactionsAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -935,7 +935,7 @@ class TransactionsAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -943,7 +943,7 @@ class TransactionsAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -951,7 +951,7 @@ class TransactionsAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -966,14 +966,14 @@ class TransactionsAPIApi
      *
      * Create Credit Transaction for Account
      *
-     * @param  \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
+     * @param  \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCreditTransactionV1'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function createCreditTransactionV1Async(
-        \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body,
+        \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body,
         string $contentType = self::contentTypes['createCreditTransactionV1'][0]
     ): PromiseInterface
     {
@@ -990,7 +990,7 @@ class TransactionsAPIApi
      *
      * Create Credit Transaction for Account
      *
-     * @param  \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
+     * @param  \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCreditTransactionV1'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1001,7 +1001,7 @@ class TransactionsAPIApi
         string $contentType = self::contentTypes['createCreditTransactionV1'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\TransactionOutcome';
+        $returnType = '\Shaype\Client\Model\TransactionOutcome';
         $request = $this->createCreditTransactionV1Request($create_transaction_request_body, $contentType);
 
         return $this->client
@@ -1043,7 +1043,7 @@ class TransactionsAPIApi
     /**
      * Create request for operation 'createCreditTransactionV1'
      *
-     * @param  \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
+     * @param  \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCreditTransactionV1'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1139,18 +1139,18 @@ class TransactionsAPIApi
      *
      * Create Debit Transaction for Account (DEPRECATED)
      *
-     * @param  \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body create_transaction_request_body (required)
+     * @param  \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body create_transaction_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDebitTransactionV0'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TransactionOutcome|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\TransactionOutcome|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      * @deprecated
      */
     public function createDebitTransactionV0(
-        \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body,
+        \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body,
         string $contentType = self::contentTypes['createDebitTransactionV0'][0]
-    ): \OpenAPI\Client\Model\TransactionOutcome
+    ): \Shaype\Client\Model\TransactionOutcome
     {
         list($response) = $this->createDebitTransactionV0WithHttpInfo($create_transaction_request_body, $contentType);
         return $response;
@@ -1161,16 +1161,16 @@ class TransactionsAPIApi
      *
      * Create Debit Transaction for Account (DEPRECATED)
      *
-     * @param  \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
+     * @param  \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDebitTransactionV0'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TransactionOutcome|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\TransactionOutcome|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      * @deprecated
      */
     public function createDebitTransactionV0WithHttpInfo(
-        \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body,
+        \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body,
         string $contentType = self::contentTypes['createDebitTransactionV0'][0]
     ): array
     {
@@ -1213,11 +1213,11 @@ class TransactionsAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TransactionOutcome' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\TransactionOutcome' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TransactionOutcome' !== 'string') {
+                        if ('\Shaype\Client\Model\TransactionOutcome' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1235,16 +1235,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TransactionOutcome', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\TransactionOutcome', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1262,16 +1262,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1289,16 +1289,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1316,16 +1316,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1343,16 +1343,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1370,13 +1370,13 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TransactionOutcome';
+            $returnType = '\Shaype\Client\Model\TransactionOutcome';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1409,7 +1409,7 @@ class TransactionsAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TransactionOutcome',
+                        '\Shaype\Client\Model\TransactionOutcome',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1417,7 +1417,7 @@ class TransactionsAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1425,7 +1425,7 @@ class TransactionsAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1433,7 +1433,7 @@ class TransactionsAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1441,7 +1441,7 @@ class TransactionsAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1449,7 +1449,7 @@ class TransactionsAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1464,7 +1464,7 @@ class TransactionsAPIApi
      *
      * Create Debit Transaction for Account (DEPRECATED)
      *
-     * @param  \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
+     * @param  \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDebitTransactionV0'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1472,7 +1472,7 @@ class TransactionsAPIApi
      * @deprecated
      */
     public function createDebitTransactionV0Async(
-        \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body,
+        \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body,
         string $contentType = self::contentTypes['createDebitTransactionV0'][0]
     ): PromiseInterface
     {
@@ -1489,7 +1489,7 @@ class TransactionsAPIApi
      *
      * Create Debit Transaction for Account (DEPRECATED)
      *
-     * @param  \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
+     * @param  \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDebitTransactionV0'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1501,7 +1501,7 @@ class TransactionsAPIApi
         string $contentType = self::contentTypes['createDebitTransactionV0'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\TransactionOutcome';
+        $returnType = '\Shaype\Client\Model\TransactionOutcome';
         $request = $this->createDebitTransactionV0Request($create_transaction_request_body, $contentType);
 
         return $this->client
@@ -1543,7 +1543,7 @@ class TransactionsAPIApi
     /**
      * Create request for operation 'createDebitTransactionV0'
      *
-     * @param  \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
+     * @param  \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDebitTransactionV0'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1640,17 +1640,17 @@ class TransactionsAPIApi
      *
      * Create Debit Transaction for Account
      *
-     * @param  \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body create_transaction_request_body (required)
+     * @param  \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body create_transaction_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDebitTransactionV1'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TransactionOutcome|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\TransactionOutcome|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function createDebitTransactionV1(
-        \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body,
+        \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body,
         string $contentType = self::contentTypes['createDebitTransactionV1'][0]
-    ): \OpenAPI\Client\Model\TransactionOutcome
+    ): \Shaype\Client\Model\TransactionOutcome
     {
         list($response) = $this->createDebitTransactionV1WithHttpInfo($create_transaction_request_body, $contentType);
         return $response;
@@ -1661,15 +1661,15 @@ class TransactionsAPIApi
      *
      * Create Debit Transaction for Account
      *
-     * @param  \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
+     * @param  \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDebitTransactionV1'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TransactionOutcome|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\TransactionOutcome|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createDebitTransactionV1WithHttpInfo(
-        \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body,
+        \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body,
         string $contentType = self::contentTypes['createDebitTransactionV1'][0]
     ): array
     {
@@ -1712,11 +1712,11 @@ class TransactionsAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TransactionOutcome' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\TransactionOutcome' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TransactionOutcome' !== 'string') {
+                        if ('\Shaype\Client\Model\TransactionOutcome' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1734,16 +1734,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TransactionOutcome', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\TransactionOutcome', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1761,16 +1761,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1788,16 +1788,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1815,16 +1815,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1842,16 +1842,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1869,13 +1869,13 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TransactionOutcome';
+            $returnType = '\Shaype\Client\Model\TransactionOutcome';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1908,7 +1908,7 @@ class TransactionsAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TransactionOutcome',
+                        '\Shaype\Client\Model\TransactionOutcome',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1916,7 +1916,7 @@ class TransactionsAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1924,7 +1924,7 @@ class TransactionsAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1932,7 +1932,7 @@ class TransactionsAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1940,7 +1940,7 @@ class TransactionsAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1948,7 +1948,7 @@ class TransactionsAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1963,14 +1963,14 @@ class TransactionsAPIApi
      *
      * Create Debit Transaction for Account
      *
-     * @param  \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
+     * @param  \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDebitTransactionV1'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function createDebitTransactionV1Async(
-        \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body,
+        \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body,
         string $contentType = self::contentTypes['createDebitTransactionV1'][0]
     ): PromiseInterface
     {
@@ -1987,7 +1987,7 @@ class TransactionsAPIApi
      *
      * Create Debit Transaction for Account
      *
-     * @param  \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
+     * @param  \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDebitTransactionV1'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1998,7 +1998,7 @@ class TransactionsAPIApi
         string $contentType = self::contentTypes['createDebitTransactionV1'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\TransactionOutcome';
+        $returnType = '\Shaype\Client\Model\TransactionOutcome';
         $request = $this->createDebitTransactionV1Request($create_transaction_request_body, $contentType);
 
         return $this->client
@@ -2040,7 +2040,7 @@ class TransactionsAPIApi
     /**
      * Create request for operation 'createDebitTransactionV1'
      *
-     * @param  \OpenAPI\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
+     * @param  \Shaype\Client\Model\CreateTransactionRequestBody $create_transaction_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createDebitTransactionV1'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2141,12 +2141,12 @@ class TransactionsAPIApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\FinancialTransaction|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\FinancialTransaction|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function getTransactionById(
         string $transaction_hay_id,
         string $contentType = self::contentTypes['getTransactionById'][0]
-    ): \OpenAPI\Client\Model\FinancialTransaction
+    ): \Shaype\Client\Model\FinancialTransaction
     {
         list($response) = $this->getTransactionByIdWithHttpInfo($transaction_hay_id, $contentType);
         return $response;
@@ -2162,7 +2162,7 @@ class TransactionsAPIApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\FinancialTransaction|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\FinancialTransaction|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTransactionByIdWithHttpInfo(
         string $transaction_hay_id,
@@ -2208,11 +2208,11 @@ class TransactionsAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\FinancialTransaction' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\FinancialTransaction' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\FinancialTransaction' !== 'string') {
+                        if ('\Shaype\Client\Model\FinancialTransaction' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2230,16 +2230,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\FinancialTransaction', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\FinancialTransaction', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2257,16 +2257,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2284,16 +2284,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2311,16 +2311,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2338,16 +2338,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2365,13 +2365,13 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\FinancialTransaction';
+            $returnType = '\Shaype\Client\Model\FinancialTransaction';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2404,7 +2404,7 @@ class TransactionsAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\FinancialTransaction',
+                        '\Shaype\Client\Model\FinancialTransaction',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2412,7 +2412,7 @@ class TransactionsAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2420,7 +2420,7 @@ class TransactionsAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2428,7 +2428,7 @@ class TransactionsAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2436,7 +2436,7 @@ class TransactionsAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2444,7 +2444,7 @@ class TransactionsAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2494,7 +2494,7 @@ class TransactionsAPIApi
         string $contentType = self::contentTypes['getTransactionById'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\FinancialTransaction';
+        $returnType = '\Shaype\Client\Model\FinancialTransaction';
         $request = $this->getTransactionByIdRequest($transaction_hay_id, $contentType);
 
         return $this->client
@@ -2635,18 +2635,18 @@ class TransactionsAPIApi
      *
      * @param  int $limit List fetch limit, value between 1 and 1000 (required)
      * @param  int $offset Offset used for paging results (required)
-     * @param  \OpenAPI\Client\Model\SearchTransactionsRequestBody $search_transactions_request_body search_transactions_request_body (required)
+     * @param  \Shaype\Client\Model\SearchTransactionsRequestBody $search_transactions_request_body search_transactions_request_body (required)
      * @param  string|null $sort_by SortBy used for sorting transactions. Possible values:  * **CLEARING_TIME** (default if not provided): Transactions sorted by clearing time  * **TRANSACTION_TIME**: Transactions sorted by transaction time (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['searchTransactions'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\FinancialTransaction[]|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\FinancialTransaction[]|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function searchTransactions(
         int $limit,
         int $offset,
-        \OpenAPI\Client\Model\SearchTransactionsRequestBody $search_transactions_request_body,
+        \Shaype\Client\Model\SearchTransactionsRequestBody $search_transactions_request_body,
         ?string $sort_by = null,
         string $contentType = self::contentTypes['searchTransactions'][0]
     ): array
@@ -2662,18 +2662,18 @@ class TransactionsAPIApi
      *
      * @param  int $limit List fetch limit, value between 1 and 1000 (required)
      * @param  int $offset Offset used for paging results (required)
-     * @param  \OpenAPI\Client\Model\SearchTransactionsRequestBody $search_transactions_request_body (required)
+     * @param  \Shaype\Client\Model\SearchTransactionsRequestBody $search_transactions_request_body (required)
      * @param  string|null $sort_by SortBy used for sorting transactions. Possible values:  * **CLEARING_TIME** (default if not provided): Transactions sorted by clearing time  * **TRANSACTION_TIME**: Transactions sorted by transaction time (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['searchTransactions'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\FinancialTransaction[]|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\FinancialTransaction[]|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function searchTransactionsWithHttpInfo(
         int $limit,
         int $offset,
-        \OpenAPI\Client\Model\SearchTransactionsRequestBody $search_transactions_request_body,
+        \Shaype\Client\Model\SearchTransactionsRequestBody $search_transactions_request_body,
         ?string $sort_by = null,
         string $contentType = self::contentTypes['searchTransactions'][0]
     ): array
@@ -2717,11 +2717,11 @@ class TransactionsAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\FinancialTransaction[]' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\FinancialTransaction[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\FinancialTransaction[]' !== 'string') {
+                        if ('\Shaype\Client\Model\FinancialTransaction[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2739,16 +2739,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\FinancialTransaction[]', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\FinancialTransaction[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2766,16 +2766,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2793,16 +2793,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2820,16 +2820,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2847,16 +2847,16 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2874,13 +2874,13 @@ class TransactionsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\FinancialTransaction[]';
+            $returnType = '\Shaype\Client\Model\FinancialTransaction[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2913,7 +2913,7 @@ class TransactionsAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\FinancialTransaction[]',
+                        '\Shaype\Client\Model\FinancialTransaction[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2921,7 +2921,7 @@ class TransactionsAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2929,7 +2929,7 @@ class TransactionsAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2937,7 +2937,7 @@ class TransactionsAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2945,7 +2945,7 @@ class TransactionsAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2953,7 +2953,7 @@ class TransactionsAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2970,7 +2970,7 @@ class TransactionsAPIApi
      *
      * @param  int $limit List fetch limit, value between 1 and 1000 (required)
      * @param  int $offset Offset used for paging results (required)
-     * @param  \OpenAPI\Client\Model\SearchTransactionsRequestBody $search_transactions_request_body (required)
+     * @param  \Shaype\Client\Model\SearchTransactionsRequestBody $search_transactions_request_body (required)
      * @param  string|null $sort_by SortBy used for sorting transactions. Possible values:  * **CLEARING_TIME** (default if not provided): Transactions sorted by clearing time  * **TRANSACTION_TIME**: Transactions sorted by transaction time (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['searchTransactions'] to see the possible values for this operation
      *
@@ -2980,7 +2980,7 @@ class TransactionsAPIApi
     public function searchTransactionsAsync(
         int $limit,
         int $offset,
-        \OpenAPI\Client\Model\SearchTransactionsRequestBody $search_transactions_request_body,
+        \Shaype\Client\Model\SearchTransactionsRequestBody $search_transactions_request_body,
         ?string $sort_by = null,
         string $contentType = self::contentTypes['searchTransactions'][0]
     ): PromiseInterface
@@ -3000,7 +3000,7 @@ class TransactionsAPIApi
      *
      * @param  int $limit List fetch limit, value between 1 and 1000 (required)
      * @param  int $offset Offset used for paging results (required)
-     * @param  \OpenAPI\Client\Model\SearchTransactionsRequestBody $search_transactions_request_body (required)
+     * @param  \Shaype\Client\Model\SearchTransactionsRequestBody $search_transactions_request_body (required)
      * @param  string|null $sort_by SortBy used for sorting transactions. Possible values:  * **CLEARING_TIME** (default if not provided): Transactions sorted by clearing time  * **TRANSACTION_TIME**: Transactions sorted by transaction time (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['searchTransactions'] to see the possible values for this operation
      *
@@ -3015,7 +3015,7 @@ class TransactionsAPIApi
         string $contentType = self::contentTypes['searchTransactions'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\FinancialTransaction[]';
+        $returnType = '\Shaype\Client\Model\FinancialTransaction[]';
         $request = $this->searchTransactionsRequest($limit, $offset, $search_transactions_request_body, $sort_by, $contentType);
 
         return $this->client
@@ -3059,7 +3059,7 @@ class TransactionsAPIApi
      *
      * @param  int $limit List fetch limit, value between 1 and 1000 (required)
      * @param  int $offset Offset used for paging results (required)
-     * @param  \OpenAPI\Client\Model\SearchTransactionsRequestBody $search_transactions_request_body (required)
+     * @param  \Shaype\Client\Model\SearchTransactionsRequestBody $search_transactions_request_body (required)
      * @param  string|null $sort_by SortBy used for sorting transactions. Possible values:  * **CLEARING_TIME** (default if not provided): Transactions sorted by clearing time  * **TRANSACTION_TIME**: Transactions sorted by transaction time (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['searchTransactions'] to see the possible values for this operation
      *

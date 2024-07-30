@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * GetMandateSummaryDto Class Doc Comment
  *
  * @description Details of a mandate.
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class GetMandateSummaryDto implements ModelInterface, ArrayAccess, JsonSerializa
         'debtor_account_id' => 'string',
         'description' => 'string',
         'mandate_id' => 'string',
-        'payment_terms' => '\OpenAPI\Client\Model\GetPaymentTermsSummaryDto',
+        'payment_terms' => '\Shaype\Client\Model\GetPaymentTermsSummaryDto',
         'purpose_code' => 'string',
         'status' => 'string',
         'validity_end_date' => '\DateTime'
@@ -498,9 +498,9 @@ class GetMandateSummaryDto implements ModelInterface, ArrayAccess, JsonSerializa
     /**
      * Gets payment_terms
      *
-     * @return \OpenAPI\Client\Model\GetPaymentTermsSummaryDto
+     * @return \Shaype\Client\Model\GetPaymentTermsSummaryDto
      */
-    public function getPaymentTerms(): \OpenAPI\Client\Model\GetPaymentTermsSummaryDto
+    public function getPaymentTerms(): \Shaype\Client\Model\GetPaymentTermsSummaryDto
     {
         return $this->container['payment_terms'];
     }
@@ -508,11 +508,11 @@ class GetMandateSummaryDto implements ModelInterface, ArrayAccess, JsonSerializa
     /**
      * Sets payment_terms
      *
-     * @param \OpenAPI\Client\Model\GetPaymentTermsSummaryDto $payment_terms payment_terms
+     * @param \Shaype\Client\Model\GetPaymentTermsSummaryDto $payment_terms payment_terms
      *
      * @return $this
      */
-    public function setPaymentTerms(\OpenAPI\Client\Model\GetPaymentTermsSummaryDto $payment_terms): static
+    public function setPaymentTerms(\Shaype\Client\Model\GetPaymentTermsSummaryDto $payment_terms): static
     {
         if (is_null($payment_terms)) {
             throw new InvalidArgumentException('non-nullable payment_terms cannot be null');

@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * HayJointAccount Class Doc Comment
  *
  * @description Details of a joint or business account.
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -59,11 +59,11 @@ class HayJointAccount implements ModelInterface, ArrayAccess, JsonSerializable
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'business_identifiers' => '\OpenAPI\Client\Model\BusinessIdentifiers',
+        'business_identifiers' => '\Shaype\Client\Model\BusinessIdentifiers',
         'customer_hay_ids' => 'string[]',
         'group_hay_id' => 'string',
         'group_type' => 'string',
-        'hay_account' => '\OpenAPI\Client\Model\HayAccount',
+        'hay_account' => '\Shaype\Client\Model\HayAccount',
         'name' => 'string'
     ];
 
@@ -350,9 +350,9 @@ class HayJointAccount implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Gets business_identifiers
      *
-     * @return \OpenAPI\Client\Model\BusinessIdentifiers|null
+     * @return \Shaype\Client\Model\BusinessIdentifiers|null
      */
-    public function getBusinessIdentifiers(): ?\OpenAPI\Client\Model\BusinessIdentifiers
+    public function getBusinessIdentifiers(): ?\Shaype\Client\Model\BusinessIdentifiers
     {
         return $this->container['business_identifiers'];
     }
@@ -360,11 +360,11 @@ class HayJointAccount implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Sets business_identifiers
      *
-     * @param \OpenAPI\Client\Model\BusinessIdentifiers|null $business_identifiers business_identifiers
+     * @param \Shaype\Client\Model\BusinessIdentifiers|null $business_identifiers business_identifiers
      *
      * @return $this
      */
-    public function setBusinessIdentifiers(?\OpenAPI\Client\Model\BusinessIdentifiers $business_identifiers): static
+    public function setBusinessIdentifiers(?\Shaype\Client\Model\BusinessIdentifiers $business_identifiers): static
     {
         if (is_null($business_identifiers)) {
             throw new InvalidArgumentException('non-nullable business_identifiers cannot be null');
@@ -468,9 +468,9 @@ class HayJointAccount implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Gets hay_account
      *
-     * @return \OpenAPI\Client\Model\HayAccount|null
+     * @return \Shaype\Client\Model\HayAccount|null
      */
-    public function getHayAccount(): ?\OpenAPI\Client\Model\HayAccount
+    public function getHayAccount(): ?\Shaype\Client\Model\HayAccount
     {
         return $this->container['hay_account'];
     }
@@ -478,11 +478,11 @@ class HayJointAccount implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Sets hay_account
      *
-     * @param \OpenAPI\Client\Model\HayAccount|null $hay_account hay_account
+     * @param \Shaype\Client\Model\HayAccount|null $hay_account hay_account
      *
      * @return $this
      */
-    public function setHayAccount(?\OpenAPI\Client\Model\HayAccount $hay_account): static
+    public function setHayAccount(?\Shaype\Client\Model\HayAccount $hay_account): static
     {
         if (is_null($hay_account)) {
             throw new InvalidArgumentException('non-nullable hay_account cannot be null');

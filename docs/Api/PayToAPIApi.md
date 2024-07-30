@@ -1,4 +1,4 @@
-# OpenAPI\Client\PayToAPIApi
+# Shaype\Client\PayToAPIApi
 
 All URIs are relative to http://localhost:8080, except if the operation defines another base path.
 
@@ -31,7 +31,7 @@ All URIs are relative to http://localhost:8080, except if the operation defines 
 ## `amendMandateByInitiator()`
 
 ```php
-amendMandateByInitiator($mandate_id, $amend_mandate_by_initiator_request_body): \OpenAPI\Client\Model\GenericMessage
+amendMandateByInitiator($mandate_id, $amend_mandate_by_initiator_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Amend Mandate by Initiator
@@ -46,13 +46,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayToAPIApi(
+$apiInstance = new Shaype\Client\Api\PayToAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $mandate_id = 'mandate_id_example'; // string | Mandate identifier
-$amend_mandate_by_initiator_request_body = new \OpenAPI\Client\Model\AmendMandateByInitiatorRequestBody(); // \OpenAPI\Client\Model\AmendMandateByInitiatorRequestBody
+$amend_mandate_by_initiator_request_body = new \Shaype\Client\Model\AmendMandateByInitiatorRequestBody(); // \Shaype\Client\Model\AmendMandateByInitiatorRequestBody
 
 try {
     $result = $apiInstance->amendMandateByInitiator($mandate_id, $amend_mandate_by_initiator_request_body);
@@ -67,11 +67,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **mandate_id** | **string**| Mandate identifier | |
-| **amend_mandate_by_initiator_request_body** | [**\OpenAPI\Client\Model\AmendMandateByInitiatorRequestBody**](../Model/AmendMandateByInitiatorRequestBody.md)|  | |
+| **amend_mandate_by_initiator_request_body** | [**\Shaype\Client\Model\AmendMandateByInitiatorRequestBody**](../Model/AmendMandateByInitiatorRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ No authorization required
 ## `amendMandateByPayer()`
 
 ```php
-amendMandateByPayer($mandate_id, $amend_mandate_by_payer_request_body): \OpenAPI\Client\Model\GenericMessage
+amendMandateByPayer($mandate_id, $amend_mandate_by_payer_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Amend Mandate by Payer
@@ -104,13 +104,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayToAPIApi(
+$apiInstance = new Shaype\Client\Api\PayToAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $mandate_id = 'mandate_id_example'; // string | Mandate identifier
-$amend_mandate_by_payer_request_body = new \OpenAPI\Client\Model\AmendMandateByPayerRequestBody(); // \OpenAPI\Client\Model\AmendMandateByPayerRequestBody
+$amend_mandate_by_payer_request_body = new \Shaype\Client\Model\AmendMandateByPayerRequestBody(); // \Shaype\Client\Model\AmendMandateByPayerRequestBody
 
 try {
     $result = $apiInstance->amendMandateByPayer($mandate_id, $amend_mandate_by_payer_request_body);
@@ -125,11 +125,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **mandate_id** | **string**| Mandate identifier | |
-| **amend_mandate_by_payer_request_body** | [**\OpenAPI\Client\Model\AmendMandateByPayerRequestBody**](../Model/AmendMandateByPayerRequestBody.md)|  | |
+| **amend_mandate_by_payer_request_body** | [**\Shaype\Client\Model\AmendMandateByPayerRequestBody**](../Model/AmendMandateByPayerRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ No authorization required
 ## `amendMandatePaymentTerms()`
 
 ```php
-amendMandatePaymentTerms($mandate_id, $amend_mandate_payment_terms_request_body): \OpenAPI\Client\Model\GenericMessage
+amendMandatePaymentTerms($mandate_id, $amend_mandate_payment_terms_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Amend Mandate payment terms
@@ -162,13 +162,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayToAPIApi(
+$apiInstance = new Shaype\Client\Api\PayToAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $mandate_id = 'mandate_id_example'; // string | Mandate identifier
-$amend_mandate_payment_terms_request_body = new \OpenAPI\Client\Model\AmendMandatePaymentTermsRequestBody(); // \OpenAPI\Client\Model\AmendMandatePaymentTermsRequestBody
+$amend_mandate_payment_terms_request_body = new \Shaype\Client\Model\AmendMandatePaymentTermsRequestBody(); // \Shaype\Client\Model\AmendMandatePaymentTermsRequestBody
 
 try {
     $result = $apiInstance->amendMandatePaymentTerms($mandate_id, $amend_mandate_payment_terms_request_body);
@@ -183,11 +183,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **mandate_id** | **string**| Mandate identifier | |
-| **amend_mandate_payment_terms_request_body** | [**\OpenAPI\Client\Model\AmendMandatePaymentTermsRequestBody**](../Model/AmendMandatePaymentTermsRequestBody.md)|  | |
+| **amend_mandate_payment_terms_request_body** | [**\Shaype\Client\Model\AmendMandatePaymentTermsRequestBody**](../Model/AmendMandatePaymentTermsRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -205,7 +205,7 @@ No authorization required
 ## `cancelMandateByInitiator()`
 
 ```php
-cancelMandateByInitiator($mandate_id, $cancel_mandate_request_body): \OpenAPI\Client\Model\GenericMessage
+cancelMandateByInitiator($mandate_id, $cancel_mandate_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Cancel Mandate by Initiator
@@ -220,13 +220,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayToAPIApi(
+$apiInstance = new Shaype\Client\Api\PayToAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $mandate_id = 'mandate_id_example'; // string | Mandate identifier
-$cancel_mandate_request_body = new \OpenAPI\Client\Model\CancelMandateRequestBody(); // \OpenAPI\Client\Model\CancelMandateRequestBody
+$cancel_mandate_request_body = new \Shaype\Client\Model\CancelMandateRequestBody(); // \Shaype\Client\Model\CancelMandateRequestBody
 
 try {
     $result = $apiInstance->cancelMandateByInitiator($mandate_id, $cancel_mandate_request_body);
@@ -241,11 +241,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **mandate_id** | **string**| Mandate identifier | |
-| **cancel_mandate_request_body** | [**\OpenAPI\Client\Model\CancelMandateRequestBody**](../Model/CancelMandateRequestBody.md)|  | |
+| **cancel_mandate_request_body** | [**\Shaype\Client\Model\CancelMandateRequestBody**](../Model/CancelMandateRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -263,7 +263,7 @@ No authorization required
 ## `cancelMandateByPayer()`
 
 ```php
-cancelMandateByPayer($mandate_id, $cancel_mandate_request_body): \OpenAPI\Client\Model\GenericMessage
+cancelMandateByPayer($mandate_id, $cancel_mandate_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Cancel Mandate by Payer
@@ -278,13 +278,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayToAPIApi(
+$apiInstance = new Shaype\Client\Api\PayToAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $mandate_id = 'mandate_id_example'; // string | Mandate identifier
-$cancel_mandate_request_body = new \OpenAPI\Client\Model\CancelMandateRequestBody(); // \OpenAPI\Client\Model\CancelMandateRequestBody
+$cancel_mandate_request_body = new \Shaype\Client\Model\CancelMandateRequestBody(); // \Shaype\Client\Model\CancelMandateRequestBody
 
 try {
     $result = $apiInstance->cancelMandateByPayer($mandate_id, $cancel_mandate_request_body);
@@ -299,11 +299,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **mandate_id** | **string**| Mandate identifier | |
-| **cancel_mandate_request_body** | [**\OpenAPI\Client\Model\CancelMandateRequestBody**](../Model/CancelMandateRequestBody.md)|  | |
+| **cancel_mandate_request_body** | [**\Shaype\Client\Model\CancelMandateRequestBody**](../Model/CancelMandateRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -321,7 +321,7 @@ No authorization required
 ## `checkBsbIsSupportedByPayTo()`
 
 ```php
-checkBsbIsSupportedByPayTo($bsb_number): \OpenAPI\Client\Model\CheckPayToBsbSupportResponseBody
+checkBsbIsSupportedByPayTo($bsb_number): \Shaype\Client\Model\CheckPayToBsbSupportResponseBody
 ```
 
 Check if BSB supports PayTo
@@ -336,7 +336,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayToAPIApi(
+$apiInstance = new Shaype\Client\Api\PayToAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -359,7 +359,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CheckPayToBsbSupportResponseBody**](../Model/CheckPayToBsbSupportResponseBody.md)
+[**\Shaype\Client\Model\CheckPayToBsbSupportResponseBody**](../Model/CheckPayToBsbSupportResponseBody.md)
 
 ### Authorization
 
@@ -377,7 +377,7 @@ No authorization required
 ## `createMandate()`
 
 ```php
-createMandate($create_mandate_request_body): \OpenAPI\Client\Model\CreateMandateResponseBody
+createMandate($create_mandate_request_body): \Shaype\Client\Model\CreateMandateResponseBody
 ```
 
 Create Mandate
@@ -392,12 +392,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayToAPIApi(
+$apiInstance = new Shaype\Client\Api\PayToAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_mandate_request_body = new \OpenAPI\Client\Model\CreateMandateRequestBody(); // \OpenAPI\Client\Model\CreateMandateRequestBody
+$create_mandate_request_body = new \Shaype\Client\Model\CreateMandateRequestBody(); // \Shaype\Client\Model\CreateMandateRequestBody
 
 try {
     $result = $apiInstance->createMandate($create_mandate_request_body);
@@ -411,11 +411,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_mandate_request_body** | [**\OpenAPI\Client\Model\CreateMandateRequestBody**](../Model/CreateMandateRequestBody.md)|  | |
+| **create_mandate_request_body** | [**\Shaype\Client\Model\CreateMandateRequestBody**](../Model/CreateMandateRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CreateMandateResponseBody**](../Model/CreateMandateResponseBody.md)
+[**\Shaype\Client\Model\CreateMandateResponseBody**](../Model/CreateMandateResponseBody.md)
 
 ### Authorization
 
@@ -433,7 +433,7 @@ No authorization required
 ## `getMandate()`
 
 ```php
-getMandate($mandate_id): \OpenAPI\Client\Model\GetMandateResponseBody
+getMandate($mandate_id): \Shaype\Client\Model\GetMandateResponseBody
 ```
 
 Get Mandate by ID
@@ -448,7 +448,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayToAPIApi(
+$apiInstance = new Shaype\Client\Api\PayToAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -471,7 +471,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetMandateResponseBody**](../Model/GetMandateResponseBody.md)
+[**\Shaype\Client\Model\GetMandateResponseBody**](../Model/GetMandateResponseBody.md)
 
 ### Authorization
 
@@ -489,7 +489,7 @@ No authorization required
 ## `getMandateActionsByInitiator()`
 
 ```php
-getMandateActionsByInitiator($mandate_id, $pending_only, $from, $to): \OpenAPI\Client\Model\GetMandateActionsResponseBody
+getMandateActionsByInitiator($mandate_id, $pending_only, $from, $to): \Shaype\Client\Model\GetMandateActionsResponseBody
 ```
 
 Get Mandate Actions by Initiator
@@ -504,7 +504,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayToAPIApi(
+$apiInstance = new Shaype\Client\Api\PayToAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -533,7 +533,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetMandateActionsResponseBody**](../Model/GetMandateActionsResponseBody.md)
+[**\Shaype\Client\Model\GetMandateActionsResponseBody**](../Model/GetMandateActionsResponseBody.md)
 
 ### Authorization
 
@@ -551,7 +551,7 @@ No authorization required
 ## `getMandateActionsByPayer()`
 
 ```php
-getMandateActionsByPayer($mandate_id, $pending_only, $from, $to): \OpenAPI\Client\Model\GetMandateActionsResponseBody
+getMandateActionsByPayer($mandate_id, $pending_only, $from, $to): \Shaype\Client\Model\GetMandateActionsResponseBody
 ```
 
 Get Mandate Actions by Payer
@@ -566,7 +566,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayToAPIApi(
+$apiInstance = new Shaype\Client\Api\PayToAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -595,7 +595,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetMandateActionsResponseBody**](../Model/GetMandateActionsResponseBody.md)
+[**\Shaype\Client\Model\GetMandateActionsResponseBody**](../Model/GetMandateActionsResponseBody.md)
 
 ### Authorization
 
@@ -628,7 +628,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayToAPIApi(
+$apiInstance = new Shaype\Client\Api\PayToAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -669,7 +669,7 @@ No authorization required
 ## `getMandatePaymentStatus()`
 
 ```php
-getMandatePaymentStatus($mandate_id, $instruction_id): \OpenAPI\Client\Model\GetMandatePaymentStatusResponseBody
+getMandatePaymentStatus($mandate_id, $instruction_id): \Shaype\Client\Model\GetMandatePaymentStatusResponseBody
 ```
 
 Get Payment instruction status by Mandate ID and Payment instruction ID
@@ -684,7 +684,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayToAPIApi(
+$apiInstance = new Shaype\Client\Api\PayToAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -709,7 +709,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetMandatePaymentStatusResponseBody**](../Model/GetMandatePaymentStatusResponseBody.md)
+[**\Shaype\Client\Model\GetMandatePaymentStatusResponseBody**](../Model/GetMandatePaymentStatusResponseBody.md)
 
 ### Authorization
 
@@ -727,7 +727,7 @@ No authorization required
 ## `getMandates()`
 
 ```php
-getMandates($account_ids, $page_number, $page_size, $statuses): \OpenAPI\Client\Model\GetMandatesResponseBody
+getMandates($account_ids, $page_number, $page_size, $statuses): \Shaype\Client\Model\GetMandatesResponseBody
 ```
 
 Get Mandates by debtor account numbers
@@ -742,7 +742,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayToAPIApi(
+$apiInstance = new Shaype\Client\Api\PayToAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -771,7 +771,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetMandatesResponseBody**](../Model/GetMandatesResponseBody.md)
+[**\Shaype\Client\Model\GetMandatesResponseBody**](../Model/GetMandatesResponseBody.md)
 
 ### Authorization
 
@@ -789,7 +789,7 @@ No authorization required
 ## `makeAdhocPayment()`
 
 ```php
-makeAdhocPayment($make_adhoc_payment_request_body): \OpenAPI\Client\Model\MakeAdhocPaymentResponseBody
+makeAdhocPayment($make_adhoc_payment_request_body): \Shaype\Client\Model\MakeAdhocPaymentResponseBody
 ```
 
 Make Adhoc Payment
@@ -804,12 +804,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayToAPIApi(
+$apiInstance = new Shaype\Client\Api\PayToAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$make_adhoc_payment_request_body = new \OpenAPI\Client\Model\MakeAdhocPaymentRequestBody(); // \OpenAPI\Client\Model\MakeAdhocPaymentRequestBody
+$make_adhoc_payment_request_body = new \Shaype\Client\Model\MakeAdhocPaymentRequestBody(); // \Shaype\Client\Model\MakeAdhocPaymentRequestBody
 
 try {
     $result = $apiInstance->makeAdhocPayment($make_adhoc_payment_request_body);
@@ -823,11 +823,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **make_adhoc_payment_request_body** | [**\OpenAPI\Client\Model\MakeAdhocPaymentRequestBody**](../Model/MakeAdhocPaymentRequestBody.md)|  | |
+| **make_adhoc_payment_request_body** | [**\Shaype\Client\Model\MakeAdhocPaymentRequestBody**](../Model/MakeAdhocPaymentRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MakeAdhocPaymentResponseBody**](../Model/MakeAdhocPaymentResponseBody.md)
+[**\Shaype\Client\Model\MakeAdhocPaymentResponseBody**](../Model/MakeAdhocPaymentResponseBody.md)
 
 ### Authorization
 
@@ -845,7 +845,7 @@ No authorization required
 ## `releaseMandateByInitiator()`
 
 ```php
-releaseMandateByInitiator($mandate_id): \OpenAPI\Client\Model\GenericMessage
+releaseMandateByInitiator($mandate_id): \Shaype\Client\Model\GenericMessage
 ```
 
 Release Mandate by Initiator
@@ -860,7 +860,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayToAPIApi(
+$apiInstance = new Shaype\Client\Api\PayToAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -883,7 +883,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -901,7 +901,7 @@ No authorization required
 ## `releaseMandateByPayer()`
 
 ```php
-releaseMandateByPayer($mandate_id): \OpenAPI\Client\Model\GenericMessage
+releaseMandateByPayer($mandate_id): \Shaype\Client\Model\GenericMessage
 ```
 
 Release Mandate by Payer
@@ -916,7 +916,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayToAPIApi(
+$apiInstance = new Shaype\Client\Api\PayToAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -939,7 +939,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -957,7 +957,7 @@ No authorization required
 ## `resolveMandateByInitiator()`
 
 ```php
-resolveMandateByInitiator($mandate_id): \OpenAPI\Client\Model\GenericMessage
+resolveMandateByInitiator($mandate_id): \Shaype\Client\Model\GenericMessage
 ```
 
 Resolve Mandate by Initiator
@@ -972,7 +972,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayToAPIApi(
+$apiInstance = new Shaype\Client\Api\PayToAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -995,7 +995,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -1013,7 +1013,7 @@ No authorization required
 ## `resolveMandateByPayer()`
 
 ```php
-resolveMandateByPayer($mandate_id, $resolution): \OpenAPI\Client\Model\GenericMessage
+resolveMandateByPayer($mandate_id, $resolution): \Shaype\Client\Model\GenericMessage
 ```
 
 Resolve Mandate pending action by Payer
@@ -1028,7 +1028,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayToAPIApi(
+$apiInstance = new Shaype\Client\Api\PayToAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -1053,7 +1053,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -1071,7 +1071,7 @@ No authorization required
 ## `searchPaymentsInstructions()`
 
 ```php
-searchPaymentsInstructions($mandate_id): \OpenAPI\Client\Model\PaymentInstructionsSummaryResponseBody
+searchPaymentsInstructions($mandate_id): \Shaype\Client\Model\PaymentInstructionsSummaryResponseBody
 ```
 
 Search payments instructions by Mandate ID
@@ -1084,7 +1084,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayToAPIApi(
+$apiInstance = new Shaype\Client\Api\PayToAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -1107,7 +1107,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PaymentInstructionsSummaryResponseBody**](../Model/PaymentInstructionsSummaryResponseBody.md)
+[**\Shaype\Client\Model\PaymentInstructionsSummaryResponseBody**](../Model/PaymentInstructionsSummaryResponseBody.md)
 
 ### Authorization
 
@@ -1125,7 +1125,7 @@ No authorization required
 ## `setScheduledPaymentInitiationRequestAmount()`
 
 ```php
-setScheduledPaymentInitiationRequestAmount($mandate_id, $set_scheduled_payment_initiation_amount_request_body): \OpenAPI\Client\Model\GenericMessage
+setScheduledPaymentInitiationRequestAmount($mandate_id, $set_scheduled_payment_initiation_amount_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Set amount of Scheduled Payment Initiation Request by Initiator
@@ -1140,13 +1140,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayToAPIApi(
+$apiInstance = new Shaype\Client\Api\PayToAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $mandate_id = 'mandate_id_example'; // string | Mandate identifier
-$set_scheduled_payment_initiation_amount_request_body = new \OpenAPI\Client\Model\SetScheduledPaymentInitiationAmountRequestBody(); // \OpenAPI\Client\Model\SetScheduledPaymentInitiationAmountRequestBody
+$set_scheduled_payment_initiation_amount_request_body = new \Shaype\Client\Model\SetScheduledPaymentInitiationAmountRequestBody(); // \Shaype\Client\Model\SetScheduledPaymentInitiationAmountRequestBody
 
 try {
     $result = $apiInstance->setScheduledPaymentInitiationRequestAmount($mandate_id, $set_scheduled_payment_initiation_amount_request_body);
@@ -1161,11 +1161,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **mandate_id** | **string**| Mandate identifier | |
-| **set_scheduled_payment_initiation_amount_request_body** | [**\OpenAPI\Client\Model\SetScheduledPaymentInitiationAmountRequestBody**](../Model/SetScheduledPaymentInitiationAmountRequestBody.md)|  | |
+| **set_scheduled_payment_initiation_amount_request_body** | [**\Shaype\Client\Model\SetScheduledPaymentInitiationAmountRequestBody**](../Model/SetScheduledPaymentInitiationAmountRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -1183,7 +1183,7 @@ No authorization required
 ## `suspendMandateByInitiator()`
 
 ```php
-suspendMandateByInitiator($mandate_id, $suspend_mandate_request_body): \OpenAPI\Client\Model\GenericMessage
+suspendMandateByInitiator($mandate_id, $suspend_mandate_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Suspend Mandate by Initiator
@@ -1198,13 +1198,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayToAPIApi(
+$apiInstance = new Shaype\Client\Api\PayToAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $mandate_id = 'mandate_id_example'; // string | Mandate identifier
-$suspend_mandate_request_body = new \OpenAPI\Client\Model\SuspendMandateRequestBody(); // \OpenAPI\Client\Model\SuspendMandateRequestBody
+$suspend_mandate_request_body = new \Shaype\Client\Model\SuspendMandateRequestBody(); // \Shaype\Client\Model\SuspendMandateRequestBody
 
 try {
     $result = $apiInstance->suspendMandateByInitiator($mandate_id, $suspend_mandate_request_body);
@@ -1219,11 +1219,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **mandate_id** | **string**| Mandate identifier | |
-| **suspend_mandate_request_body** | [**\OpenAPI\Client\Model\SuspendMandateRequestBody**](../Model/SuspendMandateRequestBody.md)|  | |
+| **suspend_mandate_request_body** | [**\Shaype\Client\Model\SuspendMandateRequestBody**](../Model/SuspendMandateRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -1241,7 +1241,7 @@ No authorization required
 ## `suspendMandateByPayer()`
 
 ```php
-suspendMandateByPayer($mandate_id, $suspend_mandate_request_body): \OpenAPI\Client\Model\GenericMessage
+suspendMandateByPayer($mandate_id, $suspend_mandate_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Suspend Mandate by Payer
@@ -1256,13 +1256,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayToAPIApi(
+$apiInstance = new Shaype\Client\Api\PayToAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $mandate_id = 'mandate_id_example'; // string | Mandate identifier
-$suspend_mandate_request_body = new \OpenAPI\Client\Model\SuspendMandateRequestBody(); // \OpenAPI\Client\Model\SuspendMandateRequestBody
+$suspend_mandate_request_body = new \Shaype\Client\Model\SuspendMandateRequestBody(); // \Shaype\Client\Model\SuspendMandateRequestBody
 
 try {
     $result = $apiInstance->suspendMandateByPayer($mandate_id, $suspend_mandate_request_body);
@@ -1277,11 +1277,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **mandate_id** | **string**| Mandate identifier | |
-| **suspend_mandate_request_body** | [**\OpenAPI\Client\Model\SuspendMandateRequestBody**](../Model/SuspendMandateRequestBody.md)|  | |
+| **suspend_mandate_request_body** | [**\Shaype\Client\Model\SuspendMandateRequestBody**](../Model/SuspendMandateRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 

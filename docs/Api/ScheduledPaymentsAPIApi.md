@@ -1,4 +1,4 @@
-# OpenAPI\Client\ScheduledPaymentsAPIApi
+# Shaype\Client\ScheduledPaymentsAPIApi
 
 All URIs are relative to http://localhost:8080, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to http://localhost:8080, except if the operation defines 
 ## `cancelScheduledPayment()`
 
 ```php
-cancelScheduledPayment($account_id, $payment_id): \OpenAPI\Client\Model\GenericMessage
+cancelScheduledPayment($account_id, $payment_id): \Shaype\Client\Model\GenericMessage
 ```
 
 Cancel Scheduled Payment
@@ -25,7 +25,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ScheduledPaymentsAPIApi(
+$apiInstance = new Shaype\Client\Api\ScheduledPaymentsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -50,7 +50,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ No authorization required
 ## `getScheduledPaymentById()`
 
 ```php
-getScheduledPaymentById($account_id, $payment_id): \OpenAPI\Client\Model\HayScheduledPayment
+getScheduledPaymentById($account_id, $payment_id): \Shaype\Client\Model\HayScheduledPayment
 ```
 
 Get Scheduled Payment by Payment ID for an Account
@@ -81,7 +81,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ScheduledPaymentsAPIApi(
+$apiInstance = new Shaype\Client\Api\ScheduledPaymentsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -106,7 +106,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayScheduledPayment**](../Model/HayScheduledPayment.md)
+[**\Shaype\Client\Model\HayScheduledPayment**](../Model/HayScheduledPayment.md)
 
 ### Authorization
 
@@ -124,7 +124,7 @@ No authorization required
 ## `getScheduledPayments()`
 
 ```php
-getScheduledPayments($account_id): \OpenAPI\Client\Model\HayScheduledPayment[]
+getScheduledPayments($account_id): \Shaype\Client\Model\HayScheduledPayment[]
 ```
 
 Get Scheduled Payments by Account ID
@@ -137,7 +137,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ScheduledPaymentsAPIApi(
+$apiInstance = new Shaype\Client\Api\ScheduledPaymentsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -160,7 +160,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayScheduledPayment[]**](../Model/HayScheduledPayment.md)
+[**\Shaype\Client\Model\HayScheduledPayment[]**](../Model/HayScheduledPayment.md)
 
 ### Authorization
 

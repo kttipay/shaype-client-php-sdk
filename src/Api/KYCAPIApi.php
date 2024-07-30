@@ -3,7 +3,7 @@
  * KYCAPIApi
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Shaype\Client\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ApiException;
+use Shaype\Client\Configuration;
+use Shaype\Client\HeaderSelector;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * KYCAPIApi Class Doc Comment
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -137,18 +137,18 @@ class KYCAPIApi
      * Approve AML Check
      *
      * @param  string $customer_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body onboarding_stage_approval_body (required)
+     * @param  \Shaype\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body onboarding_stage_approval_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['approveAmlKycCheck'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ConfirmationResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\ConfirmationResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function approveAmlKycCheck(
         string $customer_id,
-        \OpenAPI\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body,
+        \Shaype\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body,
         string $contentType = self::contentTypes['approveAmlKycCheck'][0]
-    ): \OpenAPI\Client\Model\ConfirmationResponse
+    ): \Shaype\Client\Model\ConfirmationResponse
     {
         list($response) = $this->approveAmlKycCheckWithHttpInfo($customer_id, $onboarding_stage_approval_body, $contentType);
         return $response;
@@ -160,16 +160,16 @@ class KYCAPIApi
      * Approve AML Check
      *
      * @param  string $customer_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body (required)
+     * @param  \Shaype\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['approveAmlKycCheck'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ConfirmationResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\ConfirmationResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function approveAmlKycCheckWithHttpInfo(
         string $customer_id,
-        \OpenAPI\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body,
+        \Shaype\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body,
         string $contentType = self::contentTypes['approveAmlKycCheck'][0]
     ): array
     {
@@ -212,11 +212,11 @@ class KYCAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ConfirmationResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ConfirmationResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ConfirmationResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ConfirmationResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -234,16 +234,16 @@ class KYCAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ConfirmationResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ConfirmationResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -261,16 +261,16 @@ class KYCAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -288,16 +288,16 @@ class KYCAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -315,16 +315,16 @@ class KYCAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -342,16 +342,16 @@ class KYCAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -369,13 +369,13 @@ class KYCAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ConfirmationResponse';
+            $returnType = '\Shaype\Client\Model\ConfirmationResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -408,7 +408,7 @@ class KYCAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ConfirmationResponse',
+                        '\Shaype\Client\Model\ConfirmationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -416,7 +416,7 @@ class KYCAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -424,7 +424,7 @@ class KYCAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -432,7 +432,7 @@ class KYCAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -440,7 +440,7 @@ class KYCAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -448,7 +448,7 @@ class KYCAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -464,7 +464,7 @@ class KYCAPIApi
      * Approve AML Check
      *
      * @param  string $customer_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body (required)
+     * @param  \Shaype\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['approveAmlKycCheck'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -472,7 +472,7 @@ class KYCAPIApi
      */
     public function approveAmlKycCheckAsync(
         string $customer_id,
-        \OpenAPI\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body,
+        \Shaype\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body,
         string $contentType = self::contentTypes['approveAmlKycCheck'][0]
     ): PromiseInterface
     {
@@ -490,7 +490,7 @@ class KYCAPIApi
      * Approve AML Check
      *
      * @param  string $customer_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body (required)
+     * @param  \Shaype\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['approveAmlKycCheck'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -502,7 +502,7 @@ class KYCAPIApi
         string $contentType = self::contentTypes['approveAmlKycCheck'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\ConfirmationResponse';
+        $returnType = '\Shaype\Client\Model\ConfirmationResponse';
         $request = $this->approveAmlKycCheckRequest($customer_id, $onboarding_stage_approval_body, $contentType);
 
         return $this->client
@@ -545,7 +545,7 @@ class KYCAPIApi
      * Create request for operation 'approveAmlKycCheck'
      *
      * @param  string $customer_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body (required)
+     * @param  \Shaype\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['approveAmlKycCheck'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -658,18 +658,18 @@ class KYCAPIApi
      * Approve Document Check
      *
      * @param  string $customer_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body onboarding_stage_approval_body (required)
+     * @param  \Shaype\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body onboarding_stage_approval_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['approveDocumentCheck'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ConfirmationResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\ConfirmationResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function approveDocumentCheck(
         string $customer_id,
-        \OpenAPI\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body,
+        \Shaype\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body,
         string $contentType = self::contentTypes['approveDocumentCheck'][0]
-    ): \OpenAPI\Client\Model\ConfirmationResponse
+    ): \Shaype\Client\Model\ConfirmationResponse
     {
         list($response) = $this->approveDocumentCheckWithHttpInfo($customer_id, $onboarding_stage_approval_body, $contentType);
         return $response;
@@ -681,16 +681,16 @@ class KYCAPIApi
      * Approve Document Check
      *
      * @param  string $customer_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body (required)
+     * @param  \Shaype\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['approveDocumentCheck'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ConfirmationResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\ConfirmationResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function approveDocumentCheckWithHttpInfo(
         string $customer_id,
-        \OpenAPI\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body,
+        \Shaype\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body,
         string $contentType = self::contentTypes['approveDocumentCheck'][0]
     ): array
     {
@@ -733,11 +733,11 @@ class KYCAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ConfirmationResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ConfirmationResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ConfirmationResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ConfirmationResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -755,16 +755,16 @@ class KYCAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ConfirmationResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ConfirmationResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -782,16 +782,16 @@ class KYCAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -809,16 +809,16 @@ class KYCAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -836,16 +836,16 @@ class KYCAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -863,16 +863,16 @@ class KYCAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -890,13 +890,13 @@ class KYCAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ConfirmationResponse';
+            $returnType = '\Shaype\Client\Model\ConfirmationResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -929,7 +929,7 @@ class KYCAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ConfirmationResponse',
+                        '\Shaype\Client\Model\ConfirmationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -937,7 +937,7 @@ class KYCAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -945,7 +945,7 @@ class KYCAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -953,7 +953,7 @@ class KYCAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -961,7 +961,7 @@ class KYCAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -969,7 +969,7 @@ class KYCAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -985,7 +985,7 @@ class KYCAPIApi
      * Approve Document Check
      *
      * @param  string $customer_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body (required)
+     * @param  \Shaype\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['approveDocumentCheck'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -993,7 +993,7 @@ class KYCAPIApi
      */
     public function approveDocumentCheckAsync(
         string $customer_id,
-        \OpenAPI\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body,
+        \Shaype\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body,
         string $contentType = self::contentTypes['approveDocumentCheck'][0]
     ): PromiseInterface
     {
@@ -1011,7 +1011,7 @@ class KYCAPIApi
      * Approve Document Check
      *
      * @param  string $customer_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body (required)
+     * @param  \Shaype\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['approveDocumentCheck'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1023,7 +1023,7 @@ class KYCAPIApi
         string $contentType = self::contentTypes['approveDocumentCheck'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\ConfirmationResponse';
+        $returnType = '\Shaype\Client\Model\ConfirmationResponse';
         $request = $this->approveDocumentCheckRequest($customer_id, $onboarding_stage_approval_body, $contentType);
 
         return $this->client
@@ -1066,7 +1066,7 @@ class KYCAPIApi
      * Create request for operation 'approveDocumentCheck'
      *
      * @param  string $customer_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body (required)
+     * @param  \Shaype\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['approveDocumentCheck'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1179,18 +1179,18 @@ class KYCAPIApi
      * Approve Sanctions Check
      *
      * @param  string $customer_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body onboarding_stage_approval_body (required)
+     * @param  \Shaype\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body onboarding_stage_approval_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['approveSanctionCheck'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ConfirmationResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\ConfirmationResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function approveSanctionCheck(
         string $customer_id,
-        \OpenAPI\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body,
+        \Shaype\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body,
         string $contentType = self::contentTypes['approveSanctionCheck'][0]
-    ): \OpenAPI\Client\Model\ConfirmationResponse
+    ): \Shaype\Client\Model\ConfirmationResponse
     {
         list($response) = $this->approveSanctionCheckWithHttpInfo($customer_id, $onboarding_stage_approval_body, $contentType);
         return $response;
@@ -1202,16 +1202,16 @@ class KYCAPIApi
      * Approve Sanctions Check
      *
      * @param  string $customer_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body (required)
+     * @param  \Shaype\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['approveSanctionCheck'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ConfirmationResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\ConfirmationResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function approveSanctionCheckWithHttpInfo(
         string $customer_id,
-        \OpenAPI\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body,
+        \Shaype\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body,
         string $contentType = self::contentTypes['approveSanctionCheck'][0]
     ): array
     {
@@ -1254,11 +1254,11 @@ class KYCAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ConfirmationResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ConfirmationResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ConfirmationResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ConfirmationResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1276,16 +1276,16 @@ class KYCAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ConfirmationResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ConfirmationResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1303,16 +1303,16 @@ class KYCAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1330,16 +1330,16 @@ class KYCAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1357,16 +1357,16 @@ class KYCAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1384,16 +1384,16 @@ class KYCAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1411,13 +1411,13 @@ class KYCAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ConfirmationResponse';
+            $returnType = '\Shaype\Client\Model\ConfirmationResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1450,7 +1450,7 @@ class KYCAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ConfirmationResponse',
+                        '\Shaype\Client\Model\ConfirmationResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1458,7 +1458,7 @@ class KYCAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1466,7 +1466,7 @@ class KYCAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1474,7 +1474,7 @@ class KYCAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1482,7 +1482,7 @@ class KYCAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1490,7 +1490,7 @@ class KYCAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1506,7 +1506,7 @@ class KYCAPIApi
      * Approve Sanctions Check
      *
      * @param  string $customer_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body (required)
+     * @param  \Shaype\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['approveSanctionCheck'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1514,7 +1514,7 @@ class KYCAPIApi
      */
     public function approveSanctionCheckAsync(
         string $customer_id,
-        \OpenAPI\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body,
+        \Shaype\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body,
         string $contentType = self::contentTypes['approveSanctionCheck'][0]
     ): PromiseInterface
     {
@@ -1532,7 +1532,7 @@ class KYCAPIApi
      * Approve Sanctions Check
      *
      * @param  string $customer_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body (required)
+     * @param  \Shaype\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['approveSanctionCheck'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1544,7 +1544,7 @@ class KYCAPIApi
         string $contentType = self::contentTypes['approveSanctionCheck'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\ConfirmationResponse';
+        $returnType = '\Shaype\Client\Model\ConfirmationResponse';
         $request = $this->approveSanctionCheckRequest($customer_id, $onboarding_stage_approval_body, $contentType);
 
         return $this->client
@@ -1587,7 +1587,7 @@ class KYCAPIApi
      * Create request for operation 'approveSanctionCheck'
      *
      * @param  string $customer_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body (required)
+     * @param  \Shaype\Client\Model\OnboardingStageApprovalBody $onboarding_stage_approval_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['approveSanctionCheck'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1703,11 +1703,11 @@ class KYCAPIApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CreateCaseExternalResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\CreateCaseExternalResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function createCase(
         string $contentType = self::contentTypes['createCase'][0]
-    ): \OpenAPI\Client\Model\CreateCaseExternalResponse
+    ): \Shaype\Client\Model\CreateCaseExternalResponse
     {
         list($response) = $this->createCaseWithHttpInfo($contentType);
         return $response;
@@ -1722,7 +1722,7 @@ class KYCAPIApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CreateCaseExternalResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\CreateCaseExternalResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCaseWithHttpInfo(
         string $contentType = self::contentTypes['createCase'][0]
@@ -1767,11 +1767,11 @@ class KYCAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CreateCaseExternalResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\CreateCaseExternalResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CreateCaseExternalResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\CreateCaseExternalResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1789,16 +1789,16 @@ class KYCAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CreateCaseExternalResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\CreateCaseExternalResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1816,16 +1816,16 @@ class KYCAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1843,16 +1843,16 @@ class KYCAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1870,16 +1870,16 @@ class KYCAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1897,16 +1897,16 @@ class KYCAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1924,13 +1924,13 @@ class KYCAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CreateCaseExternalResponse';
+            $returnType = '\Shaype\Client\Model\CreateCaseExternalResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1963,7 +1963,7 @@ class KYCAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CreateCaseExternalResponse',
+                        '\Shaype\Client\Model\CreateCaseExternalResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1971,7 +1971,7 @@ class KYCAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1979,7 +1979,7 @@ class KYCAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1987,7 +1987,7 @@ class KYCAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1995,7 +1995,7 @@ class KYCAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2003,7 +2003,7 @@ class KYCAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2049,7 +2049,7 @@ class KYCAPIApi
         string $contentType = self::contentTypes['createCase'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\CreateCaseExternalResponse';
+        $returnType = '\Shaype\Client\Model\CreateCaseExternalResponse';
         $request = $this->createCaseRequest($contentType);
 
         return $this->client

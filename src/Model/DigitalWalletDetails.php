@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * DigitalWalletDetails Class Doc Comment
  *
  * @description Details of all digital wallets
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class DigitalWalletDetails implements ModelInterface, ArrayAccess, JsonSerializa
       */
     protected static array $openAPITypes = [
         'primary_account_identifier' => 'string',
-        'wallets' => '\OpenAPI\Client\Model\ApiDigitalWallet[]'
+        'wallets' => '\Shaype\Client\Model\ApiDigitalWallet[]'
     ];
 
     /**
@@ -325,7 +325,7 @@ class DigitalWalletDetails implements ModelInterface, ArrayAccess, JsonSerializa
     /**
      * Gets wallets
      *
-     * @return \OpenAPI\Client\Model\ApiDigitalWallet[]|null
+     * @return \Shaype\Client\Model\ApiDigitalWallet[]|null
      */
     public function getWallets(): ?array
     {
@@ -335,7 +335,7 @@ class DigitalWalletDetails implements ModelInterface, ArrayAccess, JsonSerializa
     /**
      * Sets wallets
      *
-     * @param \OpenAPI\Client\Model\ApiDigitalWallet[]|null $wallets List of the digital wallets
+     * @param \Shaype\Client\Model\ApiDigitalWallet[]|null $wallets List of the digital wallets
      *
      * @return $this
      */

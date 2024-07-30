@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * TransferOutRequestBody Class Doc Comment
  *
  * @description Body of a request to execute a transfer
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -59,13 +59,13 @@ class TransferOutRequestBody implements ModelInterface, ArrayAccess, JsonSeriali
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'account_transfer' => '\OpenAPI\Client\Model\AccountTransfer',
+        'account_transfer' => '\Shaype\Client\Model\AccountTransfer',
         'amount' => 'float',
         'category' => 'string',
         'description' => 'string',
         'idempotency_key' => 'string',
-        'internal_transfer' => '\OpenAPI\Client\Model\InternalTransfer',
-        'pay_id_transfer' => '\OpenAPI\Client\Model\PayIdTransfer',
+        'internal_transfer' => '\Shaype\Client\Model\InternalTransfer',
+        'pay_id_transfer' => '\Shaype\Client\Model\PayIdTransfer',
         'reference' => 'string',
         'sender_customer_hay_id' => 'string',
         'transfer_type' => 'string'
@@ -412,9 +412,9 @@ class TransferOutRequestBody implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Gets account_transfer
      *
-     * @return \OpenAPI\Client\Model\AccountTransfer|null
+     * @return \Shaype\Client\Model\AccountTransfer|null
      */
-    public function getAccountTransfer(): ?\OpenAPI\Client\Model\AccountTransfer
+    public function getAccountTransfer(): ?\Shaype\Client\Model\AccountTransfer
     {
         return $this->container['account_transfer'];
     }
@@ -422,11 +422,11 @@ class TransferOutRequestBody implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Sets account_transfer
      *
-     * @param \OpenAPI\Client\Model\AccountTransfer|null $account_transfer account_transfer
+     * @param \Shaype\Client\Model\AccountTransfer|null $account_transfer account_transfer
      *
      * @return $this
      */
-    public function setAccountTransfer(?\OpenAPI\Client\Model\AccountTransfer $account_transfer): static
+    public function setAccountTransfer(?\Shaype\Client\Model\AccountTransfer $account_transfer): static
     {
         if (is_null($account_transfer)) {
             throw new InvalidArgumentException('non-nullable account_transfer cannot be null');
@@ -559,9 +559,9 @@ class TransferOutRequestBody implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Gets internal_transfer
      *
-     * @return \OpenAPI\Client\Model\InternalTransfer|null
+     * @return \Shaype\Client\Model\InternalTransfer|null
      */
-    public function getInternalTransfer(): ?\OpenAPI\Client\Model\InternalTransfer
+    public function getInternalTransfer(): ?\Shaype\Client\Model\InternalTransfer
     {
         return $this->container['internal_transfer'];
     }
@@ -569,11 +569,11 @@ class TransferOutRequestBody implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Sets internal_transfer
      *
-     * @param \OpenAPI\Client\Model\InternalTransfer|null $internal_transfer internal_transfer
+     * @param \Shaype\Client\Model\InternalTransfer|null $internal_transfer internal_transfer
      *
      * @return $this
      */
-    public function setInternalTransfer(?\OpenAPI\Client\Model\InternalTransfer $internal_transfer): static
+    public function setInternalTransfer(?\Shaype\Client\Model\InternalTransfer $internal_transfer): static
     {
         if (is_null($internal_transfer)) {
             throw new InvalidArgumentException('non-nullable internal_transfer cannot be null');
@@ -586,9 +586,9 @@ class TransferOutRequestBody implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Gets pay_id_transfer
      *
-     * @return \OpenAPI\Client\Model\PayIdTransfer|null
+     * @return \Shaype\Client\Model\PayIdTransfer|null
      */
-    public function getPayIdTransfer(): ?\OpenAPI\Client\Model\PayIdTransfer
+    public function getPayIdTransfer(): ?\Shaype\Client\Model\PayIdTransfer
     {
         return $this->container['pay_id_transfer'];
     }
@@ -596,11 +596,11 @@ class TransferOutRequestBody implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Sets pay_id_transfer
      *
-     * @param \OpenAPI\Client\Model\PayIdTransfer|null $pay_id_transfer pay_id_transfer
+     * @param \Shaype\Client\Model\PayIdTransfer|null $pay_id_transfer pay_id_transfer
      *
      * @return $this
      */
-    public function setPayIdTransfer(?\OpenAPI\Client\Model\PayIdTransfer $pay_id_transfer): static
+    public function setPayIdTransfer(?\Shaype\Client\Model\PayIdTransfer $pay_id_transfer): static
     {
         if (is_null($pay_id_transfer)) {
             throw new InvalidArgumentException('non-nullable pay_id_transfer cannot be null');

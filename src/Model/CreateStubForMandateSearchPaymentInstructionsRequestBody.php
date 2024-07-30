@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * CreateStubForMandateSearchPaymentInstructionsRequestBody Class Doc Comment
  *
  * @description Body of a request to create stub for mandate search payment instructions.
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class CreateStubForMandateSearchPaymentInstructionsRequestBody implements ModelI
       */
     protected static array $openAPITypes = [
         'mandate_identification' => 'string',
-        'payment_instruction_summaries' => '\OpenAPI\Client\Model\PaymentInstructionSummary[]'
+        'payment_instruction_summaries' => '\Shaype\Client\Model\PaymentInstructionSummary[]'
     ];
 
     /**
@@ -340,7 +340,7 @@ class CreateStubForMandateSearchPaymentInstructionsRequestBody implements ModelI
     /**
      * Gets payment_instruction_summaries
      *
-     * @return \OpenAPI\Client\Model\PaymentInstructionSummary[]
+     * @return \Shaype\Client\Model\PaymentInstructionSummary[]
      */
     public function getPaymentInstructionSummaries(): array
     {
@@ -350,7 +350,7 @@ class CreateStubForMandateSearchPaymentInstructionsRequestBody implements ModelI
     /**
      * Sets payment_instruction_summaries
      *
-     * @param \OpenAPI\Client\Model\PaymentInstructionSummary[] $payment_instruction_summaries Payment instruction list
+     * @param \Shaype\Client\Model\PaymentInstructionSummary[] $payment_instruction_summaries Payment instruction list
      *
      * @return $this
      */

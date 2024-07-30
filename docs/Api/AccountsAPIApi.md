@@ -1,4 +1,4 @@
-# OpenAPI\Client\AccountsAPIApi
+# Shaype\Client\AccountsAPIApi
 
 All URIs are relative to http://localhost:8080, except if the operation defines another base path.
 
@@ -32,7 +32,7 @@ All URIs are relative to http://localhost:8080, except if the operation defines 
 ## `addAccountRule()`
 
 ```php
-addAccountRule($account_id, $external_add_transaction_rule_request): \OpenAPI\Client\Model\ExternalTransactionRuleResponse
+addAccountRule($account_id, $external_add_transaction_rule_request): \Shaype\Client\Model\ExternalTransactionRuleResponse
 ```
 
 Create Rule for Account
@@ -45,13 +45,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsAPIApi(
+$apiInstance = new Shaype\Client\Api\AccountsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $account_id = 'account_id_example'; // string | Unique identifier (UUID) of the Account
-$external_add_transaction_rule_request = new \OpenAPI\Client\Model\ExternalAddTransactionRuleRequest(); // \OpenAPI\Client\Model\ExternalAddTransactionRuleRequest
+$external_add_transaction_rule_request = new \Shaype\Client\Model\ExternalAddTransactionRuleRequest(); // \Shaype\Client\Model\ExternalAddTransactionRuleRequest
 
 try {
     $result = $apiInstance->addAccountRule($account_id, $external_add_transaction_rule_request);
@@ -66,11 +66,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **account_id** | **string**| Unique identifier (UUID) of the Account | |
-| **external_add_transaction_rule_request** | [**\OpenAPI\Client\Model\ExternalAddTransactionRuleRequest**](../Model/ExternalAddTransactionRuleRequest.md)|  | |
+| **external_add_transaction_rule_request** | [**\Shaype\Client\Model\ExternalAddTransactionRuleRequest**](../Model/ExternalAddTransactionRuleRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ExternalTransactionRuleResponse**](../Model/ExternalTransactionRuleResponse.md)
+[**\Shaype\Client\Model\ExternalTransactionRuleResponse**](../Model/ExternalTransactionRuleResponse.md)
 
 ### Authorization
 
@@ -88,7 +88,7 @@ No authorization required
 ## `blockAccount()`
 
 ```php
-blockAccount($account_id, $block_account_request_body): \OpenAPI\Client\Model\GenericMessage
+blockAccount($account_id, $block_account_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Block Account and Customer
@@ -101,13 +101,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsAPIApi(
+$apiInstance = new Shaype\Client\Api\AccountsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $account_id = 'account_id_example'; // string | Unique identifier (UUID) of the Account
-$block_account_request_body = new \OpenAPI\Client\Model\BlockAccountRequestBody(); // \OpenAPI\Client\Model\BlockAccountRequestBody
+$block_account_request_body = new \Shaype\Client\Model\BlockAccountRequestBody(); // \Shaype\Client\Model\BlockAccountRequestBody
 
 try {
     $result = $apiInstance->blockAccount($account_id, $block_account_request_body);
@@ -122,11 +122,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **account_id** | **string**| Unique identifier (UUID) of the Account | |
-| **block_account_request_body** | [**\OpenAPI\Client\Model\BlockAccountRequestBody**](../Model/BlockAccountRequestBody.md)|  | |
+| **block_account_request_body** | [**\Shaype\Client\Model\BlockAccountRequestBody**](../Model/BlockAccountRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -144,7 +144,7 @@ No authorization required
 ## `changeAccountRiskLevel()`
 
 ```php
-changeAccountRiskLevel($account_id, $change_hay_account_risk_level_request_body): \OpenAPI\Client\Model\GenericMessage
+changeAccountRiskLevel($account_id, $change_hay_account_risk_level_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Update Account Risk Level
@@ -157,13 +157,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsAPIApi(
+$apiInstance = new Shaype\Client\Api\AccountsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $account_id = 'account_id_example'; // string | Unique identifier (UUID) of the Account
-$change_hay_account_risk_level_request_body = new \OpenAPI\Client\Model\ChangeHayAccountRiskLevelRequestBody(); // \OpenAPI\Client\Model\ChangeHayAccountRiskLevelRequestBody
+$change_hay_account_risk_level_request_body = new \Shaype\Client\Model\ChangeHayAccountRiskLevelRequestBody(); // \Shaype\Client\Model\ChangeHayAccountRiskLevelRequestBody
 
 try {
     $result = $apiInstance->changeAccountRiskLevel($account_id, $change_hay_account_risk_level_request_body);
@@ -178,11 +178,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **account_id** | **string**| Unique identifier (UUID) of the Account | |
-| **change_hay_account_risk_level_request_body** | [**\OpenAPI\Client\Model\ChangeHayAccountRiskLevelRequestBody**](../Model/ChangeHayAccountRiskLevelRequestBody.md)|  | |
+| **change_hay_account_risk_level_request_body** | [**\Shaype\Client\Model\ChangeHayAccountRiskLevelRequestBody**](../Model/ChangeHayAccountRiskLevelRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -200,7 +200,7 @@ No authorization required
 ## `closeAccount()`
 
 ```php
-closeAccount($account_id): \OpenAPI\Client\Model\CloseAccountResponse
+closeAccount($account_id): \Shaype\Client\Model\CloseAccountResponse
 ```
 
 Closes an account
@@ -213,7 +213,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsAPIApi(
+$apiInstance = new Shaype\Client\Api\AccountsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -236,7 +236,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CloseAccountResponse**](../Model/CloseAccountResponse.md)
+[**\Shaype\Client\Model\CloseAccountResponse**](../Model/CloseAccountResponse.md)
 
 ### Authorization
 
@@ -254,7 +254,7 @@ No authorization required
 ## `createAccount()`
 
 ```php
-createAccount($create_account_request_body): \OpenAPI\Client\Model\HayAccount
+createAccount($create_account_request_body): \Shaype\Client\Model\HayAccount
 ```
 
 Creates an Account
@@ -267,12 +267,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsAPIApi(
+$apiInstance = new Shaype\Client\Api\AccountsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_account_request_body = new \OpenAPI\Client\Model\CreateAccountRequestBody(); // \OpenAPI\Client\Model\CreateAccountRequestBody
+$create_account_request_body = new \Shaype\Client\Model\CreateAccountRequestBody(); // \Shaype\Client\Model\CreateAccountRequestBody
 
 try {
     $result = $apiInstance->createAccount($create_account_request_body);
@@ -286,11 +286,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_account_request_body** | [**\OpenAPI\Client\Model\CreateAccountRequestBody**](../Model/CreateAccountRequestBody.md)|  | |
+| **create_account_request_body** | [**\Shaype\Client\Model\CreateAccountRequestBody**](../Model/CreateAccountRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayAccount**](../Model/HayAccount.md)
+[**\Shaype\Client\Model\HayAccount**](../Model/HayAccount.md)
 
 ### Authorization
 
@@ -308,7 +308,7 @@ No authorization required
 ## `createAccountCustomData()`
 
 ```php
-createAccountCustomData($account_id, $create_account_custom_data_request_body): \OpenAPI\Client\Model\GenericMessage
+createAccountCustomData($account_id, $create_account_custom_data_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Create Custom Data for Account
@@ -321,13 +321,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsAPIApi(
+$apiInstance = new Shaype\Client\Api\AccountsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $account_id = 'account_id_example'; // string | Unique identifier (UUID) of the Account
-$create_account_custom_data_request_body = new \OpenAPI\Client\Model\CreateAccountCustomDataRequestBody(); // \OpenAPI\Client\Model\CreateAccountCustomDataRequestBody
+$create_account_custom_data_request_body = new \Shaype\Client\Model\CreateAccountCustomDataRequestBody(); // \Shaype\Client\Model\CreateAccountCustomDataRequestBody
 
 try {
     $result = $apiInstance->createAccountCustomData($account_id, $create_account_custom_data_request_body);
@@ -342,11 +342,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **account_id** | **string**| Unique identifier (UUID) of the Account | |
-| **create_account_custom_data_request_body** | [**\OpenAPI\Client\Model\CreateAccountCustomDataRequestBody**](../Model/CreateAccountCustomDataRequestBody.md)|  | |
+| **create_account_custom_data_request_body** | [**\Shaype\Client\Model\CreateAccountCustomDataRequestBody**](../Model/CreateAccountCustomDataRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -364,7 +364,7 @@ No authorization required
 ## `deleteAccountCustomData()`
 
 ```php
-deleteAccountCustomData($account_id): \OpenAPI\Client\Model\GenericMessage
+deleteAccountCustomData($account_id): \Shaype\Client\Model\GenericMessage
 ```
 
 Delete Custom Data from Account
@@ -377,7 +377,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsAPIApi(
+$apiInstance = new Shaype\Client\Api\AccountsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -400,7 +400,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -418,7 +418,7 @@ No authorization required
 ## `deleteAccountLimit()`
 
 ```php
-deleteAccountLimit($account_id, $limit_type): \OpenAPI\Client\Model\DeleteAccountLimitResponse
+deleteAccountLimit($account_id, $limit_type): \Shaype\Client\Model\DeleteAccountLimitResponse
 ```
 
 Delete limit from Account
@@ -431,7 +431,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsAPIApi(
+$apiInstance = new Shaype\Client\Api\AccountsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -456,7 +456,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DeleteAccountLimitResponse**](../Model/DeleteAccountLimitResponse.md)
+[**\Shaype\Client\Model\DeleteAccountLimitResponse**](../Model/DeleteAccountLimitResponse.md)
 
 ### Authorization
 
@@ -474,7 +474,7 @@ No authorization required
 ## `disableRule()`
 
 ```php
-disableRule($account_id, $rule_id): \OpenAPI\Client\Model\DisableRuleResponse
+disableRule($account_id, $rule_id): \Shaype\Client\Model\DisableRuleResponse
 ```
 
 Delete Rule from Account
@@ -487,7 +487,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsAPIApi(
+$apiInstance = new Shaype\Client\Api\AccountsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -512,7 +512,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DisableRuleResponse**](../Model/DisableRuleResponse.md)
+[**\Shaype\Client\Model\DisableRuleResponse**](../Model/DisableRuleResponse.md)
 
 ### Authorization
 
@@ -530,7 +530,7 @@ No authorization required
 ## `getAccountLimits()`
 
 ```php
-getAccountLimits($account_id): \OpenAPI\Client\Model\ExternalLimitAmounts[]
+getAccountLimits($account_id): \Shaype\Client\Model\ExternalLimitAmounts[]
 ```
 
 Get all limits by Account ID
@@ -543,7 +543,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsAPIApi(
+$apiInstance = new Shaype\Client\Api\AccountsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -566,7 +566,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ExternalLimitAmounts[]**](../Model/ExternalLimitAmounts.md)
+[**\Shaype\Client\Model\ExternalLimitAmounts[]**](../Model/ExternalLimitAmounts.md)
 
 ### Authorization
 
@@ -584,7 +584,7 @@ No authorization required
 ## `getAccountRiskLevel()`
 
 ```php
-getAccountRiskLevel($account_id): \OpenAPI\Client\Model\RiskLevelResponse
+getAccountRiskLevel($account_id): \Shaype\Client\Model\RiskLevelResponse
 ```
 
 Get Risk Level by Account ID
@@ -597,7 +597,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsAPIApi(
+$apiInstance = new Shaype\Client\Api\AccountsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -620,7 +620,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\RiskLevelResponse**](../Model/RiskLevelResponse.md)
+[**\Shaype\Client\Model\RiskLevelResponse**](../Model/RiskLevelResponse.md)
 
 ### Authorization
 
@@ -638,7 +638,7 @@ No authorization required
 ## `getAccountRuleById()`
 
 ```php
-getAccountRuleById($account_id, $rule_id): \OpenAPI\Client\Model\ExternalTransactionRuleResponse
+getAccountRuleById($account_id, $rule_id): \Shaype\Client\Model\ExternalTransactionRuleResponse
 ```
 
 Get Rule for Account by Rule ID
@@ -651,7 +651,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsAPIApi(
+$apiInstance = new Shaype\Client\Api\AccountsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -676,7 +676,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ExternalTransactionRuleResponse**](../Model/ExternalTransactionRuleResponse.md)
+[**\Shaype\Client\Model\ExternalTransactionRuleResponse**](../Model/ExternalTransactionRuleResponse.md)
 
 ### Authorization
 
@@ -694,7 +694,7 @@ No authorization required
 ## `getAccountRules()`
 
 ```php
-getAccountRules($account_id): \OpenAPI\Client\Model\ExternalTransactionRuleResponse[]
+getAccountRules($account_id): \Shaype\Client\Model\ExternalTransactionRuleResponse[]
 ```
 
 Get all Rules by Account ID
@@ -707,7 +707,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsAPIApi(
+$apiInstance = new Shaype\Client\Api\AccountsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -730,7 +730,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ExternalTransactionRuleResponse[]**](../Model/ExternalTransactionRuleResponse.md)
+[**\Shaype\Client\Model\ExternalTransactionRuleResponse[]**](../Model/ExternalTransactionRuleResponse.md)
 
 ### Authorization
 
@@ -748,7 +748,7 @@ No authorization required
 ## `getCardsForAccountId()`
 
 ```php
-getCardsForAccountId($account_id): \OpenAPI\Client\Model\HayCard[]
+getCardsForAccountId($account_id): \Shaype\Client\Model\HayCard[]
 ```
 
 Get all Cards by Account ID
@@ -761,7 +761,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsAPIApi(
+$apiInstance = new Shaype\Client\Api\AccountsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -784,7 +784,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayCard[]**](../Model/HayCard.md)
+[**\Shaype\Client\Model\HayCard[]**](../Model/HayCard.md)
 
 ### Authorization
 
@@ -802,7 +802,7 @@ No authorization required
 ## `getHayAccount()`
 
 ```php
-getHayAccount($account_id, $expand): \OpenAPI\Client\Model\HayAccount
+getHayAccount($account_id, $expand): \Shaype\Client\Model\HayAccount
 ```
 
 Get Account by ID
@@ -815,7 +815,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsAPIApi(
+$apiInstance = new Shaype\Client\Api\AccountsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -840,7 +840,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayAccount**](../Model/HayAccount.md)
+[**\Shaype\Client\Model\HayAccount**](../Model/HayAccount.md)
 
 ### Authorization
 
@@ -858,7 +858,7 @@ No authorization required
 ## `getPendingHolds()`
 
 ```php
-getPendingHolds($account_id): \OpenAPI\Client\Model\AuthorisationHold[]
+getPendingHolds($account_id): \Shaype\Client\Model\AuthorisationHold[]
 ```
 
 Get all Authorisation Holds by Account ID
@@ -871,7 +871,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsAPIApi(
+$apiInstance = new Shaype\Client\Api\AccountsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -894,7 +894,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AuthorisationHold[]**](../Model/AuthorisationHold.md)
+[**\Shaype\Client\Model\AuthorisationHold[]**](../Model/AuthorisationHold.md)
 
 ### Authorization
 
@@ -912,7 +912,7 @@ No authorization required
 ## `makeTransferV0()`
 
 ```php
-makeTransferV0($account_id, $transfer_out_request_body): \OpenAPI\Client\Model\TransactionOutcome
+makeTransferV0($account_id, $transfer_out_request_body): \Shaype\Client\Model\TransactionOutcome
 ```
 
 Initiate Cash Transfer (DEPRECATED)
@@ -927,13 +927,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsAPIApi(
+$apiInstance = new Shaype\Client\Api\AccountsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $account_id = 'account_id_example'; // string | Account ID
-$transfer_out_request_body = new \OpenAPI\Client\Model\TransferOutRequestBody(); // \OpenAPI\Client\Model\TransferOutRequestBody
+$transfer_out_request_body = new \Shaype\Client\Model\TransferOutRequestBody(); // \Shaype\Client\Model\TransferOutRequestBody
 
 try {
     $result = $apiInstance->makeTransferV0($account_id, $transfer_out_request_body);
@@ -948,11 +948,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **account_id** | **string**| Account ID | |
-| **transfer_out_request_body** | [**\OpenAPI\Client\Model\TransferOutRequestBody**](../Model/TransferOutRequestBody.md)|  | |
+| **transfer_out_request_body** | [**\Shaype\Client\Model\TransferOutRequestBody**](../Model/TransferOutRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TransactionOutcome**](../Model/TransactionOutcome.md)
+[**\Shaype\Client\Model\TransactionOutcome**](../Model/TransactionOutcome.md)
 
 ### Authorization
 
@@ -970,7 +970,7 @@ No authorization required
 ## `makeTransferV1()`
 
 ```php
-makeTransferV1($account_id, $transfer_out_request_body): \OpenAPI\Client\Model\TransactionOutcome
+makeTransferV1($account_id, $transfer_out_request_body): \Shaype\Client\Model\TransactionOutcome
 ```
 
 Initiate Cash Transfer
@@ -983,13 +983,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsAPIApi(
+$apiInstance = new Shaype\Client\Api\AccountsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $account_id = 'account_id_example'; // string | Unique identifier (UUID) of the Account
-$transfer_out_request_body = new \OpenAPI\Client\Model\TransferOutRequestBody(); // \OpenAPI\Client\Model\TransferOutRequestBody
+$transfer_out_request_body = new \Shaype\Client\Model\TransferOutRequestBody(); // \Shaype\Client\Model\TransferOutRequestBody
 
 try {
     $result = $apiInstance->makeTransferV1($account_id, $transfer_out_request_body);
@@ -1004,11 +1004,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **account_id** | **string**| Unique identifier (UUID) of the Account | |
-| **transfer_out_request_body** | [**\OpenAPI\Client\Model\TransferOutRequestBody**](../Model/TransferOutRequestBody.md)|  | |
+| **transfer_out_request_body** | [**\Shaype\Client\Model\TransferOutRequestBody**](../Model/TransferOutRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TransactionOutcome**](../Model/TransactionOutcome.md)
+[**\Shaype\Client\Model\TransactionOutcome**](../Model/TransactionOutcome.md)
 
 ### Authorization
 
@@ -1026,7 +1026,7 @@ No authorization required
 ## `searchAccounts()`
 
 ```php
-searchAccounts($search_accounts_request_body): \OpenAPI\Client\Model\HayAccount[]
+searchAccounts($search_accounts_request_body): \Shaype\Client\Model\HayAccount[]
 ```
 
 Search accounts
@@ -1039,12 +1039,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsAPIApi(
+$apiInstance = new Shaype\Client\Api\AccountsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$search_accounts_request_body = new \OpenAPI\Client\Model\SearchAccountsRequestBody(); // \OpenAPI\Client\Model\SearchAccountsRequestBody
+$search_accounts_request_body = new \Shaype\Client\Model\SearchAccountsRequestBody(); // \Shaype\Client\Model\SearchAccountsRequestBody
 
 try {
     $result = $apiInstance->searchAccounts($search_accounts_request_body);
@@ -1058,11 +1058,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **search_accounts_request_body** | [**\OpenAPI\Client\Model\SearchAccountsRequestBody**](../Model/SearchAccountsRequestBody.md)|  | |
+| **search_accounts_request_body** | [**\Shaype\Client\Model\SearchAccountsRequestBody**](../Model/SearchAccountsRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayAccount[]**](../Model/HayAccount.md)
+[**\Shaype\Client\Model\HayAccount[]**](../Model/HayAccount.md)
 
 ### Authorization
 
@@ -1080,7 +1080,7 @@ No authorization required
 ## `setAccountLimit()`
 
 ```php
-setAccountLimit($account_id, $limit_type, $external_set_account_limit_request_body): \OpenAPI\Client\Model\ExternalSetAccountLimitResponse
+setAccountLimit($account_id, $limit_type, $external_set_account_limit_request_body): \Shaype\Client\Model\ExternalSetAccountLimitResponse
 ```
 
 Set limit for Account
@@ -1093,14 +1093,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsAPIApi(
+$apiInstance = new Shaype\Client\Api\AccountsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $account_id = 'account_id_example'; // string | Unique identifier (UUID) of the Account
 $limit_type = 'limit_type_example'; // string | Account limit. Possible values:  * **ATM_WITHDRAWAL_PER_DAY**: Maximum value of ATM cash withdrawals  * **BANK_TRANSFER_TOP_UP_PER_DAY**: Maximum value of inbound cash transfers  * **BPAY_DAILY_LIMIT**: Maximum value of outgoing BPAY payments  * **BPAY_TOP_UP_PER_DAY**: Not currently used  * **CARD_PAYMENTS_DAILY**: Maximum value of Card payments  * **CARD_TOP_UP_PER_DAY**: Not currently used  * **DIRECT_DEBIT_PER_DAY**: Maximum value of outgoing direct debit transfers  * **MAX_BALANCE**: Maximum balance that can be held in Account  * **MIN_BALANCE**: Minimum balance that can be held in Account (Shaype use only)  * **MIN_STACK_BALANCE**: Minimum balance that can be held in Stack (Shaype use only)  * **OVERDRAFT_PRODUCT_LIMIT**: Maximum overdraft value that can be applied on Account  * **PAYMENT_TO_ACCOUNT_NUMBER**: Maximum value of individual outgoing cash transfer  * **PAYMENT_TO_PAY_ID**: Not currently used  * **SINGLE_CARD_TRANSACTION**: Maximum value of individual Card payment  * **TOTAL_SPEND_PER_YEAR**: Maximum value of outgoing transfers / payments on Account in a year  * **TOP_UP_PER_DAY**: Maximum value of inbound cash transfers
-$external_set_account_limit_request_body = new \OpenAPI\Client\Model\ExternalSetAccountLimitRequestBody(); // \OpenAPI\Client\Model\ExternalSetAccountLimitRequestBody
+$external_set_account_limit_request_body = new \Shaype\Client\Model\ExternalSetAccountLimitRequestBody(); // \Shaype\Client\Model\ExternalSetAccountLimitRequestBody
 
 try {
     $result = $apiInstance->setAccountLimit($account_id, $limit_type, $external_set_account_limit_request_body);
@@ -1116,11 +1116,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **account_id** | **string**| Unique identifier (UUID) of the Account | |
 | **limit_type** | **string**| Account limit. Possible values:  * **ATM_WITHDRAWAL_PER_DAY**: Maximum value of ATM cash withdrawals  * **BANK_TRANSFER_TOP_UP_PER_DAY**: Maximum value of inbound cash transfers  * **BPAY_DAILY_LIMIT**: Maximum value of outgoing BPAY payments  * **BPAY_TOP_UP_PER_DAY**: Not currently used  * **CARD_PAYMENTS_DAILY**: Maximum value of Card payments  * **CARD_TOP_UP_PER_DAY**: Not currently used  * **DIRECT_DEBIT_PER_DAY**: Maximum value of outgoing direct debit transfers  * **MAX_BALANCE**: Maximum balance that can be held in Account  * **MIN_BALANCE**: Minimum balance that can be held in Account (Shaype use only)  * **MIN_STACK_BALANCE**: Minimum balance that can be held in Stack (Shaype use only)  * **OVERDRAFT_PRODUCT_LIMIT**: Maximum overdraft value that can be applied on Account  * **PAYMENT_TO_ACCOUNT_NUMBER**: Maximum value of individual outgoing cash transfer  * **PAYMENT_TO_PAY_ID**: Not currently used  * **SINGLE_CARD_TRANSACTION**: Maximum value of individual Card payment  * **TOTAL_SPEND_PER_YEAR**: Maximum value of outgoing transfers / payments on Account in a year  * **TOP_UP_PER_DAY**: Maximum value of inbound cash transfers | |
-| **external_set_account_limit_request_body** | [**\OpenAPI\Client\Model\ExternalSetAccountLimitRequestBody**](../Model/ExternalSetAccountLimitRequestBody.md)|  | |
+| **external_set_account_limit_request_body** | [**\Shaype\Client\Model\ExternalSetAccountLimitRequestBody**](../Model/ExternalSetAccountLimitRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ExternalSetAccountLimitResponse**](../Model/ExternalSetAccountLimitResponse.md)
+[**\Shaype\Client\Model\ExternalSetAccountLimitResponse**](../Model/ExternalSetAccountLimitResponse.md)
 
 ### Authorization
 
@@ -1138,7 +1138,7 @@ No authorization required
 ## `unblockAccount()`
 
 ```php
-unblockAccount($account_id, $unblock_account_request_body): \OpenAPI\Client\Model\GenericMessage
+unblockAccount($account_id, $unblock_account_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Unblock Account
@@ -1151,13 +1151,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsAPIApi(
+$apiInstance = new Shaype\Client\Api\AccountsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $account_id = 'account_id_example'; // string | Unique identifier (UUID) of the Account
-$unblock_account_request_body = new \OpenAPI\Client\Model\UnblockAccountRequestBody(); // \OpenAPI\Client\Model\UnblockAccountRequestBody
+$unblock_account_request_body = new \Shaype\Client\Model\UnblockAccountRequestBody(); // \Shaype\Client\Model\UnblockAccountRequestBody
 
 try {
     $result = $apiInstance->unblockAccount($account_id, $unblock_account_request_body);
@@ -1172,11 +1172,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **account_id** | **string**| Unique identifier (UUID) of the Account | |
-| **unblock_account_request_body** | [**\OpenAPI\Client\Model\UnblockAccountRequestBody**](../Model/UnblockAccountRequestBody.md)|  | |
+| **unblock_account_request_body** | [**\Shaype\Client\Model\UnblockAccountRequestBody**](../Model/UnblockAccountRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -1194,7 +1194,7 @@ No authorization required
 ## `updateMaxBalanceLimit()`
 
 ```php
-updateMaxBalanceLimit($account_id, $update_max_balance_limit_request_body): \OpenAPI\Client\Model\GenericMessage
+updateMaxBalanceLimit($account_id, $update_max_balance_limit_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Update Account max balance
@@ -1207,13 +1207,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsAPIApi(
+$apiInstance = new Shaype\Client\Api\AccountsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $account_id = 'account_id_example'; // string | Unique identifier (UUID) of the Account
-$update_max_balance_limit_request_body = new \OpenAPI\Client\Model\UpdateMaxBalanceLimitRequestBody(); // \OpenAPI\Client\Model\UpdateMaxBalanceLimitRequestBody
+$update_max_balance_limit_request_body = new \Shaype\Client\Model\UpdateMaxBalanceLimitRequestBody(); // \Shaype\Client\Model\UpdateMaxBalanceLimitRequestBody
 
 try {
     $result = $apiInstance->updateMaxBalanceLimit($account_id, $update_max_balance_limit_request_body);
@@ -1228,11 +1228,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **account_id** | **string**| Unique identifier (UUID) of the Account | |
-| **update_max_balance_limit_request_body** | [**\OpenAPI\Client\Model\UpdateMaxBalanceLimitRequestBody**](../Model/UpdateMaxBalanceLimitRequestBody.md)|  | |
+| **update_max_balance_limit_request_body** | [**\Shaype\Client\Model\UpdateMaxBalanceLimitRequestBody**](../Model/UpdateMaxBalanceLimitRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -1250,7 +1250,7 @@ No authorization required
 ## `updateOverdraftLimit()`
 
 ```php
-updateOverdraftLimit($account_id, $update_overdraft_limit_request_body): \OpenAPI\Client\Model\GenericMessage
+updateOverdraftLimit($account_id, $update_overdraft_limit_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Update Account overdraft limit
@@ -1263,13 +1263,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsAPIApi(
+$apiInstance = new Shaype\Client\Api\AccountsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $account_id = 'account_id_example'; // string | Unique identifier (UUID) of the Account
-$update_overdraft_limit_request_body = new \OpenAPI\Client\Model\UpdateOverdraftLimitRequestBody(); // \OpenAPI\Client\Model\UpdateOverdraftLimitRequestBody
+$update_overdraft_limit_request_body = new \Shaype\Client\Model\UpdateOverdraftLimitRequestBody(); // \Shaype\Client\Model\UpdateOverdraftLimitRequestBody
 
 try {
     $result = $apiInstance->updateOverdraftLimit($account_id, $update_overdraft_limit_request_body);
@@ -1284,11 +1284,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **account_id** | **string**| Unique identifier (UUID) of the Account | |
-| **update_overdraft_limit_request_body** | [**\OpenAPI\Client\Model\UpdateOverdraftLimitRequestBody**](../Model/UpdateOverdraftLimitRequestBody.md)|  | |
+| **update_overdraft_limit_request_body** | [**\Shaype\Client\Model\UpdateOverdraftLimitRequestBody**](../Model/UpdateOverdraftLimitRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 

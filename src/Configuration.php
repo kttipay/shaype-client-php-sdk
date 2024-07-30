@@ -3,7 +3,7 @@
  * Configuration
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,14 +24,14 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client;
+namespace Shaype\Client;
 
 use InvalidArgumentException;
 
 /**
  * Configuration Class Doc Comment
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -424,7 +424,7 @@ class Configuration
      */
     public static function toDebugReport(): string
     {
-        $report  = 'PHP SDK (OpenAPI\Client) Debug Report:' . PHP_EOL;
+        $report  = 'PHP SDK (Shaype\Client) Debug Report:' . PHP_EOL;
         $report .= '    OS: ' . php_uname() . PHP_EOL;
         $report .= '    PHP Version: ' . PHP_VERSION . PHP_EOL;
         $report .= '    The version of the OpenAPI document: 0.0.1' . PHP_EOL;

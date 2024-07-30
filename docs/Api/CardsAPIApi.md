@@ -1,4 +1,4 @@
-# OpenAPI\Client\CardsAPIApi
+# Shaype\Client\CardsAPIApi
 
 All URIs are relative to http://localhost:8080, except if the operation defines another base path.
 
@@ -26,7 +26,7 @@ All URIs are relative to http://localhost:8080, except if the operation defines 
 ## `activateCard()`
 
 ```php
-activateCard($card_id): \OpenAPI\Client\Model\GenericMessage
+activateCard($card_id): \Shaype\Client\Model\GenericMessage
 ```
 
 Activate Card
@@ -41,7 +41,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CardsAPIApi(
+$apiInstance = new Shaype\Client\Api\CardsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -64,7 +64,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -82,7 +82,7 @@ No authorization required
 ## `blockCard()`
 
 ```php
-blockCard($card_id, $block_card_request_body): \OpenAPI\Client\Model\GenericMessage
+blockCard($card_id, $block_card_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Block Card
@@ -95,13 +95,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CardsAPIApi(
+$apiInstance = new Shaype\Client\Api\CardsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $card_id = 'card_id_example'; // string | Unique identifier (UUID) of the Card
-$block_card_request_body = new \OpenAPI\Client\Model\BlockCardRequestBody(); // \OpenAPI\Client\Model\BlockCardRequestBody
+$block_card_request_body = new \Shaype\Client\Model\BlockCardRequestBody(); // \Shaype\Client\Model\BlockCardRequestBody
 
 try {
     $result = $apiInstance->blockCard($card_id, $block_card_request_body);
@@ -116,11 +116,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **card_id** | **string**| Unique identifier (UUID) of the Card | |
-| **block_card_request_body** | [**\OpenAPI\Client\Model\BlockCardRequestBody**](../Model/BlockCardRequestBody.md)|  | [optional] |
+| **block_card_request_body** | [**\Shaype\Client\Model\BlockCardRequestBody**](../Model/BlockCardRequestBody.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -138,7 +138,7 @@ No authorization required
 ## `cancelCard()`
 
 ```php
-cancelCard($card_id): \OpenAPI\Client\Model\GenericMessage
+cancelCard($card_id): \Shaype\Client\Model\GenericMessage
 ```
 
 Cancel Card
@@ -151,7 +151,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CardsAPIApi(
+$apiInstance = new Shaype\Client\Api\CardsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -174,7 +174,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -192,7 +192,7 @@ No authorization required
 ## `changeCardPin()`
 
 ```php
-changeCardPin($card_id, $change_card_pin_request_body): \OpenAPI\Client\Model\GenericMessage
+changeCardPin($card_id, $change_card_pin_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Change Card PIN
@@ -207,13 +207,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CardsAPIApi(
+$apiInstance = new Shaype\Client\Api\CardsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $card_id = 'card_id_example'; // string | Unique identifier (UUID) of the Card
-$change_card_pin_request_body = new \OpenAPI\Client\Model\ChangeCardPinRequestBody(); // \OpenAPI\Client\Model\ChangeCardPinRequestBody
+$change_card_pin_request_body = new \Shaype\Client\Model\ChangeCardPinRequestBody(); // \Shaype\Client\Model\ChangeCardPinRequestBody
 
 try {
     $result = $apiInstance->changeCardPin($card_id, $change_card_pin_request_body);
@@ -228,11 +228,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **card_id** | **string**| Unique identifier (UUID) of the Card | |
-| **change_card_pin_request_body** | [**\OpenAPI\Client\Model\ChangeCardPinRequestBody**](../Model/ChangeCardPinRequestBody.md)|  | |
+| **change_card_pin_request_body** | [**\Shaype\Client\Model\ChangeCardPinRequestBody**](../Model/ChangeCardPinRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -250,7 +250,7 @@ No authorization required
 ## `convertCard()`
 
 ```php
-convertCard($card_id): \OpenAPI\Client\Model\HayCard
+convertCard($card_id): \Shaype\Client\Model\HayCard
 ```
 
 Convert Card
@@ -265,7 +265,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CardsAPIApi(
+$apiInstance = new Shaype\Client\Api\CardsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -288,7 +288,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayCard**](../Model/HayCard.md)
+[**\Shaype\Client\Model\HayCard**](../Model/HayCard.md)
 
 ### Authorization
 
@@ -306,7 +306,7 @@ No authorization required
 ## `createHayCard()`
 
 ```php
-createHayCard($create_hay_card_request_body): \OpenAPI\Client\Model\HayCard
+createHayCard($create_hay_card_request_body): \Shaype\Client\Model\HayCard
 ```
 
 Create Card for Customer
@@ -319,12 +319,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CardsAPIApi(
+$apiInstance = new Shaype\Client\Api\CardsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_hay_card_request_body = new \OpenAPI\Client\Model\CreateHayCardRequestBody(); // \OpenAPI\Client\Model\CreateHayCardRequestBody
+$create_hay_card_request_body = new \Shaype\Client\Model\CreateHayCardRequestBody(); // \Shaype\Client\Model\CreateHayCardRequestBody
 
 try {
     $result = $apiInstance->createHayCard($create_hay_card_request_body);
@@ -338,11 +338,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_hay_card_request_body** | [**\OpenAPI\Client\Model\CreateHayCardRequestBody**](../Model/CreateHayCardRequestBody.md)|  | |
+| **create_hay_card_request_body** | [**\Shaype\Client\Model\CreateHayCardRequestBody**](../Model/CreateHayCardRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayCard**](../Model/HayCard.md)
+[**\Shaype\Client\Model\HayCard**](../Model/HayCard.md)
 
 ### Authorization
 
@@ -360,7 +360,7 @@ No authorization required
 ## `getCard()`
 
 ```php
-getCard($card_id): \OpenAPI\Client\Model\HayCard
+getCard($card_id): \Shaype\Client\Model\HayCard
 ```
 
 Get Card by ID
@@ -373,7 +373,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CardsAPIApi(
+$apiInstance = new Shaype\Client\Api\CardsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -396,7 +396,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayCard**](../Model/HayCard.md)
+[**\Shaype\Client\Model\HayCard**](../Model/HayCard.md)
 
 ### Authorization
 
@@ -414,7 +414,7 @@ No authorization required
 ## `getCardPinStatus()`
 
 ```php
-getCardPinStatus($card_id): \OpenAPI\Client\Model\CardPinStatus
+getCardPinStatus($card_id): \Shaype\Client\Model\CardPinStatus
 ```
 
 Get Card PIN status
@@ -429,7 +429,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CardsAPIApi(
+$apiInstance = new Shaype\Client\Api\CardsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -452,7 +452,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CardPinStatus**](../Model/CardPinStatus.md)
+[**\Shaype\Client\Model\CardPinStatus**](../Model/CardPinStatus.md)
 
 ### Authorization
 
@@ -470,7 +470,7 @@ No authorization required
 ## `getDigitalWalletDetails()`
 
 ```php
-getDigitalWalletDetails($card_id): \OpenAPI\Client\Model\DigitalWalletDetails
+getDigitalWalletDetails($card_id): \Shaype\Client\Model\DigitalWalletDetails
 ```
 
 Get wallets by Card ID
@@ -485,7 +485,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CardsAPIApi(
+$apiInstance = new Shaype\Client\Api\CardsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -508,7 +508,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DigitalWalletDetails**](../Model/DigitalWalletDetails.md)
+[**\Shaype\Client\Model\DigitalWalletDetails**](../Model/DigitalWalletDetails.md)
 
 ### Authorization
 
@@ -526,7 +526,7 @@ No authorization required
 ## `getOemProvisioningData()`
 
 ```php
-getOemProvisioningData($card_id): \OpenAPI\Client\Model\OemProvisioningData
+getOemProvisioningData($card_id): \Shaype\Client\Model\OemProvisioningData
 ```
 
 Get provisioning data by Card ID
@@ -541,7 +541,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CardsAPIApi(
+$apiInstance = new Shaype\Client\Api\CardsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -564,7 +564,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\OemProvisioningData**](../Model/OemProvisioningData.md)
+[**\Shaype\Client\Model\OemProvisioningData**](../Model/OemProvisioningData.md)
 
 ### Authorization
 
@@ -582,7 +582,7 @@ No authorization required
 ## `getPaymentPreferences()`
 
 ```php
-getPaymentPreferences($card_id): \OpenAPI\Client\Model\CardPaymentPreferences
+getPaymentPreferences($card_id): \Shaype\Client\Model\CardPaymentPreferences
 ```
 
 Get preferences by Card ID
@@ -595,7 +595,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CardsAPIApi(
+$apiInstance = new Shaype\Client\Api\CardsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -618,7 +618,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CardPaymentPreferences**](../Model/CardPaymentPreferences.md)
+[**\Shaype\Client\Model\CardPaymentPreferences**](../Model/CardPaymentPreferences.md)
 
 ### Authorization
 
@@ -636,7 +636,7 @@ No authorization required
 ## `reissueHayCard()`
 
 ```php
-reissueHayCard($card_id, $reissue_hay_card_request_body): \OpenAPI\Client\Model\HayCard
+reissueHayCard($card_id, $reissue_hay_card_request_body): \Shaype\Client\Model\HayCard
 ```
 
 Replace Card
@@ -649,13 +649,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CardsAPIApi(
+$apiInstance = new Shaype\Client\Api\CardsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $card_id = 'card_id_example'; // string | Unique identifier (UUID) of the Card
-$reissue_hay_card_request_body = new \OpenAPI\Client\Model\ReissueHayCardRequestBody(); // \OpenAPI\Client\Model\ReissueHayCardRequestBody
+$reissue_hay_card_request_body = new \Shaype\Client\Model\ReissueHayCardRequestBody(); // \Shaype\Client\Model\ReissueHayCardRequestBody
 
 try {
     $result = $apiInstance->reissueHayCard($card_id, $reissue_hay_card_request_body);
@@ -670,11 +670,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **card_id** | **string**| Unique identifier (UUID) of the Card | |
-| **reissue_hay_card_request_body** | [**\OpenAPI\Client\Model\ReissueHayCardRequestBody**](../Model/ReissueHayCardRequestBody.md)|  | |
+| **reissue_hay_card_request_body** | [**\Shaype\Client\Model\ReissueHayCardRequestBody**](../Model/ReissueHayCardRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayCard**](../Model/HayCard.md)
+[**\Shaype\Client\Model\HayCard**](../Model/HayCard.md)
 
 ### Authorization
 
@@ -692,7 +692,7 @@ No authorization required
 ## `renewCard()`
 
 ```php
-renewCard($card_id, $renew_card_request_body): \OpenAPI\Client\Model\HayCard
+renewCard($card_id, $renew_card_request_body): \Shaype\Client\Model\HayCard
 ```
 
 Renew Card
@@ -707,13 +707,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CardsAPIApi(
+$apiInstance = new Shaype\Client\Api\CardsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $card_id = 'card_id_example'; // string | Unique identifier (UUID) of the Card
-$renew_card_request_body = new \OpenAPI\Client\Model\RenewCardRequestBody(); // \OpenAPI\Client\Model\RenewCardRequestBody
+$renew_card_request_body = new \Shaype\Client\Model\RenewCardRequestBody(); // \Shaype\Client\Model\RenewCardRequestBody
 
 try {
     $result = $apiInstance->renewCard($card_id, $renew_card_request_body);
@@ -728,11 +728,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **card_id** | **string**| Unique identifier (UUID) of the Card | |
-| **renew_card_request_body** | [**\OpenAPI\Client\Model\RenewCardRequestBody**](../Model/RenewCardRequestBody.md)|  | |
+| **renew_card_request_body** | [**\Shaype\Client\Model\RenewCardRequestBody**](../Model/RenewCardRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayCard**](../Model/HayCard.md)
+[**\Shaype\Client\Model\HayCard**](../Model/HayCard.md)
 
 ### Authorization
 
@@ -750,7 +750,7 @@ No authorization required
 ## `rewards()`
 
 ```php
-rewards($card_id, $card_rewards_status_body): \OpenAPI\Client\Model\CardRewardsStatusBody
+rewards($card_id, $card_rewards_status_body): \Shaype\Client\Model\CardRewardsStatusBody
 ```
 
 Enrol card to rewards
@@ -765,13 +765,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CardsAPIApi(
+$apiInstance = new Shaype\Client\Api\CardsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $card_id = 'card_id_example'; // string | Unique identifier (UUID) of the Card
-$card_rewards_status_body = new \OpenAPI\Client\Model\CardRewardsStatusBody(); // \OpenAPI\Client\Model\CardRewardsStatusBody
+$card_rewards_status_body = new \Shaype\Client\Model\CardRewardsStatusBody(); // \Shaype\Client\Model\CardRewardsStatusBody
 
 try {
     $result = $apiInstance->rewards($card_id, $card_rewards_status_body);
@@ -786,11 +786,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **card_id** | **string**| Unique identifier (UUID) of the Card | |
-| **card_rewards_status_body** | [**\OpenAPI\Client\Model\CardRewardsStatusBody**](../Model/CardRewardsStatusBody.md)|  | |
+| **card_rewards_status_body** | [**\Shaype\Client\Model\CardRewardsStatusBody**](../Model/CardRewardsStatusBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CardRewardsStatusBody**](../Model/CardRewardsStatusBody.md)
+[**\Shaype\Client\Model\CardRewardsStatusBody**](../Model/CardRewardsStatusBody.md)
 
 ### Authorization
 
@@ -808,7 +808,7 @@ No authorization required
 ## `unblockCard()`
 
 ```php
-unblockCard($card_id, $unblock_card_request_body): \OpenAPI\Client\Model\GenericMessage
+unblockCard($card_id, $unblock_card_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Unblock Card
@@ -821,13 +821,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CardsAPIApi(
+$apiInstance = new Shaype\Client\Api\CardsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $card_id = 'card_id_example'; // string | Unique identifier (UUID) of the Card
-$unblock_card_request_body = new \OpenAPI\Client\Model\UnblockCardRequestBody(); // \OpenAPI\Client\Model\UnblockCardRequestBody
+$unblock_card_request_body = new \Shaype\Client\Model\UnblockCardRequestBody(); // \Shaype\Client\Model\UnblockCardRequestBody
 
 try {
     $result = $apiInstance->unblockCard($card_id, $unblock_card_request_body);
@@ -842,11 +842,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **card_id** | **string**| Unique identifier (UUID) of the Card | |
-| **unblock_card_request_body** | [**\OpenAPI\Client\Model\UnblockCardRequestBody**](../Model/UnblockCardRequestBody.md)|  | |
+| **unblock_card_request_body** | [**\Shaype\Client\Model\UnblockCardRequestBody**](../Model/UnblockCardRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -864,7 +864,7 @@ No authorization required
 ## `unblockCardPin()`
 
 ```php
-unblockCardPin($card_id): \OpenAPI\Client\Model\GenericMessage
+unblockCardPin($card_id): \Shaype\Client\Model\GenericMessage
 ```
 
 Unblock Card PIN
@@ -879,7 +879,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CardsAPIApi(
+$apiInstance = new Shaype\Client\Api\CardsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -902,7 +902,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -920,7 +920,7 @@ No authorization required
 ## `updatePaymentPreferences()`
 
 ```php
-updatePaymentPreferences($card_id, $update_payment_preferences_request_body): \OpenAPI\Client\Model\CardPaymentPreferences
+updatePaymentPreferences($card_id, $update_payment_preferences_request_body): \Shaype\Client\Model\CardPaymentPreferences
 ```
 
 Update Card preferences
@@ -935,13 +935,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CardsAPIApi(
+$apiInstance = new Shaype\Client\Api\CardsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $card_id = 'card_id_example'; // string | Unique identifier (UUID) of the Card
-$update_payment_preferences_request_body = new \OpenAPI\Client\Model\UpdatePaymentPreferencesRequestBody(); // \OpenAPI\Client\Model\UpdatePaymentPreferencesRequestBody
+$update_payment_preferences_request_body = new \Shaype\Client\Model\UpdatePaymentPreferencesRequestBody(); // \Shaype\Client\Model\UpdatePaymentPreferencesRequestBody
 
 try {
     $result = $apiInstance->updatePaymentPreferences($card_id, $update_payment_preferences_request_body);
@@ -956,11 +956,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **card_id** | **string**| Unique identifier (UUID) of the Card | |
-| **update_payment_preferences_request_body** | [**\OpenAPI\Client\Model\UpdatePaymentPreferencesRequestBody**](../Model/UpdatePaymentPreferencesRequestBody.md)|  | |
+| **update_payment_preferences_request_body** | [**\Shaype\Client\Model\UpdatePaymentPreferencesRequestBody**](../Model/UpdatePaymentPreferencesRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CardPaymentPreferences**](../Model/CardPaymentPreferences.md)
+[**\Shaype\Client\Model\CardPaymentPreferences**](../Model/CardPaymentPreferences.md)
 
 ### Authorization
 

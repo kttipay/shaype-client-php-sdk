@@ -1,4 +1,4 @@
-# OpenAPI\Client\UtilitiesAPIApi
+# Shaype\Client\UtilitiesAPIApi
 
 All URIs are relative to http://localhost:8080, except if the operation defines another base path.
 
@@ -31,12 +31,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UtilitiesAPIApi(
+$apiInstance = new Shaype\Client\Api\UtilitiesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_stub_for_mandate_search_payment_instructions_request_body = new \OpenAPI\Client\Model\CreateStubForMandateSearchPaymentInstructionsRequestBody(); // \OpenAPI\Client\Model\CreateStubForMandateSearchPaymentInstructionsRequestBody
+$create_stub_for_mandate_search_payment_instructions_request_body = new \Shaype\Client\Model\CreateStubForMandateSearchPaymentInstructionsRequestBody(); // \Shaype\Client\Model\CreateStubForMandateSearchPaymentInstructionsRequestBody
 
 try {
     $apiInstance->createStubForMandateSearchPaymentInstructions($create_stub_for_mandate_search_payment_instructions_request_body);
@@ -49,7 +49,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_stub_for_mandate_search_payment_instructions_request_body** | [**\OpenAPI\Client\Model\CreateStubForMandateSearchPaymentInstructionsRequestBody**](../Model/CreateStubForMandateSearchPaymentInstructionsRequestBody.md)|  | |
+| **create_stub_for_mandate_search_payment_instructions_request_body** | [**\Shaype\Client\Model\CreateStubForMandateSearchPaymentInstructionsRequestBody**](../Model/CreateStubForMandateSearchPaymentInstructionsRequestBody.md)|  | |
 
 ### Return type
 
@@ -71,7 +71,7 @@ No authorization required
 ## `generateAtmTransaction()`
 
 ```php
-generateAtmTransaction($generate_card_transaction_request_body): \OpenAPI\Client\Model\GenericMessage
+generateAtmTransaction($generate_card_transaction_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Trigger mock ATM card transaction
@@ -86,12 +86,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UtilitiesAPIApi(
+$apiInstance = new Shaype\Client\Api\UtilitiesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$generate_card_transaction_request_body = new \OpenAPI\Client\Model\GenerateCardTransactionRequestBody(); // \OpenAPI\Client\Model\GenerateCardTransactionRequestBody
+$generate_card_transaction_request_body = new \Shaype\Client\Model\GenerateCardTransactionRequestBody(); // \Shaype\Client\Model\GenerateCardTransactionRequestBody
 
 try {
     $result = $apiInstance->generateAtmTransaction($generate_card_transaction_request_body);
@@ -105,11 +105,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **generate_card_transaction_request_body** | [**\OpenAPI\Client\Model\GenerateCardTransactionRequestBody**](../Model/GenerateCardTransactionRequestBody.md)|  | |
+| **generate_card_transaction_request_body** | [**\Shaype\Client\Model\GenerateCardTransactionRequestBody**](../Model/GenerateCardTransactionRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -127,7 +127,7 @@ No authorization required
 ## `generateAuthHold()`
 
 ```php
-generateAuthHold($generate_card_transaction_request_body): \OpenAPI\Client\Model\GenericMessage
+generateAuthHold($generate_card_transaction_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Trigger mock card Hold
@@ -142,12 +142,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UtilitiesAPIApi(
+$apiInstance = new Shaype\Client\Api\UtilitiesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$generate_card_transaction_request_body = new \OpenAPI\Client\Model\GenerateCardTransactionRequestBody(); // \OpenAPI\Client\Model\GenerateCardTransactionRequestBody
+$generate_card_transaction_request_body = new \Shaype\Client\Model\GenerateCardTransactionRequestBody(); // \Shaype\Client\Model\GenerateCardTransactionRequestBody
 
 try {
     $result = $apiInstance->generateAuthHold($generate_card_transaction_request_body);
@@ -161,11 +161,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **generate_card_transaction_request_body** | [**\OpenAPI\Client\Model\GenerateCardTransactionRequestBody**](../Model/GenerateCardTransactionRequestBody.md)|  | |
+| **generate_card_transaction_request_body** | [**\Shaype\Client\Model\GenerateCardTransactionRequestBody**](../Model/GenerateCardTransactionRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -183,7 +183,7 @@ No authorization required
 ## `generateCardTransaction()`
 
 ```php
-generateCardTransaction($generate_hold_and_card_transaction_request_body): \OpenAPI\Client\Model\GenericMessage
+generateCardTransaction($generate_hold_and_card_transaction_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Trigger mock card Hold and Settlement
@@ -198,12 +198,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UtilitiesAPIApi(
+$apiInstance = new Shaype\Client\Api\UtilitiesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$generate_hold_and_card_transaction_request_body = new \OpenAPI\Client\Model\GenerateHoldAndCardTransactionRequestBody(); // \OpenAPI\Client\Model\GenerateHoldAndCardTransactionRequestBody
+$generate_hold_and_card_transaction_request_body = new \Shaype\Client\Model\GenerateHoldAndCardTransactionRequestBody(); // \Shaype\Client\Model\GenerateHoldAndCardTransactionRequestBody
 
 try {
     $result = $apiInstance->generateCardTransaction($generate_hold_and_card_transaction_request_body);
@@ -217,11 +217,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **generate_hold_and_card_transaction_request_body** | [**\OpenAPI\Client\Model\GenerateHoldAndCardTransactionRequestBody**](../Model/GenerateHoldAndCardTransactionRequestBody.md)|  | |
+| **generate_hold_and_card_transaction_request_body** | [**\Shaype\Client\Model\GenerateHoldAndCardTransactionRequestBody**](../Model/GenerateHoldAndCardTransactionRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -239,7 +239,7 @@ No authorization required
 ## `generateInboundNppTransaction()`
 
 ```php
-generateInboundNppTransaction($generate_inbound_npp_transaction_request_body): \OpenAPI\Client\Model\GenericMessage
+generateInboundNppTransaction($generate_inbound_npp_transaction_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Generate mock NPP inbound transaction.
@@ -252,12 +252,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UtilitiesAPIApi(
+$apiInstance = new Shaype\Client\Api\UtilitiesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$generate_inbound_npp_transaction_request_body = new \OpenAPI\Client\Model\GenerateInboundNppTransactionRequestBody(); // \OpenAPI\Client\Model\GenerateInboundNppTransactionRequestBody
+$generate_inbound_npp_transaction_request_body = new \Shaype\Client\Model\GenerateInboundNppTransactionRequestBody(); // \Shaype\Client\Model\GenerateInboundNppTransactionRequestBody
 
 try {
     $result = $apiInstance->generateInboundNppTransaction($generate_inbound_npp_transaction_request_body);
@@ -271,11 +271,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **generate_inbound_npp_transaction_request_body** | [**\OpenAPI\Client\Model\GenerateInboundNppTransactionRequestBody**](../Model/GenerateInboundNppTransactionRequestBody.md)|  | |
+| **generate_inbound_npp_transaction_request_body** | [**\Shaype\Client\Model\GenerateInboundNppTransactionRequestBody**](../Model/GenerateInboundNppTransactionRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -293,7 +293,7 @@ No authorization required
 ## `generateInboundNppTransactionV2()`
 
 ```php
-generateInboundNppTransactionV2($generate_rap_request_body): \OpenAPI\Client\Model\GenericMessage
+generateInboundNppTransactionV2($generate_rap_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Generate mock NPP inbound transaction v2.
@@ -306,12 +306,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UtilitiesAPIApi(
+$apiInstance = new Shaype\Client\Api\UtilitiesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$generate_rap_request_body = new \OpenAPI\Client\Model\GenerateRapRequestBody(); // \OpenAPI\Client\Model\GenerateRapRequestBody
+$generate_rap_request_body = new \Shaype\Client\Model\GenerateRapRequestBody(); // \Shaype\Client\Model\GenerateRapRequestBody
 
 try {
     $result = $apiInstance->generateInboundNppTransactionV2($generate_rap_request_body);
@@ -325,11 +325,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **generate_rap_request_body** | [**\OpenAPI\Client\Model\GenerateRapRequestBody**](../Model/GenerateRapRequestBody.md)|  | |
+| **generate_rap_request_body** | [**\Shaype\Client\Model\GenerateRapRequestBody**](../Model/GenerateRapRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -347,7 +347,7 @@ No authorization required
 ## `generateMandateNotificationForInitiator()`
 
 ```php
-generateMandateNotificationForInitiator($generate_initiator_mandate_notification_request_body): \OpenAPI\Client\Model\GenericMessage
+generateMandateNotificationForInitiator($generate_initiator_mandate_notification_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Generate mock Mandate notification for Initiator.
@@ -360,12 +360,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UtilitiesAPIApi(
+$apiInstance = new Shaype\Client\Api\UtilitiesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$generate_initiator_mandate_notification_request_body = new \OpenAPI\Client\Model\GenerateInitiatorMandateNotificationRequestBody(); // \OpenAPI\Client\Model\GenerateInitiatorMandateNotificationRequestBody
+$generate_initiator_mandate_notification_request_body = new \Shaype\Client\Model\GenerateInitiatorMandateNotificationRequestBody(); // \Shaype\Client\Model\GenerateInitiatorMandateNotificationRequestBody
 
 try {
     $result = $apiInstance->generateMandateNotificationForInitiator($generate_initiator_mandate_notification_request_body);
@@ -379,11 +379,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **generate_initiator_mandate_notification_request_body** | [**\OpenAPI\Client\Model\GenerateInitiatorMandateNotificationRequestBody**](../Model/GenerateInitiatorMandateNotificationRequestBody.md)|  | |
+| **generate_initiator_mandate_notification_request_body** | [**\Shaype\Client\Model\GenerateInitiatorMandateNotificationRequestBody**](../Model/GenerateInitiatorMandateNotificationRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -401,7 +401,7 @@ No authorization required
 ## `generateMandateNotificationForPayer()`
 
 ```php
-generateMandateNotificationForPayer($generate_payer_mandate_notification_request_body): \OpenAPI\Client\Model\GenericMessage
+generateMandateNotificationForPayer($generate_payer_mandate_notification_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Generate mock Mandate notification for Payer.
@@ -414,12 +414,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UtilitiesAPIApi(
+$apiInstance = new Shaype\Client\Api\UtilitiesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$generate_payer_mandate_notification_request_body = new \OpenAPI\Client\Model\GeneratePayerMandateNotificationRequestBody(); // \OpenAPI\Client\Model\GeneratePayerMandateNotificationRequestBody
+$generate_payer_mandate_notification_request_body = new \Shaype\Client\Model\GeneratePayerMandateNotificationRequestBody(); // \Shaype\Client\Model\GeneratePayerMandateNotificationRequestBody
 
 try {
     $result = $apiInstance->generateMandateNotificationForPayer($generate_payer_mandate_notification_request_body);
@@ -433,11 +433,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **generate_payer_mandate_notification_request_body** | [**\OpenAPI\Client\Model\GeneratePayerMandateNotificationRequestBody**](../Model/GeneratePayerMandateNotificationRequestBody.md)|  | |
+| **generate_payer_mandate_notification_request_body** | [**\Shaype\Client\Model\GeneratePayerMandateNotificationRequestBody**](../Model/GeneratePayerMandateNotificationRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -455,7 +455,7 @@ No authorization required
 ## `generateReceiveAPaymentInstruction()`
 
 ```php
-generateReceiveAPaymentInstruction($generate_rapain_request_body): \OpenAPI\Client\Model\GenericMessage
+generateReceiveAPaymentInstruction($generate_rapain_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Generate mock Receive A Payment Instruction (RAPAIN).
@@ -468,12 +468,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UtilitiesAPIApi(
+$apiInstance = new Shaype\Client\Api\UtilitiesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$generate_rapain_request_body = new \OpenAPI\Client\Model\GenerateRapainRequestBody(); // \OpenAPI\Client\Model\GenerateRapainRequestBody
+$generate_rapain_request_body = new \Shaype\Client\Model\GenerateRapainRequestBody(); // \Shaype\Client\Model\GenerateRapainRequestBody
 
 try {
     $result = $apiInstance->generateReceiveAPaymentInstruction($generate_rapain_request_body);
@@ -487,11 +487,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **generate_rapain_request_body** | [**\OpenAPI\Client\Model\GenerateRapainRequestBody**](../Model/GenerateRapainRequestBody.md)|  | |
+| **generate_rapain_request_body** | [**\Shaype\Client\Model\GenerateRapainRequestBody**](../Model/GenerateRapainRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 

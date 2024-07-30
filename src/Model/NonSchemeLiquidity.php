@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * NonSchemeLiquidity Class Doc Comment
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -58,10 +58,10 @@ class NonSchemeLiquidity implements ModelInterface, ArrayAccess, JsonSerializabl
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'bpay' => '\OpenAPI\Client\Model\BPayLiquidity',
-        'direct_entry' => '\OpenAPI\Client\Model\DirectEntryLiquidity',
-        'haas' => '\OpenAPI\Client\Model\HaasLiquidity',
-        'npp' => '\OpenAPI\Client\Model\NppLiquidity',
+        'bpay' => '\Shaype\Client\Model\BPayLiquidity',
+        'direct_entry' => '\Shaype\Client\Model\DirectEntryLiquidity',
+        'haas' => '\Shaype\Client\Model\HaasLiquidity',
+        'npp' => '\Shaype\Client\Model\NppLiquidity',
         'total' => 'float'
     ];
 
@@ -333,9 +333,9 @@ class NonSchemeLiquidity implements ModelInterface, ArrayAccess, JsonSerializabl
     /**
      * Gets bpay
      *
-     * @return \OpenAPI\Client\Model\BPayLiquidity
+     * @return \Shaype\Client\Model\BPayLiquidity
      */
-    public function getBpay(): \OpenAPI\Client\Model\BPayLiquidity
+    public function getBpay(): \Shaype\Client\Model\BPayLiquidity
     {
         return $this->container['bpay'];
     }
@@ -343,11 +343,11 @@ class NonSchemeLiquidity implements ModelInterface, ArrayAccess, JsonSerializabl
     /**
      * Sets bpay
      *
-     * @param \OpenAPI\Client\Model\BPayLiquidity $bpay bpay
+     * @param \Shaype\Client\Model\BPayLiquidity $bpay bpay
      *
      * @return $this
      */
-    public function setBpay(\OpenAPI\Client\Model\BPayLiquidity $bpay): static
+    public function setBpay(\Shaype\Client\Model\BPayLiquidity $bpay): static
     {
         if (is_null($bpay)) {
             throw new InvalidArgumentException('non-nullable bpay cannot be null');
@@ -360,9 +360,9 @@ class NonSchemeLiquidity implements ModelInterface, ArrayAccess, JsonSerializabl
     /**
      * Gets direct_entry
      *
-     * @return \OpenAPI\Client\Model\DirectEntryLiquidity
+     * @return \Shaype\Client\Model\DirectEntryLiquidity
      */
-    public function getDirectEntry(): \OpenAPI\Client\Model\DirectEntryLiquidity
+    public function getDirectEntry(): \Shaype\Client\Model\DirectEntryLiquidity
     {
         return $this->container['direct_entry'];
     }
@@ -370,11 +370,11 @@ class NonSchemeLiquidity implements ModelInterface, ArrayAccess, JsonSerializabl
     /**
      * Sets direct_entry
      *
-     * @param \OpenAPI\Client\Model\DirectEntryLiquidity $direct_entry direct_entry
+     * @param \Shaype\Client\Model\DirectEntryLiquidity $direct_entry direct_entry
      *
      * @return $this
      */
-    public function setDirectEntry(\OpenAPI\Client\Model\DirectEntryLiquidity $direct_entry): static
+    public function setDirectEntry(\Shaype\Client\Model\DirectEntryLiquidity $direct_entry): static
     {
         if (is_null($direct_entry)) {
             throw new InvalidArgumentException('non-nullable direct_entry cannot be null');
@@ -387,9 +387,9 @@ class NonSchemeLiquidity implements ModelInterface, ArrayAccess, JsonSerializabl
     /**
      * Gets haas
      *
-     * @return \OpenAPI\Client\Model\HaasLiquidity
+     * @return \Shaype\Client\Model\HaasLiquidity
      */
-    public function getHaas(): \OpenAPI\Client\Model\HaasLiquidity
+    public function getHaas(): \Shaype\Client\Model\HaasLiquidity
     {
         return $this->container['haas'];
     }
@@ -397,11 +397,11 @@ class NonSchemeLiquidity implements ModelInterface, ArrayAccess, JsonSerializabl
     /**
      * Sets haas
      *
-     * @param \OpenAPI\Client\Model\HaasLiquidity $haas haas
+     * @param \Shaype\Client\Model\HaasLiquidity $haas haas
      *
      * @return $this
      */
-    public function setHaas(\OpenAPI\Client\Model\HaasLiquidity $haas): static
+    public function setHaas(\Shaype\Client\Model\HaasLiquidity $haas): static
     {
         if (is_null($haas)) {
             throw new InvalidArgumentException('non-nullable haas cannot be null');
@@ -414,9 +414,9 @@ class NonSchemeLiquidity implements ModelInterface, ArrayAccess, JsonSerializabl
     /**
      * Gets npp
      *
-     * @return \OpenAPI\Client\Model\NppLiquidity
+     * @return \Shaype\Client\Model\NppLiquidity
      */
-    public function getNpp(): \OpenAPI\Client\Model\NppLiquidity
+    public function getNpp(): \Shaype\Client\Model\NppLiquidity
     {
         return $this->container['npp'];
     }
@@ -424,11 +424,11 @@ class NonSchemeLiquidity implements ModelInterface, ArrayAccess, JsonSerializabl
     /**
      * Sets npp
      *
-     * @param \OpenAPI\Client\Model\NppLiquidity $npp npp
+     * @param \Shaype\Client\Model\NppLiquidity $npp npp
      *
      * @return $this
      */
-    public function setNpp(\OpenAPI\Client\Model\NppLiquidity $npp): static
+    public function setNpp(\Shaype\Client\Model\NppLiquidity $npp): static
     {
         if (is_null($npp)) {
             throw new InvalidArgumentException('non-nullable npp cannot be null');

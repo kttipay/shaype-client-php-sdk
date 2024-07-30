@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * HayCustomer Class Doc Comment
  *
  * @description Details of a customer
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -59,13 +59,13 @@ class HayCustomer implements ModelInterface, ArrayAccess, JsonSerializable
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'address' => '\OpenAPI\Client\Model\Address',
+        'address' => '\Shaype\Client\Model\Address',
         'approved_date_time_utc' => '\DateTime',
         'blocked_by' => 'string',
         'client_reference' => 'string',
         'closed_date_time_utc' => '\DateTime',
         'creation_date_time_utc' => '\DateTime',
-        'customer_details' => '\OpenAPI\Client\Model\CustomerDetails',
+        'customer_details' => '\Shaype\Client\Model\CustomerDetails',
         'customer_hay_id' => 'string',
         'device_id' => 'string',
         'device_os' => 'string',
@@ -77,7 +77,7 @@ class HayCustomer implements ModelInterface, ArrayAccess, JsonSerializable
         'identity_document_region' => 'string',
         'identity_document_type' => 'string',
         'last_updated_date_time_utc' => '\DateTime',
-        'phone_number' => '\OpenAPI\Client\Model\PhoneNumber',
+        'phone_number' => '\Shaype\Client\Model\PhoneNumber',
         'status' => 'string',
         'tier' => 'string'
     ];
@@ -561,9 +561,9 @@ class HayCustomer implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Gets address
      *
-     * @return \OpenAPI\Client\Model\Address|null
+     * @return \Shaype\Client\Model\Address|null
      */
-    public function getAddress(): ?\OpenAPI\Client\Model\Address
+    public function getAddress(): ?\Shaype\Client\Model\Address
     {
         return $this->container['address'];
     }
@@ -571,11 +571,11 @@ class HayCustomer implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Sets address
      *
-     * @param \OpenAPI\Client\Model\Address|null $address address
+     * @param \Shaype\Client\Model\Address|null $address address
      *
      * @return $this
      */
-    public function setAddress(?\OpenAPI\Client\Model\Address $address): static
+    public function setAddress(?\Shaype\Client\Model\Address $address): static
     {
         if (is_null($address)) {
             throw new InvalidArgumentException('non-nullable address cannot be null');
@@ -733,9 +733,9 @@ class HayCustomer implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Gets customer_details
      *
-     * @return \OpenAPI\Client\Model\CustomerDetails|null
+     * @return \Shaype\Client\Model\CustomerDetails|null
      */
-    public function getCustomerDetails(): ?\OpenAPI\Client\Model\CustomerDetails
+    public function getCustomerDetails(): ?\Shaype\Client\Model\CustomerDetails
     {
         return $this->container['customer_details'];
     }
@@ -743,11 +743,11 @@ class HayCustomer implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Sets customer_details
      *
-     * @param \OpenAPI\Client\Model\CustomerDetails|null $customer_details customer_details
+     * @param \Shaype\Client\Model\CustomerDetails|null $customer_details customer_details
      *
      * @return $this
      */
-    public function setCustomerDetails(?\OpenAPI\Client\Model\CustomerDetails $customer_details): static
+    public function setCustomerDetails(?\Shaype\Client\Model\CustomerDetails $customer_details): static
     {
         if (is_null($customer_details)) {
             throw new InvalidArgumentException('non-nullable customer_details cannot be null');
@@ -1077,9 +1077,9 @@ class HayCustomer implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Gets phone_number
      *
-     * @return \OpenAPI\Client\Model\PhoneNumber|null
+     * @return \Shaype\Client\Model\PhoneNumber|null
      */
-    public function getPhoneNumber(): ?\OpenAPI\Client\Model\PhoneNumber
+    public function getPhoneNumber(): ?\Shaype\Client\Model\PhoneNumber
     {
         return $this->container['phone_number'];
     }
@@ -1087,11 +1087,11 @@ class HayCustomer implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Sets phone_number
      *
-     * @param \OpenAPI\Client\Model\PhoneNumber|null $phone_number phone_number
+     * @param \Shaype\Client\Model\PhoneNumber|null $phone_number phone_number
      *
      * @return $this
      */
-    public function setPhoneNumber(?\OpenAPI\Client\Model\PhoneNumber $phone_number): static
+    public function setPhoneNumber(?\Shaype\Client\Model\PhoneNumber $phone_number): static
     {
         if (is_null($phone_number)) {
             throw new InvalidArgumentException('non-nullable phone_number cannot be null');

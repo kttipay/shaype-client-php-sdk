@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * GenerateInitiatorMandateNotificationRequestBody Class Doc Comment
  *
  * @description Body of a request to notify initiator about mandate operation preformed.
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class GenerateInitiatorMandateNotificationRequestBody implements ModelInterface,
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'action_details' => '\OpenAPI\Client\Model\GenerateMandateNotificationActionDetailsDto',
-        'mandate_details' => '\OpenAPI\Client\Model\GenerateMandateNotificationMandateDetailsDto',
+        'action_details' => '\Shaype\Client\Model\GenerateMandateNotificationActionDetailsDto',
+        'mandate_details' => '\Shaype\Client\Model\GenerateMandateNotificationMandateDetailsDto',
         'trigger' => 'string'
     ];
 
@@ -344,9 +344,9 @@ class GenerateInitiatorMandateNotificationRequestBody implements ModelInterface,
     /**
      * Gets action_details
      *
-     * @return \OpenAPI\Client\Model\GenerateMandateNotificationActionDetailsDto
+     * @return \Shaype\Client\Model\GenerateMandateNotificationActionDetailsDto
      */
-    public function getActionDetails(): \OpenAPI\Client\Model\GenerateMandateNotificationActionDetailsDto
+    public function getActionDetails(): \Shaype\Client\Model\GenerateMandateNotificationActionDetailsDto
     {
         return $this->container['action_details'];
     }
@@ -354,11 +354,11 @@ class GenerateInitiatorMandateNotificationRequestBody implements ModelInterface,
     /**
      * Sets action_details
      *
-     * @param \OpenAPI\Client\Model\GenerateMandateNotificationActionDetailsDto $action_details action_details
+     * @param \Shaype\Client\Model\GenerateMandateNotificationActionDetailsDto $action_details action_details
      *
      * @return $this
      */
-    public function setActionDetails(\OpenAPI\Client\Model\GenerateMandateNotificationActionDetailsDto $action_details): static
+    public function setActionDetails(\Shaype\Client\Model\GenerateMandateNotificationActionDetailsDto $action_details): static
     {
         if (is_null($action_details)) {
             throw new InvalidArgumentException('non-nullable action_details cannot be null');
@@ -371,9 +371,9 @@ class GenerateInitiatorMandateNotificationRequestBody implements ModelInterface,
     /**
      * Gets mandate_details
      *
-     * @return \OpenAPI\Client\Model\GenerateMandateNotificationMandateDetailsDto
+     * @return \Shaype\Client\Model\GenerateMandateNotificationMandateDetailsDto
      */
-    public function getMandateDetails(): \OpenAPI\Client\Model\GenerateMandateNotificationMandateDetailsDto
+    public function getMandateDetails(): \Shaype\Client\Model\GenerateMandateNotificationMandateDetailsDto
     {
         return $this->container['mandate_details'];
     }
@@ -381,11 +381,11 @@ class GenerateInitiatorMandateNotificationRequestBody implements ModelInterface,
     /**
      * Sets mandate_details
      *
-     * @param \OpenAPI\Client\Model\GenerateMandateNotificationMandateDetailsDto $mandate_details mandate_details
+     * @param \Shaype\Client\Model\GenerateMandateNotificationMandateDetailsDto $mandate_details mandate_details
      *
      * @return $this
      */
-    public function setMandateDetails(\OpenAPI\Client\Model\GenerateMandateNotificationMandateDetailsDto $mandate_details): static
+    public function setMandateDetails(\Shaype\Client\Model\GenerateMandateNotificationMandateDetailsDto $mandate_details): static
     {
         if (is_null($mandate_details)) {
             throw new InvalidArgumentException('non-nullable mandate_details cannot be null');

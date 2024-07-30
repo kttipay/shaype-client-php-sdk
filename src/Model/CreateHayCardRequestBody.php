@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * CreateHayCardRequestBody Class Doc Comment
  *
  * @description Body of a request to issue a card for a customer
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -63,12 +63,12 @@ class CreateHayCardRequestBody implements ModelInterface, ArrayAccess, JsonSeria
         'card_sub_design' => 'string',
         'card_type' => 'string',
         'customer_hay_id' => 'string',
-        'delivery_address' => '\OpenAPI\Client\Model\Address',
+        'delivery_address' => '\Shaype\Client\Model\Address',
         'email' => 'string',
         'first_name' => 'string',
         'idempotency_key' => 'string',
         'last_name' => 'string',
-        'phone_number' => '\OpenAPI\Client\Model\PhoneNumber',
+        'phone_number' => '\Shaype\Client\Model\PhoneNumber',
         'pin' => 'string',
         'title' => 'string'
     ];
@@ -587,9 +587,9 @@ class CreateHayCardRequestBody implements ModelInterface, ArrayAccess, JsonSeria
     /**
      * Gets delivery_address
      *
-     * @return \OpenAPI\Client\Model\Address
+     * @return \Shaype\Client\Model\Address
      */
-    public function getDeliveryAddress(): \OpenAPI\Client\Model\Address
+    public function getDeliveryAddress(): \Shaype\Client\Model\Address
     {
         return $this->container['delivery_address'];
     }
@@ -597,11 +597,11 @@ class CreateHayCardRequestBody implements ModelInterface, ArrayAccess, JsonSeria
     /**
      * Sets delivery_address
      *
-     * @param \OpenAPI\Client\Model\Address $delivery_address delivery_address
+     * @param \Shaype\Client\Model\Address $delivery_address delivery_address
      *
      * @return $this
      */
-    public function setDeliveryAddress(\OpenAPI\Client\Model\Address $delivery_address): static
+    public function setDeliveryAddress(\Shaype\Client\Model\Address $delivery_address): static
     {
         if (is_null($delivery_address)) {
             throw new InvalidArgumentException('non-nullable delivery_address cannot be null');
@@ -722,9 +722,9 @@ class CreateHayCardRequestBody implements ModelInterface, ArrayAccess, JsonSeria
     /**
      * Gets phone_number
      *
-     * @return \OpenAPI\Client\Model\PhoneNumber
+     * @return \Shaype\Client\Model\PhoneNumber
      */
-    public function getPhoneNumber(): \OpenAPI\Client\Model\PhoneNumber
+    public function getPhoneNumber(): \Shaype\Client\Model\PhoneNumber
     {
         return $this->container['phone_number'];
     }
@@ -732,11 +732,11 @@ class CreateHayCardRequestBody implements ModelInterface, ArrayAccess, JsonSeria
     /**
      * Sets phone_number
      *
-     * @param \OpenAPI\Client\Model\PhoneNumber $phone_number phone_number
+     * @param \Shaype\Client\Model\PhoneNumber $phone_number phone_number
      *
      * @return $this
      */
-    public function setPhoneNumber(\OpenAPI\Client\Model\PhoneNumber $phone_number): static
+    public function setPhoneNumber(\Shaype\Client\Model\PhoneNumber $phone_number): static
     {
         if (is_null($phone_number)) {
             throw new InvalidArgumentException('non-nullable phone_number cannot be null');

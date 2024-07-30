@@ -3,7 +3,7 @@
  * HoldsAPIApi
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Shaype\Client\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ApiException;
+use Shaype\Client\Configuration;
+use Shaype\Client\HeaderSelector;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * HoldsAPIApi Class Doc Comment
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -132,12 +132,12 @@ class HoldsAPIApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AuthorisationHold|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\AuthorisationHold|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function getAuthorisationHold(
         string $hold_id,
         string $contentType = self::contentTypes['getAuthorisationHold'][0]
-    ): \OpenAPI\Client\Model\AuthorisationHold
+    ): \Shaype\Client\Model\AuthorisationHold
     {
         list($response) = $this->getAuthorisationHoldWithHttpInfo($hold_id, $contentType);
         return $response;
@@ -153,7 +153,7 @@ class HoldsAPIApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AuthorisationHold|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\AuthorisationHold|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAuthorisationHoldWithHttpInfo(
         string $hold_id,
@@ -199,11 +199,11 @@ class HoldsAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AuthorisationHold' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\AuthorisationHold' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AuthorisationHold' !== 'string') {
+                        if ('\Shaype\Client\Model\AuthorisationHold' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -221,16 +221,16 @@ class HoldsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AuthorisationHold', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\AuthorisationHold', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -248,16 +248,16 @@ class HoldsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -275,16 +275,16 @@ class HoldsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -302,16 +302,16 @@ class HoldsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -329,16 +329,16 @@ class HoldsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -356,13 +356,13 @@ class HoldsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AuthorisationHold';
+            $returnType = '\Shaype\Client\Model\AuthorisationHold';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -395,7 +395,7 @@ class HoldsAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AuthorisationHold',
+                        '\Shaype\Client\Model\AuthorisationHold',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -403,7 +403,7 @@ class HoldsAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -411,7 +411,7 @@ class HoldsAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -419,7 +419,7 @@ class HoldsAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -427,7 +427,7 @@ class HoldsAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -435,7 +435,7 @@ class HoldsAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -485,7 +485,7 @@ class HoldsAPIApi
         string $contentType = self::contentTypes['getAuthorisationHold'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\AuthorisationHold';
+        $returnType = '\Shaype\Client\Model\AuthorisationHold';
         $request = $this->getAuthorisationHoldRequest($hold_id, $contentType);
 
         return $this->client

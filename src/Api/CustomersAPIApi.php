@@ -3,7 +3,7 @@
  * CustomersAPIApi
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Shaype\Client\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ApiException;
+use Shaype\Client\Configuration;
+use Shaype\Client\HeaderSelector;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * CustomersAPIApi Class Doc Comment
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -158,18 +158,18 @@ class CustomersAPIApi
      * Block Customer
      *
      * @param  string $customer_id Unique identifier (UUID) of the customer (required)
-     * @param  \OpenAPI\Client\Model\BlockCustomerRequestBody $block_customer_request_body block_customer_request_body (required)
+     * @param  \Shaype\Client\Model\BlockCustomerRequestBody $block_customer_request_body block_customer_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['blockCustomer'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GenericMessage|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\GenericMessage|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function blockCustomer(
         string $customer_id,
-        \OpenAPI\Client\Model\BlockCustomerRequestBody $block_customer_request_body,
+        \Shaype\Client\Model\BlockCustomerRequestBody $block_customer_request_body,
         string $contentType = self::contentTypes['blockCustomer'][0]
-    ): \OpenAPI\Client\Model\GenericMessage
+    ): \Shaype\Client\Model\GenericMessage
     {
         list($response) = $this->blockCustomerWithHttpInfo($customer_id, $block_customer_request_body, $contentType);
         return $response;
@@ -181,16 +181,16 @@ class CustomersAPIApi
      * Block Customer
      *
      * @param  string $customer_id Unique identifier (UUID) of the customer (required)
-     * @param  \OpenAPI\Client\Model\BlockCustomerRequestBody $block_customer_request_body (required)
+     * @param  \Shaype\Client\Model\BlockCustomerRequestBody $block_customer_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['blockCustomer'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GenericMessage|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\GenericMessage|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function blockCustomerWithHttpInfo(
         string $customer_id,
-        \OpenAPI\Client\Model\BlockCustomerRequestBody $block_customer_request_body,
+        \Shaype\Client\Model\BlockCustomerRequestBody $block_customer_request_body,
         string $contentType = self::contentTypes['blockCustomer'][0]
     ): array
     {
@@ -233,11 +233,11 @@ class CustomersAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\GenericMessage' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\GenericMessage' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\GenericMessage' !== 'string') {
+                        if ('\Shaype\Client\Model\GenericMessage' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -255,16 +255,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\GenericMessage', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\GenericMessage', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -282,16 +282,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -309,16 +309,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -336,16 +336,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -363,16 +363,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -390,13 +390,13 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\GenericMessage';
+            $returnType = '\Shaype\Client\Model\GenericMessage';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -429,7 +429,7 @@ class CustomersAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GenericMessage',
+                        '\Shaype\Client\Model\GenericMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -437,7 +437,7 @@ class CustomersAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -445,7 +445,7 @@ class CustomersAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -453,7 +453,7 @@ class CustomersAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -461,7 +461,7 @@ class CustomersAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -469,7 +469,7 @@ class CustomersAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -485,7 +485,7 @@ class CustomersAPIApi
      * Block Customer
      *
      * @param  string $customer_id Unique identifier (UUID) of the customer (required)
-     * @param  \OpenAPI\Client\Model\BlockCustomerRequestBody $block_customer_request_body (required)
+     * @param  \Shaype\Client\Model\BlockCustomerRequestBody $block_customer_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['blockCustomer'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -493,7 +493,7 @@ class CustomersAPIApi
      */
     public function blockCustomerAsync(
         string $customer_id,
-        \OpenAPI\Client\Model\BlockCustomerRequestBody $block_customer_request_body,
+        \Shaype\Client\Model\BlockCustomerRequestBody $block_customer_request_body,
         string $contentType = self::contentTypes['blockCustomer'][0]
     ): PromiseInterface
     {
@@ -511,7 +511,7 @@ class CustomersAPIApi
      * Block Customer
      *
      * @param  string $customer_id Unique identifier (UUID) of the customer (required)
-     * @param  \OpenAPI\Client\Model\BlockCustomerRequestBody $block_customer_request_body (required)
+     * @param  \Shaype\Client\Model\BlockCustomerRequestBody $block_customer_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['blockCustomer'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -523,7 +523,7 @@ class CustomersAPIApi
         string $contentType = self::contentTypes['blockCustomer'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\GenericMessage';
+        $returnType = '\Shaype\Client\Model\GenericMessage';
         $request = $this->blockCustomerRequest($customer_id, $block_customer_request_body, $contentType);
 
         return $this->client
@@ -566,7 +566,7 @@ class CustomersAPIApi
      * Create request for operation 'blockCustomer'
      *
      * @param  string $customer_id Unique identifier (UUID) of the customer (required)
-     * @param  \OpenAPI\Client\Model\BlockCustomerRequestBody $block_customer_request_body (required)
+     * @param  \Shaype\Client\Model\BlockCustomerRequestBody $block_customer_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['blockCustomer'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -679,18 +679,18 @@ class CustomersAPIApi
      * Update Customer status
      *
      * @param  string $customer_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\ChangeHayCustomerStatusRequestBody $change_hay_customer_status_request_body change_hay_customer_status_request_body (required)
+     * @param  \Shaype\Client\Model\ChangeHayCustomerStatusRequestBody $change_hay_customer_status_request_body change_hay_customer_status_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['changeHayCustomerStatus'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\HayCustomer|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\HayCustomer|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function changeHayCustomerStatus(
         string $customer_id,
-        \OpenAPI\Client\Model\ChangeHayCustomerStatusRequestBody $change_hay_customer_status_request_body,
+        \Shaype\Client\Model\ChangeHayCustomerStatusRequestBody $change_hay_customer_status_request_body,
         string $contentType = self::contentTypes['changeHayCustomerStatus'][0]
-    ): \OpenAPI\Client\Model\HayCustomer
+    ): \Shaype\Client\Model\HayCustomer
     {
         list($response) = $this->changeHayCustomerStatusWithHttpInfo($customer_id, $change_hay_customer_status_request_body, $contentType);
         return $response;
@@ -702,16 +702,16 @@ class CustomersAPIApi
      * Update Customer status
      *
      * @param  string $customer_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\ChangeHayCustomerStatusRequestBody $change_hay_customer_status_request_body (required)
+     * @param  \Shaype\Client\Model\ChangeHayCustomerStatusRequestBody $change_hay_customer_status_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['changeHayCustomerStatus'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\HayCustomer|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\HayCustomer|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function changeHayCustomerStatusWithHttpInfo(
         string $customer_id,
-        \OpenAPI\Client\Model\ChangeHayCustomerStatusRequestBody $change_hay_customer_status_request_body,
+        \Shaype\Client\Model\ChangeHayCustomerStatusRequestBody $change_hay_customer_status_request_body,
         string $contentType = self::contentTypes['changeHayCustomerStatus'][0]
     ): array
     {
@@ -754,11 +754,11 @@ class CustomersAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\HayCustomer' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\HayCustomer' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\HayCustomer' !== 'string') {
+                        if ('\Shaype\Client\Model\HayCustomer' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -776,16 +776,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\HayCustomer', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\HayCustomer', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -803,16 +803,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -830,16 +830,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -857,16 +857,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -884,16 +884,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -911,13 +911,13 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\HayCustomer';
+            $returnType = '\Shaype\Client\Model\HayCustomer';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -950,7 +950,7 @@ class CustomersAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HayCustomer',
+                        '\Shaype\Client\Model\HayCustomer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -958,7 +958,7 @@ class CustomersAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -966,7 +966,7 @@ class CustomersAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -974,7 +974,7 @@ class CustomersAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -982,7 +982,7 @@ class CustomersAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -990,7 +990,7 @@ class CustomersAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1006,7 +1006,7 @@ class CustomersAPIApi
      * Update Customer status
      *
      * @param  string $customer_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\ChangeHayCustomerStatusRequestBody $change_hay_customer_status_request_body (required)
+     * @param  \Shaype\Client\Model\ChangeHayCustomerStatusRequestBody $change_hay_customer_status_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['changeHayCustomerStatus'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1014,7 +1014,7 @@ class CustomersAPIApi
      */
     public function changeHayCustomerStatusAsync(
         string $customer_id,
-        \OpenAPI\Client\Model\ChangeHayCustomerStatusRequestBody $change_hay_customer_status_request_body,
+        \Shaype\Client\Model\ChangeHayCustomerStatusRequestBody $change_hay_customer_status_request_body,
         string $contentType = self::contentTypes['changeHayCustomerStatus'][0]
     ): PromiseInterface
     {
@@ -1032,7 +1032,7 @@ class CustomersAPIApi
      * Update Customer status
      *
      * @param  string $customer_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\ChangeHayCustomerStatusRequestBody $change_hay_customer_status_request_body (required)
+     * @param  \Shaype\Client\Model\ChangeHayCustomerStatusRequestBody $change_hay_customer_status_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['changeHayCustomerStatus'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1044,7 +1044,7 @@ class CustomersAPIApi
         string $contentType = self::contentTypes['changeHayCustomerStatus'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\HayCustomer';
+        $returnType = '\Shaype\Client\Model\HayCustomer';
         $request = $this->changeHayCustomerStatusRequest($customer_id, $change_hay_customer_status_request_body, $contentType);
 
         return $this->client
@@ -1087,7 +1087,7 @@ class CustomersAPIApi
      * Create request for operation 'changeHayCustomerStatus'
      *
      * @param  string $customer_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\ChangeHayCustomerStatusRequestBody $change_hay_customer_status_request_body (required)
+     * @param  \Shaype\Client\Model\ChangeHayCustomerStatusRequestBody $change_hay_customer_status_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['changeHayCustomerStatus'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1200,18 +1200,18 @@ class CustomersAPIApi
      * Create Account for Customer - (To be DEPRECATED - Use POST /v1/accounts instead)
      *
      * @param  string $customer_hay_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\CreateHayAccountRequest $create_hay_account_request create_hay_account_request (required)
+     * @param  \Shaype\Client\Model\CreateHayAccountRequest $create_hay_account_request create_hay_account_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHayAccount'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\HayAccount|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\HayAccount|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function createHayAccount(
         string $customer_hay_id,
-        \OpenAPI\Client\Model\CreateHayAccountRequest $create_hay_account_request,
+        \Shaype\Client\Model\CreateHayAccountRequest $create_hay_account_request,
         string $contentType = self::contentTypes['createHayAccount'][0]
-    ): \OpenAPI\Client\Model\HayAccount
+    ): \Shaype\Client\Model\HayAccount
     {
         list($response) = $this->createHayAccountWithHttpInfo($customer_hay_id, $create_hay_account_request, $contentType);
         return $response;
@@ -1223,16 +1223,16 @@ class CustomersAPIApi
      * Create Account for Customer - (To be DEPRECATED - Use POST /v1/accounts instead)
      *
      * @param  string $customer_hay_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\CreateHayAccountRequest $create_hay_account_request (required)
+     * @param  \Shaype\Client\Model\CreateHayAccountRequest $create_hay_account_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHayAccount'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\HayAccount|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\HayAccount|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createHayAccountWithHttpInfo(
         string $customer_hay_id,
-        \OpenAPI\Client\Model\CreateHayAccountRequest $create_hay_account_request,
+        \Shaype\Client\Model\CreateHayAccountRequest $create_hay_account_request,
         string $contentType = self::contentTypes['createHayAccount'][0]
     ): array
     {
@@ -1275,11 +1275,11 @@ class CustomersAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\HayAccount' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\HayAccount' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\HayAccount' !== 'string') {
+                        if ('\Shaype\Client\Model\HayAccount' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1297,16 +1297,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\HayAccount', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\HayAccount', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1324,16 +1324,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1351,16 +1351,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1378,16 +1378,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1405,16 +1405,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1432,13 +1432,13 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\HayAccount';
+            $returnType = '\Shaype\Client\Model\HayAccount';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1471,7 +1471,7 @@ class CustomersAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HayAccount',
+                        '\Shaype\Client\Model\HayAccount',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1479,7 +1479,7 @@ class CustomersAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1487,7 +1487,7 @@ class CustomersAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1495,7 +1495,7 @@ class CustomersAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1503,7 +1503,7 @@ class CustomersAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1511,7 +1511,7 @@ class CustomersAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1527,7 +1527,7 @@ class CustomersAPIApi
      * Create Account for Customer - (To be DEPRECATED - Use POST /v1/accounts instead)
      *
      * @param  string $customer_hay_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\CreateHayAccountRequest $create_hay_account_request (required)
+     * @param  \Shaype\Client\Model\CreateHayAccountRequest $create_hay_account_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHayAccount'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1535,7 +1535,7 @@ class CustomersAPIApi
      */
     public function createHayAccountAsync(
         string $customer_hay_id,
-        \OpenAPI\Client\Model\CreateHayAccountRequest $create_hay_account_request,
+        \Shaype\Client\Model\CreateHayAccountRequest $create_hay_account_request,
         string $contentType = self::contentTypes['createHayAccount'][0]
     ): PromiseInterface
     {
@@ -1553,7 +1553,7 @@ class CustomersAPIApi
      * Create Account for Customer - (To be DEPRECATED - Use POST /v1/accounts instead)
      *
      * @param  string $customer_hay_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\CreateHayAccountRequest $create_hay_account_request (required)
+     * @param  \Shaype\Client\Model\CreateHayAccountRequest $create_hay_account_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHayAccount'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1565,7 +1565,7 @@ class CustomersAPIApi
         string $contentType = self::contentTypes['createHayAccount'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\HayAccount';
+        $returnType = '\Shaype\Client\Model\HayAccount';
         $request = $this->createHayAccountRequest($customer_hay_id, $create_hay_account_request, $contentType);
 
         return $this->client
@@ -1608,7 +1608,7 @@ class CustomersAPIApi
      * Create request for operation 'createHayAccount'
      *
      * @param  string $customer_hay_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\CreateHayAccountRequest $create_hay_account_request (required)
+     * @param  \Shaype\Client\Model\CreateHayAccountRequest $create_hay_account_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHayAccount'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1720,17 +1720,17 @@ class CustomersAPIApi
      *
      * Create Customer
      *
-     * @param  \OpenAPI\Client\Model\CreateHayCustomerRequestBody $create_hay_customer_request_body create_hay_customer_request_body (required)
+     * @param  \Shaype\Client\Model\CreateHayCustomerRequestBody $create_hay_customer_request_body create_hay_customer_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHayCustomer'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\HayCustomer|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\HayCustomer|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function createHayCustomer(
-        \OpenAPI\Client\Model\CreateHayCustomerRequestBody $create_hay_customer_request_body,
+        \Shaype\Client\Model\CreateHayCustomerRequestBody $create_hay_customer_request_body,
         string $contentType = self::contentTypes['createHayCustomer'][0]
-    ): \OpenAPI\Client\Model\HayCustomer
+    ): \Shaype\Client\Model\HayCustomer
     {
         list($response) = $this->createHayCustomerWithHttpInfo($create_hay_customer_request_body, $contentType);
         return $response;
@@ -1741,15 +1741,15 @@ class CustomersAPIApi
      *
      * Create Customer
      *
-     * @param  \OpenAPI\Client\Model\CreateHayCustomerRequestBody $create_hay_customer_request_body (required)
+     * @param  \Shaype\Client\Model\CreateHayCustomerRequestBody $create_hay_customer_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHayCustomer'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\HayCustomer|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\HayCustomer|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createHayCustomerWithHttpInfo(
-        \OpenAPI\Client\Model\CreateHayCustomerRequestBody $create_hay_customer_request_body,
+        \Shaype\Client\Model\CreateHayCustomerRequestBody $create_hay_customer_request_body,
         string $contentType = self::contentTypes['createHayCustomer'][0]
     ): array
     {
@@ -1792,11 +1792,11 @@ class CustomersAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\HayCustomer' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\HayCustomer' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\HayCustomer' !== 'string') {
+                        if ('\Shaype\Client\Model\HayCustomer' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1814,16 +1814,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\HayCustomer', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\HayCustomer', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1841,16 +1841,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1868,16 +1868,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1895,16 +1895,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1922,16 +1922,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1949,13 +1949,13 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\HayCustomer';
+            $returnType = '\Shaype\Client\Model\HayCustomer';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1988,7 +1988,7 @@ class CustomersAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HayCustomer',
+                        '\Shaype\Client\Model\HayCustomer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1996,7 +1996,7 @@ class CustomersAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2004,7 +2004,7 @@ class CustomersAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2012,7 +2012,7 @@ class CustomersAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2020,7 +2020,7 @@ class CustomersAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2028,7 +2028,7 @@ class CustomersAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2043,14 +2043,14 @@ class CustomersAPIApi
      *
      * Create Customer
      *
-     * @param  \OpenAPI\Client\Model\CreateHayCustomerRequestBody $create_hay_customer_request_body (required)
+     * @param  \Shaype\Client\Model\CreateHayCustomerRequestBody $create_hay_customer_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHayCustomer'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function createHayCustomerAsync(
-        \OpenAPI\Client\Model\CreateHayCustomerRequestBody $create_hay_customer_request_body,
+        \Shaype\Client\Model\CreateHayCustomerRequestBody $create_hay_customer_request_body,
         string $contentType = self::contentTypes['createHayCustomer'][0]
     ): PromiseInterface
     {
@@ -2067,7 +2067,7 @@ class CustomersAPIApi
      *
      * Create Customer
      *
-     * @param  \OpenAPI\Client\Model\CreateHayCustomerRequestBody $create_hay_customer_request_body (required)
+     * @param  \Shaype\Client\Model\CreateHayCustomerRequestBody $create_hay_customer_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHayCustomer'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2078,7 +2078,7 @@ class CustomersAPIApi
         string $contentType = self::contentTypes['createHayCustomer'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\HayCustomer';
+        $returnType = '\Shaype\Client\Model\HayCustomer';
         $request = $this->createHayCustomerRequest($create_hay_customer_request_body, $contentType);
 
         return $this->client
@@ -2120,7 +2120,7 @@ class CustomersAPIApi
     /**
      * Create request for operation 'createHayCustomer'
      *
-     * @param  \OpenAPI\Client\Model\CreateHayCustomerRequestBody $create_hay_customer_request_body (required)
+     * @param  \Shaype\Client\Model\CreateHayCustomerRequestBody $create_hay_customer_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHayCustomer'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2221,7 +2221,7 @@ class CustomersAPIApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\HayAccount[]|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\HayAccount[]|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function getAccountsForCustomerId(
         string $customer_hay_id,
@@ -2242,7 +2242,7 @@ class CustomersAPIApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\HayAccount[]|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\HayAccount[]|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccountsForCustomerIdWithHttpInfo(
         string $customer_hay_id,
@@ -2288,11 +2288,11 @@ class CustomersAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\HayAccount[]' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\HayAccount[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\HayAccount[]' !== 'string') {
+                        if ('\Shaype\Client\Model\HayAccount[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2310,16 +2310,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\HayAccount[]', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\HayAccount[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2337,16 +2337,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2364,16 +2364,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2391,16 +2391,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2418,16 +2418,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2445,13 +2445,13 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\HayAccount[]';
+            $returnType = '\Shaype\Client\Model\HayAccount[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2484,7 +2484,7 @@ class CustomersAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HayAccount[]',
+                        '\Shaype\Client\Model\HayAccount[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2492,7 +2492,7 @@ class CustomersAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2500,7 +2500,7 @@ class CustomersAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2508,7 +2508,7 @@ class CustomersAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2516,7 +2516,7 @@ class CustomersAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2524,7 +2524,7 @@ class CustomersAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2574,7 +2574,7 @@ class CustomersAPIApi
         string $contentType = self::contentTypes['getAccountsForCustomerId'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\HayAccount[]';
+        $returnType = '\Shaype\Client\Model\HayAccount[]';
         $request = $this->getAccountsForCustomerIdRequest($customer_hay_id, $contentType);
 
         return $this->client
@@ -2719,7 +2719,7 @@ class CustomersAPIApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\HayCustomer[]|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\HayCustomer[]|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function getAllCustomers(
         int $offset,
@@ -2742,7 +2742,7 @@ class CustomersAPIApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\HayCustomer[]|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\HayCustomer[]|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAllCustomersWithHttpInfo(
         int $offset,
@@ -2789,11 +2789,11 @@ class CustomersAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\HayCustomer[]' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\HayCustomer[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\HayCustomer[]' !== 'string') {
+                        if ('\Shaype\Client\Model\HayCustomer[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2811,16 +2811,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\HayCustomer[]', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\HayCustomer[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2838,16 +2838,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2865,16 +2865,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2892,16 +2892,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2919,16 +2919,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2946,13 +2946,13 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\HayCustomer[]';
+            $returnType = '\Shaype\Client\Model\HayCustomer[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2985,7 +2985,7 @@ class CustomersAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HayCustomer[]',
+                        '\Shaype\Client\Model\HayCustomer[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2993,7 +2993,7 @@ class CustomersAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3001,7 +3001,7 @@ class CustomersAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3009,7 +3009,7 @@ class CustomersAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3017,7 +3017,7 @@ class CustomersAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3025,7 +3025,7 @@ class CustomersAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3079,7 +3079,7 @@ class CustomersAPIApi
         string $contentType = self::contentTypes['getAllCustomers'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\HayCustomer[]';
+        $returnType = '\Shaype\Client\Model\HayCustomer[]';
         $request = $this->getAllCustomersRequest($offset, $limit, $contentType);
 
         return $this->client
@@ -3242,7 +3242,7 @@ class CustomersAPIApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\HayCard[]|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\HayCard[]|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function getCardsForCustomerId(
         string $customer_hay_id,
@@ -3263,7 +3263,7 @@ class CustomersAPIApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\HayCard[]|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\HayCard[]|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCardsForCustomerIdWithHttpInfo(
         string $customer_hay_id,
@@ -3309,11 +3309,11 @@ class CustomersAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\HayCard[]' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\HayCard[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\HayCard[]' !== 'string') {
+                        if ('\Shaype\Client\Model\HayCard[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3331,16 +3331,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\HayCard[]', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\HayCard[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3358,16 +3358,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3385,16 +3385,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3412,16 +3412,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3439,16 +3439,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3466,13 +3466,13 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\HayCard[]';
+            $returnType = '\Shaype\Client\Model\HayCard[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3505,7 +3505,7 @@ class CustomersAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HayCard[]',
+                        '\Shaype\Client\Model\HayCard[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3513,7 +3513,7 @@ class CustomersAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3521,7 +3521,7 @@ class CustomersAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3529,7 +3529,7 @@ class CustomersAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3537,7 +3537,7 @@ class CustomersAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3545,7 +3545,7 @@ class CustomersAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3595,7 +3595,7 @@ class CustomersAPIApi
         string $contentType = self::contentTypes['getCardsForCustomerId'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\HayCard[]';
+        $returnType = '\Shaype\Client\Model\HayCard[]';
         $request = $this->getCardsForCustomerIdRequest($customer_hay_id, $contentType);
 
         return $this->client
@@ -3739,12 +3739,12 @@ class CustomersAPIApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\HayCustomer|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\HayCustomer|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function getHayCustomerById(
         string $customer_id,
         string $contentType = self::contentTypes['getHayCustomerById'][0]
-    ): \OpenAPI\Client\Model\HayCustomer
+    ): \Shaype\Client\Model\HayCustomer
     {
         list($response) = $this->getHayCustomerByIdWithHttpInfo($customer_id, $contentType);
         return $response;
@@ -3760,7 +3760,7 @@ class CustomersAPIApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\HayCustomer|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\HayCustomer|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getHayCustomerByIdWithHttpInfo(
         string $customer_id,
@@ -3806,11 +3806,11 @@ class CustomersAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\HayCustomer' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\HayCustomer' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\HayCustomer' !== 'string') {
+                        if ('\Shaype\Client\Model\HayCustomer' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3828,16 +3828,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\HayCustomer', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\HayCustomer', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3855,16 +3855,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3882,16 +3882,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3909,16 +3909,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3936,16 +3936,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3963,13 +3963,13 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\HayCustomer';
+            $returnType = '\Shaype\Client\Model\HayCustomer';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4002,7 +4002,7 @@ class CustomersAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HayCustomer',
+                        '\Shaype\Client\Model\HayCustomer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4010,7 +4010,7 @@ class CustomersAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4018,7 +4018,7 @@ class CustomersAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4026,7 +4026,7 @@ class CustomersAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4034,7 +4034,7 @@ class CustomersAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4042,7 +4042,7 @@ class CustomersAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4092,7 +4092,7 @@ class CustomersAPIApi
         string $contentType = self::contentTypes['getHayCustomerById'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\HayCustomer';
+        $returnType = '\Shaype\Client\Model\HayCustomer';
         $request = $this->getHayCustomerByIdRequest($customer_id, $contentType);
 
         return $this->client
@@ -4233,17 +4233,17 @@ class CustomersAPIApi
      *
      * @param  int $limit List fetch limit, value between 1 and 1000 (required)
      * @param  int $offset Offset used for paging results (required)
-     * @param  \OpenAPI\Client\Model\SearchCustomersRequestBody $search_customers_request_body search_customers_request_body (required)
+     * @param  \Shaype\Client\Model\SearchCustomersRequestBody $search_customers_request_body search_customers_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['searchCustomers'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\HayCustomer[]|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\HayCustomer[]|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function searchCustomers(
         int $limit,
         int $offset,
-        \OpenAPI\Client\Model\SearchCustomersRequestBody $search_customers_request_body,
+        \Shaype\Client\Model\SearchCustomersRequestBody $search_customers_request_body,
         string $contentType = self::contentTypes['searchCustomers'][0]
     ): array
     {
@@ -4258,17 +4258,17 @@ class CustomersAPIApi
      *
      * @param  int $limit List fetch limit, value between 1 and 1000 (required)
      * @param  int $offset Offset used for paging results (required)
-     * @param  \OpenAPI\Client\Model\SearchCustomersRequestBody $search_customers_request_body (required)
+     * @param  \Shaype\Client\Model\SearchCustomersRequestBody $search_customers_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['searchCustomers'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\HayCustomer[]|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\HayCustomer[]|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function searchCustomersWithHttpInfo(
         int $limit,
         int $offset,
-        \OpenAPI\Client\Model\SearchCustomersRequestBody $search_customers_request_body,
+        \Shaype\Client\Model\SearchCustomersRequestBody $search_customers_request_body,
         string $contentType = self::contentTypes['searchCustomers'][0]
     ): array
     {
@@ -4311,11 +4311,11 @@ class CustomersAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\HayCustomer[]' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\HayCustomer[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\HayCustomer[]' !== 'string') {
+                        if ('\Shaype\Client\Model\HayCustomer[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4333,16 +4333,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\HayCustomer[]', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\HayCustomer[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4360,16 +4360,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4387,16 +4387,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4414,16 +4414,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4441,16 +4441,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4468,13 +4468,13 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\HayCustomer[]';
+            $returnType = '\Shaype\Client\Model\HayCustomer[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4507,7 +4507,7 @@ class CustomersAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HayCustomer[]',
+                        '\Shaype\Client\Model\HayCustomer[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4515,7 +4515,7 @@ class CustomersAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4523,7 +4523,7 @@ class CustomersAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4531,7 +4531,7 @@ class CustomersAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4539,7 +4539,7 @@ class CustomersAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4547,7 +4547,7 @@ class CustomersAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4564,7 +4564,7 @@ class CustomersAPIApi
      *
      * @param  int $limit List fetch limit, value between 1 and 1000 (required)
      * @param  int $offset Offset used for paging results (required)
-     * @param  \OpenAPI\Client\Model\SearchCustomersRequestBody $search_customers_request_body (required)
+     * @param  \Shaype\Client\Model\SearchCustomersRequestBody $search_customers_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['searchCustomers'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -4573,7 +4573,7 @@ class CustomersAPIApi
     public function searchCustomersAsync(
         int $limit,
         int $offset,
-        \OpenAPI\Client\Model\SearchCustomersRequestBody $search_customers_request_body,
+        \Shaype\Client\Model\SearchCustomersRequestBody $search_customers_request_body,
         string $contentType = self::contentTypes['searchCustomers'][0]
     ): PromiseInterface
     {
@@ -4592,7 +4592,7 @@ class CustomersAPIApi
      *
      * @param  int $limit List fetch limit, value between 1 and 1000 (required)
      * @param  int $offset Offset used for paging results (required)
-     * @param  \OpenAPI\Client\Model\SearchCustomersRequestBody $search_customers_request_body (required)
+     * @param  \Shaype\Client\Model\SearchCustomersRequestBody $search_customers_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['searchCustomers'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -4605,7 +4605,7 @@ class CustomersAPIApi
         string $contentType = self::contentTypes['searchCustomers'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\HayCustomer[]';
+        $returnType = '\Shaype\Client\Model\HayCustomer[]';
         $request = $this->searchCustomersRequest($limit, $offset, $search_customers_request_body, $contentType);
 
         return $this->client
@@ -4649,7 +4649,7 @@ class CustomersAPIApi
      *
      * @param  int $limit List fetch limit, value between 1 and 1000 (required)
      * @param  int $offset Offset used for paging results (required)
-     * @param  \OpenAPI\Client\Model\SearchCustomersRequestBody $search_customers_request_body (required)
+     * @param  \Shaype\Client\Model\SearchCustomersRequestBody $search_customers_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['searchCustomers'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -4780,18 +4780,18 @@ class CustomersAPIApi
      * Unblock Customer
      *
      * @param  string $customer_id Unique identifier (UUID) of the customer (required)
-     * @param  \OpenAPI\Client\Model\UnblockCustomerRequestBody $unblock_customer_request_body unblock_customer_request_body (required)
+     * @param  \Shaype\Client\Model\UnblockCustomerRequestBody $unblock_customer_request_body unblock_customer_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['unblockCustomer'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GenericMessage|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\GenericMessage|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function unblockCustomer(
         string $customer_id,
-        \OpenAPI\Client\Model\UnblockCustomerRequestBody $unblock_customer_request_body,
+        \Shaype\Client\Model\UnblockCustomerRequestBody $unblock_customer_request_body,
         string $contentType = self::contentTypes['unblockCustomer'][0]
-    ): \OpenAPI\Client\Model\GenericMessage
+    ): \Shaype\Client\Model\GenericMessage
     {
         list($response) = $this->unblockCustomerWithHttpInfo($customer_id, $unblock_customer_request_body, $contentType);
         return $response;
@@ -4803,16 +4803,16 @@ class CustomersAPIApi
      * Unblock Customer
      *
      * @param  string $customer_id Unique identifier (UUID) of the customer (required)
-     * @param  \OpenAPI\Client\Model\UnblockCustomerRequestBody $unblock_customer_request_body (required)
+     * @param  \Shaype\Client\Model\UnblockCustomerRequestBody $unblock_customer_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['unblockCustomer'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GenericMessage|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\GenericMessage|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function unblockCustomerWithHttpInfo(
         string $customer_id,
-        \OpenAPI\Client\Model\UnblockCustomerRequestBody $unblock_customer_request_body,
+        \Shaype\Client\Model\UnblockCustomerRequestBody $unblock_customer_request_body,
         string $contentType = self::contentTypes['unblockCustomer'][0]
     ): array
     {
@@ -4855,11 +4855,11 @@ class CustomersAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\GenericMessage' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\GenericMessage' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\GenericMessage' !== 'string') {
+                        if ('\Shaype\Client\Model\GenericMessage' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4877,16 +4877,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\GenericMessage', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\GenericMessage', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4904,16 +4904,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4931,16 +4931,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4958,16 +4958,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4985,16 +4985,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5012,13 +5012,13 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\GenericMessage';
+            $returnType = '\Shaype\Client\Model\GenericMessage';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5051,7 +5051,7 @@ class CustomersAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GenericMessage',
+                        '\Shaype\Client\Model\GenericMessage',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5059,7 +5059,7 @@ class CustomersAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5067,7 +5067,7 @@ class CustomersAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5075,7 +5075,7 @@ class CustomersAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5083,7 +5083,7 @@ class CustomersAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5091,7 +5091,7 @@ class CustomersAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5107,7 +5107,7 @@ class CustomersAPIApi
      * Unblock Customer
      *
      * @param  string $customer_id Unique identifier (UUID) of the customer (required)
-     * @param  \OpenAPI\Client\Model\UnblockCustomerRequestBody $unblock_customer_request_body (required)
+     * @param  \Shaype\Client\Model\UnblockCustomerRequestBody $unblock_customer_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['unblockCustomer'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -5115,7 +5115,7 @@ class CustomersAPIApi
      */
     public function unblockCustomerAsync(
         string $customer_id,
-        \OpenAPI\Client\Model\UnblockCustomerRequestBody $unblock_customer_request_body,
+        \Shaype\Client\Model\UnblockCustomerRequestBody $unblock_customer_request_body,
         string $contentType = self::contentTypes['unblockCustomer'][0]
     ): PromiseInterface
     {
@@ -5133,7 +5133,7 @@ class CustomersAPIApi
      * Unblock Customer
      *
      * @param  string $customer_id Unique identifier (UUID) of the customer (required)
-     * @param  \OpenAPI\Client\Model\UnblockCustomerRequestBody $unblock_customer_request_body (required)
+     * @param  \Shaype\Client\Model\UnblockCustomerRequestBody $unblock_customer_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['unblockCustomer'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -5145,7 +5145,7 @@ class CustomersAPIApi
         string $contentType = self::contentTypes['unblockCustomer'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\GenericMessage';
+        $returnType = '\Shaype\Client\Model\GenericMessage';
         $request = $this->unblockCustomerRequest($customer_id, $unblock_customer_request_body, $contentType);
 
         return $this->client
@@ -5188,7 +5188,7 @@ class CustomersAPIApi
      * Create request for operation 'unblockCustomer'
      *
      * @param  string $customer_id Unique identifier (UUID) of the customer (required)
-     * @param  \OpenAPI\Client\Model\UnblockCustomerRequestBody $unblock_customer_request_body (required)
+     * @param  \Shaype\Client\Model\UnblockCustomerRequestBody $unblock_customer_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['unblockCustomer'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -5301,18 +5301,18 @@ class CustomersAPIApi
      * Update Customer details
      *
      * @param  string $customer_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\UpdateCustomerRequestBody $update_customer_request_body update_customer_request_body (required)
+     * @param  \Shaype\Client\Model\UpdateCustomerRequestBody $update_customer_request_body update_customer_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomer'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\HayCustomer|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\HayCustomer|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function updateCustomer(
         string $customer_id,
-        \OpenAPI\Client\Model\UpdateCustomerRequestBody $update_customer_request_body,
+        \Shaype\Client\Model\UpdateCustomerRequestBody $update_customer_request_body,
         string $contentType = self::contentTypes['updateCustomer'][0]
-    ): \OpenAPI\Client\Model\HayCustomer
+    ): \Shaype\Client\Model\HayCustomer
     {
         list($response) = $this->updateCustomerWithHttpInfo($customer_id, $update_customer_request_body, $contentType);
         return $response;
@@ -5324,16 +5324,16 @@ class CustomersAPIApi
      * Update Customer details
      *
      * @param  string $customer_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\UpdateCustomerRequestBody $update_customer_request_body (required)
+     * @param  \Shaype\Client\Model\UpdateCustomerRequestBody $update_customer_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomer'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\HayCustomer|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\HayCustomer|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateCustomerWithHttpInfo(
         string $customer_id,
-        \OpenAPI\Client\Model\UpdateCustomerRequestBody $update_customer_request_body,
+        \Shaype\Client\Model\UpdateCustomerRequestBody $update_customer_request_body,
         string $contentType = self::contentTypes['updateCustomer'][0]
     ): array
     {
@@ -5376,11 +5376,11 @@ class CustomersAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\HayCustomer' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\HayCustomer' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\HayCustomer' !== 'string') {
+                        if ('\Shaype\Client\Model\HayCustomer' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5398,16 +5398,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\HayCustomer', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\HayCustomer', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5425,16 +5425,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5452,16 +5452,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5479,16 +5479,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5506,16 +5506,16 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5533,13 +5533,13 @@ class CustomersAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\HayCustomer';
+            $returnType = '\Shaype\Client\Model\HayCustomer';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5572,7 +5572,7 @@ class CustomersAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HayCustomer',
+                        '\Shaype\Client\Model\HayCustomer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5580,7 +5580,7 @@ class CustomersAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5588,7 +5588,7 @@ class CustomersAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5596,7 +5596,7 @@ class CustomersAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5604,7 +5604,7 @@ class CustomersAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5612,7 +5612,7 @@ class CustomersAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5628,7 +5628,7 @@ class CustomersAPIApi
      * Update Customer details
      *
      * @param  string $customer_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\UpdateCustomerRequestBody $update_customer_request_body (required)
+     * @param  \Shaype\Client\Model\UpdateCustomerRequestBody $update_customer_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomer'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -5636,7 +5636,7 @@ class CustomersAPIApi
      */
     public function updateCustomerAsync(
         string $customer_id,
-        \OpenAPI\Client\Model\UpdateCustomerRequestBody $update_customer_request_body,
+        \Shaype\Client\Model\UpdateCustomerRequestBody $update_customer_request_body,
         string $contentType = self::contentTypes['updateCustomer'][0]
     ): PromiseInterface
     {
@@ -5654,7 +5654,7 @@ class CustomersAPIApi
      * Update Customer details
      *
      * @param  string $customer_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\UpdateCustomerRequestBody $update_customer_request_body (required)
+     * @param  \Shaype\Client\Model\UpdateCustomerRequestBody $update_customer_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomer'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -5666,7 +5666,7 @@ class CustomersAPIApi
         string $contentType = self::contentTypes['updateCustomer'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\HayCustomer';
+        $returnType = '\Shaype\Client\Model\HayCustomer';
         $request = $this->updateCustomerRequest($customer_id, $update_customer_request_body, $contentType);
 
         return $this->client
@@ -5709,7 +5709,7 @@ class CustomersAPIApi
      * Create request for operation 'updateCustomer'
      *
      * @param  string $customer_id Unique identifier (UUID) of the Customer (required)
-     * @param  \OpenAPI\Client\Model\UpdateCustomerRequestBody $update_customer_request_body (required)
+     * @param  \Shaype\Client\Model\UpdateCustomerRequestBody $update_customer_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomer'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException

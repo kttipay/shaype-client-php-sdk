@@ -1,4 +1,4 @@
-# OpenAPI\Client\HoldsAPIApi
+# Shaype\Client\HoldsAPIApi
 
 All URIs are relative to http://localhost:8080, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to http://localhost:8080, except if the operation defines 
 ## `getAuthorisationHold()`
 
 ```php
-getAuthorisationHold($hold_id): \OpenAPI\Client\Model\AuthorisationHold
+getAuthorisationHold($hold_id): \Shaype\Client\Model\AuthorisationHold
 ```
 
 Get Authorisation Hold by ID
@@ -23,7 +23,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\HoldsAPIApi(
+$apiInstance = new Shaype\Client\Api\HoldsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -46,7 +46,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AuthorisationHold**](../Model/AuthorisationHold.md)
+[**\Shaype\Client\Model\AuthorisationHold**](../Model/AuthorisationHold.md)
 
 ### Authorization
 

@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * GetMandatesResponseBody Class Doc Comment
  *
  * @description Mandates list response.
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class GetMandatesResponseBody implements ModelInterface, ArrayAccess, JsonSerial
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'result' => '\OpenAPI\Client\Model\GetMandateSummaryDto[]',
+        'result' => '\Shaype\Client\Model\GetMandateSummaryDto[]',
         'total_count' => 'int'
     ];
 
@@ -304,7 +304,7 @@ class GetMandatesResponseBody implements ModelInterface, ArrayAccess, JsonSerial
     /**
      * Gets result
      *
-     * @return \OpenAPI\Client\Model\GetMandateSummaryDto[]
+     * @return \Shaype\Client\Model\GetMandateSummaryDto[]
      */
     public function getResult(): array
     {
@@ -314,7 +314,7 @@ class GetMandatesResponseBody implements ModelInterface, ArrayAccess, JsonSerial
     /**
      * Sets result
      *
-     * @param \OpenAPI\Client\Model\GetMandateSummaryDto[] $result List of mandates on the given page.
+     * @param \Shaype\Client\Model\GetMandateSummaryDto[] $result List of mandates on the given page.
      *
      * @return $this
      */

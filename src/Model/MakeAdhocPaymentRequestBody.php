@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * MakeAdhocPaymentRequestBody Class Doc Comment
  *
  * @description Body of a request to make adhoc payment.
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class MakeAdhocPaymentRequestBody implements ModelInterface, ArrayAccess, JsonSe
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'amount' => '\OpenAPI\Client\Model\CurrencyAmount',
+        'amount' => '\Shaype\Client\Model\CurrencyAmount',
         'description' => 'string',
         'end_to_end_id' => 'string',
         'idempotency_key' => 'string',
@@ -333,9 +333,9 @@ class MakeAdhocPaymentRequestBody implements ModelInterface, ArrayAccess, JsonSe
     /**
      * Gets amount
      *
-     * @return \OpenAPI\Client\Model\CurrencyAmount|null
+     * @return \Shaype\Client\Model\CurrencyAmount|null
      */
-    public function getAmount(): ?\OpenAPI\Client\Model\CurrencyAmount
+    public function getAmount(): ?\Shaype\Client\Model\CurrencyAmount
     {
         return $this->container['amount'];
     }
@@ -343,11 +343,11 @@ class MakeAdhocPaymentRequestBody implements ModelInterface, ArrayAccess, JsonSe
     /**
      * Sets amount
      *
-     * @param \OpenAPI\Client\Model\CurrencyAmount|null $amount amount
+     * @param \Shaype\Client\Model\CurrencyAmount|null $amount amount
      *
      * @return $this
      */
-    public function setAmount(?\OpenAPI\Client\Model\CurrencyAmount $amount): static
+    public function setAmount(?\Shaype\Client\Model\CurrencyAmount $amount): static
     {
         if (is_null($amount)) {
             throw new InvalidArgumentException('non-nullable amount cannot be null');

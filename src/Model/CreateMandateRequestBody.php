@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * CreateMandateRequestBody Class Doc Comment
  *
  * @description Body of a request to add mandate.
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -59,11 +59,11 @@ class CreateMandateRequestBody implements ModelInterface, ArrayAccess, JsonSeria
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'creditor_details' => '\OpenAPI\Client\Model\CreateCreditorDetailsDto',
-        'debtor_details' => '\OpenAPI\Client\Model\CreateDebtorDetailsDto',
+        'creditor_details' => '\Shaype\Client\Model\CreateCreditorDetailsDto',
+        'debtor_details' => '\Shaype\Client\Model\CreateDebtorDetailsDto',
         'description' => 'string',
         'idempotency_key' => 'string',
-        'payment_terms' => '\OpenAPI\Client\Model\CreatePaymentTermsDto',
+        'payment_terms' => '\Shaype\Client\Model\CreatePaymentTermsDto',
         'purpose_code' => 'string',
         'resolution_requested_by' => 'string',
         'transfer_arrangement' => 'string',
@@ -424,9 +424,9 @@ class CreateMandateRequestBody implements ModelInterface, ArrayAccess, JsonSeria
     /**
      * Gets creditor_details
      *
-     * @return \OpenAPI\Client\Model\CreateCreditorDetailsDto
+     * @return \Shaype\Client\Model\CreateCreditorDetailsDto
      */
-    public function getCreditorDetails(): \OpenAPI\Client\Model\CreateCreditorDetailsDto
+    public function getCreditorDetails(): \Shaype\Client\Model\CreateCreditorDetailsDto
     {
         return $this->container['creditor_details'];
     }
@@ -434,11 +434,11 @@ class CreateMandateRequestBody implements ModelInterface, ArrayAccess, JsonSeria
     /**
      * Sets creditor_details
      *
-     * @param \OpenAPI\Client\Model\CreateCreditorDetailsDto $creditor_details creditor_details
+     * @param \Shaype\Client\Model\CreateCreditorDetailsDto $creditor_details creditor_details
      *
      * @return $this
      */
-    public function setCreditorDetails(\OpenAPI\Client\Model\CreateCreditorDetailsDto $creditor_details): static
+    public function setCreditorDetails(\Shaype\Client\Model\CreateCreditorDetailsDto $creditor_details): static
     {
         if (is_null($creditor_details)) {
             throw new InvalidArgumentException('non-nullable creditor_details cannot be null');
@@ -451,9 +451,9 @@ class CreateMandateRequestBody implements ModelInterface, ArrayAccess, JsonSeria
     /**
      * Gets debtor_details
      *
-     * @return \OpenAPI\Client\Model\CreateDebtorDetailsDto
+     * @return \Shaype\Client\Model\CreateDebtorDetailsDto
      */
-    public function getDebtorDetails(): \OpenAPI\Client\Model\CreateDebtorDetailsDto
+    public function getDebtorDetails(): \Shaype\Client\Model\CreateDebtorDetailsDto
     {
         return $this->container['debtor_details'];
     }
@@ -461,11 +461,11 @@ class CreateMandateRequestBody implements ModelInterface, ArrayAccess, JsonSeria
     /**
      * Sets debtor_details
      *
-     * @param \OpenAPI\Client\Model\CreateDebtorDetailsDto $debtor_details debtor_details
+     * @param \Shaype\Client\Model\CreateDebtorDetailsDto $debtor_details debtor_details
      *
      * @return $this
      */
-    public function setDebtorDetails(\OpenAPI\Client\Model\CreateDebtorDetailsDto $debtor_details): static
+    public function setDebtorDetails(\Shaype\Client\Model\CreateDebtorDetailsDto $debtor_details): static
     {
         if (is_null($debtor_details)) {
             throw new InvalidArgumentException('non-nullable debtor_details cannot be null');
@@ -539,9 +539,9 @@ class CreateMandateRequestBody implements ModelInterface, ArrayAccess, JsonSeria
     /**
      * Gets payment_terms
      *
-     * @return \OpenAPI\Client\Model\CreatePaymentTermsDto
+     * @return \Shaype\Client\Model\CreatePaymentTermsDto
      */
-    public function getPaymentTerms(): \OpenAPI\Client\Model\CreatePaymentTermsDto
+    public function getPaymentTerms(): \Shaype\Client\Model\CreatePaymentTermsDto
     {
         return $this->container['payment_terms'];
     }
@@ -549,11 +549,11 @@ class CreateMandateRequestBody implements ModelInterface, ArrayAccess, JsonSeria
     /**
      * Sets payment_terms
      *
-     * @param \OpenAPI\Client\Model\CreatePaymentTermsDto $payment_terms payment_terms
+     * @param \Shaype\Client\Model\CreatePaymentTermsDto $payment_terms payment_terms
      *
      * @return $this
      */
-    public function setPaymentTerms(\OpenAPI\Client\Model\CreatePaymentTermsDto $payment_terms): static
+    public function setPaymentTerms(\Shaype\Client\Model\CreatePaymentTermsDto $payment_terms): static
     {
         if (is_null($payment_terms)) {
             throw new InvalidArgumentException('non-nullable payment_terms cannot be null');

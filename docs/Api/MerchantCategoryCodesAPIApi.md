@@ -1,4 +1,4 @@
-# OpenAPI\Client\MerchantCategoryCodesAPIApi
+# Shaype\Client\MerchantCategoryCodesAPIApi
 
 All URIs are relative to http://localhost:8080, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to http://localhost:8080, except if the operation defines 
 ## `getAllMerchantCategoryCodes()`
 
 ```php
-getAllMerchantCategoryCodes(): \OpenAPI\Client\Model\HayMerchantCategoryCode[]
+getAllMerchantCategoryCodes(): \Shaype\Client\Model\HayMerchantCategoryCode[]
 ```
 
 Get all Merchant Category Codes
@@ -23,7 +23,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\MerchantCategoryCodesAPIApi(
+$apiInstance = new Shaype\Client\Api\MerchantCategoryCodesAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -43,7 +43,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayMerchantCategoryCode[]**](../Model/HayMerchantCategoryCode.md)
+[**\Shaype\Client\Model\HayMerchantCategoryCode[]**](../Model/HayMerchantCategoryCode.md)
 
 ### Authorization
 

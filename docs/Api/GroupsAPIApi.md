@@ -1,4 +1,4 @@
-# OpenAPI\Client\GroupsAPIApi
+# Shaype\Client\GroupsAPIApi
 
 All URIs are relative to http://localhost:8080, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to http://localhost:8080, except if the operation defines 
 ## `addCustomersToGroup()`
 
 ```php
-addCustomersToGroup($group_hay_id, $add_customers_to_group_request_body): \OpenAPI\Client\Model\HayJointAccount
+addCustomersToGroup($group_hay_id, $add_customers_to_group_request_body): \Shaype\Client\Model\HayJointAccount
 ```
 
 Add Customers to Group
@@ -27,13 +27,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupsAPIApi(
+$apiInstance = new Shaype\Client\Api\GroupsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $group_hay_id = 'group_hay_id_example'; // string | Unique identifier (UUID) of the Group
-$add_customers_to_group_request_body = new \OpenAPI\Client\Model\AddCustomersToGroupRequestBody(); // \OpenAPI\Client\Model\AddCustomersToGroupRequestBody
+$add_customers_to_group_request_body = new \Shaype\Client\Model\AddCustomersToGroupRequestBody(); // \Shaype\Client\Model\AddCustomersToGroupRequestBody
 
 try {
     $result = $apiInstance->addCustomersToGroup($group_hay_id, $add_customers_to_group_request_body);
@@ -48,11 +48,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **group_hay_id** | **string**| Unique identifier (UUID) of the Group | |
-| **add_customers_to_group_request_body** | [**\OpenAPI\Client\Model\AddCustomersToGroupRequestBody**](../Model/AddCustomersToGroupRequestBody.md)|  | |
+| **add_customers_to_group_request_body** | [**\Shaype\Client\Model\AddCustomersToGroupRequestBody**](../Model/AddCustomersToGroupRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayJointAccount**](../Model/HayJointAccount.md)
+[**\Shaype\Client\Model\HayJointAccount**](../Model/HayJointAccount.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ No authorization required
 ## `createHayAccountForGroup()`
 
 ```php
-createHayAccountForGroup($group_hay_id, $create_hay_account_for_group_request_body): \OpenAPI\Client\Model\HayJointAccount
+createHayAccountForGroup($group_hay_id, $create_hay_account_for_group_request_body): \Shaype\Client\Model\HayJointAccount
 ```
 
 Create Account for Group - (To be DEPRECATED - Use POST /v1/accounts instead)
@@ -83,13 +83,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupsAPIApi(
+$apiInstance = new Shaype\Client\Api\GroupsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $group_hay_id = 'group_hay_id_example'; // string | Unique identifier (UUID) of the Group
-$create_hay_account_for_group_request_body = new \OpenAPI\Client\Model\CreateHayAccountForGroupRequestBody(); // \OpenAPI\Client\Model\CreateHayAccountForGroupRequestBody
+$create_hay_account_for_group_request_body = new \Shaype\Client\Model\CreateHayAccountForGroupRequestBody(); // \Shaype\Client\Model\CreateHayAccountForGroupRequestBody
 
 try {
     $result = $apiInstance->createHayAccountForGroup($group_hay_id, $create_hay_account_for_group_request_body);
@@ -104,11 +104,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **group_hay_id** | **string**| Unique identifier (UUID) of the Group | |
-| **create_hay_account_for_group_request_body** | [**\OpenAPI\Client\Model\CreateHayAccountForGroupRequestBody**](../Model/CreateHayAccountForGroupRequestBody.md)|  | |
+| **create_hay_account_for_group_request_body** | [**\Shaype\Client\Model\CreateHayAccountForGroupRequestBody**](../Model/CreateHayAccountForGroupRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayJointAccount**](../Model/HayJointAccount.md)
+[**\Shaype\Client\Model\HayJointAccount**](../Model/HayJointAccount.md)
 
 ### Authorization
 
@@ -126,7 +126,7 @@ No authorization required
 ## `createHayGroup()`
 
 ```php
-createHayGroup($create_hay_group_request_body): \OpenAPI\Client\Model\HayGroup
+createHayGroup($create_hay_group_request_body): \Shaype\Client\Model\HayGroup
 ```
 
 Create Group
@@ -139,12 +139,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupsAPIApi(
+$apiInstance = new Shaype\Client\Api\GroupsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_hay_group_request_body = new \OpenAPI\Client\Model\CreateHayGroupRequestBody(); // \OpenAPI\Client\Model\CreateHayGroupRequestBody
+$create_hay_group_request_body = new \Shaype\Client\Model\CreateHayGroupRequestBody(); // \Shaype\Client\Model\CreateHayGroupRequestBody
 
 try {
     $result = $apiInstance->createHayGroup($create_hay_group_request_body);
@@ -158,11 +158,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_hay_group_request_body** | [**\OpenAPI\Client\Model\CreateHayGroupRequestBody**](../Model/CreateHayGroupRequestBody.md)|  | |
+| **create_hay_group_request_body** | [**\Shaype\Client\Model\CreateHayGroupRequestBody**](../Model/CreateHayGroupRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayGroup**](../Model/HayGroup.md)
+[**\Shaype\Client\Model\HayGroup**](../Model/HayGroup.md)
 
 ### Authorization
 
@@ -180,7 +180,7 @@ No authorization required
 ## `getHayJointAccountByGroupHayId()`
 
 ```php
-getHayJointAccountByGroupHayId($group_hay_id): \OpenAPI\Client\Model\HayJointAccount
+getHayJointAccountByGroupHayId($group_hay_id): \Shaype\Client\Model\HayJointAccount
 ```
 
 Get Account by Group ID
@@ -193,7 +193,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupsAPIApi(
+$apiInstance = new Shaype\Client\Api\GroupsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -216,7 +216,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayJointAccount**](../Model/HayJointAccount.md)
+[**\Shaype\Client\Model\HayJointAccount**](../Model/HayJointAccount.md)
 
 ### Authorization
 
@@ -234,7 +234,7 @@ No authorization required
 ## `updateGroup()`
 
 ```php
-updateGroup($group_hay_id, $update_group_request_body): \OpenAPI\Client\Model\HayGroup
+updateGroup($group_hay_id, $update_group_request_body): \Shaype\Client\Model\HayGroup
 ```
 
 Update Group details
@@ -247,13 +247,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupsAPIApi(
+$apiInstance = new Shaype\Client\Api\GroupsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $group_hay_id = 'group_hay_id_example'; // string | Unique identifier (UUID) of the Group
-$update_group_request_body = new \OpenAPI\Client\Model\UpdateGroupRequestBody(); // \OpenAPI\Client\Model\UpdateGroupRequestBody
+$update_group_request_body = new \Shaype\Client\Model\UpdateGroupRequestBody(); // \Shaype\Client\Model\UpdateGroupRequestBody
 
 try {
     $result = $apiInstance->updateGroup($group_hay_id, $update_group_request_body);
@@ -268,11 +268,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **group_hay_id** | **string**| Unique identifier (UUID) of the Group | |
-| **update_group_request_body** | [**\OpenAPI\Client\Model\UpdateGroupRequestBody**](../Model/UpdateGroupRequestBody.md)|  | |
+| **update_group_request_body** | [**\Shaype\Client\Model\UpdateGroupRequestBody**](../Model/UpdateGroupRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayGroup**](../Model/HayGroup.md)
+[**\Shaype\Client\Model\HayGroup**](../Model/HayGroup.md)
 
 ### Authorization
 

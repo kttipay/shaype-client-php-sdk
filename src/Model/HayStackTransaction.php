@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * HayStackTransaction Class Doc Comment
  *
  * @description Details of a stack transaction.
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -65,7 +65,7 @@ class HayStackTransaction implements ModelInterface, ArrayAccess, JsonSerializab
         'customer_id' => 'string',
         'hay_id' => 'string',
         'notes' => 'string',
-        'stack' => '\OpenAPI\Client\Model\HayStack',
+        'stack' => '\Shaype\Client\Model\HayStack',
         'stack_hay_id' => 'string',
         'transaction_time_utc' => '\DateTime'
     ];
@@ -509,9 +509,9 @@ class HayStackTransaction implements ModelInterface, ArrayAccess, JsonSerializab
     /**
      * Gets stack
      *
-     * @return \OpenAPI\Client\Model\HayStack|null
+     * @return \Shaype\Client\Model\HayStack|null
      */
-    public function getStack(): ?\OpenAPI\Client\Model\HayStack
+    public function getStack(): ?\Shaype\Client\Model\HayStack
     {
         return $this->container['stack'];
     }
@@ -519,11 +519,11 @@ class HayStackTransaction implements ModelInterface, ArrayAccess, JsonSerializab
     /**
      * Sets stack
      *
-     * @param \OpenAPI\Client\Model\HayStack|null $stack stack
+     * @param \Shaype\Client\Model\HayStack|null $stack stack
      *
      * @return $this
      */
-    public function setStack(?\OpenAPI\Client\Model\HayStack $stack): static
+    public function setStack(?\Shaype\Client\Model\HayStack $stack): static
     {
         if (is_null($stack)) {
             throw new InvalidArgumentException('non-nullable stack cannot be null');

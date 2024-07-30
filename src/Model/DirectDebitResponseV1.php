@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * DirectDebitResponseV1 Class Doc Comment
  *
  * @description Response of a request to create outbound Direct Debit instruction.
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class DirectDebitResponseV1 implements ModelInterface, ArrayAccess, JsonSerializ
         'details' => 'string',
         'outcome' => 'string',
         'trace_id' => 'string',
-        'transaction_details' => '\OpenAPI\Client\Model\DeTransactionDetailsV1',
+        'transaction_details' => '\Shaype\Client\Model\DeTransactionDetailsV1',
         'transaction_id' => 'string'
     ];
 
@@ -450,9 +450,9 @@ class DirectDebitResponseV1 implements ModelInterface, ArrayAccess, JsonSerializ
     /**
      * Gets transaction_details
      *
-     * @return \OpenAPI\Client\Model\DeTransactionDetailsV1|null
+     * @return \Shaype\Client\Model\DeTransactionDetailsV1|null
      */
-    public function getTransactionDetails(): ?\OpenAPI\Client\Model\DeTransactionDetailsV1
+    public function getTransactionDetails(): ?\Shaype\Client\Model\DeTransactionDetailsV1
     {
         return $this->container['transaction_details'];
     }
@@ -460,11 +460,11 @@ class DirectDebitResponseV1 implements ModelInterface, ArrayAccess, JsonSerializ
     /**
      * Sets transaction_details
      *
-     * @param \OpenAPI\Client\Model\DeTransactionDetailsV1|null $transaction_details transaction_details
+     * @param \Shaype\Client\Model\DeTransactionDetailsV1|null $transaction_details transaction_details
      *
      * @return $this
      */
-    public function setTransactionDetails(?\OpenAPI\Client\Model\DeTransactionDetailsV1 $transaction_details): static
+    public function setTransactionDetails(?\Shaype\Client\Model\DeTransactionDetailsV1 $transaction_details): static
     {
         if (is_null($transaction_details)) {
             throw new InvalidArgumentException('non-nullable transaction_details cannot be null');

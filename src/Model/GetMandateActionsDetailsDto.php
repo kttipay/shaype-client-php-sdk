@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * GetMandateActionsDetailsDto Class Doc Comment
  *
  * @description Details of an action performed on a mandate. Depending on the type of action, only one of the following fields will be present: Creation, Amendment, Porting or StatusChange.
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -59,10 +59,10 @@ class GetMandateActionsDetailsDto implements ModelInterface, ArrayAccess, JsonSe
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'amendment' => '\OpenAPI\Client\Model\GetMandateActionsDetailsAmendmentDto',
-        'creation' => '\OpenAPI\Client\Model\GetMandateActionsDetailsCreationDto',
-        'porting' => '\OpenAPI\Client\Model\GetMandateActionsDetailsPortingDto',
-        'status_change' => '\OpenAPI\Client\Model\GetMandateActionsDetailsStatusChangeDto'
+        'amendment' => '\Shaype\Client\Model\GetMandateActionsDetailsAmendmentDto',
+        'creation' => '\Shaype\Client\Model\GetMandateActionsDetailsCreationDto',
+        'porting' => '\Shaype\Client\Model\GetMandateActionsDetailsPortingDto',
+        'status_change' => '\Shaype\Client\Model\GetMandateActionsDetailsStatusChangeDto'
     ];
 
     /**
@@ -312,9 +312,9 @@ class GetMandateActionsDetailsDto implements ModelInterface, ArrayAccess, JsonSe
     /**
      * Gets amendment
      *
-     * @return \OpenAPI\Client\Model\GetMandateActionsDetailsAmendmentDto|null
+     * @return \Shaype\Client\Model\GetMandateActionsDetailsAmendmentDto|null
      */
-    public function getAmendment(): ?\OpenAPI\Client\Model\GetMandateActionsDetailsAmendmentDto
+    public function getAmendment(): ?\Shaype\Client\Model\GetMandateActionsDetailsAmendmentDto
     {
         return $this->container['amendment'];
     }
@@ -322,11 +322,11 @@ class GetMandateActionsDetailsDto implements ModelInterface, ArrayAccess, JsonSe
     /**
      * Sets amendment
      *
-     * @param \OpenAPI\Client\Model\GetMandateActionsDetailsAmendmentDto|null $amendment amendment
+     * @param \Shaype\Client\Model\GetMandateActionsDetailsAmendmentDto|null $amendment amendment
      *
      * @return $this
      */
-    public function setAmendment(?\OpenAPI\Client\Model\GetMandateActionsDetailsAmendmentDto $amendment): static
+    public function setAmendment(?\Shaype\Client\Model\GetMandateActionsDetailsAmendmentDto $amendment): static
     {
         if (is_null($amendment)) {
             throw new InvalidArgumentException('non-nullable amendment cannot be null');
@@ -339,9 +339,9 @@ class GetMandateActionsDetailsDto implements ModelInterface, ArrayAccess, JsonSe
     /**
      * Gets creation
      *
-     * @return \OpenAPI\Client\Model\GetMandateActionsDetailsCreationDto|null
+     * @return \Shaype\Client\Model\GetMandateActionsDetailsCreationDto|null
      */
-    public function getCreation(): ?\OpenAPI\Client\Model\GetMandateActionsDetailsCreationDto
+    public function getCreation(): ?\Shaype\Client\Model\GetMandateActionsDetailsCreationDto
     {
         return $this->container['creation'];
     }
@@ -349,11 +349,11 @@ class GetMandateActionsDetailsDto implements ModelInterface, ArrayAccess, JsonSe
     /**
      * Sets creation
      *
-     * @param \OpenAPI\Client\Model\GetMandateActionsDetailsCreationDto|null $creation creation
+     * @param \Shaype\Client\Model\GetMandateActionsDetailsCreationDto|null $creation creation
      *
      * @return $this
      */
-    public function setCreation(?\OpenAPI\Client\Model\GetMandateActionsDetailsCreationDto $creation): static
+    public function setCreation(?\Shaype\Client\Model\GetMandateActionsDetailsCreationDto $creation): static
     {
         if (is_null($creation)) {
             throw new InvalidArgumentException('non-nullable creation cannot be null');
@@ -366,9 +366,9 @@ class GetMandateActionsDetailsDto implements ModelInterface, ArrayAccess, JsonSe
     /**
      * Gets porting
      *
-     * @return \OpenAPI\Client\Model\GetMandateActionsDetailsPortingDto|null
+     * @return \Shaype\Client\Model\GetMandateActionsDetailsPortingDto|null
      */
-    public function getPorting(): ?\OpenAPI\Client\Model\GetMandateActionsDetailsPortingDto
+    public function getPorting(): ?\Shaype\Client\Model\GetMandateActionsDetailsPortingDto
     {
         return $this->container['porting'];
     }
@@ -376,11 +376,11 @@ class GetMandateActionsDetailsDto implements ModelInterface, ArrayAccess, JsonSe
     /**
      * Sets porting
      *
-     * @param \OpenAPI\Client\Model\GetMandateActionsDetailsPortingDto|null $porting porting
+     * @param \Shaype\Client\Model\GetMandateActionsDetailsPortingDto|null $porting porting
      *
      * @return $this
      */
-    public function setPorting(?\OpenAPI\Client\Model\GetMandateActionsDetailsPortingDto $porting): static
+    public function setPorting(?\Shaype\Client\Model\GetMandateActionsDetailsPortingDto $porting): static
     {
         if (is_null($porting)) {
             throw new InvalidArgumentException('non-nullable porting cannot be null');
@@ -393,9 +393,9 @@ class GetMandateActionsDetailsDto implements ModelInterface, ArrayAccess, JsonSe
     /**
      * Gets status_change
      *
-     * @return \OpenAPI\Client\Model\GetMandateActionsDetailsStatusChangeDto|null
+     * @return \Shaype\Client\Model\GetMandateActionsDetailsStatusChangeDto|null
      */
-    public function getStatusChange(): ?\OpenAPI\Client\Model\GetMandateActionsDetailsStatusChangeDto
+    public function getStatusChange(): ?\Shaype\Client\Model\GetMandateActionsDetailsStatusChangeDto
     {
         return $this->container['status_change'];
     }
@@ -403,11 +403,11 @@ class GetMandateActionsDetailsDto implements ModelInterface, ArrayAccess, JsonSe
     /**
      * Sets status_change
      *
-     * @param \OpenAPI\Client\Model\GetMandateActionsDetailsStatusChangeDto|null $status_change status_change
+     * @param \Shaype\Client\Model\GetMandateActionsDetailsStatusChangeDto|null $status_change status_change
      *
      * @return $this
      */
-    public function setStatusChange(?\OpenAPI\Client\Model\GetMandateActionsDetailsStatusChangeDto $status_change): static
+    public function setStatusChange(?\Shaype\Client\Model\GetMandateActionsDetailsStatusChangeDto $status_change): static
     {
         if (is_null($status_change)) {
             throw new InvalidArgumentException('non-nullable status_change cannot be null');

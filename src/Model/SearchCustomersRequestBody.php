@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * SearchCustomersRequestBody Class Doc Comment
  *
  * @description Body of a request to search customers
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -63,7 +63,7 @@ class SearchCustomersRequestBody implements ModelInterface, ArrayAccess, JsonSer
         'email' => 'string',
         'first_name' => 'string',
         'last_name' => 'string',
-        'phone_number' => '\OpenAPI\Client\Model\PhoneNumber',
+        'phone_number' => '\Shaype\Client\Model\PhoneNumber',
         'status' => 'string'
     ];
 
@@ -511,9 +511,9 @@ class SearchCustomersRequestBody implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Gets phone_number
      *
-     * @return \OpenAPI\Client\Model\PhoneNumber|null
+     * @return \Shaype\Client\Model\PhoneNumber|null
      */
-    public function getPhoneNumber(): ?\OpenAPI\Client\Model\PhoneNumber
+    public function getPhoneNumber(): ?\Shaype\Client\Model\PhoneNumber
     {
         return $this->container['phone_number'];
     }
@@ -521,11 +521,11 @@ class SearchCustomersRequestBody implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Sets phone_number
      *
-     * @param \OpenAPI\Client\Model\PhoneNumber|null $phone_number phone_number
+     * @param \Shaype\Client\Model\PhoneNumber|null $phone_number phone_number
      *
      * @return $this
      */
-    public function setPhoneNumber(?\OpenAPI\Client\Model\PhoneNumber $phone_number): static
+    public function setPhoneNumber(?\Shaype\Client\Model\PhoneNumber $phone_number): static
     {
         if (is_null($phone_number)) {
             throw new InvalidArgumentException('non-nullable phone_number cannot be null');

@@ -1,3 +1,4 @@
 {
-  "composerPackageName": "kttipay/shaype-client-php-sdk"
+  "composerPackageName": "kttipay/shaype-client-php-sdk",
+  "invokerPackage": "Shaype\\Client"
 }

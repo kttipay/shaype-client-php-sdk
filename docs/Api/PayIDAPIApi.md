@@ -1,4 +1,4 @@
-# OpenAPI\Client\PayIDAPIApi
+# Shaype\Client\PayIDAPIApi
 
 All URIs are relative to http://localhost:8080, except if the operation defines another base path.
 
@@ -17,7 +17,7 @@ All URIs are relative to http://localhost:8080, except if the operation defines 
 ## `getPayId()`
 
 ```php
-getPayId($pay_id_type, $pay_id): \OpenAPI\Client\Model\PayIdResponse
+getPayId($pay_id_type, $pay_id): \Shaype\Client\Model\PayIdResponse
 ```
 
 Get PayID details
@@ -30,7 +30,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayIDAPIApi(
+$apiInstance = new Shaype\Client\Api\PayIDAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -55,7 +55,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PayIdResponse**](../Model/PayIdResponse.md)
+[**\Shaype\Client\Model\PayIdResponse**](../Model/PayIdResponse.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ No authorization required
 ## `getPayIdAvailability()`
 
 ```php
-getPayIdAvailability($pay_id, $pay_id_type): \OpenAPI\Client\Model\PayIdAvailabilityDetailsResponse
+getPayIdAvailability($pay_id, $pay_id_type): \Shaype\Client\Model\PayIdAvailabilityDetailsResponse
 ```
 
 Check PayID availability
@@ -86,7 +86,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayIDAPIApi(
+$apiInstance = new Shaype\Client\Api\PayIDAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -111,7 +111,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PayIdAvailabilityDetailsResponse**](../Model/PayIdAvailabilityDetailsResponse.md)
+[**\Shaype\Client\Model\PayIdAvailabilityDetailsResponse**](../Model/PayIdAvailabilityDetailsResponse.md)
 
 ### Authorization
 
@@ -129,7 +129,7 @@ No authorization required
 ## `getPayIdDeregisterHistory()`
 
 ```php
-getPayIdDeregisterHistory($pay_id): \OpenAPI\Client\Model\PayIdDeregisterDetailsResponse[]
+getPayIdDeregisterHistory($pay_id): \Shaype\Client\Model\PayIdDeregisterDetailsResponse[]
 ```
 
 Get PayID de-register history
@@ -142,7 +142,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayIDAPIApi(
+$apiInstance = new Shaype\Client\Api\PayIDAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -165,7 +165,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PayIdDeregisterDetailsResponse[]**](../Model/PayIdDeregisterDetailsResponse.md)
+[**\Shaype\Client\Model\PayIdDeregisterDetailsResponse[]**](../Model/PayIdDeregisterDetailsResponse.md)
 
 ### Authorization
 
@@ -183,7 +183,7 @@ No authorization required
 ## `getPayIdsForAccount()`
 
 ```php
-getPayIdsForAccount($account_id): \OpenAPI\Client\Model\PayIdDetailsResponse[]
+getPayIdsForAccount($account_id): \Shaype\Client\Model\PayIdDetailsResponse[]
 ```
 
 Get PayIDs by Account ID
@@ -196,7 +196,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayIDAPIApi(
+$apiInstance = new Shaype\Client\Api\PayIDAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -219,7 +219,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PayIdDetailsResponse[]**](../Model/PayIdDetailsResponse.md)
+[**\Shaype\Client\Model\PayIdDetailsResponse[]**](../Model/PayIdDetailsResponse.md)
 
 ### Authorization
 
@@ -237,7 +237,7 @@ No authorization required
 ## `postPayIdRegister()`
 
 ```php
-postPayIdRegister($account_id, $pay_id, $pay_id_register_request_body): \OpenAPI\Client\Model\GenericMessage
+postPayIdRegister($account_id, $pay_id, $pay_id_register_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Register PayID
@@ -250,14 +250,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayIDAPIApi(
+$apiInstance = new Shaype\Client\Api\PayIDAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $account_id = 'account_id_example'; // string | Unique identifier (UUID) of the Account
 $pay_id = 'pay_id_example'; // string | PayID
-$pay_id_register_request_body = new \OpenAPI\Client\Model\PayIdRegisterRequestBody(); // \OpenAPI\Client\Model\PayIdRegisterRequestBody
+$pay_id_register_request_body = new \Shaype\Client\Model\PayIdRegisterRequestBody(); // \Shaype\Client\Model\PayIdRegisterRequestBody
 
 try {
     $result = $apiInstance->postPayIdRegister($account_id, $pay_id, $pay_id_register_request_body);
@@ -273,11 +273,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **account_id** | **string**| Unique identifier (UUID) of the Account | |
 | **pay_id** | **string**| PayID | |
-| **pay_id_register_request_body** | [**\OpenAPI\Client\Model\PayIdRegisterRequestBody**](../Model/PayIdRegisterRequestBody.md)|  | |
+| **pay_id_register_request_body** | [**\Shaype\Client\Model\PayIdRegisterRequestBody**](../Model/PayIdRegisterRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -295,7 +295,7 @@ No authorization required
 ## `resolvePayId()`
 
 ```php
-resolvePayId($pay_id, $pay_id_type): \OpenAPI\Client\Model\PayIdAvailabilityDetailsResponse
+resolvePayId($pay_id, $pay_id_type): \Shaype\Client\Model\PayIdAvailabilityDetailsResponse
 ```
 
 Resolve PayID to bank account
@@ -308,7 +308,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayIDAPIApi(
+$apiInstance = new Shaype\Client\Api\PayIDAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -333,7 +333,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PayIdAvailabilityDetailsResponse**](../Model/PayIdAvailabilityDetailsResponse.md)
+[**\Shaype\Client\Model\PayIdAvailabilityDetailsResponse**](../Model/PayIdAvailabilityDetailsResponse.md)
 
 ### Authorization
 
@@ -351,7 +351,7 @@ No authorization required
 ## `updatePayIdDetails()`
 
 ```php
-updatePayIdDetails($pay_id, $update_pay_id_details_request_body): \OpenAPI\Client\Model\GenericMessage
+updatePayIdDetails($pay_id, $update_pay_id_details_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Update PayID details
@@ -364,13 +364,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayIDAPIApi(
+$apiInstance = new Shaype\Client\Api\PayIDAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $pay_id = 'pay_id_example'; // string | PayID
-$update_pay_id_details_request_body = new \OpenAPI\Client\Model\UpdatePayIdDetailsRequestBody(); // \OpenAPI\Client\Model\UpdatePayIdDetailsRequestBody
+$update_pay_id_details_request_body = new \Shaype\Client\Model\UpdatePayIdDetailsRequestBody(); // \Shaype\Client\Model\UpdatePayIdDetailsRequestBody
 
 try {
     $result = $apiInstance->updatePayIdDetails($pay_id, $update_pay_id_details_request_body);
@@ -385,11 +385,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **pay_id** | **string**| PayID | |
-| **update_pay_id_details_request_body** | [**\OpenAPI\Client\Model\UpdatePayIdDetailsRequestBody**](../Model/UpdatePayIdDetailsRequestBody.md)|  | |
+| **update_pay_id_details_request_body** | [**\Shaype\Client\Model\UpdatePayIdDetailsRequestBody**](../Model/UpdatePayIdDetailsRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -407,7 +407,7 @@ No authorization required
 ## `updatePayIdStatus()`
 
 ```php
-updatePayIdStatus($pay_id, $update_pay_id_status_request_body): \OpenAPI\Client\Model\GenericMessage
+updatePayIdStatus($pay_id, $update_pay_id_status_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Update PayID status
@@ -420,13 +420,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\PayIDAPIApi(
+$apiInstance = new Shaype\Client\Api\PayIDAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $pay_id = 'pay_id_example'; // string | PayID
-$update_pay_id_status_request_body = new \OpenAPI\Client\Model\UpdatePayIdStatusRequestBody(); // \OpenAPI\Client\Model\UpdatePayIdStatusRequestBody
+$update_pay_id_status_request_body = new \Shaype\Client\Model\UpdatePayIdStatusRequestBody(); // \Shaype\Client\Model\UpdatePayIdStatusRequestBody
 
 try {
     $result = $apiInstance->updatePayIdStatus($pay_id, $update_pay_id_status_request_body);
@@ -441,11 +441,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **pay_id** | **string**| PayID | |
-| **update_pay_id_status_request_body** | [**\OpenAPI\Client\Model\UpdatePayIdStatusRequestBody**](../Model/UpdatePayIdStatusRequestBody.md)|  | |
+| **update_pay_id_status_request_body** | [**\Shaype\Client\Model\UpdatePayIdStatusRequestBody**](../Model/UpdatePayIdStatusRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 

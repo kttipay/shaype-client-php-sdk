@@ -1,4 +1,4 @@
-# OpenAPI\Client\CustomersAPIApi
+# Shaype\Client\CustomersAPIApi
 
 All URIs are relative to http://localhost:8080, except if the operation defines another base path.
 
@@ -20,7 +20,7 @@ All URIs are relative to http://localhost:8080, except if the operation defines 
 ## `blockCustomer()`
 
 ```php
-blockCustomer($customer_id, $block_customer_request_body): \OpenAPI\Client\Model\GenericMessage
+blockCustomer($customer_id, $block_customer_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Block Customer
@@ -33,13 +33,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomersAPIApi(
+$apiInstance = new Shaype\Client\Api\CustomersAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $customer_id = 'customer_id_example'; // string | Unique identifier (UUID) of the customer
-$block_customer_request_body = new \OpenAPI\Client\Model\BlockCustomerRequestBody(); // \OpenAPI\Client\Model\BlockCustomerRequestBody
+$block_customer_request_body = new \Shaype\Client\Model\BlockCustomerRequestBody(); // \Shaype\Client\Model\BlockCustomerRequestBody
 
 try {
     $result = $apiInstance->blockCustomer($customer_id, $block_customer_request_body);
@@ -54,11 +54,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **customer_id** | **string**| Unique identifier (UUID) of the customer | |
-| **block_customer_request_body** | [**\OpenAPI\Client\Model\BlockCustomerRequestBody**](../Model/BlockCustomerRequestBody.md)|  | |
+| **block_customer_request_body** | [**\Shaype\Client\Model\BlockCustomerRequestBody**](../Model/BlockCustomerRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ No authorization required
 ## `changeHayCustomerStatus()`
 
 ```php
-changeHayCustomerStatus($customer_id, $change_hay_customer_status_request_body): \OpenAPI\Client\Model\HayCustomer
+changeHayCustomerStatus($customer_id, $change_hay_customer_status_request_body): \Shaype\Client\Model\HayCustomer
 ```
 
 Update Customer status
@@ -89,13 +89,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomersAPIApi(
+$apiInstance = new Shaype\Client\Api\CustomersAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $customer_id = 'customer_id_example'; // string | Unique identifier (UUID) of the Customer
-$change_hay_customer_status_request_body = new \OpenAPI\Client\Model\ChangeHayCustomerStatusRequestBody(); // \OpenAPI\Client\Model\ChangeHayCustomerStatusRequestBody
+$change_hay_customer_status_request_body = new \Shaype\Client\Model\ChangeHayCustomerStatusRequestBody(); // \Shaype\Client\Model\ChangeHayCustomerStatusRequestBody
 
 try {
     $result = $apiInstance->changeHayCustomerStatus($customer_id, $change_hay_customer_status_request_body);
@@ -110,11 +110,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **customer_id** | **string**| Unique identifier (UUID) of the Customer | |
-| **change_hay_customer_status_request_body** | [**\OpenAPI\Client\Model\ChangeHayCustomerStatusRequestBody**](../Model/ChangeHayCustomerStatusRequestBody.md)|  | |
+| **change_hay_customer_status_request_body** | [**\Shaype\Client\Model\ChangeHayCustomerStatusRequestBody**](../Model/ChangeHayCustomerStatusRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayCustomer**](../Model/HayCustomer.md)
+[**\Shaype\Client\Model\HayCustomer**](../Model/HayCustomer.md)
 
 ### Authorization
 
@@ -132,7 +132,7 @@ No authorization required
 ## `createHayAccount()`
 
 ```php
-createHayAccount($customer_hay_id, $create_hay_account_request): \OpenAPI\Client\Model\HayAccount
+createHayAccount($customer_hay_id, $create_hay_account_request): \Shaype\Client\Model\HayAccount
 ```
 
 Create Account for Customer - (To be DEPRECATED - Use POST /v1/accounts instead)
@@ -145,13 +145,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomersAPIApi(
+$apiInstance = new Shaype\Client\Api\CustomersAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $customer_hay_id = 'customer_hay_id_example'; // string | Unique identifier (UUID) of the Customer
-$create_hay_account_request = new \OpenAPI\Client\Model\CreateHayAccountRequest(); // \OpenAPI\Client\Model\CreateHayAccountRequest
+$create_hay_account_request = new \Shaype\Client\Model\CreateHayAccountRequest(); // \Shaype\Client\Model\CreateHayAccountRequest
 
 try {
     $result = $apiInstance->createHayAccount($customer_hay_id, $create_hay_account_request);
@@ -166,11 +166,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **customer_hay_id** | **string**| Unique identifier (UUID) of the Customer | |
-| **create_hay_account_request** | [**\OpenAPI\Client\Model\CreateHayAccountRequest**](../Model/CreateHayAccountRequest.md)|  | |
+| **create_hay_account_request** | [**\Shaype\Client\Model\CreateHayAccountRequest**](../Model/CreateHayAccountRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayAccount**](../Model/HayAccount.md)
+[**\Shaype\Client\Model\HayAccount**](../Model/HayAccount.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ No authorization required
 ## `createHayCustomer()`
 
 ```php
-createHayCustomer($create_hay_customer_request_body): \OpenAPI\Client\Model\HayCustomer
+createHayCustomer($create_hay_customer_request_body): \Shaype\Client\Model\HayCustomer
 ```
 
 Create Customer
@@ -201,12 +201,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomersAPIApi(
+$apiInstance = new Shaype\Client\Api\CustomersAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_hay_customer_request_body = new \OpenAPI\Client\Model\CreateHayCustomerRequestBody(); // \OpenAPI\Client\Model\CreateHayCustomerRequestBody
+$create_hay_customer_request_body = new \Shaype\Client\Model\CreateHayCustomerRequestBody(); // \Shaype\Client\Model\CreateHayCustomerRequestBody
 
 try {
     $result = $apiInstance->createHayCustomer($create_hay_customer_request_body);
@@ -220,11 +220,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_hay_customer_request_body** | [**\OpenAPI\Client\Model\CreateHayCustomerRequestBody**](../Model/CreateHayCustomerRequestBody.md)|  | |
+| **create_hay_customer_request_body** | [**\Shaype\Client\Model\CreateHayCustomerRequestBody**](../Model/CreateHayCustomerRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayCustomer**](../Model/HayCustomer.md)
+[**\Shaype\Client\Model\HayCustomer**](../Model/HayCustomer.md)
 
 ### Authorization
 
@@ -242,7 +242,7 @@ No authorization required
 ## `getAccountsForCustomerId()`
 
 ```php
-getAccountsForCustomerId($customer_hay_id): \OpenAPI\Client\Model\HayAccount[]
+getAccountsForCustomerId($customer_hay_id): \Shaype\Client\Model\HayAccount[]
 ```
 
 Get Account by Customer ID
@@ -255,7 +255,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomersAPIApi(
+$apiInstance = new Shaype\Client\Api\CustomersAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -278,7 +278,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayAccount[]**](../Model/HayAccount.md)
+[**\Shaype\Client\Model\HayAccount[]**](../Model/HayAccount.md)
 
 ### Authorization
 
@@ -296,7 +296,7 @@ No authorization required
 ## `getAllCustomers()`
 
 ```php
-getAllCustomers($offset, $limit): \OpenAPI\Client\Model\HayCustomer[]
+getAllCustomers($offset, $limit): \Shaype\Client\Model\HayCustomer[]
 ```
 
 Get all Customers
@@ -309,7 +309,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomersAPIApi(
+$apiInstance = new Shaype\Client\Api\CustomersAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -334,7 +334,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayCustomer[]**](../Model/HayCustomer.md)
+[**\Shaype\Client\Model\HayCustomer[]**](../Model/HayCustomer.md)
 
 ### Authorization
 
@@ -352,7 +352,7 @@ No authorization required
 ## `getCardsForCustomerId()`
 
 ```php
-getCardsForCustomerId($customer_hay_id): \OpenAPI\Client\Model\HayCard[]
+getCardsForCustomerId($customer_hay_id): \Shaype\Client\Model\HayCard[]
 ```
 
 Get Cards by Customer ID
@@ -365,7 +365,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomersAPIApi(
+$apiInstance = new Shaype\Client\Api\CustomersAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -388,7 +388,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayCard[]**](../Model/HayCard.md)
+[**\Shaype\Client\Model\HayCard[]**](../Model/HayCard.md)
 
 ### Authorization
 
@@ -406,7 +406,7 @@ No authorization required
 ## `getHayCustomerById()`
 
 ```php
-getHayCustomerById($customer_id): \OpenAPI\Client\Model\HayCustomer
+getHayCustomerById($customer_id): \Shaype\Client\Model\HayCustomer
 ```
 
 Get Customer by ID
@@ -419,7 +419,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomersAPIApi(
+$apiInstance = new Shaype\Client\Api\CustomersAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -442,7 +442,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayCustomer**](../Model/HayCustomer.md)
+[**\Shaype\Client\Model\HayCustomer**](../Model/HayCustomer.md)
 
 ### Authorization
 
@@ -460,7 +460,7 @@ No authorization required
 ## `searchCustomers()`
 
 ```php
-searchCustomers($limit, $offset, $search_customers_request_body): \OpenAPI\Client\Model\HayCustomer[]
+searchCustomers($limit, $offset, $search_customers_request_body): \Shaype\Client\Model\HayCustomer[]
 ```
 
 Search Customers
@@ -473,14 +473,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomersAPIApi(
+$apiInstance = new Shaype\Client\Api\CustomersAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $limit = 56; // int | List fetch limit, value between 1 and 1000
 $offset = 56; // int | Offset used for paging results
-$search_customers_request_body = new \OpenAPI\Client\Model\SearchCustomersRequestBody(); // \OpenAPI\Client\Model\SearchCustomersRequestBody
+$search_customers_request_body = new \Shaype\Client\Model\SearchCustomersRequestBody(); // \Shaype\Client\Model\SearchCustomersRequestBody
 
 try {
     $result = $apiInstance->searchCustomers($limit, $offset, $search_customers_request_body);
@@ -496,11 +496,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **limit** | **int**| List fetch limit, value between 1 and 1000 | |
 | **offset** | **int**| Offset used for paging results | |
-| **search_customers_request_body** | [**\OpenAPI\Client\Model\SearchCustomersRequestBody**](../Model/SearchCustomersRequestBody.md)|  | |
+| **search_customers_request_body** | [**\Shaype\Client\Model\SearchCustomersRequestBody**](../Model/SearchCustomersRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayCustomer[]**](../Model/HayCustomer.md)
+[**\Shaype\Client\Model\HayCustomer[]**](../Model/HayCustomer.md)
 
 ### Authorization
 
@@ -518,7 +518,7 @@ No authorization required
 ## `unblockCustomer()`
 
 ```php
-unblockCustomer($customer_id, $unblock_customer_request_body): \OpenAPI\Client\Model\GenericMessage
+unblockCustomer($customer_id, $unblock_customer_request_body): \Shaype\Client\Model\GenericMessage
 ```
 
 Unblock Customer
@@ -531,13 +531,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomersAPIApi(
+$apiInstance = new Shaype\Client\Api\CustomersAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $customer_id = 'customer_id_example'; // string | Unique identifier (UUID) of the customer
-$unblock_customer_request_body = new \OpenAPI\Client\Model\UnblockCustomerRequestBody(); // \OpenAPI\Client\Model\UnblockCustomerRequestBody
+$unblock_customer_request_body = new \Shaype\Client\Model\UnblockCustomerRequestBody(); // \Shaype\Client\Model\UnblockCustomerRequestBody
 
 try {
     $result = $apiInstance->unblockCustomer($customer_id, $unblock_customer_request_body);
@@ -552,11 +552,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **customer_id** | **string**| Unique identifier (UUID) of the customer | |
-| **unblock_customer_request_body** | [**\OpenAPI\Client\Model\UnblockCustomerRequestBody**](../Model/UnblockCustomerRequestBody.md)|  | |
+| **unblock_customer_request_body** | [**\Shaype\Client\Model\UnblockCustomerRequestBody**](../Model/UnblockCustomerRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GenericMessage**](../Model/GenericMessage.md)
+[**\Shaype\Client\Model\GenericMessage**](../Model/GenericMessage.md)
 
 ### Authorization
 
@@ -574,7 +574,7 @@ No authorization required
 ## `updateCustomer()`
 
 ```php
-updateCustomer($customer_id, $update_customer_request_body): \OpenAPI\Client\Model\HayCustomer
+updateCustomer($customer_id, $update_customer_request_body): \Shaype\Client\Model\HayCustomer
 ```
 
 Update Customer details
@@ -587,13 +587,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\CustomersAPIApi(
+$apiInstance = new Shaype\Client\Api\CustomersAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $customer_id = 'customer_id_example'; // string | Unique identifier (UUID) of the Customer
-$update_customer_request_body = new \OpenAPI\Client\Model\UpdateCustomerRequestBody(); // \OpenAPI\Client\Model\UpdateCustomerRequestBody
+$update_customer_request_body = new \Shaype\Client\Model\UpdateCustomerRequestBody(); // \Shaype\Client\Model\UpdateCustomerRequestBody
 
 try {
     $result = $apiInstance->updateCustomer($customer_id, $update_customer_request_body);
@@ -608,11 +608,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **customer_id** | **string**| Unique identifier (UUID) of the Customer | |
-| **update_customer_request_body** | [**\OpenAPI\Client\Model\UpdateCustomerRequestBody**](../Model/UpdateCustomerRequestBody.md)|  | |
+| **update_customer_request_body** | [**\Shaype\Client\Model\UpdateCustomerRequestBody**](../Model/UpdateCustomerRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayCustomer**](../Model/HayCustomer.md)
+[**\Shaype\Client\Model\HayCustomer**](../Model/HayCustomer.md)
 
 ### Authorization
 

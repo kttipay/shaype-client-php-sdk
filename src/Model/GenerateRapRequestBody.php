@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * GenerateRapRequestBody Class Doc Comment
  *
  * @description Encapsulates payment data for payment initiated by the payer directly into payee&#39;s account
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -59,13 +59,13 @@ class GenerateRapRequestBody implements ModelInterface, ArrayAccess, JsonSeriali
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'creditor_information' => '\OpenAPI\Client\Model\GenerateRapCreditorInformation',
-        'debtor_information' => '\OpenAPI\Client\Model\GenerateRapDebtorInformation',
+        'creditor_information' => '\Shaype\Client\Model\GenerateRapCreditorInformation',
+        'debtor_information' => '\Shaype\Client\Model\GenerateRapDebtorInformation',
         'initg_pty_id_org_id' => 'string',
-        'mandate_information' => '\OpenAPI\Client\Model\GenerateRapMandateInformation',
+        'mandate_information' => '\Shaype\Client\Model\GenerateRapMandateInformation',
         'payment_id' => 'string',
-        'payment_information' => '\OpenAPI\Client\Model\GenerateRapPaymentInformation',
-        'payment_return_information' => '\OpenAPI\Client\Model\GenerateRapPaymentReturnInformation'
+        'payment_information' => '\Shaype\Client\Model\GenerateRapPaymentInformation',
+        'payment_return_information' => '\Shaype\Client\Model\GenerateRapPaymentReturnInformation'
     ];
 
     /**
@@ -356,9 +356,9 @@ class GenerateRapRequestBody implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Gets creditor_information
      *
-     * @return \OpenAPI\Client\Model\GenerateRapCreditorInformation
+     * @return \Shaype\Client\Model\GenerateRapCreditorInformation
      */
-    public function getCreditorInformation(): \OpenAPI\Client\Model\GenerateRapCreditorInformation
+    public function getCreditorInformation(): \Shaype\Client\Model\GenerateRapCreditorInformation
     {
         return $this->container['creditor_information'];
     }
@@ -366,11 +366,11 @@ class GenerateRapRequestBody implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Sets creditor_information
      *
-     * @param \OpenAPI\Client\Model\GenerateRapCreditorInformation $creditor_information creditor_information
+     * @param \Shaype\Client\Model\GenerateRapCreditorInformation $creditor_information creditor_information
      *
      * @return $this
      */
-    public function setCreditorInformation(\OpenAPI\Client\Model\GenerateRapCreditorInformation $creditor_information): static
+    public function setCreditorInformation(\Shaype\Client\Model\GenerateRapCreditorInformation $creditor_information): static
     {
         if (is_null($creditor_information)) {
             throw new InvalidArgumentException('non-nullable creditor_information cannot be null');
@@ -383,9 +383,9 @@ class GenerateRapRequestBody implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Gets debtor_information
      *
-     * @return \OpenAPI\Client\Model\GenerateRapDebtorInformation
+     * @return \Shaype\Client\Model\GenerateRapDebtorInformation
      */
-    public function getDebtorInformation(): \OpenAPI\Client\Model\GenerateRapDebtorInformation
+    public function getDebtorInformation(): \Shaype\Client\Model\GenerateRapDebtorInformation
     {
         return $this->container['debtor_information'];
     }
@@ -393,11 +393,11 @@ class GenerateRapRequestBody implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Sets debtor_information
      *
-     * @param \OpenAPI\Client\Model\GenerateRapDebtorInformation $debtor_information debtor_information
+     * @param \Shaype\Client\Model\GenerateRapDebtorInformation $debtor_information debtor_information
      *
      * @return $this
      */
-    public function setDebtorInformation(\OpenAPI\Client\Model\GenerateRapDebtorInformation $debtor_information): static
+    public function setDebtorInformation(\Shaype\Client\Model\GenerateRapDebtorInformation $debtor_information): static
     {
         if (is_null($debtor_information)) {
             throw new InvalidArgumentException('non-nullable debtor_information cannot be null');
@@ -442,9 +442,9 @@ class GenerateRapRequestBody implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Gets mandate_information
      *
-     * @return \OpenAPI\Client\Model\GenerateRapMandateInformation|null
+     * @return \Shaype\Client\Model\GenerateRapMandateInformation|null
      */
-    public function getMandateInformation(): ?\OpenAPI\Client\Model\GenerateRapMandateInformation
+    public function getMandateInformation(): ?\Shaype\Client\Model\GenerateRapMandateInformation
     {
         return $this->container['mandate_information'];
     }
@@ -452,11 +452,11 @@ class GenerateRapRequestBody implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Sets mandate_information
      *
-     * @param \OpenAPI\Client\Model\GenerateRapMandateInformation|null $mandate_information mandate_information
+     * @param \Shaype\Client\Model\GenerateRapMandateInformation|null $mandate_information mandate_information
      *
      * @return $this
      */
-    public function setMandateInformation(?\OpenAPI\Client\Model\GenerateRapMandateInformation $mandate_information): static
+    public function setMandateInformation(?\Shaype\Client\Model\GenerateRapMandateInformation $mandate_information): static
     {
         if (is_null($mandate_information)) {
             throw new InvalidArgumentException('non-nullable mandate_information cannot be null');
@@ -501,9 +501,9 @@ class GenerateRapRequestBody implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Gets payment_information
      *
-     * @return \OpenAPI\Client\Model\GenerateRapPaymentInformation
+     * @return \Shaype\Client\Model\GenerateRapPaymentInformation
      */
-    public function getPaymentInformation(): \OpenAPI\Client\Model\GenerateRapPaymentInformation
+    public function getPaymentInformation(): \Shaype\Client\Model\GenerateRapPaymentInformation
     {
         return $this->container['payment_information'];
     }
@@ -511,11 +511,11 @@ class GenerateRapRequestBody implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Sets payment_information
      *
-     * @param \OpenAPI\Client\Model\GenerateRapPaymentInformation $payment_information payment_information
+     * @param \Shaype\Client\Model\GenerateRapPaymentInformation $payment_information payment_information
      *
      * @return $this
      */
-    public function setPaymentInformation(\OpenAPI\Client\Model\GenerateRapPaymentInformation $payment_information): static
+    public function setPaymentInformation(\Shaype\Client\Model\GenerateRapPaymentInformation $payment_information): static
     {
         if (is_null($payment_information)) {
             throw new InvalidArgumentException('non-nullable payment_information cannot be null');
@@ -528,9 +528,9 @@ class GenerateRapRequestBody implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Gets payment_return_information
      *
-     * @return \OpenAPI\Client\Model\GenerateRapPaymentReturnInformation|null
+     * @return \Shaype\Client\Model\GenerateRapPaymentReturnInformation|null
      */
-    public function getPaymentReturnInformation(): ?\OpenAPI\Client\Model\GenerateRapPaymentReturnInformation
+    public function getPaymentReturnInformation(): ?\Shaype\Client\Model\GenerateRapPaymentReturnInformation
     {
         return $this->container['payment_return_information'];
     }
@@ -538,11 +538,11 @@ class GenerateRapRequestBody implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Sets payment_return_information
      *
-     * @param \OpenAPI\Client\Model\GenerateRapPaymentReturnInformation|null $payment_return_information payment_return_information
+     * @param \Shaype\Client\Model\GenerateRapPaymentReturnInformation|null $payment_return_information payment_return_information
      *
      * @return $this
      */
-    public function setPaymentReturnInformation(?\OpenAPI\Client\Model\GenerateRapPaymentReturnInformation $payment_return_information): static
+    public function setPaymentReturnInformation(?\Shaype\Client\Model\GenerateRapPaymentReturnInformation $payment_return_information): static
     {
         if (is_null($payment_return_information)) {
             throw new InvalidArgumentException('non-nullable payment_return_information cannot be null');

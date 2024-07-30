@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * CreateCaseExternalResponse Class Doc Comment
  *
  * @description New case created
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class CreateCaseExternalResponse implements ModelInterface, ArrayAccess, JsonSer
       */
     protected static array $openAPITypes = [
         'mobile_token' => 'string',
-        'scan_case' => '\OpenAPI\Client\Model\ExternalCase',
+        'scan_case' => '\Shaype\Client\Model\ExternalCase',
         'web_link' => 'string'
     ];
 
@@ -332,9 +332,9 @@ class CreateCaseExternalResponse implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Gets scan_case
      *
-     * @return \OpenAPI\Client\Model\ExternalCase|null
+     * @return \Shaype\Client\Model\ExternalCase|null
      */
-    public function getScanCase(): ?\OpenAPI\Client\Model\ExternalCase
+    public function getScanCase(): ?\Shaype\Client\Model\ExternalCase
     {
         return $this->container['scan_case'];
     }
@@ -342,11 +342,11 @@ class CreateCaseExternalResponse implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Sets scan_case
      *
-     * @param \OpenAPI\Client\Model\ExternalCase|null $scan_case scan_case
+     * @param \Shaype\Client\Model\ExternalCase|null $scan_case scan_case
      *
      * @return $this
      */
-    public function setScanCase(?\OpenAPI\Client\Model\ExternalCase $scan_case): static
+    public function setScanCase(?\Shaype\Client\Model\ExternalCase $scan_case): static
     {
         if (is_null($scan_case)) {
             throw new InvalidArgumentException('non-nullable scan_case cannot be null');

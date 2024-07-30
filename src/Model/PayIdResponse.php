@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * PayIdResponse Class Doc Comment
  *
  * @description Details of the PayID
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class PayIdResponse implements ModelInterface, ArrayAccess, JsonSerializable
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'account_details' => '\OpenAPI\Client\Model\PayIdAccountDetails',
-        'pay_id_details' => '\OpenAPI\Client\Model\PayIdDetailsResponse'
+        'account_details' => '\Shaype\Client\Model\PayIdAccountDetails',
+        'pay_id_details' => '\Shaype\Client\Model\PayIdDetailsResponse'
     ];
 
     /**
@@ -298,9 +298,9 @@ class PayIdResponse implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Gets account_details
      *
-     * @return \OpenAPI\Client\Model\PayIdAccountDetails|null
+     * @return \Shaype\Client\Model\PayIdAccountDetails|null
      */
-    public function getAccountDetails(): ?\OpenAPI\Client\Model\PayIdAccountDetails
+    public function getAccountDetails(): ?\Shaype\Client\Model\PayIdAccountDetails
     {
         return $this->container['account_details'];
     }
@@ -308,11 +308,11 @@ class PayIdResponse implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Sets account_details
      *
-     * @param \OpenAPI\Client\Model\PayIdAccountDetails|null $account_details account_details
+     * @param \Shaype\Client\Model\PayIdAccountDetails|null $account_details account_details
      *
      * @return $this
      */
-    public function setAccountDetails(?\OpenAPI\Client\Model\PayIdAccountDetails $account_details): static
+    public function setAccountDetails(?\Shaype\Client\Model\PayIdAccountDetails $account_details): static
     {
         if (is_null($account_details)) {
             throw new InvalidArgumentException('non-nullable account_details cannot be null');
@@ -325,9 +325,9 @@ class PayIdResponse implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Gets pay_id_details
      *
-     * @return \OpenAPI\Client\Model\PayIdDetailsResponse|null
+     * @return \Shaype\Client\Model\PayIdDetailsResponse|null
      */
-    public function getPayIdDetails(): ?\OpenAPI\Client\Model\PayIdDetailsResponse
+    public function getPayIdDetails(): ?\Shaype\Client\Model\PayIdDetailsResponse
     {
         return $this->container['pay_id_details'];
     }
@@ -335,11 +335,11 @@ class PayIdResponse implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Sets pay_id_details
      *
-     * @param \OpenAPI\Client\Model\PayIdDetailsResponse|null $pay_id_details pay_id_details
+     * @param \Shaype\Client\Model\PayIdDetailsResponse|null $pay_id_details pay_id_details
      *
      * @return $this
      */
-    public function setPayIdDetails(?\OpenAPI\Client\Model\PayIdDetailsResponse $pay_id_details): static
+    public function setPayIdDetails(?\Shaype\Client\Model\PayIdDetailsResponse $pay_id_details): static
     {
         if (is_null($pay_id_details)) {
             throw new InvalidArgumentException('non-nullable pay_id_details cannot be null');

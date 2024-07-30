@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * HayArchivedScheduledPayment Class Doc Comment
  *
  * @description Any previous versions of this payment schedule that has subsequently been updated
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class HayArchivedScheduledPayment implements ModelInterface, ArrayAccess, JsonSe
       */
     protected static array $openAPITypes = [
         'account_id' => 'string',
-        'amount' => '\OpenAPI\Client\Model\CurrencyAmount',
+        'amount' => '\Shaype\Client\Model\CurrencyAmount',
         'creation_date_time_utc' => '\DateTime',
         'customer_hay_id' => 'string',
         'description' => 'string',
@@ -70,7 +70,7 @@ class HayArchivedScheduledPayment implements ModelInterface, ArrayAccess, JsonSe
         'last_processed_date_time_utc' => '\DateTime',
         'number_of_payments' => 'int',
         'number_of_processed_payments' => 'int',
-        'recipient' => '\OpenAPI\Client\Model\ScheduledPaymentRecipient',
+        'recipient' => '\Shaype\Client\Model\ScheduledPaymentRecipient',
         'reference' => 'string',
         'should_cancel_on_failure' => 'bool',
         'start_date' => '\DateTime',
@@ -516,9 +516,9 @@ class HayArchivedScheduledPayment implements ModelInterface, ArrayAccess, JsonSe
     /**
      * Gets amount
      *
-     * @return \OpenAPI\Client\Model\CurrencyAmount|null
+     * @return \Shaype\Client\Model\CurrencyAmount|null
      */
-    public function getAmount(): ?\OpenAPI\Client\Model\CurrencyAmount
+    public function getAmount(): ?\Shaype\Client\Model\CurrencyAmount
     {
         return $this->container['amount'];
     }
@@ -526,11 +526,11 @@ class HayArchivedScheduledPayment implements ModelInterface, ArrayAccess, JsonSe
     /**
      * Sets amount
      *
-     * @param \OpenAPI\Client\Model\CurrencyAmount|null $amount amount
+     * @param \Shaype\Client\Model\CurrencyAmount|null $amount amount
      *
      * @return $this
      */
-    public function setAmount(?\OpenAPI\Client\Model\CurrencyAmount $amount): static
+    public function setAmount(?\Shaype\Client\Model\CurrencyAmount $amount): static
     {
         if (is_null($amount)) {
             throw new InvalidArgumentException('non-nullable amount cannot be null');
@@ -796,9 +796,9 @@ class HayArchivedScheduledPayment implements ModelInterface, ArrayAccess, JsonSe
     /**
      * Gets recipient
      *
-     * @return \OpenAPI\Client\Model\ScheduledPaymentRecipient|null
+     * @return \Shaype\Client\Model\ScheduledPaymentRecipient|null
      */
-    public function getRecipient(): ?\OpenAPI\Client\Model\ScheduledPaymentRecipient
+    public function getRecipient(): ?\Shaype\Client\Model\ScheduledPaymentRecipient
     {
         return $this->container['recipient'];
     }
@@ -806,11 +806,11 @@ class HayArchivedScheduledPayment implements ModelInterface, ArrayAccess, JsonSe
     /**
      * Sets recipient
      *
-     * @param \OpenAPI\Client\Model\ScheduledPaymentRecipient|null $recipient recipient
+     * @param \Shaype\Client\Model\ScheduledPaymentRecipient|null $recipient recipient
      *
      * @return $this
      */
-    public function setRecipient(?\OpenAPI\Client\Model\ScheduledPaymentRecipient $recipient): static
+    public function setRecipient(?\Shaype\Client\Model\ScheduledPaymentRecipient $recipient): static
     {
         if (is_null($recipient)) {
             throw new InvalidArgumentException('non-nullable recipient cannot be null');

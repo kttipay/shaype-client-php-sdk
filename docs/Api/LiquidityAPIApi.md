@@ -1,4 +1,4 @@
-# OpenAPI\Client\LiquidityAPIApi
+# Shaype\Client\LiquidityAPIApi
 
 All URIs are relative to http://localhost:8080, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to http://localhost:8080, except if the operation defines 
 ## `createLiquidityThreshold()`
 
 ```php
-createLiquidityThreshold($create_threshold_request_body): \OpenAPI\Client\Model\LiquidityThreshold
+createLiquidityThreshold($create_threshold_request_body): \Shaype\Client\Model\LiquidityThreshold
 ```
 
 Create liquidity alerting Threshold
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\LiquidityAPIApi(
+$apiInstance = new Shaype\Client\Api\LiquidityAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_threshold_request_body = new \OpenAPI\Client\Model\CreateThresholdRequestBody(); // \OpenAPI\Client\Model\CreateThresholdRequestBody
+$create_threshold_request_body = new \Shaype\Client\Model\CreateThresholdRequestBody(); // \Shaype\Client\Model\CreateThresholdRequestBody
 
 try {
     $result = $apiInstance->createLiquidityThreshold($create_threshold_request_body);
@@ -45,11 +45,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_threshold_request_body** | [**\OpenAPI\Client\Model\CreateThresholdRequestBody**](../Model/CreateThresholdRequestBody.md)|  | |
+| **create_threshold_request_body** | [**\Shaype\Client\Model\CreateThresholdRequestBody**](../Model/CreateThresholdRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LiquidityThreshold**](../Model/LiquidityThreshold.md)
+[**\Shaype\Client\Model\LiquidityThreshold**](../Model/LiquidityThreshold.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ No authorization required
 ## `getClientLiquidity()`
 
 ```php
-getClientLiquidity($date): \OpenAPI\Client\Model\ClientLiquidity
+getClientLiquidity($date): \Shaype\Client\Model\ClientLiquidity
 ```
 
 Get client Liquidity
@@ -80,7 +80,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\LiquidityAPIApi(
+$apiInstance = new Shaype\Client\Api\LiquidityAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -103,7 +103,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ClientLiquidity**](../Model/ClientLiquidity.md)
+[**\Shaype\Client\Model\ClientLiquidity**](../Model/ClientLiquidity.md)
 
 ### Authorization
 
@@ -121,7 +121,7 @@ No authorization required
 ## `getClientLiquidityThresholds()`
 
 ```php
-getClientLiquidityThresholds($active): \OpenAPI\Client\Model\LiquidityThreshold[]
+getClientLiquidityThresholds($active): \Shaype\Client\Model\LiquidityThreshold[]
 ```
 
 Get all liquidity alerting Thresholds
@@ -134,7 +134,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\LiquidityAPIApi(
+$apiInstance = new Shaype\Client\Api\LiquidityAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -157,7 +157,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LiquidityThreshold[]**](../Model/LiquidityThreshold.md)
+[**\Shaype\Client\Model\LiquidityThreshold[]**](../Model/LiquidityThreshold.md)
 
 ### Authorization
 
@@ -175,7 +175,7 @@ No authorization required
 ## `updateLiquidityThreshold()`
 
 ```php
-updateLiquidityThreshold($threshold_id, $update_threshold_request_body): \OpenAPI\Client\Model\LiquidityThreshold
+updateLiquidityThreshold($threshold_id, $update_threshold_request_body): \Shaype\Client\Model\LiquidityThreshold
 ```
 
 Update liquidity alerting Threshold
@@ -188,13 +188,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\LiquidityAPIApi(
+$apiInstance = new Shaype\Client\Api\LiquidityAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $threshold_id = 'threshold_id_example'; // string | Threshold ID
-$update_threshold_request_body = new \OpenAPI\Client\Model\UpdateThresholdRequestBody(); // \OpenAPI\Client\Model\UpdateThresholdRequestBody
+$update_threshold_request_body = new \Shaype\Client\Model\UpdateThresholdRequestBody(); // \Shaype\Client\Model\UpdateThresholdRequestBody
 
 try {
     $result = $apiInstance->updateLiquidityThreshold($threshold_id, $update_threshold_request_body);
@@ -209,11 +209,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **threshold_id** | **string**| Threshold ID | |
-| **update_threshold_request_body** | [**\OpenAPI\Client\Model\UpdateThresholdRequestBody**](../Model/UpdateThresholdRequestBody.md)|  | |
+| **update_threshold_request_body** | [**\Shaype\Client\Model\UpdateThresholdRequestBody**](../Model/UpdateThresholdRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LiquidityThreshold**](../Model/LiquidityThreshold.md)
+[**\Shaype\Client\Model\LiquidityThreshold**](../Model/LiquidityThreshold.md)
 
 ### Authorization
 

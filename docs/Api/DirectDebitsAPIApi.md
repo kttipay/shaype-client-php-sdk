@@ -1,4 +1,4 @@
-# OpenAPI\Client\DirectDebitsAPIApi
+# Shaype\Client\DirectDebitsAPIApi
 
 All URIs are relative to http://localhost:8080, except if the operation defines another base path.
 
@@ -15,7 +15,7 @@ All URIs are relative to http://localhost:8080, except if the operation defines 
 ## `createDirectDebitV0()`
 
 ```php
-createDirectDebitV0($create_direct_debit_request_body): \OpenAPI\Client\Model\DirectDebitResponse
+createDirectDebitV0($create_direct_debit_request_body): \Shaype\Client\Model\DirectDebitResponse
 ```
 
 Create outbound Direct Debit
@@ -28,12 +28,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\DirectDebitsAPIApi(
+$apiInstance = new Shaype\Client\Api\DirectDebitsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_direct_debit_request_body = new \OpenAPI\Client\Model\CreateDirectDebitRequestBody(); // \OpenAPI\Client\Model\CreateDirectDebitRequestBody
+$create_direct_debit_request_body = new \Shaype\Client\Model\CreateDirectDebitRequestBody(); // \Shaype\Client\Model\CreateDirectDebitRequestBody
 
 try {
     $result = $apiInstance->createDirectDebitV0($create_direct_debit_request_body);
@@ -47,11 +47,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_direct_debit_request_body** | [**\OpenAPI\Client\Model\CreateDirectDebitRequestBody**](../Model/CreateDirectDebitRequestBody.md)|  | |
+| **create_direct_debit_request_body** | [**\Shaype\Client\Model\CreateDirectDebitRequestBody**](../Model/CreateDirectDebitRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DirectDebitResponse**](../Model/DirectDebitResponse.md)
+[**\Shaype\Client\Model\DirectDebitResponse**](../Model/DirectDebitResponse.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ No authorization required
 ## `createDirectDebitV1()`
 
 ```php
-createDirectDebitV1($create_direct_debit_request_body): \OpenAPI\Client\Model\DirectDebitResponseV1
+createDirectDebitV1($create_direct_debit_request_body): \Shaype\Client\Model\DirectDebitResponseV1
 ```
 
 Create outbound Direct Debit
@@ -82,12 +82,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\DirectDebitsAPIApi(
+$apiInstance = new Shaype\Client\Api\DirectDebitsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_direct_debit_request_body = new \OpenAPI\Client\Model\CreateDirectDebitRequestBody(); // \OpenAPI\Client\Model\CreateDirectDebitRequestBody
+$create_direct_debit_request_body = new \Shaype\Client\Model\CreateDirectDebitRequestBody(); // \Shaype\Client\Model\CreateDirectDebitRequestBody
 
 try {
     $result = $apiInstance->createDirectDebitV1($create_direct_debit_request_body);
@@ -101,11 +101,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_direct_debit_request_body** | [**\OpenAPI\Client\Model\CreateDirectDebitRequestBody**](../Model/CreateDirectDebitRequestBody.md)|  | |
+| **create_direct_debit_request_body** | [**\Shaype\Client\Model\CreateDirectDebitRequestBody**](../Model/CreateDirectDebitRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DirectDebitResponseV1**](../Model/DirectDebitResponseV1.md)
+[**\Shaype\Client\Model\DirectDebitResponseV1**](../Model/DirectDebitResponseV1.md)
 
 ### Authorization
 
@@ -123,7 +123,7 @@ No authorization required
 ## `getDirectDebitV0()`
 
 ```php
-getDirectDebitV0($transaction_id): \OpenAPI\Client\Model\DirectDebitResponse
+getDirectDebitV0($transaction_id): \Shaype\Client\Model\DirectDebitResponse
 ```
 
 Get outbound Direct Debit by ID
@@ -136,7 +136,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\DirectDebitsAPIApi(
+$apiInstance = new Shaype\Client\Api\DirectDebitsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -159,7 +159,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DirectDebitResponse**](../Model/DirectDebitResponse.md)
+[**\Shaype\Client\Model\DirectDebitResponse**](../Model/DirectDebitResponse.md)
 
 ### Authorization
 
@@ -177,7 +177,7 @@ No authorization required
 ## `getDirectDebitV1()`
 
 ```php
-getDirectDebitV1($transaction_id): \OpenAPI\Client\Model\DirectDebitResponseV1
+getDirectDebitV1($transaction_id): \Shaype\Client\Model\DirectDebitResponseV1
 ```
 
 Get outbound Direct Debit by ID
@@ -190,7 +190,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\DirectDebitsAPIApi(
+$apiInstance = new Shaype\Client\Api\DirectDebitsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -213,7 +213,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DirectDebitResponseV1**](../Model/DirectDebitResponseV1.md)
+[**\Shaype\Client\Model\DirectDebitResponseV1**](../Model/DirectDebitResponseV1.md)
 
 ### Authorization
 
@@ -231,7 +231,7 @@ No authorization required
 ## `getDirectDebitsV0()`
 
 ```php
-getDirectDebitsV0($from_utc, $to_utc, $offset, $limit, $status): \OpenAPI\Client\Model\DeTransactionDetails[]
+getDirectDebitsV0($from_utc, $to_utc, $offset, $limit, $status): \Shaype\Client\Model\DeTransactionDetails[]
 ```
 
 Get outbound Direct Debits by date
@@ -244,7 +244,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\DirectDebitsAPIApi(
+$apiInstance = new Shaype\Client\Api\DirectDebitsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -275,7 +275,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DeTransactionDetails[]**](../Model/DeTransactionDetails.md)
+[**\Shaype\Client\Model\DeTransactionDetails[]**](../Model/DeTransactionDetails.md)
 
 ### Authorization
 
@@ -293,7 +293,7 @@ No authorization required
 ## `getDirectDebitsV1()`
 
 ```php
-getDirectDebitsV1($from_utc, $to_utc, $offset, $limit, $status, $sender_account_number): \OpenAPI\Client\Model\DeTransactionDetailsV1[]
+getDirectDebitsV1($from_utc, $to_utc, $offset, $limit, $status, $sender_account_number): \Shaype\Client\Model\DeTransactionDetailsV1[]
 ```
 
 Get outbound Direct Debits by date
@@ -306,7 +306,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\DirectDebitsAPIApi(
+$apiInstance = new Shaype\Client\Api\DirectDebitsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -339,7 +339,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DeTransactionDetailsV1[]**](../Model/DeTransactionDetailsV1.md)
+[**\Shaype\Client\Model\DeTransactionDetailsV1[]**](../Model/DeTransactionDetailsV1.md)
 
 ### Authorization
 

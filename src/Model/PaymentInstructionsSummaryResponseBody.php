@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * PaymentInstructionsSummaryResponseBody Class Doc Comment
  *
  * @description Response with payment instructions summary.
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class PaymentInstructionsSummaryResponseBody implements ModelInterface, ArrayAcc
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'payment_instructions' => '\OpenAPI\Client\Model\PaymentInstruction[]'
+        'payment_instructions' => '\Shaype\Client\Model\PaymentInstruction[]'
     ];
 
     /**
@@ -291,7 +291,7 @@ class PaymentInstructionsSummaryResponseBody implements ModelInterface, ArrayAcc
     /**
      * Gets payment_instructions
      *
-     * @return \OpenAPI\Client\Model\PaymentInstruction[]|null
+     * @return \Shaype\Client\Model\PaymentInstruction[]|null
      */
     public function getPaymentInstructions(): ?array
     {
@@ -301,7 +301,7 @@ class PaymentInstructionsSummaryResponseBody implements ModelInterface, ArrayAcc
     /**
      * Sets payment_instructions
      *
-     * @param \OpenAPI\Client\Model\PaymentInstruction[]|null $payment_instructions Payments instructions data.
+     * @param \Shaype\Client\Model\PaymentInstruction[]|null $payment_instructions Payments instructions data.
      *
      * @return $this
      */

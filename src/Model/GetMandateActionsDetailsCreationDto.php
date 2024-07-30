@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * GetMandateActionsDetailsCreationDto Class Doc Comment
  *
  * @description Request to register payment mandate in central mandate service.
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -61,16 +61,16 @@ class GetMandateActionsDetailsCreationDto implements ModelInterface, ArrayAccess
     protected static array $openAPITypes = [
         'automatic_extension_indicator' => 'bool',
         'besc_user_identification' => 'string',
-        'creditor_information' => '\OpenAPI\Client\Model\GetMandateActionsDetailsCreationCreditorInformationDto',
-        'debtor_information' => '\OpenAPI\Client\Model\GetMandateActionsDetailsCreationDebtorInformationDto',
+        'creditor_information' => '\Shaype\Client\Model\GetMandateActionsDetailsCreationCreditorInformationDto',
+        'debtor_information' => '\Shaype\Client\Model\GetMandateActionsDetailsCreationDebtorInformationDto',
         'description' => 'string',
         'establishment_scheme' => 'string',
         'initiation_request_identification' => 'string',
         'mandate_purpose_code' => 'string',
         'mandate_type' => 'string',
         'npp_backoffice_service' => 'string',
-        'payment_information' => '\OpenAPI\Client\Model\GetMandateActionsDetailsCreationPaymentInformationDto',
-        'payment_initiator_information' => '\OpenAPI\Client\Model\GetMandateActionsDetailsCreationPaymentInitiatorInformationDto',
+        'payment_information' => '\Shaype\Client\Model\GetMandateActionsDetailsCreationPaymentInformationDto',
+        'payment_initiator_information' => '\Shaype\Client\Model\GetMandateActionsDetailsCreationPaymentInitiatorInformationDto',
         'resolution_requested_by' => 'string',
         'short_description' => 'string',
         'transfer_arrangement' => 'string',
@@ -606,9 +606,9 @@ class GetMandateActionsDetailsCreationDto implements ModelInterface, ArrayAccess
     /**
      * Gets creditor_information
      *
-     * @return \OpenAPI\Client\Model\GetMandateActionsDetailsCreationCreditorInformationDto|null
+     * @return \Shaype\Client\Model\GetMandateActionsDetailsCreationCreditorInformationDto|null
      */
-    public function getCreditorInformation(): ?\OpenAPI\Client\Model\GetMandateActionsDetailsCreationCreditorInformationDto
+    public function getCreditorInformation(): ?\Shaype\Client\Model\GetMandateActionsDetailsCreationCreditorInformationDto
     {
         return $this->container['creditor_information'];
     }
@@ -616,11 +616,11 @@ class GetMandateActionsDetailsCreationDto implements ModelInterface, ArrayAccess
     /**
      * Sets creditor_information
      *
-     * @param \OpenAPI\Client\Model\GetMandateActionsDetailsCreationCreditorInformationDto|null $creditor_information creditor_information
+     * @param \Shaype\Client\Model\GetMandateActionsDetailsCreationCreditorInformationDto|null $creditor_information creditor_information
      *
      * @return $this
      */
-    public function setCreditorInformation(?\OpenAPI\Client\Model\GetMandateActionsDetailsCreationCreditorInformationDto $creditor_information): static
+    public function setCreditorInformation(?\Shaype\Client\Model\GetMandateActionsDetailsCreationCreditorInformationDto $creditor_information): static
     {
         if (is_null($creditor_information)) {
             throw new InvalidArgumentException('non-nullable creditor_information cannot be null');
@@ -633,9 +633,9 @@ class GetMandateActionsDetailsCreationDto implements ModelInterface, ArrayAccess
     /**
      * Gets debtor_information
      *
-     * @return \OpenAPI\Client\Model\GetMandateActionsDetailsCreationDebtorInformationDto
+     * @return \Shaype\Client\Model\GetMandateActionsDetailsCreationDebtorInformationDto
      */
-    public function getDebtorInformation(): \OpenAPI\Client\Model\GetMandateActionsDetailsCreationDebtorInformationDto
+    public function getDebtorInformation(): \Shaype\Client\Model\GetMandateActionsDetailsCreationDebtorInformationDto
     {
         return $this->container['debtor_information'];
     }
@@ -643,11 +643,11 @@ class GetMandateActionsDetailsCreationDto implements ModelInterface, ArrayAccess
     /**
      * Sets debtor_information
      *
-     * @param \OpenAPI\Client\Model\GetMandateActionsDetailsCreationDebtorInformationDto $debtor_information debtor_information
+     * @param \Shaype\Client\Model\GetMandateActionsDetailsCreationDebtorInformationDto $debtor_information debtor_information
      *
      * @return $this
      */
-    public function setDebtorInformation(\OpenAPI\Client\Model\GetMandateActionsDetailsCreationDebtorInformationDto $debtor_information): static
+    public function setDebtorInformation(\Shaype\Client\Model\GetMandateActionsDetailsCreationDebtorInformationDto $debtor_information): static
     {
         if (is_null($debtor_information)) {
             throw new InvalidArgumentException('non-nullable debtor_information cannot be null');
@@ -869,9 +869,9 @@ class GetMandateActionsDetailsCreationDto implements ModelInterface, ArrayAccess
     /**
      * Gets payment_information
      *
-     * @return \OpenAPI\Client\Model\GetMandateActionsDetailsCreationPaymentInformationDto
+     * @return \Shaype\Client\Model\GetMandateActionsDetailsCreationPaymentInformationDto
      */
-    public function getPaymentInformation(): \OpenAPI\Client\Model\GetMandateActionsDetailsCreationPaymentInformationDto
+    public function getPaymentInformation(): \Shaype\Client\Model\GetMandateActionsDetailsCreationPaymentInformationDto
     {
         return $this->container['payment_information'];
     }
@@ -879,11 +879,11 @@ class GetMandateActionsDetailsCreationDto implements ModelInterface, ArrayAccess
     /**
      * Sets payment_information
      *
-     * @param \OpenAPI\Client\Model\GetMandateActionsDetailsCreationPaymentInformationDto $payment_information payment_information
+     * @param \Shaype\Client\Model\GetMandateActionsDetailsCreationPaymentInformationDto $payment_information payment_information
      *
      * @return $this
      */
-    public function setPaymentInformation(\OpenAPI\Client\Model\GetMandateActionsDetailsCreationPaymentInformationDto $payment_information): static
+    public function setPaymentInformation(\Shaype\Client\Model\GetMandateActionsDetailsCreationPaymentInformationDto $payment_information): static
     {
         if (is_null($payment_information)) {
             throw new InvalidArgumentException('non-nullable payment_information cannot be null');
@@ -896,9 +896,9 @@ class GetMandateActionsDetailsCreationDto implements ModelInterface, ArrayAccess
     /**
      * Gets payment_initiator_information
      *
-     * @return \OpenAPI\Client\Model\GetMandateActionsDetailsCreationPaymentInitiatorInformationDto
+     * @return \Shaype\Client\Model\GetMandateActionsDetailsCreationPaymentInitiatorInformationDto
      */
-    public function getPaymentInitiatorInformation(): \OpenAPI\Client\Model\GetMandateActionsDetailsCreationPaymentInitiatorInformationDto
+    public function getPaymentInitiatorInformation(): \Shaype\Client\Model\GetMandateActionsDetailsCreationPaymentInitiatorInformationDto
     {
         return $this->container['payment_initiator_information'];
     }
@@ -906,11 +906,11 @@ class GetMandateActionsDetailsCreationDto implements ModelInterface, ArrayAccess
     /**
      * Sets payment_initiator_information
      *
-     * @param \OpenAPI\Client\Model\GetMandateActionsDetailsCreationPaymentInitiatorInformationDto $payment_initiator_information payment_initiator_information
+     * @param \Shaype\Client\Model\GetMandateActionsDetailsCreationPaymentInitiatorInformationDto $payment_initiator_information payment_initiator_information
      *
      * @return $this
      */
-    public function setPaymentInitiatorInformation(\OpenAPI\Client\Model\GetMandateActionsDetailsCreationPaymentInitiatorInformationDto $payment_initiator_information): static
+    public function setPaymentInitiatorInformation(\Shaype\Client\Model\GetMandateActionsDetailsCreationPaymentInitiatorInformationDto $payment_initiator_information): static
     {
         if (is_null($payment_initiator_information)) {
             throw new InvalidArgumentException('non-nullable payment_initiator_information cannot be null');

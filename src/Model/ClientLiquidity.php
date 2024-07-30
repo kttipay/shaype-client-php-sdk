@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * ClientLiquidity Class Doc Comment
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -60,8 +60,8 @@ class ClientLiquidity implements ModelInterface, ArrayAccess, JsonSerializable
     protected static array $openAPITypes = [
         'client_reference' => 'string',
         'date' => '\DateTime',
-        'non_scheme' => '\OpenAPI\Client\Model\NonSchemeLiquidity',
-        'scheme' => '\OpenAPI\Client\Model\SchemeLiquidity'
+        'non_scheme' => '\Shaype\Client\Model\NonSchemeLiquidity',
+        'scheme' => '\Shaype\Client\Model\SchemeLiquidity'
     ];
 
     /**
@@ -377,9 +377,9 @@ class ClientLiquidity implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Gets non_scheme
      *
-     * @return \OpenAPI\Client\Model\NonSchemeLiquidity
+     * @return \Shaype\Client\Model\NonSchemeLiquidity
      */
-    public function getNonScheme(): \OpenAPI\Client\Model\NonSchemeLiquidity
+    public function getNonScheme(): \Shaype\Client\Model\NonSchemeLiquidity
     {
         return $this->container['non_scheme'];
     }
@@ -387,11 +387,11 @@ class ClientLiquidity implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Sets non_scheme
      *
-     * @param \OpenAPI\Client\Model\NonSchemeLiquidity $non_scheme non_scheme
+     * @param \Shaype\Client\Model\NonSchemeLiquidity $non_scheme non_scheme
      *
      * @return $this
      */
-    public function setNonScheme(\OpenAPI\Client\Model\NonSchemeLiquidity $non_scheme): static
+    public function setNonScheme(\Shaype\Client\Model\NonSchemeLiquidity $non_scheme): static
     {
         if (is_null($non_scheme)) {
             throw new InvalidArgumentException('non-nullable non_scheme cannot be null');
@@ -404,9 +404,9 @@ class ClientLiquidity implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Gets scheme
      *
-     * @return \OpenAPI\Client\Model\SchemeLiquidity
+     * @return \Shaype\Client\Model\SchemeLiquidity
      */
-    public function getScheme(): \OpenAPI\Client\Model\SchemeLiquidity
+    public function getScheme(): \Shaype\Client\Model\SchemeLiquidity
     {
         return $this->container['scheme'];
     }
@@ -414,11 +414,11 @@ class ClientLiquidity implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Sets scheme
      *
-     * @param \OpenAPI\Client\Model\SchemeLiquidity $scheme scheme
+     * @param \Shaype\Client\Model\SchemeLiquidity $scheme scheme
      *
      * @return $this
      */
-    public function setScheme(\OpenAPI\Client\Model\SchemeLiquidity $scheme): static
+    public function setScheme(\Shaype\Client\Model\SchemeLiquidity $scheme): static
     {
         if (is_null($scheme)) {
             throw new InvalidArgumentException('non-nullable scheme cannot be null');

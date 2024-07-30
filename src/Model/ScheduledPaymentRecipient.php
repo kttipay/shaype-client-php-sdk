@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * ScheduledPaymentRecipient Class Doc Comment
  *
  * @description Details of the scheduled payment recipient
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class ScheduledPaymentRecipient implements ModelInterface, ArrayAccess, JsonSeri
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'bpay_details' => '\OpenAPI\Client\Model\BpayDetails',
-        'recipient_account_number' => '\OpenAPI\Client\Model\BasicAccountNumber',
+        'bpay_details' => '\Shaype\Client\Model\BpayDetails',
+        'recipient_account_number' => '\Shaype\Client\Model\BasicAccountNumber',
         'recipient_name' => 'string',
         'recipient_type' => 'string'
     ];
@@ -336,9 +336,9 @@ class ScheduledPaymentRecipient implements ModelInterface, ArrayAccess, JsonSeri
     /**
      * Gets bpay_details
      *
-     * @return \OpenAPI\Client\Model\BpayDetails|null
+     * @return \Shaype\Client\Model\BpayDetails|null
      */
-    public function getBpayDetails(): ?\OpenAPI\Client\Model\BpayDetails
+    public function getBpayDetails(): ?\Shaype\Client\Model\BpayDetails
     {
         return $this->container['bpay_details'];
     }
@@ -346,11 +346,11 @@ class ScheduledPaymentRecipient implements ModelInterface, ArrayAccess, JsonSeri
     /**
      * Sets bpay_details
      *
-     * @param \OpenAPI\Client\Model\BpayDetails|null $bpay_details bpay_details
+     * @param \Shaype\Client\Model\BpayDetails|null $bpay_details bpay_details
      *
      * @return $this
      */
-    public function setBpayDetails(?\OpenAPI\Client\Model\BpayDetails $bpay_details): static
+    public function setBpayDetails(?\Shaype\Client\Model\BpayDetails $bpay_details): static
     {
         if (is_null($bpay_details)) {
             throw new InvalidArgumentException('non-nullable bpay_details cannot be null');
@@ -363,9 +363,9 @@ class ScheduledPaymentRecipient implements ModelInterface, ArrayAccess, JsonSeri
     /**
      * Gets recipient_account_number
      *
-     * @return \OpenAPI\Client\Model\BasicAccountNumber|null
+     * @return \Shaype\Client\Model\BasicAccountNumber|null
      */
-    public function getRecipientAccountNumber(): ?\OpenAPI\Client\Model\BasicAccountNumber
+    public function getRecipientAccountNumber(): ?\Shaype\Client\Model\BasicAccountNumber
     {
         return $this->container['recipient_account_number'];
     }
@@ -373,11 +373,11 @@ class ScheduledPaymentRecipient implements ModelInterface, ArrayAccess, JsonSeri
     /**
      * Sets recipient_account_number
      *
-     * @param \OpenAPI\Client\Model\BasicAccountNumber|null $recipient_account_number recipient_account_number
+     * @param \Shaype\Client\Model\BasicAccountNumber|null $recipient_account_number recipient_account_number
      *
      * @return $this
      */
-    public function setRecipientAccountNumber(?\OpenAPI\Client\Model\BasicAccountNumber $recipient_account_number): static
+    public function setRecipientAccountNumber(?\Shaype\Client\Model\BasicAccountNumber $recipient_account_number): static
     {
         if (is_null($recipient_account_number)) {
             throw new InvalidArgumentException('non-nullable recipient_account_number cannot be null');

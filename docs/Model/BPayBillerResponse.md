@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **account_hay_id** | **string** | Unique identifier (UUID) of the Account | [optional]
-**biller_details** | [**\OpenAPI\Client\Model\BPayBillerDetails**](BPayBillerDetails.md) |  | [optional]
+**biller_details** | [**\Shaype\Client\Model\BPayBillerDetails**](BPayBillerDetails.md) |  | [optional]
 **hay_id** | **string** | Unique identifier (UUID) of the Biller. | [optional]
 **image** | **string** | Biller image | [optional]
 **name** | **string** | Nick name of the Bpay biller | [optional]

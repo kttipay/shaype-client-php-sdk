@@ -1,4 +1,4 @@
-# OpenAPI\Client\KYCAPIApi
+# Shaype\Client\KYCAPIApi
 
 All URIs are relative to http://localhost:8080, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to http://localhost:8080, except if the operation defines 
 ## `approveAmlKycCheck()`
 
 ```php
-approveAmlKycCheck($customer_id, $onboarding_stage_approval_body): \OpenAPI\Client\Model\ConfirmationResponse
+approveAmlKycCheck($customer_id, $onboarding_stage_approval_body): \Shaype\Client\Model\ConfirmationResponse
 ```
 
 Approve AML Check
@@ -26,13 +26,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\KYCAPIApi(
+$apiInstance = new Shaype\Client\Api\KYCAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $customer_id = 'customer_id_example'; // string | Unique identifier (UUID) of the Customer
-$onboarding_stage_approval_body = new \OpenAPI\Client\Model\OnboardingStageApprovalBody(); // \OpenAPI\Client\Model\OnboardingStageApprovalBody
+$onboarding_stage_approval_body = new \Shaype\Client\Model\OnboardingStageApprovalBody(); // \Shaype\Client\Model\OnboardingStageApprovalBody
 
 try {
     $result = $apiInstance->approveAmlKycCheck($customer_id, $onboarding_stage_approval_body);
@@ -47,11 +47,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **customer_id** | **string**| Unique identifier (UUID) of the Customer | |
-| **onboarding_stage_approval_body** | [**\OpenAPI\Client\Model\OnboardingStageApprovalBody**](../Model/OnboardingStageApprovalBody.md)|  | |
+| **onboarding_stage_approval_body** | [**\Shaype\Client\Model\OnboardingStageApprovalBody**](../Model/OnboardingStageApprovalBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ConfirmationResponse**](../Model/ConfirmationResponse.md)
+[**\Shaype\Client\Model\ConfirmationResponse**](../Model/ConfirmationResponse.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ No authorization required
 ## `approveDocumentCheck()`
 
 ```php
-approveDocumentCheck($customer_id, $onboarding_stage_approval_body): \OpenAPI\Client\Model\ConfirmationResponse
+approveDocumentCheck($customer_id, $onboarding_stage_approval_body): \Shaype\Client\Model\ConfirmationResponse
 ```
 
 Approve Document Check
@@ -82,13 +82,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\KYCAPIApi(
+$apiInstance = new Shaype\Client\Api\KYCAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $customer_id = 'customer_id_example'; // string | Unique identifier (UUID) of the Customer
-$onboarding_stage_approval_body = new \OpenAPI\Client\Model\OnboardingStageApprovalBody(); // \OpenAPI\Client\Model\OnboardingStageApprovalBody
+$onboarding_stage_approval_body = new \Shaype\Client\Model\OnboardingStageApprovalBody(); // \Shaype\Client\Model\OnboardingStageApprovalBody
 
 try {
     $result = $apiInstance->approveDocumentCheck($customer_id, $onboarding_stage_approval_body);
@@ -103,11 +103,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **customer_id** | **string**| Unique identifier (UUID) of the Customer | |
-| **onboarding_stage_approval_body** | [**\OpenAPI\Client\Model\OnboardingStageApprovalBody**](../Model/OnboardingStageApprovalBody.md)|  | |
+| **onboarding_stage_approval_body** | [**\Shaype\Client\Model\OnboardingStageApprovalBody**](../Model/OnboardingStageApprovalBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ConfirmationResponse**](../Model/ConfirmationResponse.md)
+[**\Shaype\Client\Model\ConfirmationResponse**](../Model/ConfirmationResponse.md)
 
 ### Authorization
 
@@ -125,7 +125,7 @@ No authorization required
 ## `approveSanctionCheck()`
 
 ```php
-approveSanctionCheck($customer_id, $onboarding_stage_approval_body): \OpenAPI\Client\Model\ConfirmationResponse
+approveSanctionCheck($customer_id, $onboarding_stage_approval_body): \Shaype\Client\Model\ConfirmationResponse
 ```
 
 Approve Sanctions Check
@@ -138,13 +138,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\KYCAPIApi(
+$apiInstance = new Shaype\Client\Api\KYCAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $customer_id = 'customer_id_example'; // string | Unique identifier (UUID) of the Customer
-$onboarding_stage_approval_body = new \OpenAPI\Client\Model\OnboardingStageApprovalBody(); // \OpenAPI\Client\Model\OnboardingStageApprovalBody
+$onboarding_stage_approval_body = new \Shaype\Client\Model\OnboardingStageApprovalBody(); // \Shaype\Client\Model\OnboardingStageApprovalBody
 
 try {
     $result = $apiInstance->approveSanctionCheck($customer_id, $onboarding_stage_approval_body);
@@ -159,11 +159,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **customer_id** | **string**| Unique identifier (UUID) of the Customer | |
-| **onboarding_stage_approval_body** | [**\OpenAPI\Client\Model\OnboardingStageApprovalBody**](../Model/OnboardingStageApprovalBody.md)|  | |
+| **onboarding_stage_approval_body** | [**\Shaype\Client\Model\OnboardingStageApprovalBody**](../Model/OnboardingStageApprovalBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ConfirmationResponse**](../Model/ConfirmationResponse.md)
+[**\Shaype\Client\Model\ConfirmationResponse**](../Model/ConfirmationResponse.md)
 
 ### Authorization
 
@@ -181,7 +181,7 @@ No authorization required
 ## `createCase()`
 
 ```php
-createCase(): \OpenAPI\Client\Model\CreateCaseExternalResponse
+createCase(): \Shaype\Client\Model\CreateCaseExternalResponse
 ```
 
 Create new identity verification case and first submission
@@ -194,7 +194,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\KYCAPIApi(
+$apiInstance = new Shaype\Client\Api\KYCAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -214,7 +214,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CreateCaseExternalResponse**](../Model/CreateCaseExternalResponse.md)
+[**\Shaype\Client\Model\CreateCaseExternalResponse**](../Model/CreateCaseExternalResponse.md)
 
 ### Authorization
 

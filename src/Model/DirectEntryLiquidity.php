@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,18 +25,18 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * DirectEntryLiquidity Class Doc Comment
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class DirectEntryLiquidity implements ModelInterface, ArrayAccess, JsonSerializa
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'credit' => '\OpenAPI\Client\Model\DirectCreditLiquidity',
-        'debit' => '\OpenAPI\Client\Model\DirectDebitLiquidity',
+        'credit' => '\Shaype\Client\Model\DirectCreditLiquidity',
+        'debit' => '\Shaype\Client\Model\DirectDebitLiquidity',
         'total' => 'float'
     ];
 
@@ -313,9 +313,9 @@ class DirectEntryLiquidity implements ModelInterface, ArrayAccess, JsonSerializa
     /**
      * Gets credit
      *
-     * @return \OpenAPI\Client\Model\DirectCreditLiquidity
+     * @return \Shaype\Client\Model\DirectCreditLiquidity
      */
-    public function getCredit(): \OpenAPI\Client\Model\DirectCreditLiquidity
+    public function getCredit(): \Shaype\Client\Model\DirectCreditLiquidity
     {
         return $this->container['credit'];
     }
@@ -323,11 +323,11 @@ class DirectEntryLiquidity implements ModelInterface, ArrayAccess, JsonSerializa
     /**
      * Sets credit
      *
-     * @param \OpenAPI\Client\Model\DirectCreditLiquidity $credit credit
+     * @param \Shaype\Client\Model\DirectCreditLiquidity $credit credit
      *
      * @return $this
      */
-    public function setCredit(\OpenAPI\Client\Model\DirectCreditLiquidity $credit): static
+    public function setCredit(\Shaype\Client\Model\DirectCreditLiquidity $credit): static
     {
         if (is_null($credit)) {
             throw new InvalidArgumentException('non-nullable credit cannot be null');
@@ -340,9 +340,9 @@ class DirectEntryLiquidity implements ModelInterface, ArrayAccess, JsonSerializa
     /**
      * Gets debit
      *
-     * @return \OpenAPI\Client\Model\DirectDebitLiquidity
+     * @return \Shaype\Client\Model\DirectDebitLiquidity
      */
-    public function getDebit(): \OpenAPI\Client\Model\DirectDebitLiquidity
+    public function getDebit(): \Shaype\Client\Model\DirectDebitLiquidity
     {
         return $this->container['debit'];
     }
@@ -350,11 +350,11 @@ class DirectEntryLiquidity implements ModelInterface, ArrayAccess, JsonSerializa
     /**
      * Sets debit
      *
-     * @param \OpenAPI\Client\Model\DirectDebitLiquidity $debit debit
+     * @param \Shaype\Client\Model\DirectDebitLiquidity $debit debit
      *
      * @return $this
      */
-    public function setDebit(\OpenAPI\Client\Model\DirectDebitLiquidity $debit): static
+    public function setDebit(\Shaype\Client\Model\DirectDebitLiquidity $debit): static
     {
         if (is_null($debit)) {
             throw new InvalidArgumentException('non-nullable debit cannot be null');

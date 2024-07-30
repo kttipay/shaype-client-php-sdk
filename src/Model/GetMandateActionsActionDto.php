@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * GetMandateActionsActionDto Class Doc Comment
  *
  * @description Details of an action performed on a mandate.
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -61,14 +61,14 @@ class GetMandateActionsActionDto implements ModelInterface, ArrayAccess, JsonSer
     protected static array $openAPITypes = [
         'action_identification' => 'string',
         'bilateral' => 'bool',
-        'creation_event' => '\OpenAPI\Client\Model\GetMandateActionsCreationEventDto',
+        'creation_event' => '\Shaype\Client\Model\GetMandateActionsCreationEventDto',
         'cx_event_name_creation' => 'string',
         'cx_event_name_resolution' => 'string',
-        'details' => '\OpenAPI\Client\Model\GetMandateActionsDetailsDto',
+        'details' => '\Shaype\Client\Model\GetMandateActionsDetailsDto',
         'expiry_time' => 'string',
         'mandate_identification' => 'string',
         'notification_priority' => 'string',
-        'resolution_event' => '\OpenAPI\Client\Model\GetMandateActionsResolutionEventDto',
+        'resolution_event' => '\Shaype\Client\Model\GetMandateActionsResolutionEventDto',
         'resolution_requested_by' => 'string',
         'status' => 'string',
         'type' => 'string'
@@ -537,9 +537,9 @@ class GetMandateActionsActionDto implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Gets creation_event
      *
-     * @return \OpenAPI\Client\Model\GetMandateActionsCreationEventDto
+     * @return \Shaype\Client\Model\GetMandateActionsCreationEventDto
      */
-    public function getCreationEvent(): \OpenAPI\Client\Model\GetMandateActionsCreationEventDto
+    public function getCreationEvent(): \Shaype\Client\Model\GetMandateActionsCreationEventDto
     {
         return $this->container['creation_event'];
     }
@@ -547,11 +547,11 @@ class GetMandateActionsActionDto implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Sets creation_event
      *
-     * @param \OpenAPI\Client\Model\GetMandateActionsCreationEventDto $creation_event creation_event
+     * @param \Shaype\Client\Model\GetMandateActionsCreationEventDto $creation_event creation_event
      *
      * @return $this
      */
-    public function setCreationEvent(\OpenAPI\Client\Model\GetMandateActionsCreationEventDto $creation_event): static
+    public function setCreationEvent(\Shaype\Client\Model\GetMandateActionsCreationEventDto $creation_event): static
     {
         if (is_null($creation_event)) {
             throw new InvalidArgumentException('non-nullable creation_event cannot be null');
@@ -632,9 +632,9 @@ class GetMandateActionsActionDto implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Gets details
      *
-     * @return \OpenAPI\Client\Model\GetMandateActionsDetailsDto|null
+     * @return \Shaype\Client\Model\GetMandateActionsDetailsDto|null
      */
-    public function getDetails(): ?\OpenAPI\Client\Model\GetMandateActionsDetailsDto
+    public function getDetails(): ?\Shaype\Client\Model\GetMandateActionsDetailsDto
     {
         return $this->container['details'];
     }
@@ -642,11 +642,11 @@ class GetMandateActionsActionDto implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Sets details
      *
-     * @param \OpenAPI\Client\Model\GetMandateActionsDetailsDto|null $details details
+     * @param \Shaype\Client\Model\GetMandateActionsDetailsDto|null $details details
      *
      * @return $this
      */
-    public function setDetails(?\OpenAPI\Client\Model\GetMandateActionsDetailsDto $details): static
+    public function setDetails(?\Shaype\Client\Model\GetMandateActionsDetailsDto $details): static
     {
         if (is_null($details)) {
             throw new InvalidArgumentException('non-nullable details cannot be null');
@@ -755,9 +755,9 @@ class GetMandateActionsActionDto implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Gets resolution_event
      *
-     * @return \OpenAPI\Client\Model\GetMandateActionsResolutionEventDto|null
+     * @return \Shaype\Client\Model\GetMandateActionsResolutionEventDto|null
      */
-    public function getResolutionEvent(): ?\OpenAPI\Client\Model\GetMandateActionsResolutionEventDto
+    public function getResolutionEvent(): ?\Shaype\Client\Model\GetMandateActionsResolutionEventDto
     {
         return $this->container['resolution_event'];
     }
@@ -765,11 +765,11 @@ class GetMandateActionsActionDto implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Sets resolution_event
      *
-     * @param \OpenAPI\Client\Model\GetMandateActionsResolutionEventDto|null $resolution_event resolution_event
+     * @param \Shaype\Client\Model\GetMandateActionsResolutionEventDto|null $resolution_event resolution_event
      *
      * @return $this
      */
-    public function setResolutionEvent(?\OpenAPI\Client\Model\GetMandateActionsResolutionEventDto $resolution_event): static
+    public function setResolutionEvent(?\Shaype\Client\Model\GetMandateActionsResolutionEventDto $resolution_event): static
     {
         if (is_null($resolution_event)) {
             throw new InvalidArgumentException('non-nullable resolution_event cannot be null');

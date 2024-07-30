@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * AmendMandatePaymentTermsRequestBody Class Doc Comment
  *
  * @description Body of a request to amend mandate payment terms.
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class AmendMandatePaymentTermsRequestBody implements ModelInterface, ArrayAccess
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'payment_terms' => '\OpenAPI\Client\Model\CreatePaymentTermsDto',
+        'payment_terms' => '\Shaype\Client\Model\CreatePaymentTermsDto',
         'resolution_requested_by' => 'string',
         'validity_end_date' => '\DateTime'
     ];
@@ -305,9 +305,9 @@ class AmendMandatePaymentTermsRequestBody implements ModelInterface, ArrayAccess
     /**
      * Gets payment_terms
      *
-     * @return \OpenAPI\Client\Model\CreatePaymentTermsDto|null
+     * @return \Shaype\Client\Model\CreatePaymentTermsDto|null
      */
-    public function getPaymentTerms(): ?\OpenAPI\Client\Model\CreatePaymentTermsDto
+    public function getPaymentTerms(): ?\Shaype\Client\Model\CreatePaymentTermsDto
     {
         return $this->container['payment_terms'];
     }
@@ -315,11 +315,11 @@ class AmendMandatePaymentTermsRequestBody implements ModelInterface, ArrayAccess
     /**
      * Sets payment_terms
      *
-     * @param \OpenAPI\Client\Model\CreatePaymentTermsDto|null $payment_terms payment_terms
+     * @param \Shaype\Client\Model\CreatePaymentTermsDto|null $payment_terms payment_terms
      *
      * @return $this
      */
-    public function setPaymentTerms(?\OpenAPI\Client\Model\CreatePaymentTermsDto $payment_terms): static
+    public function setPaymentTerms(?\Shaype\Client\Model\CreatePaymentTermsDto $payment_terms): static
     {
         if (is_null($payment_terms)) {
             throw new InvalidArgumentException('non-nullable payment_terms cannot be null');

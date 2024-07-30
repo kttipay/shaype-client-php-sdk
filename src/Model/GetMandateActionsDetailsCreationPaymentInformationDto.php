@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * GetMandateActionsDetailsCreationPaymentInformationDto Class Doc Comment
  *
  * @description Set of characteristics enabling amendment of mandate payment information.
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -59,13 +59,13 @@ class GetMandateActionsDetailsCreationPaymentInformationDto implements ModelInte
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'amount' => '\OpenAPI\Client\Model\CurrencyAmountDto',
+        'amount' => '\Shaype\Client\Model\CurrencyAmountDto',
         'count_per_period' => 'string',
-        'first_payment_amount' => '\OpenAPI\Client\Model\CurrencyAmountDto',
+        'first_payment_amount' => '\Shaype\Client\Model\CurrencyAmountDto',
         'first_payment_date' => 'string',
-        'last_payment_amount' => '\OpenAPI\Client\Model\CurrencyAmountDto',
+        'last_payment_amount' => '\Shaype\Client\Model\CurrencyAmountDto',
         'last_payment_date' => 'string',
-        'maximum_amount' => '\OpenAPI\Client\Model\CurrencyAmountDto',
+        'maximum_amount' => '\Shaype\Client\Model\CurrencyAmountDto',
         'payment_amount_type' => 'string',
         'payment_execute_not_before_time' => 'string',
         'payment_frequency' => 'string',
@@ -428,9 +428,9 @@ class GetMandateActionsDetailsCreationPaymentInformationDto implements ModelInte
     /**
      * Gets amount
      *
-     * @return \OpenAPI\Client\Model\CurrencyAmountDto|null
+     * @return \Shaype\Client\Model\CurrencyAmountDto|null
      */
-    public function getAmount(): ?\OpenAPI\Client\Model\CurrencyAmountDto
+    public function getAmount(): ?\Shaype\Client\Model\CurrencyAmountDto
     {
         return $this->container['amount'];
     }
@@ -438,11 +438,11 @@ class GetMandateActionsDetailsCreationPaymentInformationDto implements ModelInte
     /**
      * Sets amount
      *
-     * @param \OpenAPI\Client\Model\CurrencyAmountDto|null $amount amount
+     * @param \Shaype\Client\Model\CurrencyAmountDto|null $amount amount
      *
      * @return $this
      */
-    public function setAmount(?\OpenAPI\Client\Model\CurrencyAmountDto $amount): static
+    public function setAmount(?\Shaype\Client\Model\CurrencyAmountDto $amount): static
     {
         if (is_null($amount)) {
             throw new InvalidArgumentException('non-nullable amount cannot be null');
@@ -487,9 +487,9 @@ class GetMandateActionsDetailsCreationPaymentInformationDto implements ModelInte
     /**
      * Gets first_payment_amount
      *
-     * @return \OpenAPI\Client\Model\CurrencyAmountDto|null
+     * @return \Shaype\Client\Model\CurrencyAmountDto|null
      */
-    public function getFirstPaymentAmount(): ?\OpenAPI\Client\Model\CurrencyAmountDto
+    public function getFirstPaymentAmount(): ?\Shaype\Client\Model\CurrencyAmountDto
     {
         return $this->container['first_payment_amount'];
     }
@@ -497,11 +497,11 @@ class GetMandateActionsDetailsCreationPaymentInformationDto implements ModelInte
     /**
      * Sets first_payment_amount
      *
-     * @param \OpenAPI\Client\Model\CurrencyAmountDto|null $first_payment_amount first_payment_amount
+     * @param \Shaype\Client\Model\CurrencyAmountDto|null $first_payment_amount first_payment_amount
      *
      * @return $this
      */
-    public function setFirstPaymentAmount(?\OpenAPI\Client\Model\CurrencyAmountDto $first_payment_amount): static
+    public function setFirstPaymentAmount(?\Shaype\Client\Model\CurrencyAmountDto $first_payment_amount): static
     {
         if (is_null($first_payment_amount)) {
             throw new InvalidArgumentException('non-nullable first_payment_amount cannot be null');
@@ -546,9 +546,9 @@ class GetMandateActionsDetailsCreationPaymentInformationDto implements ModelInte
     /**
      * Gets last_payment_amount
      *
-     * @return \OpenAPI\Client\Model\CurrencyAmountDto|null
+     * @return \Shaype\Client\Model\CurrencyAmountDto|null
      */
-    public function getLastPaymentAmount(): ?\OpenAPI\Client\Model\CurrencyAmountDto
+    public function getLastPaymentAmount(): ?\Shaype\Client\Model\CurrencyAmountDto
     {
         return $this->container['last_payment_amount'];
     }
@@ -556,11 +556,11 @@ class GetMandateActionsDetailsCreationPaymentInformationDto implements ModelInte
     /**
      * Sets last_payment_amount
      *
-     * @param \OpenAPI\Client\Model\CurrencyAmountDto|null $last_payment_amount last_payment_amount
+     * @param \Shaype\Client\Model\CurrencyAmountDto|null $last_payment_amount last_payment_amount
      *
      * @return $this
      */
-    public function setLastPaymentAmount(?\OpenAPI\Client\Model\CurrencyAmountDto $last_payment_amount): static
+    public function setLastPaymentAmount(?\Shaype\Client\Model\CurrencyAmountDto $last_payment_amount): static
     {
         if (is_null($last_payment_amount)) {
             throw new InvalidArgumentException('non-nullable last_payment_amount cannot be null');
@@ -605,9 +605,9 @@ class GetMandateActionsDetailsCreationPaymentInformationDto implements ModelInte
     /**
      * Gets maximum_amount
      *
-     * @return \OpenAPI\Client\Model\CurrencyAmountDto|null
+     * @return \Shaype\Client\Model\CurrencyAmountDto|null
      */
-    public function getMaximumAmount(): ?\OpenAPI\Client\Model\CurrencyAmountDto
+    public function getMaximumAmount(): ?\Shaype\Client\Model\CurrencyAmountDto
     {
         return $this->container['maximum_amount'];
     }
@@ -615,11 +615,11 @@ class GetMandateActionsDetailsCreationPaymentInformationDto implements ModelInte
     /**
      * Sets maximum_amount
      *
-     * @param \OpenAPI\Client\Model\CurrencyAmountDto|null $maximum_amount maximum_amount
+     * @param \Shaype\Client\Model\CurrencyAmountDto|null $maximum_amount maximum_amount
      *
      * @return $this
      */
-    public function setMaximumAmount(?\OpenAPI\Client\Model\CurrencyAmountDto $maximum_amount): static
+    public function setMaximumAmount(?\Shaype\Client\Model\CurrencyAmountDto $maximum_amount): static
     {
         if (is_null($maximum_amount)) {
             throw new InvalidArgumentException('non-nullable maximum_amount cannot be null');

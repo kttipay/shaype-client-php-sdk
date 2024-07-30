@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **customer_id** | **string** | Unique identifier (UUID) of the Customer (initiator of the transfer) | [optional]
 **hay_id** | **string** | Unique identifier (UUID) of the Transaction | [optional]
 **notes** | **string** | Transaction description | [optional]
-**stack** | [**\OpenAPI\Client\Model\HayStack**](HayStack.md) |  | [optional]
+**stack** | [**\Shaype\Client\Model\HayStack**](HayStack.md) |  | [optional]
 **stack_hay_id** | **string** | Unique identifier (UUID) of the Stack | [optional]
 **transaction_time_utc** | **\DateTime** | DateTime in UTC format when the Transaction was initiated | [optional]
 

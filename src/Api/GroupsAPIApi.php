@@ -3,7 +3,7 @@
  * GroupsAPIApi
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Shaype\Client\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ApiException;
+use Shaype\Client\Configuration;
+use Shaype\Client\HeaderSelector;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * GroupsAPIApi Class Doc Comment
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -140,18 +140,18 @@ class GroupsAPIApi
      * Add Customers to Group
      *
      * @param  string $group_hay_id Unique identifier (UUID) of the Group (required)
-     * @param  \OpenAPI\Client\Model\AddCustomersToGroupRequestBody $add_customers_to_group_request_body add_customers_to_group_request_body (required)
+     * @param  \Shaype\Client\Model\AddCustomersToGroupRequestBody $add_customers_to_group_request_body add_customers_to_group_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addCustomersToGroup'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\HayJointAccount|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\HayJointAccount|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function addCustomersToGroup(
         string $group_hay_id,
-        \OpenAPI\Client\Model\AddCustomersToGroupRequestBody $add_customers_to_group_request_body,
+        \Shaype\Client\Model\AddCustomersToGroupRequestBody $add_customers_to_group_request_body,
         string $contentType = self::contentTypes['addCustomersToGroup'][0]
-    ): \OpenAPI\Client\Model\HayJointAccount
+    ): \Shaype\Client\Model\HayJointAccount
     {
         list($response) = $this->addCustomersToGroupWithHttpInfo($group_hay_id, $add_customers_to_group_request_body, $contentType);
         return $response;
@@ -163,16 +163,16 @@ class GroupsAPIApi
      * Add Customers to Group
      *
      * @param  string $group_hay_id Unique identifier (UUID) of the Group (required)
-     * @param  \OpenAPI\Client\Model\AddCustomersToGroupRequestBody $add_customers_to_group_request_body (required)
+     * @param  \Shaype\Client\Model\AddCustomersToGroupRequestBody $add_customers_to_group_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addCustomersToGroup'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\HayJointAccount|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\HayJointAccount|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function addCustomersToGroupWithHttpInfo(
         string $group_hay_id,
-        \OpenAPI\Client\Model\AddCustomersToGroupRequestBody $add_customers_to_group_request_body,
+        \Shaype\Client\Model\AddCustomersToGroupRequestBody $add_customers_to_group_request_body,
         string $contentType = self::contentTypes['addCustomersToGroup'][0]
     ): array
     {
@@ -215,11 +215,11 @@ class GroupsAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\HayJointAccount' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\HayJointAccount' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\HayJointAccount' !== 'string') {
+                        if ('\Shaype\Client\Model\HayJointAccount' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -237,16 +237,16 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\HayJointAccount', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\HayJointAccount', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -264,16 +264,16 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -291,16 +291,16 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -318,16 +318,16 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -345,16 +345,16 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -372,13 +372,13 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\HayJointAccount';
+            $returnType = '\Shaype\Client\Model\HayJointAccount';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -411,7 +411,7 @@ class GroupsAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HayJointAccount',
+                        '\Shaype\Client\Model\HayJointAccount',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -419,7 +419,7 @@ class GroupsAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -427,7 +427,7 @@ class GroupsAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -435,7 +435,7 @@ class GroupsAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -443,7 +443,7 @@ class GroupsAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -451,7 +451,7 @@ class GroupsAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -467,7 +467,7 @@ class GroupsAPIApi
      * Add Customers to Group
      *
      * @param  string $group_hay_id Unique identifier (UUID) of the Group (required)
-     * @param  \OpenAPI\Client\Model\AddCustomersToGroupRequestBody $add_customers_to_group_request_body (required)
+     * @param  \Shaype\Client\Model\AddCustomersToGroupRequestBody $add_customers_to_group_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addCustomersToGroup'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -475,7 +475,7 @@ class GroupsAPIApi
      */
     public function addCustomersToGroupAsync(
         string $group_hay_id,
-        \OpenAPI\Client\Model\AddCustomersToGroupRequestBody $add_customers_to_group_request_body,
+        \Shaype\Client\Model\AddCustomersToGroupRequestBody $add_customers_to_group_request_body,
         string $contentType = self::contentTypes['addCustomersToGroup'][0]
     ): PromiseInterface
     {
@@ -493,7 +493,7 @@ class GroupsAPIApi
      * Add Customers to Group
      *
      * @param  string $group_hay_id Unique identifier (UUID) of the Group (required)
-     * @param  \OpenAPI\Client\Model\AddCustomersToGroupRequestBody $add_customers_to_group_request_body (required)
+     * @param  \Shaype\Client\Model\AddCustomersToGroupRequestBody $add_customers_to_group_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addCustomersToGroup'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -505,7 +505,7 @@ class GroupsAPIApi
         string $contentType = self::contentTypes['addCustomersToGroup'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\HayJointAccount';
+        $returnType = '\Shaype\Client\Model\HayJointAccount';
         $request = $this->addCustomersToGroupRequest($group_hay_id, $add_customers_to_group_request_body, $contentType);
 
         return $this->client
@@ -548,7 +548,7 @@ class GroupsAPIApi
      * Create request for operation 'addCustomersToGroup'
      *
      * @param  string $group_hay_id Unique identifier (UUID) of the Group (required)
-     * @param  \OpenAPI\Client\Model\AddCustomersToGroupRequestBody $add_customers_to_group_request_body (required)
+     * @param  \Shaype\Client\Model\AddCustomersToGroupRequestBody $add_customers_to_group_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addCustomersToGroup'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -661,18 +661,18 @@ class GroupsAPIApi
      * Create Account for Group - (To be DEPRECATED - Use POST /v1/accounts instead)
      *
      * @param  string $group_hay_id Unique identifier (UUID) of the Group (required)
-     * @param  \OpenAPI\Client\Model\CreateHayAccountForGroupRequestBody $create_hay_account_for_group_request_body create_hay_account_for_group_request_body (required)
+     * @param  \Shaype\Client\Model\CreateHayAccountForGroupRequestBody $create_hay_account_for_group_request_body create_hay_account_for_group_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHayAccountForGroup'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\HayJointAccount|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\HayJointAccount|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function createHayAccountForGroup(
         string $group_hay_id,
-        \OpenAPI\Client\Model\CreateHayAccountForGroupRequestBody $create_hay_account_for_group_request_body,
+        \Shaype\Client\Model\CreateHayAccountForGroupRequestBody $create_hay_account_for_group_request_body,
         string $contentType = self::contentTypes['createHayAccountForGroup'][0]
-    ): \OpenAPI\Client\Model\HayJointAccount
+    ): \Shaype\Client\Model\HayJointAccount
     {
         list($response) = $this->createHayAccountForGroupWithHttpInfo($group_hay_id, $create_hay_account_for_group_request_body, $contentType);
         return $response;
@@ -684,16 +684,16 @@ class GroupsAPIApi
      * Create Account for Group - (To be DEPRECATED - Use POST /v1/accounts instead)
      *
      * @param  string $group_hay_id Unique identifier (UUID) of the Group (required)
-     * @param  \OpenAPI\Client\Model\CreateHayAccountForGroupRequestBody $create_hay_account_for_group_request_body (required)
+     * @param  \Shaype\Client\Model\CreateHayAccountForGroupRequestBody $create_hay_account_for_group_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHayAccountForGroup'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\HayJointAccount|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\HayJointAccount|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createHayAccountForGroupWithHttpInfo(
         string $group_hay_id,
-        \OpenAPI\Client\Model\CreateHayAccountForGroupRequestBody $create_hay_account_for_group_request_body,
+        \Shaype\Client\Model\CreateHayAccountForGroupRequestBody $create_hay_account_for_group_request_body,
         string $contentType = self::contentTypes['createHayAccountForGroup'][0]
     ): array
     {
@@ -736,11 +736,11 @@ class GroupsAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\HayJointAccount' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\HayJointAccount' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\HayJointAccount' !== 'string') {
+                        if ('\Shaype\Client\Model\HayJointAccount' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -758,16 +758,16 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\HayJointAccount', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\HayJointAccount', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -785,16 +785,16 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -812,16 +812,16 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -839,16 +839,16 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -866,16 +866,16 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -893,13 +893,13 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\HayJointAccount';
+            $returnType = '\Shaype\Client\Model\HayJointAccount';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -932,7 +932,7 @@ class GroupsAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HayJointAccount',
+                        '\Shaype\Client\Model\HayJointAccount',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -940,7 +940,7 @@ class GroupsAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -948,7 +948,7 @@ class GroupsAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -956,7 +956,7 @@ class GroupsAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -964,7 +964,7 @@ class GroupsAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -972,7 +972,7 @@ class GroupsAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -988,7 +988,7 @@ class GroupsAPIApi
      * Create Account for Group - (To be DEPRECATED - Use POST /v1/accounts instead)
      *
      * @param  string $group_hay_id Unique identifier (UUID) of the Group (required)
-     * @param  \OpenAPI\Client\Model\CreateHayAccountForGroupRequestBody $create_hay_account_for_group_request_body (required)
+     * @param  \Shaype\Client\Model\CreateHayAccountForGroupRequestBody $create_hay_account_for_group_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHayAccountForGroup'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -996,7 +996,7 @@ class GroupsAPIApi
      */
     public function createHayAccountForGroupAsync(
         string $group_hay_id,
-        \OpenAPI\Client\Model\CreateHayAccountForGroupRequestBody $create_hay_account_for_group_request_body,
+        \Shaype\Client\Model\CreateHayAccountForGroupRequestBody $create_hay_account_for_group_request_body,
         string $contentType = self::contentTypes['createHayAccountForGroup'][0]
     ): PromiseInterface
     {
@@ -1014,7 +1014,7 @@ class GroupsAPIApi
      * Create Account for Group - (To be DEPRECATED - Use POST /v1/accounts instead)
      *
      * @param  string $group_hay_id Unique identifier (UUID) of the Group (required)
-     * @param  \OpenAPI\Client\Model\CreateHayAccountForGroupRequestBody $create_hay_account_for_group_request_body (required)
+     * @param  \Shaype\Client\Model\CreateHayAccountForGroupRequestBody $create_hay_account_for_group_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHayAccountForGroup'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1026,7 +1026,7 @@ class GroupsAPIApi
         string $contentType = self::contentTypes['createHayAccountForGroup'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\HayJointAccount';
+        $returnType = '\Shaype\Client\Model\HayJointAccount';
         $request = $this->createHayAccountForGroupRequest($group_hay_id, $create_hay_account_for_group_request_body, $contentType);
 
         return $this->client
@@ -1069,7 +1069,7 @@ class GroupsAPIApi
      * Create request for operation 'createHayAccountForGroup'
      *
      * @param  string $group_hay_id Unique identifier (UUID) of the Group (required)
-     * @param  \OpenAPI\Client\Model\CreateHayAccountForGroupRequestBody $create_hay_account_for_group_request_body (required)
+     * @param  \Shaype\Client\Model\CreateHayAccountForGroupRequestBody $create_hay_account_for_group_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHayAccountForGroup'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1181,17 +1181,17 @@ class GroupsAPIApi
      *
      * Create Group
      *
-     * @param  \OpenAPI\Client\Model\CreateHayGroupRequestBody $create_hay_group_request_body create_hay_group_request_body (required)
+     * @param  \Shaype\Client\Model\CreateHayGroupRequestBody $create_hay_group_request_body create_hay_group_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHayGroup'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\HayGroup|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\HayGroup|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function createHayGroup(
-        \OpenAPI\Client\Model\CreateHayGroupRequestBody $create_hay_group_request_body,
+        \Shaype\Client\Model\CreateHayGroupRequestBody $create_hay_group_request_body,
         string $contentType = self::contentTypes['createHayGroup'][0]
-    ): \OpenAPI\Client\Model\HayGroup
+    ): \Shaype\Client\Model\HayGroup
     {
         list($response) = $this->createHayGroupWithHttpInfo($create_hay_group_request_body, $contentType);
         return $response;
@@ -1202,15 +1202,15 @@ class GroupsAPIApi
      *
      * Create Group
      *
-     * @param  \OpenAPI\Client\Model\CreateHayGroupRequestBody $create_hay_group_request_body (required)
+     * @param  \Shaype\Client\Model\CreateHayGroupRequestBody $create_hay_group_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHayGroup'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\HayGroup|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\HayGroup|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createHayGroupWithHttpInfo(
-        \OpenAPI\Client\Model\CreateHayGroupRequestBody $create_hay_group_request_body,
+        \Shaype\Client\Model\CreateHayGroupRequestBody $create_hay_group_request_body,
         string $contentType = self::contentTypes['createHayGroup'][0]
     ): array
     {
@@ -1253,11 +1253,11 @@ class GroupsAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\HayGroup' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\HayGroup' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\HayGroup' !== 'string') {
+                        if ('\Shaype\Client\Model\HayGroup' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1275,16 +1275,16 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\HayGroup', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\HayGroup', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1302,16 +1302,16 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1329,16 +1329,16 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1356,16 +1356,16 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1383,16 +1383,16 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1410,13 +1410,13 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\HayGroup';
+            $returnType = '\Shaype\Client\Model\HayGroup';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1449,7 +1449,7 @@ class GroupsAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HayGroup',
+                        '\Shaype\Client\Model\HayGroup',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1457,7 +1457,7 @@ class GroupsAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1465,7 +1465,7 @@ class GroupsAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1473,7 +1473,7 @@ class GroupsAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1481,7 +1481,7 @@ class GroupsAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1489,7 +1489,7 @@ class GroupsAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1504,14 +1504,14 @@ class GroupsAPIApi
      *
      * Create Group
      *
-     * @param  \OpenAPI\Client\Model\CreateHayGroupRequestBody $create_hay_group_request_body (required)
+     * @param  \Shaype\Client\Model\CreateHayGroupRequestBody $create_hay_group_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHayGroup'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function createHayGroupAsync(
-        \OpenAPI\Client\Model\CreateHayGroupRequestBody $create_hay_group_request_body,
+        \Shaype\Client\Model\CreateHayGroupRequestBody $create_hay_group_request_body,
         string $contentType = self::contentTypes['createHayGroup'][0]
     ): PromiseInterface
     {
@@ -1528,7 +1528,7 @@ class GroupsAPIApi
      *
      * Create Group
      *
-     * @param  \OpenAPI\Client\Model\CreateHayGroupRequestBody $create_hay_group_request_body (required)
+     * @param  \Shaype\Client\Model\CreateHayGroupRequestBody $create_hay_group_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHayGroup'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1539,7 +1539,7 @@ class GroupsAPIApi
         string $contentType = self::contentTypes['createHayGroup'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\HayGroup';
+        $returnType = '\Shaype\Client\Model\HayGroup';
         $request = $this->createHayGroupRequest($create_hay_group_request_body, $contentType);
 
         return $this->client
@@ -1581,7 +1581,7 @@ class GroupsAPIApi
     /**
      * Create request for operation 'createHayGroup'
      *
-     * @param  \OpenAPI\Client\Model\CreateHayGroupRequestBody $create_hay_group_request_body (required)
+     * @param  \Shaype\Client\Model\CreateHayGroupRequestBody $create_hay_group_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHayGroup'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -1682,12 +1682,12 @@ class GroupsAPIApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\HayJointAccount|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\HayJointAccount|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function getHayJointAccountByGroupHayId(
         string $group_hay_id,
         string $contentType = self::contentTypes['getHayJointAccountByGroupHayId'][0]
-    ): \OpenAPI\Client\Model\HayJointAccount
+    ): \Shaype\Client\Model\HayJointAccount
     {
         list($response) = $this->getHayJointAccountByGroupHayIdWithHttpInfo($group_hay_id, $contentType);
         return $response;
@@ -1703,7 +1703,7 @@ class GroupsAPIApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\HayJointAccount|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\HayJointAccount|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getHayJointAccountByGroupHayIdWithHttpInfo(
         string $group_hay_id,
@@ -1749,11 +1749,11 @@ class GroupsAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\HayJointAccount' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\HayJointAccount' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\HayJointAccount' !== 'string') {
+                        if ('\Shaype\Client\Model\HayJointAccount' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1771,16 +1771,16 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\HayJointAccount', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\HayJointAccount', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1798,16 +1798,16 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1825,16 +1825,16 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1852,16 +1852,16 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1879,16 +1879,16 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1906,13 +1906,13 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\HayJointAccount';
+            $returnType = '\Shaype\Client\Model\HayJointAccount';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1945,7 +1945,7 @@ class GroupsAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HayJointAccount',
+                        '\Shaype\Client\Model\HayJointAccount',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1953,7 +1953,7 @@ class GroupsAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1961,7 +1961,7 @@ class GroupsAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1969,7 +1969,7 @@ class GroupsAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1977,7 +1977,7 @@ class GroupsAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1985,7 +1985,7 @@ class GroupsAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2035,7 +2035,7 @@ class GroupsAPIApi
         string $contentType = self::contentTypes['getHayJointAccountByGroupHayId'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\HayJointAccount';
+        $returnType = '\Shaype\Client\Model\HayJointAccount';
         $request = $this->getHayJointAccountByGroupHayIdRequest($group_hay_id, $contentType);
 
         return $this->client
@@ -2175,18 +2175,18 @@ class GroupsAPIApi
      * Update Group details
      *
      * @param  string $group_hay_id Unique identifier (UUID) of the Group (required)
-     * @param  \OpenAPI\Client\Model\UpdateGroupRequestBody $update_group_request_body update_group_request_body (required)
+     * @param  \Shaype\Client\Model\UpdateGroupRequestBody $update_group_request_body update_group_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateGroup'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\HayGroup|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\HayGroup|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function updateGroup(
         string $group_hay_id,
-        \OpenAPI\Client\Model\UpdateGroupRequestBody $update_group_request_body,
+        \Shaype\Client\Model\UpdateGroupRequestBody $update_group_request_body,
         string $contentType = self::contentTypes['updateGroup'][0]
-    ): \OpenAPI\Client\Model\HayGroup
+    ): \Shaype\Client\Model\HayGroup
     {
         list($response) = $this->updateGroupWithHttpInfo($group_hay_id, $update_group_request_body, $contentType);
         return $response;
@@ -2198,16 +2198,16 @@ class GroupsAPIApi
      * Update Group details
      *
      * @param  string $group_hay_id Unique identifier (UUID) of the Group (required)
-     * @param  \OpenAPI\Client\Model\UpdateGroupRequestBody $update_group_request_body (required)
+     * @param  \Shaype\Client\Model\UpdateGroupRequestBody $update_group_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateGroup'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\HayGroup|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\HayGroup|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateGroupWithHttpInfo(
         string $group_hay_id,
-        \OpenAPI\Client\Model\UpdateGroupRequestBody $update_group_request_body,
+        \Shaype\Client\Model\UpdateGroupRequestBody $update_group_request_body,
         string $contentType = self::contentTypes['updateGroup'][0]
     ): array
     {
@@ -2250,11 +2250,11 @@ class GroupsAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\HayGroup' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\HayGroup' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\HayGroup' !== 'string') {
+                        if ('\Shaype\Client\Model\HayGroup' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2272,16 +2272,16 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\HayGroup', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\HayGroup', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2299,16 +2299,16 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2326,16 +2326,16 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2353,16 +2353,16 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2380,16 +2380,16 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2407,13 +2407,13 @@ class GroupsAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\HayGroup';
+            $returnType = '\Shaype\Client\Model\HayGroup';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2446,7 +2446,7 @@ class GroupsAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\HayGroup',
+                        '\Shaype\Client\Model\HayGroup',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2454,7 +2454,7 @@ class GroupsAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2462,7 +2462,7 @@ class GroupsAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2470,7 +2470,7 @@ class GroupsAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2478,7 +2478,7 @@ class GroupsAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2486,7 +2486,7 @@ class GroupsAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2502,7 +2502,7 @@ class GroupsAPIApi
      * Update Group details
      *
      * @param  string $group_hay_id Unique identifier (UUID) of the Group (required)
-     * @param  \OpenAPI\Client\Model\UpdateGroupRequestBody $update_group_request_body (required)
+     * @param  \Shaype\Client\Model\UpdateGroupRequestBody $update_group_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateGroup'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2510,7 +2510,7 @@ class GroupsAPIApi
      */
     public function updateGroupAsync(
         string $group_hay_id,
-        \OpenAPI\Client\Model\UpdateGroupRequestBody $update_group_request_body,
+        \Shaype\Client\Model\UpdateGroupRequestBody $update_group_request_body,
         string $contentType = self::contentTypes['updateGroup'][0]
     ): PromiseInterface
     {
@@ -2528,7 +2528,7 @@ class GroupsAPIApi
      * Update Group details
      *
      * @param  string $group_hay_id Unique identifier (UUID) of the Group (required)
-     * @param  \OpenAPI\Client\Model\UpdateGroupRequestBody $update_group_request_body (required)
+     * @param  \Shaype\Client\Model\UpdateGroupRequestBody $update_group_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateGroup'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -2540,7 +2540,7 @@ class GroupsAPIApi
         string $contentType = self::contentTypes['updateGroup'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\HayGroup';
+        $returnType = '\Shaype\Client\Model\HayGroup';
         $request = $this->updateGroupRequest($group_hay_id, $update_group_request_body, $contentType);
 
         return $this->client
@@ -2583,7 +2583,7 @@ class GroupsAPIApi
      * Create request for operation 'updateGroup'
      *
      * @param  string $group_hay_id Unique identifier (UUID) of the Group (required)
-     * @param  \OpenAPI\Client\Model\UpdateGroupRequestBody $update_group_request_body (required)
+     * @param  \Shaype\Client\Model\UpdateGroupRequestBody $update_group_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateGroup'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException

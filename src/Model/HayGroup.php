@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * HayGroup Class Doc Comment
  *
  * @description Details of a Group
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class HayGroup implements ModelInterface, ArrayAccess, JsonSerializable
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'business_identifiers' => '\OpenAPI\Client\Model\BusinessIdentifiers',
+        'business_identifiers' => '\Shaype\Client\Model\BusinessIdentifiers',
         'customer_hay_ids' => 'string[]',
         'group_hay_id' => 'string',
         'group_name' => 'string',
@@ -343,9 +343,9 @@ class HayGroup implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Gets business_identifiers
      *
-     * @return \OpenAPI\Client\Model\BusinessIdentifiers|null
+     * @return \Shaype\Client\Model\BusinessIdentifiers|null
      */
-    public function getBusinessIdentifiers(): ?\OpenAPI\Client\Model\BusinessIdentifiers
+    public function getBusinessIdentifiers(): ?\Shaype\Client\Model\BusinessIdentifiers
     {
         return $this->container['business_identifiers'];
     }
@@ -353,11 +353,11 @@ class HayGroup implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Sets business_identifiers
      *
-     * @param \OpenAPI\Client\Model\BusinessIdentifiers|null $business_identifiers business_identifiers
+     * @param \Shaype\Client\Model\BusinessIdentifiers|null $business_identifiers business_identifiers
      *
      * @return $this
      */
-    public function setBusinessIdentifiers(?\OpenAPI\Client\Model\BusinessIdentifiers $business_identifiers): static
+    public function setBusinessIdentifiers(?\Shaype\Client\Model\BusinessIdentifiers $business_identifiers): static
     {
         if (is_null($business_identifiers)) {
             throw new InvalidArgumentException('non-nullable business_identifiers cannot be null');

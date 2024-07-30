@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * GenerateMandateNotificationMandateDetailsDto Class Doc Comment
  *
  * @description Mandate details
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -59,11 +59,11 @@ class GenerateMandateNotificationMandateDetailsDto implements ModelInterface, Ar
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'creditor_information' => '\OpenAPI\Client\Model\GenerateMandateNotificationCreditorInformationDto',
-        'debtor_information' => '\OpenAPI\Client\Model\GenerateMandateNotificationDebtorInformationDto',
+        'creditor_information' => '\Shaype\Client\Model\GenerateMandateNotificationCreditorInformationDto',
+        'debtor_information' => '\Shaype\Client\Model\GenerateMandateNotificationDebtorInformationDto',
         'description' => 'string',
         'mandate_id' => 'string',
-        'payment_information' => '\OpenAPI\Client\Model\GenerateMandateNotificationPaymentInformationDto',
+        'payment_information' => '\Shaype\Client\Model\GenerateMandateNotificationPaymentInformationDto',
         'short_description' => 'string',
         'validity_end_date' => 'string',
         'validity_start_date' => 'string'
@@ -380,9 +380,9 @@ class GenerateMandateNotificationMandateDetailsDto implements ModelInterface, Ar
     /**
      * Gets creditor_information
      *
-     * @return \OpenAPI\Client\Model\GenerateMandateNotificationCreditorInformationDto|null
+     * @return \Shaype\Client\Model\GenerateMandateNotificationCreditorInformationDto|null
      */
-    public function getCreditorInformation(): ?\OpenAPI\Client\Model\GenerateMandateNotificationCreditorInformationDto
+    public function getCreditorInformation(): ?\Shaype\Client\Model\GenerateMandateNotificationCreditorInformationDto
     {
         return $this->container['creditor_information'];
     }
@@ -390,11 +390,11 @@ class GenerateMandateNotificationMandateDetailsDto implements ModelInterface, Ar
     /**
      * Sets creditor_information
      *
-     * @param \OpenAPI\Client\Model\GenerateMandateNotificationCreditorInformationDto|null $creditor_information creditor_information
+     * @param \Shaype\Client\Model\GenerateMandateNotificationCreditorInformationDto|null $creditor_information creditor_information
      *
      * @return $this
      */
-    public function setCreditorInformation(?\OpenAPI\Client\Model\GenerateMandateNotificationCreditorInformationDto $creditor_information): static
+    public function setCreditorInformation(?\Shaype\Client\Model\GenerateMandateNotificationCreditorInformationDto $creditor_information): static
     {
         if (is_null($creditor_information)) {
             throw new InvalidArgumentException('non-nullable creditor_information cannot be null');
@@ -407,9 +407,9 @@ class GenerateMandateNotificationMandateDetailsDto implements ModelInterface, Ar
     /**
      * Gets debtor_information
      *
-     * @return \OpenAPI\Client\Model\GenerateMandateNotificationDebtorInformationDto
+     * @return \Shaype\Client\Model\GenerateMandateNotificationDebtorInformationDto
      */
-    public function getDebtorInformation(): \OpenAPI\Client\Model\GenerateMandateNotificationDebtorInformationDto
+    public function getDebtorInformation(): \Shaype\Client\Model\GenerateMandateNotificationDebtorInformationDto
     {
         return $this->container['debtor_information'];
     }
@@ -417,11 +417,11 @@ class GenerateMandateNotificationMandateDetailsDto implements ModelInterface, Ar
     /**
      * Sets debtor_information
      *
-     * @param \OpenAPI\Client\Model\GenerateMandateNotificationDebtorInformationDto $debtor_information debtor_information
+     * @param \Shaype\Client\Model\GenerateMandateNotificationDebtorInformationDto $debtor_information debtor_information
      *
      * @return $this
      */
-    public function setDebtorInformation(\OpenAPI\Client\Model\GenerateMandateNotificationDebtorInformationDto $debtor_information): static
+    public function setDebtorInformation(\Shaype\Client\Model\GenerateMandateNotificationDebtorInformationDto $debtor_information): static
     {
         if (is_null($debtor_information)) {
             throw new InvalidArgumentException('non-nullable debtor_information cannot be null');
@@ -500,9 +500,9 @@ class GenerateMandateNotificationMandateDetailsDto implements ModelInterface, Ar
     /**
      * Gets payment_information
      *
-     * @return \OpenAPI\Client\Model\GenerateMandateNotificationPaymentInformationDto
+     * @return \Shaype\Client\Model\GenerateMandateNotificationPaymentInformationDto
      */
-    public function getPaymentInformation(): \OpenAPI\Client\Model\GenerateMandateNotificationPaymentInformationDto
+    public function getPaymentInformation(): \Shaype\Client\Model\GenerateMandateNotificationPaymentInformationDto
     {
         return $this->container['payment_information'];
     }
@@ -510,11 +510,11 @@ class GenerateMandateNotificationMandateDetailsDto implements ModelInterface, Ar
     /**
      * Sets payment_information
      *
-     * @param \OpenAPI\Client\Model\GenerateMandateNotificationPaymentInformationDto $payment_information payment_information
+     * @param \Shaype\Client\Model\GenerateMandateNotificationPaymentInformationDto $payment_information payment_information
      *
      * @return $this
      */
-    public function setPaymentInformation(\OpenAPI\Client\Model\GenerateMandateNotificationPaymentInformationDto $payment_information): static
+    public function setPaymentInformation(\Shaype\Client\Model\GenerateMandateNotificationPaymentInformationDto $payment_information): static
     {
         if (is_null($payment_information)) {
             throw new InvalidArgumentException('non-nullable payment_information cannot be null');

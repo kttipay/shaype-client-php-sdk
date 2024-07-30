@@ -3,7 +3,7 @@
  * HeaderSelector
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,12 +24,12 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client;
+namespace Shaype\Client;
 
 /**
  * HeaderSelector Class Doc Comment
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

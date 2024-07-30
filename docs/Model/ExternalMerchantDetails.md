@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**address** | [**\OpenAPI\Client\Model\MerchantAddress**](MerchantAddress.md) |  | [optional]
+**address** | [**\Shaype\Client\Model\MerchantAddress**](MerchantAddress.md) |  | [optional]
 **card_acceptor_location** | **string** | Name and/or location information of merchant, maximum 101 characters in length | [optional]
 **chain_name** | **string** | Retail chain name - if merchant is part of a wider group this can be different to the merchant name | [optional]
 **circular_logo_url** | **string** | Merchant logo | [optional]

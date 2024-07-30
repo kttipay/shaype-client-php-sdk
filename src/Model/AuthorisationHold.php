@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * AuthorisationHold Class Doc Comment
  *
  * @description Details of an authorisation hold
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -62,12 +62,12 @@ class AuthorisationHold implements ModelInterface, ArrayAccess, JsonSerializable
         'account_hay_id' => 'string',
         'card_id' => 'string',
         'category' => 'string',
-        'currency_amount' => '\OpenAPI\Client\Model\CurrencyAmount',
+        'currency_amount' => '\Shaype\Client\Model\CurrencyAmount',
         'customer_id' => 'string',
         'description' => 'string',
         'hold_hay_id' => 'string',
-        'merchant_details' => '\OpenAPI\Client\Model\ExternalMerchantDetails',
-        'original_currency_amount' => '\OpenAPI\Client\Model\CurrencyAmount',
+        'merchant_details' => '\Shaype\Client\Model\ExternalMerchantDetails',
+        'original_currency_amount' => '\Shaype\Client\Model\CurrencyAmount',
         'transaction_channel' => 'string',
         'transaction_time_utc' => '\DateTime',
         'type' => 'string'
@@ -633,9 +633,9 @@ class AuthorisationHold implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Gets currency_amount
      *
-     * @return \OpenAPI\Client\Model\CurrencyAmount|null
+     * @return \Shaype\Client\Model\CurrencyAmount|null
      */
-    public function getCurrencyAmount(): ?\OpenAPI\Client\Model\CurrencyAmount
+    public function getCurrencyAmount(): ?\Shaype\Client\Model\CurrencyAmount
     {
         return $this->container['currency_amount'];
     }
@@ -643,11 +643,11 @@ class AuthorisationHold implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Sets currency_amount
      *
-     * @param \OpenAPI\Client\Model\CurrencyAmount|null $currency_amount currency_amount
+     * @param \Shaype\Client\Model\CurrencyAmount|null $currency_amount currency_amount
      *
      * @return $this
      */
-    public function setCurrencyAmount(?\OpenAPI\Client\Model\CurrencyAmount $currency_amount): static
+    public function setCurrencyAmount(?\Shaype\Client\Model\CurrencyAmount $currency_amount): static
     {
         if (is_null($currency_amount)) {
             throw new InvalidArgumentException('non-nullable currency_amount cannot be null');
@@ -741,9 +741,9 @@ class AuthorisationHold implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Gets merchant_details
      *
-     * @return \OpenAPI\Client\Model\ExternalMerchantDetails|null
+     * @return \Shaype\Client\Model\ExternalMerchantDetails|null
      */
-    public function getMerchantDetails(): ?\OpenAPI\Client\Model\ExternalMerchantDetails
+    public function getMerchantDetails(): ?\Shaype\Client\Model\ExternalMerchantDetails
     {
         return $this->container['merchant_details'];
     }
@@ -751,11 +751,11 @@ class AuthorisationHold implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Sets merchant_details
      *
-     * @param \OpenAPI\Client\Model\ExternalMerchantDetails|null $merchant_details merchant_details
+     * @param \Shaype\Client\Model\ExternalMerchantDetails|null $merchant_details merchant_details
      *
      * @return $this
      */
-    public function setMerchantDetails(?\OpenAPI\Client\Model\ExternalMerchantDetails $merchant_details): static
+    public function setMerchantDetails(?\Shaype\Client\Model\ExternalMerchantDetails $merchant_details): static
     {
         if (is_null($merchant_details)) {
             throw new InvalidArgumentException('non-nullable merchant_details cannot be null');
@@ -768,9 +768,9 @@ class AuthorisationHold implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Gets original_currency_amount
      *
-     * @return \OpenAPI\Client\Model\CurrencyAmount|null
+     * @return \Shaype\Client\Model\CurrencyAmount|null
      */
-    public function getOriginalCurrencyAmount(): ?\OpenAPI\Client\Model\CurrencyAmount
+    public function getOriginalCurrencyAmount(): ?\Shaype\Client\Model\CurrencyAmount
     {
         return $this->container['original_currency_amount'];
     }
@@ -778,11 +778,11 @@ class AuthorisationHold implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Sets original_currency_amount
      *
-     * @param \OpenAPI\Client\Model\CurrencyAmount|null $original_currency_amount original_currency_amount
+     * @param \Shaype\Client\Model\CurrencyAmount|null $original_currency_amount original_currency_amount
      *
      * @return $this
      */
-    public function setOriginalCurrencyAmount(?\OpenAPI\Client\Model\CurrencyAmount $original_currency_amount): static
+    public function setOriginalCurrencyAmount(?\Shaype\Client\Model\CurrencyAmount $original_currency_amount): static
     {
         if (is_null($original_currency_amount)) {
             throw new InvalidArgumentException('non-nullable original_currency_amount cannot be null');

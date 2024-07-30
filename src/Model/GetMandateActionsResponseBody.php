@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * GetMandateActionsResponseBody Class Doc Comment
  *
  * @description Details of mandate actions history
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class GetMandateActionsResponseBody implements ModelInterface, ArrayAccess, Json
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'actions' => '\OpenAPI\Client\Model\GetMandateActionsActionDto[]'
+        'actions' => '\Shaype\Client\Model\GetMandateActionsActionDto[]'
     ];
 
     /**
@@ -291,7 +291,7 @@ class GetMandateActionsResponseBody implements ModelInterface, ArrayAccess, Json
     /**
      * Gets actions
      *
-     * @return \OpenAPI\Client\Model\GetMandateActionsActionDto[]|null
+     * @return \Shaype\Client\Model\GetMandateActionsActionDto[]|null
      */
     public function getActions(): ?array
     {
@@ -301,7 +301,7 @@ class GetMandateActionsResponseBody implements ModelInterface, ArrayAccess, Json
     /**
      * Sets actions
      *
-     * @param \OpenAPI\Client\Model\GetMandateActionsActionDto[]|null $actions List of actions for the requested history period.
+     * @param \Shaype\Client\Model\GetMandateActionsActionDto[]|null $actions List of actions for the requested history period.
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * CreateHayCustomerRequestBody Class Doc Comment
  *
  * @description Body of a request to create a customer
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class CreateHayCustomerRequestBody implements ModelInterface, ArrayAccess, JsonS
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'address' => '\OpenAPI\Client\Model\Address',
-        'customer_details' => '\OpenAPI\Client\Model\CustomerDetails',
+        'address' => '\Shaype\Client\Model\Address',
+        'customer_details' => '\Shaype\Client\Model\CustomerDetails',
         'customer_tier' => 'string',
         'email' => 'string',
         'external_customer_id' => 'string',
@@ -72,9 +72,9 @@ class CreateHayCustomerRequestBody implements ModelInterface, ArrayAccess, JsonS
         'identity_document_type' => 'string',
         'identity_verification_case_id' => 'string',
         'journey_id' => 'string',
-        'phone_number' => '\OpenAPI\Client\Model\PhoneNumber',
+        'phone_number' => '\Shaype\Client\Model\PhoneNumber',
         'skip_kyc' => 'bool',
-        'tax_obligations' => '\OpenAPI\Client\Model\TaxObligation[]'
+        'tax_obligations' => '\Shaype\Client\Model\TaxObligation[]'
     ];
 
     /**
@@ -480,9 +480,9 @@ class CreateHayCustomerRequestBody implements ModelInterface, ArrayAccess, JsonS
     /**
      * Gets address
      *
-     * @return \OpenAPI\Client\Model\Address
+     * @return \Shaype\Client\Model\Address
      */
-    public function getAddress(): \OpenAPI\Client\Model\Address
+    public function getAddress(): \Shaype\Client\Model\Address
     {
         return $this->container['address'];
     }
@@ -490,11 +490,11 @@ class CreateHayCustomerRequestBody implements ModelInterface, ArrayAccess, JsonS
     /**
      * Sets address
      *
-     * @param \OpenAPI\Client\Model\Address $address address
+     * @param \Shaype\Client\Model\Address $address address
      *
      * @return $this
      */
-    public function setAddress(\OpenAPI\Client\Model\Address $address): static
+    public function setAddress(\Shaype\Client\Model\Address $address): static
     {
         if (is_null($address)) {
             throw new InvalidArgumentException('non-nullable address cannot be null');
@@ -507,9 +507,9 @@ class CreateHayCustomerRequestBody implements ModelInterface, ArrayAccess, JsonS
     /**
      * Gets customer_details
      *
-     * @return \OpenAPI\Client\Model\CustomerDetails
+     * @return \Shaype\Client\Model\CustomerDetails
      */
-    public function getCustomerDetails(): \OpenAPI\Client\Model\CustomerDetails
+    public function getCustomerDetails(): \Shaype\Client\Model\CustomerDetails
     {
         return $this->container['customer_details'];
     }
@@ -517,11 +517,11 @@ class CreateHayCustomerRequestBody implements ModelInterface, ArrayAccess, JsonS
     /**
      * Sets customer_details
      *
-     * @param \OpenAPI\Client\Model\CustomerDetails $customer_details customer_details
+     * @param \Shaype\Client\Model\CustomerDetails $customer_details customer_details
      *
      * @return $this
      */
-    public function setCustomerDetails(\OpenAPI\Client\Model\CustomerDetails $customer_details): static
+    public function setCustomerDetails(\Shaype\Client\Model\CustomerDetails $customer_details): static
     {
         if (is_null($customer_details)) {
             throw new InvalidArgumentException('non-nullable customer_details cannot be null');
@@ -870,9 +870,9 @@ class CreateHayCustomerRequestBody implements ModelInterface, ArrayAccess, JsonS
     /**
      * Gets phone_number
      *
-     * @return \OpenAPI\Client\Model\PhoneNumber
+     * @return \Shaype\Client\Model\PhoneNumber
      */
-    public function getPhoneNumber(): \OpenAPI\Client\Model\PhoneNumber
+    public function getPhoneNumber(): \Shaype\Client\Model\PhoneNumber
     {
         return $this->container['phone_number'];
     }
@@ -880,11 +880,11 @@ class CreateHayCustomerRequestBody implements ModelInterface, ArrayAccess, JsonS
     /**
      * Sets phone_number
      *
-     * @param \OpenAPI\Client\Model\PhoneNumber $phone_number phone_number
+     * @param \Shaype\Client\Model\PhoneNumber $phone_number phone_number
      *
      * @return $this
      */
-    public function setPhoneNumber(\OpenAPI\Client\Model\PhoneNumber $phone_number): static
+    public function setPhoneNumber(\Shaype\Client\Model\PhoneNumber $phone_number): static
     {
         if (is_null($phone_number)) {
             throw new InvalidArgumentException('non-nullable phone_number cannot be null');
@@ -924,7 +924,7 @@ class CreateHayCustomerRequestBody implements ModelInterface, ArrayAccess, JsonS
     /**
      * Gets tax_obligations
      *
-     * @return \OpenAPI\Client\Model\TaxObligation[]|null
+     * @return \Shaype\Client\Model\TaxObligation[]|null
      */
     public function getTaxObligations(): ?array
     {
@@ -934,7 +934,7 @@ class CreateHayCustomerRequestBody implements ModelInterface, ArrayAccess, JsonS
     /**
      * Sets tax_obligations
      *
-     * @param \OpenAPI\Client\Model\TaxObligation[]|null $tax_obligations Captures any foreign (outside Australia) tax obligations for the Customer
+     * @param \Shaype\Client\Model\TaxObligation[]|null $tax_obligations Captures any foreign (outside Australia) tax obligations for the Customer
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * BPayBillerResponse Class Doc Comment
  *
  * @description BPAY biller Response body
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class BPayBillerResponse implements ModelInterface, ArrayAccess, JsonSerializabl
       */
     protected static array $openAPITypes = [
         'account_hay_id' => 'string',
-        'biller_details' => '\OpenAPI\Client\Model\BPayBillerDetails',
+        'biller_details' => '\Shaype\Client\Model\BPayBillerDetails',
         'hay_id' => 'string',
         'image' => 'string',
         'name' => 'string'
@@ -346,9 +346,9 @@ class BPayBillerResponse implements ModelInterface, ArrayAccess, JsonSerializabl
     /**
      * Gets biller_details
      *
-     * @return \OpenAPI\Client\Model\BPayBillerDetails|null
+     * @return \Shaype\Client\Model\BPayBillerDetails|null
      */
-    public function getBillerDetails(): ?\OpenAPI\Client\Model\BPayBillerDetails
+    public function getBillerDetails(): ?\Shaype\Client\Model\BPayBillerDetails
     {
         return $this->container['biller_details'];
     }
@@ -356,11 +356,11 @@ class BPayBillerResponse implements ModelInterface, ArrayAccess, JsonSerializabl
     /**
      * Sets biller_details
      *
-     * @param \OpenAPI\Client\Model\BPayBillerDetails|null $biller_details biller_details
+     * @param \Shaype\Client\Model\BPayBillerDetails|null $biller_details biller_details
      *
      * @return $this
      */
-    public function setBillerDetails(?\OpenAPI\Client\Model\BPayBillerDetails $biller_details): static
+    public function setBillerDetails(?\Shaype\Client\Model\BPayBillerDetails $biller_details): static
     {
         if (is_null($biller_details)) {
             throw new InvalidArgumentException('non-nullable biller_details cannot be null');

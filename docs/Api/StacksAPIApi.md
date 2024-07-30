@@ -1,4 +1,4 @@
-# OpenAPI\Client\StacksAPIApi
+# Shaype\Client\StacksAPIApi
 
 All URIs are relative to http://localhost:8080, except if the operation defines another base path.
 
@@ -31,14 +31,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StacksAPIApi(
+$apiInstance = new Shaype\Client\Api\StacksAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $account_id = 'account_id_example'; // string | Unique identifier (UUID) of the Account
 $stack_id = 'stack_id_example'; // string | Unique identifier (UUID) of the Stack
-$account_to_stack_transfer_request_body = new \OpenAPI\Client\Model\AccountToStackTransferRequestBody(); // \OpenAPI\Client\Model\AccountToStackTransferRequestBody
+$account_to_stack_transfer_request_body = new \Shaype\Client\Model\AccountToStackTransferRequestBody(); // \Shaype\Client\Model\AccountToStackTransferRequestBody
 
 try {
     $result = $apiInstance->accountToStackTransfer($account_id, $stack_id, $account_to_stack_transfer_request_body);
@@ -54,7 +54,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **account_id** | **string**| Unique identifier (UUID) of the Account | |
 | **stack_id** | **string**| Unique identifier (UUID) of the Stack | |
-| **account_to_stack_transfer_request_body** | [**\OpenAPI\Client\Model\AccountToStackTransferRequestBody**](../Model/AccountToStackTransferRequestBody.md)|  | |
+| **account_to_stack_transfer_request_body** | [**\Shaype\Client\Model\AccountToStackTransferRequestBody**](../Model/AccountToStackTransferRequestBody.md)|  | |
 
 ### Return type
 
@@ -91,7 +91,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StacksAPIApi(
+$apiInstance = new Shaype\Client\Api\StacksAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -147,13 +147,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StacksAPIApi(
+$apiInstance = new Shaype\Client\Api\StacksAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $account_id = 'account_id_example'; // string | Unique identifier (UUID) of the Account
-$create_hay_stack_request_body = new \OpenAPI\Client\Model\CreateHayStackRequestBody(); // \OpenAPI\Client\Model\CreateHayStackRequestBody
+$create_hay_stack_request_body = new \Shaype\Client\Model\CreateHayStackRequestBody(); // \Shaype\Client\Model\CreateHayStackRequestBody
 
 try {
     $result = $apiInstance->createStack($account_id, $create_hay_stack_request_body);
@@ -168,7 +168,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **account_id** | **string**| Unique identifier (UUID) of the Account | |
-| **create_hay_stack_request_body** | [**\OpenAPI\Client\Model\CreateHayStackRequestBody**](../Model/CreateHayStackRequestBody.md)|  | |
+| **create_hay_stack_request_body** | [**\Shaype\Client\Model\CreateHayStackRequestBody**](../Model/CreateHayStackRequestBody.md)|  | |
 
 ### Return type
 
@@ -190,7 +190,7 @@ No authorization required
 ## `getAllStackTransactions()`
 
 ```php
-getAllStackTransactions($account_id, $offset, $limit): \OpenAPI\Client\Model\HayStackTransaction[]
+getAllStackTransactions($account_id, $offset, $limit): \Shaype\Client\Model\HayStackTransaction[]
 ```
 
 Get all Stack Transactions by Account ID
@@ -205,7 +205,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StacksAPIApi(
+$apiInstance = new Shaype\Client\Api\StacksAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -232,7 +232,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayStackTransaction[]**](../Model/HayStackTransaction.md)
+[**\Shaype\Client\Model\HayStackTransaction[]**](../Model/HayStackTransaction.md)
 
 ### Authorization
 
@@ -250,7 +250,7 @@ No authorization required
 ## `getAllStacks()`
 
 ```php
-getAllStacks($account_id, $include_closed): \OpenAPI\Client\Model\HayStack[]
+getAllStacks($account_id, $include_closed): \Shaype\Client\Model\HayStack[]
 ```
 
 Get all Stacks by Account ID
@@ -263,7 +263,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StacksAPIApi(
+$apiInstance = new Shaype\Client\Api\StacksAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -288,7 +288,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayStack[]**](../Model/HayStack.md)
+[**\Shaype\Client\Model\HayStack[]**](../Model/HayStack.md)
 
 ### Authorization
 
@@ -306,7 +306,7 @@ No authorization required
 ## `getTransactionsForStack()`
 
 ```php
-getTransactionsForStack($account_id, $stack_id, $offset, $limit): \OpenAPI\Client\Model\HayStackTransaction[]
+getTransactionsForStack($account_id, $stack_id, $offset, $limit): \Shaype\Client\Model\HayStackTransaction[]
 ```
 
 Get all Stack Transactions by Stack ID
@@ -319,7 +319,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StacksAPIApi(
+$apiInstance = new Shaype\Client\Api\StacksAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -348,7 +348,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HayStackTransaction[]**](../Model/HayStackTransaction.md)
+[**\Shaype\Client\Model\HayStackTransaction[]**](../Model/HayStackTransaction.md)
 
 ### Authorization
 
@@ -379,14 +379,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StacksAPIApi(
+$apiInstance = new Shaype\Client\Api\StacksAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $account_id = 'account_id_example'; // string | Account ID
 $stack_id = 'stack_id_example'; // string | Stack ID
-$stack_to_account_transfer_request_body = new \OpenAPI\Client\Model\StackToAccountTransferRequestBody(); // \OpenAPI\Client\Model\StackToAccountTransferRequestBody
+$stack_to_account_transfer_request_body = new \Shaype\Client\Model\StackToAccountTransferRequestBody(); // \Shaype\Client\Model\StackToAccountTransferRequestBody
 
 try {
     $result = $apiInstance->stackToAccountTransfer($account_id, $stack_id, $stack_to_account_transfer_request_body);
@@ -402,7 +402,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **account_id** | **string**| Account ID | |
 | **stack_id** | **string**| Stack ID | |
-| **stack_to_account_transfer_request_body** | [**\OpenAPI\Client\Model\StackToAccountTransferRequestBody**](../Model/StackToAccountTransferRequestBody.md)|  | |
+| **stack_to_account_transfer_request_body** | [**\Shaype\Client\Model\StackToAccountTransferRequestBody**](../Model/StackToAccountTransferRequestBody.md)|  | |
 
 ### Return type
 
@@ -437,13 +437,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StacksAPIApi(
+$apiInstance = new Shaype\Client\Api\StacksAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $account_id = 'account_id_example'; // string | Unique identifier (UUID) of the Account
-$stack_to_stack_transfer_request_body = new \OpenAPI\Client\Model\StackToStackTransferRequestBody(); // \OpenAPI\Client\Model\StackToStackTransferRequestBody
+$stack_to_stack_transfer_request_body = new \Shaype\Client\Model\StackToStackTransferRequestBody(); // \Shaype\Client\Model\StackToStackTransferRequestBody
 
 try {
     $result = $apiInstance->stackToStackTransfer($account_id, $stack_to_stack_transfer_request_body);
@@ -458,7 +458,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **account_id** | **string**| Unique identifier (UUID) of the Account | |
-| **stack_to_stack_transfer_request_body** | [**\OpenAPI\Client\Model\StackToStackTransferRequestBody**](../Model/StackToStackTransferRequestBody.md)|  | |
+| **stack_to_stack_transfer_request_body** | [**\Shaype\Client\Model\StackToStackTransferRequestBody**](../Model/StackToStackTransferRequestBody.md)|  | |
 
 ### Return type
 
@@ -480,7 +480,7 @@ No authorization required
 ## `updateStack()`
 
 ```php
-updateStack($account_id, $stack_id, $update_stack_request_body): \OpenAPI\Client\Model\UpdateStackResponse
+updateStack($account_id, $stack_id, $update_stack_request_body): \Shaype\Client\Model\UpdateStackResponse
 ```
 
 Update Stack
@@ -493,14 +493,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\StacksAPIApi(
+$apiInstance = new Shaype\Client\Api\StacksAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $account_id = 'account_id_example'; // string | Unique identifier (UUID) of the Account
 $stack_id = 'stack_id_example'; // string | Unique identifier (UUID) of the Stack
-$update_stack_request_body = new \OpenAPI\Client\Model\UpdateStackRequestBody(); // \OpenAPI\Client\Model\UpdateStackRequestBody
+$update_stack_request_body = new \Shaype\Client\Model\UpdateStackRequestBody(); // \Shaype\Client\Model\UpdateStackRequestBody
 
 try {
     $result = $apiInstance->updateStack($account_id, $stack_id, $update_stack_request_body);
@@ -516,11 +516,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **account_id** | **string**| Unique identifier (UUID) of the Account | |
 | **stack_id** | **string**| Unique identifier (UUID) of the Stack | |
-| **update_stack_request_body** | [**\OpenAPI\Client\Model\UpdateStackRequestBody**](../Model/UpdateStackRequestBody.md)|  | |
+| **update_stack_request_body** | [**\Shaype\Client\Model\UpdateStackRequestBody**](../Model/UpdateStackRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UpdateStackResponse**](../Model/UpdateStackResponse.md)
+[**\Shaype\Client\Model\UpdateStackResponse**](../Model/UpdateStackResponse.md)
 
 ### Authorization
 

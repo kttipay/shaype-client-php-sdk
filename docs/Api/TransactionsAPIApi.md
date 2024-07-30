@@ -1,4 +1,4 @@
-# OpenAPI\Client\TransactionsAPIApi
+# Shaype\Client\TransactionsAPIApi
 
 All URIs are relative to http://localhost:8080, except if the operation defines another base path.
 
@@ -15,7 +15,7 @@ All URIs are relative to http://localhost:8080, except if the operation defines 
 ## `createCreditTransactionV0()`
 
 ```php
-createCreditTransactionV0($create_transaction_request_body): \OpenAPI\Client\Model\TransactionOutcome
+createCreditTransactionV0($create_transaction_request_body): \Shaype\Client\Model\TransactionOutcome
 ```
 
 Create Credit Transaction for Account (DEPRECATED)
@@ -30,12 +30,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsAPIApi(
+$apiInstance = new Shaype\Client\Api\TransactionsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_transaction_request_body = new \OpenAPI\Client\Model\CreateTransactionRequestBody(); // \OpenAPI\Client\Model\CreateTransactionRequestBody
+$create_transaction_request_body = new \Shaype\Client\Model\CreateTransactionRequestBody(); // \Shaype\Client\Model\CreateTransactionRequestBody
 
 try {
     $result = $apiInstance->createCreditTransactionV0($create_transaction_request_body);
@@ -49,11 +49,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_transaction_request_body** | [**\OpenAPI\Client\Model\CreateTransactionRequestBody**](../Model/CreateTransactionRequestBody.md)|  | |
+| **create_transaction_request_body** | [**\Shaype\Client\Model\CreateTransactionRequestBody**](../Model/CreateTransactionRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TransactionOutcome**](../Model/TransactionOutcome.md)
+[**\Shaype\Client\Model\TransactionOutcome**](../Model/TransactionOutcome.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ No authorization required
 ## `createCreditTransactionV1()`
 
 ```php
-createCreditTransactionV1($create_transaction_request_body): \OpenAPI\Client\Model\TransactionOutcome
+createCreditTransactionV1($create_transaction_request_body): \Shaype\Client\Model\TransactionOutcome
 ```
 
 Create Credit Transaction for Account
@@ -84,12 +84,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsAPIApi(
+$apiInstance = new Shaype\Client\Api\TransactionsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_transaction_request_body = new \OpenAPI\Client\Model\CreateTransactionRequestBody(); // \OpenAPI\Client\Model\CreateTransactionRequestBody
+$create_transaction_request_body = new \Shaype\Client\Model\CreateTransactionRequestBody(); // \Shaype\Client\Model\CreateTransactionRequestBody
 
 try {
     $result = $apiInstance->createCreditTransactionV1($create_transaction_request_body);
@@ -103,11 +103,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_transaction_request_body** | [**\OpenAPI\Client\Model\CreateTransactionRequestBody**](../Model/CreateTransactionRequestBody.md)|  | |
+| **create_transaction_request_body** | [**\Shaype\Client\Model\CreateTransactionRequestBody**](../Model/CreateTransactionRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TransactionOutcome**](../Model/TransactionOutcome.md)
+[**\Shaype\Client\Model\TransactionOutcome**](../Model/TransactionOutcome.md)
 
 ### Authorization
 
@@ -125,7 +125,7 @@ No authorization required
 ## `createDebitTransactionV0()`
 
 ```php
-createDebitTransactionV0($create_transaction_request_body): \OpenAPI\Client\Model\TransactionOutcome
+createDebitTransactionV0($create_transaction_request_body): \Shaype\Client\Model\TransactionOutcome
 ```
 
 Create Debit Transaction for Account (DEPRECATED)
@@ -140,12 +140,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsAPIApi(
+$apiInstance = new Shaype\Client\Api\TransactionsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_transaction_request_body = new \OpenAPI\Client\Model\CreateTransactionRequestBody(); // \OpenAPI\Client\Model\CreateTransactionRequestBody
+$create_transaction_request_body = new \Shaype\Client\Model\CreateTransactionRequestBody(); // \Shaype\Client\Model\CreateTransactionRequestBody
 
 try {
     $result = $apiInstance->createDebitTransactionV0($create_transaction_request_body);
@@ -159,11 +159,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_transaction_request_body** | [**\OpenAPI\Client\Model\CreateTransactionRequestBody**](../Model/CreateTransactionRequestBody.md)|  | |
+| **create_transaction_request_body** | [**\Shaype\Client\Model\CreateTransactionRequestBody**](../Model/CreateTransactionRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TransactionOutcome**](../Model/TransactionOutcome.md)
+[**\Shaype\Client\Model\TransactionOutcome**](../Model/TransactionOutcome.md)
 
 ### Authorization
 
@@ -181,7 +181,7 @@ No authorization required
 ## `createDebitTransactionV1()`
 
 ```php
-createDebitTransactionV1($create_transaction_request_body): \OpenAPI\Client\Model\TransactionOutcome
+createDebitTransactionV1($create_transaction_request_body): \Shaype\Client\Model\TransactionOutcome
 ```
 
 Create Debit Transaction for Account
@@ -194,12 +194,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsAPIApi(
+$apiInstance = new Shaype\Client\Api\TransactionsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$create_transaction_request_body = new \OpenAPI\Client\Model\CreateTransactionRequestBody(); // \OpenAPI\Client\Model\CreateTransactionRequestBody
+$create_transaction_request_body = new \Shaype\Client\Model\CreateTransactionRequestBody(); // \Shaype\Client\Model\CreateTransactionRequestBody
 
 try {
     $result = $apiInstance->createDebitTransactionV1($create_transaction_request_body);
@@ -213,11 +213,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_transaction_request_body** | [**\OpenAPI\Client\Model\CreateTransactionRequestBody**](../Model/CreateTransactionRequestBody.md)|  | |
+| **create_transaction_request_body** | [**\Shaype\Client\Model\CreateTransactionRequestBody**](../Model/CreateTransactionRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TransactionOutcome**](../Model/TransactionOutcome.md)
+[**\Shaype\Client\Model\TransactionOutcome**](../Model/TransactionOutcome.md)
 
 ### Authorization
 
@@ -235,7 +235,7 @@ No authorization required
 ## `getTransactionById()`
 
 ```php
-getTransactionById($transaction_hay_id): \OpenAPI\Client\Model\FinancialTransaction
+getTransactionById($transaction_hay_id): \Shaype\Client\Model\FinancialTransaction
 ```
 
 Get Transaction by ID
@@ -248,7 +248,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsAPIApi(
+$apiInstance = new Shaype\Client\Api\TransactionsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -271,7 +271,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\FinancialTransaction**](../Model/FinancialTransaction.md)
+[**\Shaype\Client\Model\FinancialTransaction**](../Model/FinancialTransaction.md)
 
 ### Authorization
 
@@ -289,7 +289,7 @@ No authorization required
 ## `searchTransactions()`
 
 ```php
-searchTransactions($limit, $offset, $search_transactions_request_body, $sort_by): \OpenAPI\Client\Model\FinancialTransaction[]
+searchTransactions($limit, $offset, $search_transactions_request_body, $sort_by): \Shaype\Client\Model\FinancialTransaction[]
 ```
 
 Search Transactions
@@ -302,14 +302,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TransactionsAPIApi(
+$apiInstance = new Shaype\Client\Api\TransactionsAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $limit = 56; // int | List fetch limit, value between 1 and 1000
 $offset = 56; // int | Offset used for paging results
-$search_transactions_request_body = new \OpenAPI\Client\Model\SearchTransactionsRequestBody(); // \OpenAPI\Client\Model\SearchTransactionsRequestBody
+$search_transactions_request_body = new \Shaype\Client\Model\SearchTransactionsRequestBody(); // \Shaype\Client\Model\SearchTransactionsRequestBody
 $sort_by = 'sort_by_example'; // string | SortBy used for sorting transactions. Possible values:  * **CLEARING_TIME** (default if not provided): Transactions sorted by clearing time  * **TRANSACTION_TIME**: Transactions sorted by transaction time
 
 try {
@@ -326,12 +326,12 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **limit** | **int**| List fetch limit, value between 1 and 1000 | |
 | **offset** | **int**| Offset used for paging results | |
-| **search_transactions_request_body** | [**\OpenAPI\Client\Model\SearchTransactionsRequestBody**](../Model/SearchTransactionsRequestBody.md)|  | |
+| **search_transactions_request_body** | [**\Shaype\Client\Model\SearchTransactionsRequestBody**](../Model/SearchTransactionsRequestBody.md)|  | |
 | **sort_by** | **string**| SortBy used for sorting transactions. Possible values:  * **CLEARING_TIME** (default if not provided): Transactions sorted by clearing time  * **TRANSACTION_TIME**: Transactions sorted by transaction time | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\FinancialTransaction[]**](../Model/FinancialTransaction.md)
+[**\Shaype\Client\Model\FinancialTransaction[]**](../Model/FinancialTransaction.md)
 
 ### Authorization
 

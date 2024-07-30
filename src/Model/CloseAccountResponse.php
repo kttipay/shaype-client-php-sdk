@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * CloseAccountResponse Class Doc Comment
  *
  * @description Response for account closure request
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class CloseAccountResponse implements ModelInterface, ArrayAccess, JsonSerializa
       */
     protected static array $openAPITypes = [
         'description' => 'string',
-        'errors' => '\OpenAPI\Client\Model\ClosureCheckerError[]',
+        'errors' => '\Shaype\Client\Model\ClosureCheckerError[]',
         'result' => 'string'
     ];
 
@@ -356,7 +356,7 @@ class CloseAccountResponse implements ModelInterface, ArrayAccess, JsonSerializa
     /**
      * Gets errors
      *
-     * @return \OpenAPI\Client\Model\ClosureCheckerError[]|null
+     * @return \Shaype\Client\Model\ClosureCheckerError[]|null
      */
     public function getErrors(): ?array
     {
@@ -366,7 +366,7 @@ class CloseAccountResponse implements ModelInterface, ArrayAccess, JsonSerializa
     /**
      * Sets errors
      *
-     * @param \OpenAPI\Client\Model\ClosureCheckerError[]|null $errors List of errors if any
+     * @param \Shaype\Client\Model\ClosureCheckerError[]|null $errors List of errors if any
      *
      * @return $this
      */

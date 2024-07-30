@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * FinancialTransaction Class Doc Comment
  *
  * @description Details of a financial transaction.
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -63,17 +63,17 @@ class FinancialTransaction implements ModelInterface, ArrayAccess, JsonSerializa
         'card_id' => 'string',
         'category' => 'string',
         'clearing_time_utc' => '\DateTime',
-        'counterpart_details' => '\OpenAPI\Client\Model\ExternalCounterpartDetails',
+        'counterpart_details' => '\Shaype\Client\Model\ExternalCounterpartDetails',
         'counterpart_name' => 'string',
         'country_of_expenditure' => 'string',
-        'currency_amount' => '\OpenAPI\Client\Model\CurrencyAmount',
+        'currency_amount' => '\Shaype\Client\Model\CurrencyAmount',
         'customer_id' => 'string',
         'description' => 'string',
-        'mandate_payment_details' => '\OpenAPI\Client\Model\ExternalMandatePaymentDetails',
+        'mandate_payment_details' => '\Shaype\Client\Model\ExternalMandatePaymentDetails',
         'origin_channel' => 'string',
         'origin_id' => 'string',
         'origin_type' => 'string',
-        'original_currency_amount' => '\OpenAPI\Client\Model\CurrencyAmount',
+        'original_currency_amount' => '\Shaype\Client\Model\CurrencyAmount',
         'product_id' => 'string',
         'reference' => 'string',
         'related_hold_hay_id' => 'string',
@@ -1320,9 +1320,9 @@ class FinancialTransaction implements ModelInterface, ArrayAccess, JsonSerializa
     /**
      * Gets counterpart_details
      *
-     * @return \OpenAPI\Client\Model\ExternalCounterpartDetails|null
+     * @return \Shaype\Client\Model\ExternalCounterpartDetails|null
      */
-    public function getCounterpartDetails(): ?\OpenAPI\Client\Model\ExternalCounterpartDetails
+    public function getCounterpartDetails(): ?\Shaype\Client\Model\ExternalCounterpartDetails
     {
         return $this->container['counterpart_details'];
     }
@@ -1330,11 +1330,11 @@ class FinancialTransaction implements ModelInterface, ArrayAccess, JsonSerializa
     /**
      * Sets counterpart_details
      *
-     * @param \OpenAPI\Client\Model\ExternalCounterpartDetails|null $counterpart_details counterpart_details
+     * @param \Shaype\Client\Model\ExternalCounterpartDetails|null $counterpart_details counterpart_details
      *
      * @return $this
      */
-    public function setCounterpartDetails(?\OpenAPI\Client\Model\ExternalCounterpartDetails $counterpart_details): static
+    public function setCounterpartDetails(?\Shaype\Client\Model\ExternalCounterpartDetails $counterpart_details): static
     {
         if (is_null($counterpart_details)) {
             throw new InvalidArgumentException('non-nullable counterpart_details cannot be null');
@@ -1413,9 +1413,9 @@ class FinancialTransaction implements ModelInterface, ArrayAccess, JsonSerializa
     /**
      * Gets currency_amount
      *
-     * @return \OpenAPI\Client\Model\CurrencyAmount|null
+     * @return \Shaype\Client\Model\CurrencyAmount|null
      */
-    public function getCurrencyAmount(): ?\OpenAPI\Client\Model\CurrencyAmount
+    public function getCurrencyAmount(): ?\Shaype\Client\Model\CurrencyAmount
     {
         return $this->container['currency_amount'];
     }
@@ -1423,11 +1423,11 @@ class FinancialTransaction implements ModelInterface, ArrayAccess, JsonSerializa
     /**
      * Sets currency_amount
      *
-     * @param \OpenAPI\Client\Model\CurrencyAmount|null $currency_amount currency_amount
+     * @param \Shaype\Client\Model\CurrencyAmount|null $currency_amount currency_amount
      *
      * @return $this
      */
-    public function setCurrencyAmount(?\OpenAPI\Client\Model\CurrencyAmount $currency_amount): static
+    public function setCurrencyAmount(?\Shaype\Client\Model\CurrencyAmount $currency_amount): static
     {
         if (is_null($currency_amount)) {
             throw new InvalidArgumentException('non-nullable currency_amount cannot be null');
@@ -1494,9 +1494,9 @@ class FinancialTransaction implements ModelInterface, ArrayAccess, JsonSerializa
     /**
      * Gets mandate_payment_details
      *
-     * @return \OpenAPI\Client\Model\ExternalMandatePaymentDetails|null
+     * @return \Shaype\Client\Model\ExternalMandatePaymentDetails|null
      */
-    public function getMandatePaymentDetails(): ?\OpenAPI\Client\Model\ExternalMandatePaymentDetails
+    public function getMandatePaymentDetails(): ?\Shaype\Client\Model\ExternalMandatePaymentDetails
     {
         return $this->container['mandate_payment_details'];
     }
@@ -1504,11 +1504,11 @@ class FinancialTransaction implements ModelInterface, ArrayAccess, JsonSerializa
     /**
      * Sets mandate_payment_details
      *
-     * @param \OpenAPI\Client\Model\ExternalMandatePaymentDetails|null $mandate_payment_details mandate_payment_details
+     * @param \Shaype\Client\Model\ExternalMandatePaymentDetails|null $mandate_payment_details mandate_payment_details
      *
      * @return $this
      */
-    public function setMandatePaymentDetails(?\OpenAPI\Client\Model\ExternalMandatePaymentDetails $mandate_payment_details): static
+    public function setMandatePaymentDetails(?\Shaype\Client\Model\ExternalMandatePaymentDetails $mandate_payment_details): static
     {
         if (is_null($mandate_payment_details)) {
             throw new InvalidArgumentException('non-nullable mandate_payment_details cannot be null');
@@ -1622,9 +1622,9 @@ class FinancialTransaction implements ModelInterface, ArrayAccess, JsonSerializa
     /**
      * Gets original_currency_amount
      *
-     * @return \OpenAPI\Client\Model\CurrencyAmount|null
+     * @return \Shaype\Client\Model\CurrencyAmount|null
      */
-    public function getOriginalCurrencyAmount(): ?\OpenAPI\Client\Model\CurrencyAmount
+    public function getOriginalCurrencyAmount(): ?\Shaype\Client\Model\CurrencyAmount
     {
         return $this->container['original_currency_amount'];
     }
@@ -1632,11 +1632,11 @@ class FinancialTransaction implements ModelInterface, ArrayAccess, JsonSerializa
     /**
      * Sets original_currency_amount
      *
-     * @param \OpenAPI\Client\Model\CurrencyAmount|null $original_currency_amount original_currency_amount
+     * @param \Shaype\Client\Model\CurrencyAmount|null $original_currency_amount original_currency_amount
      *
      * @return $this
      */
-    public function setOriginalCurrencyAmount(?\OpenAPI\Client\Model\CurrencyAmount $original_currency_amount): static
+    public function setOriginalCurrencyAmount(?\Shaype\Client\Model\CurrencyAmount $original_currency_amount): static
     {
         if (is_null($original_currency_amount)) {
             throw new InvalidArgumentException('non-nullable original_currency_amount cannot be null');

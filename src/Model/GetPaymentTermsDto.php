@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * GetPaymentTermsDto Class Doc Comment
  *
  * @description Describes how payments for a mandate should happen.
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -59,12 +59,12 @@ class GetPaymentTermsDto implements ModelInterface, ArrayAccess, JsonSerializabl
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'amount' => '\OpenAPI\Client\Model\CurrencyAmount',
+        'amount' => '\Shaype\Client\Model\CurrencyAmount',
         'count_per_period' => 'string',
-        'first_payment' => '\OpenAPI\Client\Model\PaymentDto',
+        'first_payment' => '\Shaype\Client\Model\PaymentDto',
         'frequency' => 'string',
-        'last_payment' => '\OpenAPI\Client\Model\PaymentDto',
-        'maximum_amount' => '\OpenAPI\Client\Model\CurrencyAmount',
+        'last_payment' => '\Shaype\Client\Model\PaymentDto',
+        'maximum_amount' => '\Shaype\Client\Model\CurrencyAmount',
         'point_in_time' => 'string',
         'type' => 'string'
     ];
@@ -409,9 +409,9 @@ class GetPaymentTermsDto implements ModelInterface, ArrayAccess, JsonSerializabl
     /**
      * Gets amount
      *
-     * @return \OpenAPI\Client\Model\CurrencyAmount|null
+     * @return \Shaype\Client\Model\CurrencyAmount|null
      */
-    public function getAmount(): ?\OpenAPI\Client\Model\CurrencyAmount
+    public function getAmount(): ?\Shaype\Client\Model\CurrencyAmount
     {
         return $this->container['amount'];
     }
@@ -419,11 +419,11 @@ class GetPaymentTermsDto implements ModelInterface, ArrayAccess, JsonSerializabl
     /**
      * Sets amount
      *
-     * @param \OpenAPI\Client\Model\CurrencyAmount|null $amount amount
+     * @param \Shaype\Client\Model\CurrencyAmount|null $amount amount
      *
      * @return $this
      */
-    public function setAmount(?\OpenAPI\Client\Model\CurrencyAmount $amount): static
+    public function setAmount(?\Shaype\Client\Model\CurrencyAmount $amount): static
     {
         if (is_null($amount)) {
             throw new InvalidArgumentException('non-nullable amount cannot be null');
@@ -463,9 +463,9 @@ class GetPaymentTermsDto implements ModelInterface, ArrayAccess, JsonSerializabl
     /**
      * Gets first_payment
      *
-     * @return \OpenAPI\Client\Model\PaymentDto|null
+     * @return \Shaype\Client\Model\PaymentDto|null
      */
-    public function getFirstPayment(): ?\OpenAPI\Client\Model\PaymentDto
+    public function getFirstPayment(): ?\Shaype\Client\Model\PaymentDto
     {
         return $this->container['first_payment'];
     }
@@ -473,11 +473,11 @@ class GetPaymentTermsDto implements ModelInterface, ArrayAccess, JsonSerializabl
     /**
      * Sets first_payment
      *
-     * @param \OpenAPI\Client\Model\PaymentDto|null $first_payment first_payment
+     * @param \Shaype\Client\Model\PaymentDto|null $first_payment first_payment
      *
      * @return $this
      */
-    public function setFirstPayment(?\OpenAPI\Client\Model\PaymentDto $first_payment): static
+    public function setFirstPayment(?\Shaype\Client\Model\PaymentDto $first_payment): static
     {
         if (is_null($first_payment)) {
             throw new InvalidArgumentException('non-nullable first_payment cannot be null');
@@ -527,9 +527,9 @@ class GetPaymentTermsDto implements ModelInterface, ArrayAccess, JsonSerializabl
     /**
      * Gets last_payment
      *
-     * @return \OpenAPI\Client\Model\PaymentDto|null
+     * @return \Shaype\Client\Model\PaymentDto|null
      */
-    public function getLastPayment(): ?\OpenAPI\Client\Model\PaymentDto
+    public function getLastPayment(): ?\Shaype\Client\Model\PaymentDto
     {
         return $this->container['last_payment'];
     }
@@ -537,11 +537,11 @@ class GetPaymentTermsDto implements ModelInterface, ArrayAccess, JsonSerializabl
     /**
      * Sets last_payment
      *
-     * @param \OpenAPI\Client\Model\PaymentDto|null $last_payment last_payment
+     * @param \Shaype\Client\Model\PaymentDto|null $last_payment last_payment
      *
      * @return $this
      */
-    public function setLastPayment(?\OpenAPI\Client\Model\PaymentDto $last_payment): static
+    public function setLastPayment(?\Shaype\Client\Model\PaymentDto $last_payment): static
     {
         if (is_null($last_payment)) {
             throw new InvalidArgumentException('non-nullable last_payment cannot be null');
@@ -554,9 +554,9 @@ class GetPaymentTermsDto implements ModelInterface, ArrayAccess, JsonSerializabl
     /**
      * Gets maximum_amount
      *
-     * @return \OpenAPI\Client\Model\CurrencyAmount|null
+     * @return \Shaype\Client\Model\CurrencyAmount|null
      */
-    public function getMaximumAmount(): ?\OpenAPI\Client\Model\CurrencyAmount
+    public function getMaximumAmount(): ?\Shaype\Client\Model\CurrencyAmount
     {
         return $this->container['maximum_amount'];
     }
@@ -564,11 +564,11 @@ class GetPaymentTermsDto implements ModelInterface, ArrayAccess, JsonSerializabl
     /**
      * Sets maximum_amount
      *
-     * @param \OpenAPI\Client\Model\CurrencyAmount|null $maximum_amount maximum_amount
+     * @param \Shaype\Client\Model\CurrencyAmount|null $maximum_amount maximum_amount
      *
      * @return $this
      */
-    public function setMaximumAmount(?\OpenAPI\Client\Model\CurrencyAmount $maximum_amount): static
+    public function setMaximumAmount(?\Shaype\Client\Model\CurrencyAmount $maximum_amount): static
     {
         if (is_null($maximum_amount)) {
             throw new InvalidArgumentException('non-nullable maximum_amount cannot be null');

@@ -1,4 +1,4 @@
-# OpenAPI\Client\TokensAPIApi
+# Shaype\Client\TokensAPIApi
 
 All URIs are relative to http://localhost:8080, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to http://localhost:8080, except if the operation defines 
 ## `elevateExternalToken()`
 
 ```php
-elevateExternalToken($elevate_external_token_request_body): \OpenAPI\Client\Model\ElevateExternalTokenResponse
+elevateExternalToken($elevate_external_token_request_body): \Shaype\Client\Model\ElevateExternalTokenResponse
 ```
 
 Retrieve an elevation header to be used for GraphQL APIs that require step up access
@@ -24,12 +24,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TokensAPIApi(
+$apiInstance = new Shaype\Client\Api\TokensAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$elevate_external_token_request_body = new \OpenAPI\Client\Model\ElevateExternalTokenRequestBody(); // \OpenAPI\Client\Model\ElevateExternalTokenRequestBody
+$elevate_external_token_request_body = new \Shaype\Client\Model\ElevateExternalTokenRequestBody(); // \Shaype\Client\Model\ElevateExternalTokenRequestBody
 
 try {
     $result = $apiInstance->elevateExternalToken($elevate_external_token_request_body);
@@ -43,11 +43,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **elevate_external_token_request_body** | [**\OpenAPI\Client\Model\ElevateExternalTokenRequestBody**](../Model/ElevateExternalTokenRequestBody.md)|  | |
+| **elevate_external_token_request_body** | [**\Shaype\Client\Model\ElevateExternalTokenRequestBody**](../Model/ElevateExternalTokenRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ElevateExternalTokenResponse**](../Model/ElevateExternalTokenResponse.md)
+[**\Shaype\Client\Model\ElevateExternalTokenResponse**](../Model/ElevateExternalTokenResponse.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ No authorization required
 ## `exchangeExternalToken()`
 
 ```php
-exchangeExternalToken($exchange_external_token_request_body): \OpenAPI\Client\Model\ExchangeExternalTokenResponse
+exchangeExternalToken($exchange_external_token_request_body): \Shaype\Client\Model\ExchangeExternalTokenResponse
 ```
 
 Exchange External Token for a Shaype token to be used when calling our GraphQL APIs
@@ -78,12 +78,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\TokensAPIApi(
+$apiInstance = new Shaype\Client\Api\TokensAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$exchange_external_token_request_body = new \OpenAPI\Client\Model\ExchangeExternalTokenRequestBody(); // \OpenAPI\Client\Model\ExchangeExternalTokenRequestBody
+$exchange_external_token_request_body = new \Shaype\Client\Model\ExchangeExternalTokenRequestBody(); // \Shaype\Client\Model\ExchangeExternalTokenRequestBody
 
 try {
     $result = $apiInstance->exchangeExternalToken($exchange_external_token_request_body);
@@ -97,11 +97,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **exchange_external_token_request_body** | [**\OpenAPI\Client\Model\ExchangeExternalTokenRequestBody**](../Model/ExchangeExternalTokenRequestBody.md)|  | |
+| **exchange_external_token_request_body** | [**\Shaype\Client\Model\ExchangeExternalTokenRequestBody**](../Model/ExchangeExternalTokenRequestBody.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ExchangeExternalTokenResponse**](../Model/ExchangeExternalTokenResponse.md)
+[**\Shaype\Client\Model\ExchangeExternalTokenResponse**](../Model/ExchangeExternalTokenResponse.md)
 
 ### Authorization
 

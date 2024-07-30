@@ -3,7 +3,7 @@
  * TokensAPIApi
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -24,7 +24,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Shaype\Client\Api;
 
 use InvalidArgumentException;
 use GuzzleHttp\Client;
@@ -35,15 +35,15 @@ use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Promise\PromiseInterface;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ApiException;
+use Shaype\Client\Configuration;
+use Shaype\Client\HeaderSelector;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * TokensAPIApi Class Doc Comment
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -130,17 +130,17 @@ class TokensAPIApi
      *
      * Retrieve an elevation header to be used for GraphQL APIs that require step up access
      *
-     * @param  \OpenAPI\Client\Model\ElevateExternalTokenRequestBody $elevate_external_token_request_body elevate_external_token_request_body (required)
+     * @param  \Shaype\Client\Model\ElevateExternalTokenRequestBody $elevate_external_token_request_body elevate_external_token_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['elevateExternalToken'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ElevateExternalTokenResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\ElevateExternalTokenResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function elevateExternalToken(
-        \OpenAPI\Client\Model\ElevateExternalTokenRequestBody $elevate_external_token_request_body,
+        \Shaype\Client\Model\ElevateExternalTokenRequestBody $elevate_external_token_request_body,
         string $contentType = self::contentTypes['elevateExternalToken'][0]
-    ): \OpenAPI\Client\Model\ElevateExternalTokenResponse
+    ): \Shaype\Client\Model\ElevateExternalTokenResponse
     {
         list($response) = $this->elevateExternalTokenWithHttpInfo($elevate_external_token_request_body, $contentType);
         return $response;
@@ -151,15 +151,15 @@ class TokensAPIApi
      *
      * Retrieve an elevation header to be used for GraphQL APIs that require step up access
      *
-     * @param  \OpenAPI\Client\Model\ElevateExternalTokenRequestBody $elevate_external_token_request_body (required)
+     * @param  \Shaype\Client\Model\ElevateExternalTokenRequestBody $elevate_external_token_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['elevateExternalToken'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ElevateExternalTokenResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\ElevateExternalTokenResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function elevateExternalTokenWithHttpInfo(
-        \OpenAPI\Client\Model\ElevateExternalTokenRequestBody $elevate_external_token_request_body,
+        \Shaype\Client\Model\ElevateExternalTokenRequestBody $elevate_external_token_request_body,
         string $contentType = self::contentTypes['elevateExternalToken'][0]
     ): array
     {
@@ -202,11 +202,11 @@ class TokensAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ElevateExternalTokenResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ElevateExternalTokenResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ElevateExternalTokenResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ElevateExternalTokenResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -224,16 +224,16 @@ class TokensAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ElevateExternalTokenResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ElevateExternalTokenResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -251,16 +251,16 @@ class TokensAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -278,16 +278,16 @@ class TokensAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -305,16 +305,16 @@ class TokensAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -332,16 +332,16 @@ class TokensAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -359,13 +359,13 @@ class TokensAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ElevateExternalTokenResponse';
+            $returnType = '\Shaype\Client\Model\ElevateExternalTokenResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -398,7 +398,7 @@ class TokensAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ElevateExternalTokenResponse',
+                        '\Shaype\Client\Model\ElevateExternalTokenResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -406,7 +406,7 @@ class TokensAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -414,7 +414,7 @@ class TokensAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -422,7 +422,7 @@ class TokensAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -430,7 +430,7 @@ class TokensAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -438,7 +438,7 @@ class TokensAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -453,14 +453,14 @@ class TokensAPIApi
      *
      * Retrieve an elevation header to be used for GraphQL APIs that require step up access
      *
-     * @param  \OpenAPI\Client\Model\ElevateExternalTokenRequestBody $elevate_external_token_request_body (required)
+     * @param  \Shaype\Client\Model\ElevateExternalTokenRequestBody $elevate_external_token_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['elevateExternalToken'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function elevateExternalTokenAsync(
-        \OpenAPI\Client\Model\ElevateExternalTokenRequestBody $elevate_external_token_request_body,
+        \Shaype\Client\Model\ElevateExternalTokenRequestBody $elevate_external_token_request_body,
         string $contentType = self::contentTypes['elevateExternalToken'][0]
     ): PromiseInterface
     {
@@ -477,7 +477,7 @@ class TokensAPIApi
      *
      * Retrieve an elevation header to be used for GraphQL APIs that require step up access
      *
-     * @param  \OpenAPI\Client\Model\ElevateExternalTokenRequestBody $elevate_external_token_request_body (required)
+     * @param  \Shaype\Client\Model\ElevateExternalTokenRequestBody $elevate_external_token_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['elevateExternalToken'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -488,7 +488,7 @@ class TokensAPIApi
         string $contentType = self::contentTypes['elevateExternalToken'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\ElevateExternalTokenResponse';
+        $returnType = '\Shaype\Client\Model\ElevateExternalTokenResponse';
         $request = $this->elevateExternalTokenRequest($elevate_external_token_request_body, $contentType);
 
         return $this->client
@@ -530,7 +530,7 @@ class TokensAPIApi
     /**
      * Create request for operation 'elevateExternalToken'
      *
-     * @param  \OpenAPI\Client\Model\ElevateExternalTokenRequestBody $elevate_external_token_request_body (required)
+     * @param  \Shaype\Client\Model\ElevateExternalTokenRequestBody $elevate_external_token_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['elevateExternalToken'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -626,17 +626,17 @@ class TokensAPIApi
      *
      * Exchange External Token for a Shaype token to be used when calling our GraphQL APIs
      *
-     * @param  \OpenAPI\Client\Model\ExchangeExternalTokenRequestBody $exchange_external_token_request_body exchange_external_token_request_body (required)
+     * @param  \Shaype\Client\Model\ExchangeExternalTokenRequestBody $exchange_external_token_request_body exchange_external_token_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['exchangeExternalToken'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ExchangeExternalTokenResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse
+     * @return \Shaype\Client\Model\ExchangeExternalTokenResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse
      */
     public function exchangeExternalToken(
-        \OpenAPI\Client\Model\ExchangeExternalTokenRequestBody $exchange_external_token_request_body,
+        \Shaype\Client\Model\ExchangeExternalTokenRequestBody $exchange_external_token_request_body,
         string $contentType = self::contentTypes['exchangeExternalToken'][0]
-    ): \OpenAPI\Client\Model\ExchangeExternalTokenResponse
+    ): \Shaype\Client\Model\ExchangeExternalTokenResponse
     {
         list($response) = $this->exchangeExternalTokenWithHttpInfo($exchange_external_token_request_body, $contentType);
         return $response;
@@ -647,15 +647,15 @@ class TokensAPIApi
      *
      * Exchange External Token for a Shaype token to be used when calling our GraphQL APIs
      *
-     * @param  \OpenAPI\Client\Model\ExchangeExternalTokenRequestBody $exchange_external_token_request_body (required)
+     * @param  \Shaype\Client\Model\ExchangeExternalTokenRequestBody $exchange_external_token_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['exchangeExternalToken'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ExchangeExternalTokenResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse|\OpenAPI\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Shaype\Client\Model\ExchangeExternalTokenResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse|\Shaype\Client\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function exchangeExternalTokenWithHttpInfo(
-        \OpenAPI\Client\Model\ExchangeExternalTokenRequestBody $exchange_external_token_request_body,
+        \Shaype\Client\Model\ExchangeExternalTokenRequestBody $exchange_external_token_request_body,
         string $contentType = self::contentTypes['exchangeExternalToken'][0]
     ): array
     {
@@ -698,11 +698,11 @@ class TokensAPIApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ExchangeExternalTokenResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ExchangeExternalTokenResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ExchangeExternalTokenResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ExchangeExternalTokenResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -720,16 +720,16 @@ class TokensAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ExchangeExternalTokenResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ExchangeExternalTokenResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -747,16 +747,16 @@ class TokensAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -774,16 +774,16 @@ class TokensAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -801,16 +801,16 @@ class TokensAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -828,16 +828,16 @@ class TokensAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 501:
-                    if ('\OpenAPI\Client\Model\ErrorResponse' === '\SplFileObject') {
+                    if ('\Shaype\Client\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ErrorResponse' !== 'string') {
+                        if ('\Shaype\Client\Model\ErrorResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -855,13 +855,13 @@ class TokensAPIApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ErrorResponse', []),
+                        ObjectSerializer::deserialize($content, '\Shaype\Client\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ExchangeExternalTokenResponse';
+            $returnType = '\Shaype\Client\Model\ExchangeExternalTokenResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -894,7 +894,7 @@ class TokensAPIApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ExchangeExternalTokenResponse',
+                        '\Shaype\Client\Model\ExchangeExternalTokenResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -902,7 +902,7 @@ class TokensAPIApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -910,7 +910,7 @@ class TokensAPIApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -918,7 +918,7 @@ class TokensAPIApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -926,7 +926,7 @@ class TokensAPIApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -934,7 +934,7 @@ class TokensAPIApi
                 case 501:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ErrorResponse',
+                        '\Shaype\Client\Model\ErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -949,14 +949,14 @@ class TokensAPIApi
      *
      * Exchange External Token for a Shaype token to be used when calling our GraphQL APIs
      *
-     * @param  \OpenAPI\Client\Model\ExchangeExternalTokenRequestBody $exchange_external_token_request_body (required)
+     * @param  \Shaype\Client\Model\ExchangeExternalTokenRequestBody $exchange_external_token_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['exchangeExternalToken'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function exchangeExternalTokenAsync(
-        \OpenAPI\Client\Model\ExchangeExternalTokenRequestBody $exchange_external_token_request_body,
+        \Shaype\Client\Model\ExchangeExternalTokenRequestBody $exchange_external_token_request_body,
         string $contentType = self::contentTypes['exchangeExternalToken'][0]
     ): PromiseInterface
     {
@@ -973,7 +973,7 @@ class TokensAPIApi
      *
      * Exchange External Token for a Shaype token to be used when calling our GraphQL APIs
      *
-     * @param  \OpenAPI\Client\Model\ExchangeExternalTokenRequestBody $exchange_external_token_request_body (required)
+     * @param  \Shaype\Client\Model\ExchangeExternalTokenRequestBody $exchange_external_token_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['exchangeExternalToken'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
@@ -984,7 +984,7 @@ class TokensAPIApi
         string $contentType = self::contentTypes['exchangeExternalToken'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\ExchangeExternalTokenResponse';
+        $returnType = '\Shaype\Client\Model\ExchangeExternalTokenResponse';
         $request = $this->exchangeExternalTokenRequest($exchange_external_token_request_body, $contentType);
 
         return $this->client
@@ -1026,7 +1026,7 @@ class TokensAPIApi
     /**
      * Create request for operation 'exchangeExternalToken'
      *
-     * @param  \OpenAPI\Client\Model\ExchangeExternalTokenRequestBody $exchange_external_token_request_body (required)
+     * @param  \Shaype\Client\Model\ExchangeExternalTokenRequestBody $exchange_external_token_request_body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['exchangeExternalToken'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException

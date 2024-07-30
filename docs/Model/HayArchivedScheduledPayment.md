@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **account_id** | **string** | Unique identifier (UUID) of the Account | [optional]
-**amount** | [**\OpenAPI\Client\Model\CurrencyAmount**](CurrencyAmount.md) |  | [optional]
+**amount** | [**\Shaype\Client\Model\CurrencyAmount**](CurrencyAmount.md) |  | [optional]
 **creation_date_time_utc** | **\DateTime** | DateTime in UTC format when a scheduled or recurring payment schedule has been created | [optional]
 **customer_hay_id** | **string** | Unique identifier (UUID) of the Customer (initiator of the transfer) | [optional]
 **description** | **string** | Description on the transaction | [optional]
@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **last_processed_date_time_utc** | **\DateTime** | DateTime in UTC format when a scheduled or recurring payment has been last processed | [optional]
 **number_of_payments** | **int** | Total number of times a recurring payment will be processed | [optional]
 **number_of_processed_payments** | **int** | Total number of times the payment has been processed | [optional]
-**recipient** | [**\OpenAPI\Client\Model\ScheduledPaymentRecipient**](ScheduledPaymentRecipient.md) |  | [optional]
+**recipient** | [**\Shaype\Client\Model\ScheduledPaymentRecipient**](ScheduledPaymentRecipient.md) |  | [optional]
 **reference** | **string** | Reference to be included with the transfer | [optional]
 **should_cancel_on_failure** | **bool** | Indicates whether a recurring payment schedule should be cancelled if a payment fails (i.e. insufficient funds in Account or rejected by the receiving party) | [optional]
 **start_date** | **\DateTime** | First processing date for a recurring payment, or the processing date for a scheduled single payment | [optional]

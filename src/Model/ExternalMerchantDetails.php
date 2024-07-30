@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * ExternalMerchantDetails Class Doc Comment
  *
  * @description Details of the merchant
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class ExternalMerchantDetails implements ModelInterface, ArrayAccess, JsonSerial
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'address' => '\OpenAPI\Client\Model\MerchantAddress',
+        'address' => '\Shaype\Client\Model\MerchantAddress',
         'card_acceptor_location' => 'string',
         'chain_name' => 'string',
         'circular_logo_url' => 'string',
@@ -340,9 +340,9 @@ class ExternalMerchantDetails implements ModelInterface, ArrayAccess, JsonSerial
     /**
      * Gets address
      *
-     * @return \OpenAPI\Client\Model\MerchantAddress|null
+     * @return \Shaype\Client\Model\MerchantAddress|null
      */
-    public function getAddress(): ?\OpenAPI\Client\Model\MerchantAddress
+    public function getAddress(): ?\Shaype\Client\Model\MerchantAddress
     {
         return $this->container['address'];
     }
@@ -350,11 +350,11 @@ class ExternalMerchantDetails implements ModelInterface, ArrayAccess, JsonSerial
     /**
      * Sets address
      *
-     * @param \OpenAPI\Client\Model\MerchantAddress|null $address address
+     * @param \Shaype\Client\Model\MerchantAddress|null $address address
      *
      * @return $this
      */
-    public function setAddress(?\OpenAPI\Client\Model\MerchantAddress $address): static
+    public function setAddress(?\Shaype\Client\Model\MerchantAddress $address): static
     {
         if (is_null($address)) {
             throw new InvalidArgumentException('non-nullable address cannot be null');

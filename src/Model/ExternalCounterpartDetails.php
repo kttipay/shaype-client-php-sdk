@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * ExternalCounterpartDetails Class Doc Comment
  *
  * @description Details of the counterpart
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -59,8 +59,8 @@ class ExternalCounterpartDetails implements ModelInterface, ArrayAccess, JsonSer
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'basic_account_number' => '\OpenAPI\Client\Model\BasicAccountNumber',
-        'merchant_details' => '\OpenAPI\Client\Model\ExternalMerchantDetails',
+        'basic_account_number' => '\Shaype\Client\Model\BasicAccountNumber',
+        'merchant_details' => '\Shaype\Client\Model\ExternalMerchantDetails',
         'name' => 'string'
     ];
 
@@ -305,9 +305,9 @@ class ExternalCounterpartDetails implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Gets basic_account_number
      *
-     * @return \OpenAPI\Client\Model\BasicAccountNumber|null
+     * @return \Shaype\Client\Model\BasicAccountNumber|null
      */
-    public function getBasicAccountNumber(): ?\OpenAPI\Client\Model\BasicAccountNumber
+    public function getBasicAccountNumber(): ?\Shaype\Client\Model\BasicAccountNumber
     {
         return $this->container['basic_account_number'];
     }
@@ -315,11 +315,11 @@ class ExternalCounterpartDetails implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Sets basic_account_number
      *
-     * @param \OpenAPI\Client\Model\BasicAccountNumber|null $basic_account_number basic_account_number
+     * @param \Shaype\Client\Model\BasicAccountNumber|null $basic_account_number basic_account_number
      *
      * @return $this
      */
-    public function setBasicAccountNumber(?\OpenAPI\Client\Model\BasicAccountNumber $basic_account_number): static
+    public function setBasicAccountNumber(?\Shaype\Client\Model\BasicAccountNumber $basic_account_number): static
     {
         if (is_null($basic_account_number)) {
             throw new InvalidArgumentException('non-nullable basic_account_number cannot be null');
@@ -332,9 +332,9 @@ class ExternalCounterpartDetails implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Gets merchant_details
      *
-     * @return \OpenAPI\Client\Model\ExternalMerchantDetails|null
+     * @return \Shaype\Client\Model\ExternalMerchantDetails|null
      */
-    public function getMerchantDetails(): ?\OpenAPI\Client\Model\ExternalMerchantDetails
+    public function getMerchantDetails(): ?\Shaype\Client\Model\ExternalMerchantDetails
     {
         return $this->container['merchant_details'];
     }
@@ -342,11 +342,11 @@ class ExternalCounterpartDetails implements ModelInterface, ArrayAccess, JsonSer
     /**
      * Sets merchant_details
      *
-     * @param \OpenAPI\Client\Model\ExternalMerchantDetails|null $merchant_details merchant_details
+     * @param \Shaype\Client\Model\ExternalMerchantDetails|null $merchant_details merchant_details
      *
      * @return $this
      */
-    public function setMerchantDetails(?\OpenAPI\Client\Model\ExternalMerchantDetails $merchant_details): static
+    public function setMerchantDetails(?\Shaype\Client\Model\ExternalMerchantDetails $merchant_details): static
     {
         if (is_null($merchant_details)) {
             throw new InvalidArgumentException('non-nullable merchant_details cannot be null');

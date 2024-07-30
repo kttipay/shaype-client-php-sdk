@@ -4,7 +4,7 @@
  *
  * PHP version 8.1
  *
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,19 +25,19 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Shaype\Client\Model;
 
 use ArrayAccess;
 use JsonSerializable;
 use InvalidArgumentException;
 use ReturnTypeWillChange;
-use OpenAPI\Client\ObjectSerializer;
+use Shaype\Client\ObjectSerializer;
 
 /**
  * UpdateCustomerRequestBody Class Doc Comment
  *
  * @description Describes the changes to be applied to Customer record. Only the provided information will be updated. Address and Phone Number will be replaced as a whole (no partial updates are possible).
- * @package  OpenAPI\Client
+ * @package  Shaype\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
@@ -59,15 +59,15 @@ class UpdateCustomerRequestBody implements ModelInterface, ArrayAccess, JsonSeri
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'address' => '\OpenAPI\Client\Model\Address',
+        'address' => '\Shaype\Client\Model\Address',
         'date_of_birth' => '\DateTime',
-        'document_data' => '\OpenAPI\Client\Model\DocumentData',
+        'document_data' => '\Shaype\Client\Model\DocumentData',
         'email' => 'string',
         'first_name' => 'string',
         'gender' => 'string',
         'last_name' => 'string',
         'middle_name' => 'string',
-        'phone_number' => '\OpenAPI\Client\Model\PhoneNumber',
+        'phone_number' => '\Shaype\Client\Model\PhoneNumber',
         'preferred_name' => 'string'
     ];
 
@@ -354,9 +354,9 @@ class UpdateCustomerRequestBody implements ModelInterface, ArrayAccess, JsonSeri
     /**
      * Gets address
      *
-     * @return \OpenAPI\Client\Model\Address|null
+     * @return \Shaype\Client\Model\Address|null
      */
-    public function getAddress(): ?\OpenAPI\Client\Model\Address
+    public function getAddress(): ?\Shaype\Client\Model\Address
     {
         return $this->container['address'];
     }
@@ -364,11 +364,11 @@ class UpdateCustomerRequestBody implements ModelInterface, ArrayAccess, JsonSeri
     /**
      * Sets address
      *
-     * @param \OpenAPI\Client\Model\Address|null $address address
+     * @param \Shaype\Client\Model\Address|null $address address
      *
      * @return $this
      */
-    public function setAddress(?\OpenAPI\Client\Model\Address $address): static
+    public function setAddress(?\Shaype\Client\Model\Address $address): static
     {
         if (is_null($address)) {
             throw new InvalidArgumentException('non-nullable address cannot be null');
@@ -408,9 +408,9 @@ class UpdateCustomerRequestBody implements ModelInterface, ArrayAccess, JsonSeri
     /**
      * Gets document_data
      *
-     * @return \OpenAPI\Client\Model\DocumentData|null
+     * @return \Shaype\Client\Model\DocumentData|null
      */
-    public function getDocumentData(): ?\OpenAPI\Client\Model\DocumentData
+    public function getDocumentData(): ?\Shaype\Client\Model\DocumentData
     {
         return $this->container['document_data'];
     }
@@ -418,11 +418,11 @@ class UpdateCustomerRequestBody implements ModelInterface, ArrayAccess, JsonSeri
     /**
      * Sets document_data
      *
-     * @param \OpenAPI\Client\Model\DocumentData|null $document_data document_data
+     * @param \Shaype\Client\Model\DocumentData|null $document_data document_data
      *
      * @return $this
      */
-    public function setDocumentData(?\OpenAPI\Client\Model\DocumentData $document_data): static
+    public function setDocumentData(?\Shaype\Client\Model\DocumentData $document_data): static
     {
         if (is_null($document_data)) {
             throw new InvalidArgumentException('non-nullable document_data cannot be null');
@@ -570,9 +570,9 @@ class UpdateCustomerRequestBody implements ModelInterface, ArrayAccess, JsonSeri
     /**
      * Gets phone_number
      *
-     * @return \OpenAPI\Client\Model\PhoneNumber|null
+     * @return \Shaype\Client\Model\PhoneNumber|null
      */
-    public function getPhoneNumber(): ?\OpenAPI\Client\Model\PhoneNumber
+    public function getPhoneNumber(): ?\Shaype\Client\Model\PhoneNumber
     {
         return $this->container['phone_number'];
     }
@@ -580,11 +580,11 @@ class UpdateCustomerRequestBody implements ModelInterface, ArrayAccess, JsonSeri
     /**
      * Sets phone_number
      *
-     * @param \OpenAPI\Client\Model\PhoneNumber|null $phone_number phone_number
+     * @param \Shaype\Client\Model\PhoneNumber|null $phone_number phone_number
      *
      * @return $this
      */
-    public function setPhoneNumber(?\OpenAPI\Client\Model\PhoneNumber $phone_number): static
+    public function setPhoneNumber(?\Shaype\Client\Model\PhoneNumber $phone_number): static
     {
         if (is_null($phone_number)) {
             throw new InvalidArgumentException('non-nullable phone_number cannot be null');
