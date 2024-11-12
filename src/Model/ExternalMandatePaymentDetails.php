@@ -302,8 +302,8 @@ class ExternalMandatePaymentDetails implements ModelInterface, ArrayAccess, Json
             $invalidProperties[] = "invalid value for 'instruction_id', the character length must be smaller than or equal to 35.";
         }
 
-        if ((mb_strlen($this->container['instruction_id']) < 35)) {
-            $invalidProperties[] = "invalid value for 'instruction_id', the character length must be bigger than or equal to 35.";
+        if ((mb_strlen($this->container['instruction_id']) < 1)) {
+            $invalidProperties[] = "invalid value for 'instruction_id', the character length must be bigger than or equal to 1.";
         }
 
         return $invalidProperties;
@@ -380,8 +380,8 @@ class ExternalMandatePaymentDetails implements ModelInterface, ArrayAccess, Json
         if ((mb_strlen($instruction_id) > 35)) {
             throw new InvalidArgumentException('invalid length for $instruction_id when calling ExternalMandatePaymentDetails., must be smaller than or equal to 35.');
         }
-        if ((mb_strlen($instruction_id) < 35)) {
-            throw new InvalidArgumentException('invalid length for $instruction_id when calling ExternalMandatePaymentDetails., must be bigger than or equal to 35.');
+        if ((mb_strlen($instruction_id) < 1)) {
+            throw new InvalidArgumentException('invalid length for $instruction_id when calling ExternalMandatePaymentDetails., must be bigger than or equal to 1.');
         }
 
         $this->container['instruction_id'] = $instruction_id;

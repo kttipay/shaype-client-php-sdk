@@ -447,6 +447,3 @@ src/Model/UpdateStackResponse.php
 src/Model/UpdateThresholdRequestBody.php
 src/Model/UserConsentRequestBody.php
 src/ObjectSerializer.php
-tests/Model/CloseAccountRequestBodyTest.php
-tests/Model/RemoveCustomerFromGroupRequestBodyTest.php
-tests/Model/UserConsentRequestBodyTest.php
