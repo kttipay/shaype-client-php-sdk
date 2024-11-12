@@ -54,6 +54,7 @@ docs/Model/ChangeHayAccountRiskLevelRequestBody.md
 docs/Model/ChangeHayCustomerStatusRequestBody.md
 docs/Model/CheckPayToBsbSupportResponseBody.md
 docs/Model/ClientLiquidity.md
+docs/Model/CloseAccountRequestBody.md
 docs/Model/CloseAccountResponse.md
 docs/Model/ClosureCheckerError.md
 docs/Model/ConfirmationResponse.md
@@ -190,6 +191,7 @@ docs/Model/PaymentInstructionsSummaryResponseBody.md
 docs/Model/PhoneNumber.md
 docs/Model/ProductSummary.md
 docs/Model/ReissueHayCardRequestBody.md
+docs/Model/RemoveCustomerFromGroupRequestBody.md
 docs/Model/RenewCardRequestBody.md
 docs/Model/RiskLevelResponse.md
 docs/Model/RuleDetails.md
@@ -219,6 +221,7 @@ docs/Model/UpdatePaymentPreferencesRequestBody.md
 docs/Model/UpdateStackRequestBody.md
 docs/Model/UpdateStackResponse.md
 docs/Model/UpdateThresholdRequestBody.md
+docs/Model/UserConsentRequestBody.md
 git_push.sh
 phpunit.xml.dist
 src/Api/AccountsAPIApi.php
@@ -274,6 +277,7 @@ src/Model/ChangeHayAccountRiskLevelRequestBody.php
 src/Model/ChangeHayCustomerStatusRequestBody.php
 src/Model/CheckPayToBsbSupportResponseBody.php
 src/Model/ClientLiquidity.php
+src/Model/CloseAccountRequestBody.php
 src/Model/CloseAccountResponse.php
 src/Model/ClosureCheckerError.php
 src/Model/ConfirmationResponse.php
@@ -411,6 +415,7 @@ src/Model/PaymentInstructionsSummaryResponseBody.php
 src/Model/PhoneNumber.php
 src/Model/ProductSummary.php
 src/Model/ReissueHayCardRequestBody.php
+src/Model/RemoveCustomerFromGroupRequestBody.php
 src/Model/RenewCardRequestBody.php
 src/Model/RiskLevelResponse.php
 src/Model/RuleDetails.php
@@ -440,4 +445,8 @@ src/Model/UpdatePaymentPreferencesRequestBody.php
 src/Model/UpdateStackRequestBody.php
 src/Model/UpdateStackResponse.php
 src/Model/UpdateThresholdRequestBody.php
+src/Model/UserConsentRequestBody.php
 src/ObjectSerializer.php
+tests/Model/CloseAccountRequestBodyTest.php
+tests/Model/RemoveCustomerFromGroupRequestBodyTest.php
+tests/Model/UserConsentRequestBodyTest.php

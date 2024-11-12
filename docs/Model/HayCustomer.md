@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **client_reference** | **string** | Client reference associated with customer | [optional]
 **closed_date_time_utc** | **\DateTime** | DateTime in UTC format when the Customer was closed | [optional]
 **creation_date_time_utc** | **\DateTime** | DateTime in UTC format when the Customer was created | [optional]
+**custom_data** | **object** | Custom data associated with customer | [optional]
 **customer_details** | [**\Shaype\Client\Model\CustomerDetails**](CustomerDetails.md) |  | [optional]
 **customer_hay_id** | **string** | Unique identifier (UUID) of the Customer | [optional]
 **device_id** | **string** | Customer&#39;s device ID, typically UUID though format controlled by mobile OS (if a mobile app is available) | [optional]
@@ -24,6 +25,7 @@ Name | Type | Description | Notes
 **last_updated_date_time_utc** | **\DateTime** | DateTime in UTC format when the Customer was last updated | [optional]
 **phone_number** | [**\Shaype\Client\Model\PhoneNumber**](PhoneNumber.md) |  | [optional]
 **status** | **string** | Current Customer status. Possible values:  * **ACTIVE**: Customer is active  * **BLOCKED**: Customer is blocked  * **INACTIVE**: Customer is not active (closed)  * **PENDING_APPROVAL**: Customer is awaiting approval  * **REFERRED**: Customer is referred for further KYC checks  * **REJECTED**: Customer has been rejected | [optional]
+**status_reason** | **string** | INACTIVE status reason. Possible values:  * **SUSPICIOUS**: The customer was made inactive due to concerns about their account conduct.  * **DECEASED**: The customer was made inactive after confirmation was received that they are deceased.  * **CUSTOMER**: The customer was made inactive due to a customer request.  * **OPERATIONAL**: The customer was made inactive due to an operational request. | [optional]
 **tier** | **string** | Customer tier, will be STANDARD unless additional tiers have been agreed as part of the product offering. Possible values:  * **FOUNDER**  * **STANDARD**  * **PREMIUM** | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

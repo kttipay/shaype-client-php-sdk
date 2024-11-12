@@ -200,7 +200,7 @@ No authorization required
 ## `closeAccount()`
 
 ```php
-closeAccount($account_id): \Shaype\Client\Model\CloseAccountResponse
+closeAccount($account_id, $close_account_request_body): \Shaype\Client\Model\CloseAccountResponse
 ```
 
 Closes an account
@@ -219,9 +219,10 @@ $apiInstance = new Shaype\Client\Api\AccountsAPIApi(
     new GuzzleHttp\Client()
 );
 $account_id = 'account_id_example'; // string | Unique identifier (UUID) of the Account
+$close_account_request_body = new \Shaype\Client\Model\CloseAccountRequestBody(); // \Shaype\Client\Model\CloseAccountRequestBody
 
 try {
-    $result = $apiInstance->closeAccount($account_id);
+    $result = $apiInstance->closeAccount($account_id, $close_account_request_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AccountsAPIApi->closeAccount: ', $e->getMessage(), PHP_EOL;
@@ -233,6 +234,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **account_id** | **string**| Unique identifier (UUID) of the Account | |
+| **close_account_request_body** | [**\Shaype\Client\Model\CloseAccountRequestBody**](../Model/CloseAccountRequestBody.md)|  | [optional] |
 
 ### Return type
 
@@ -244,7 +246,7 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

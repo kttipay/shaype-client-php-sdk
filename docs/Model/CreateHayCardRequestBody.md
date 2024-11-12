@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **account_id** | **string** | Unique identifier (UUID) of the Account |
-**card_sub_design** | **string** | Card design, applicable to multiple Card designs for product. Mapping of designs will be provided. Possible values:  * **SUB_DESIGN_1** (default if not provided)  * **SUB_DESIGN_2**  * **SUB_DESIGN_3**  * **SUB_DESIGN_4**  * **SUB_DESIGN_5**  * **SUB_DESIGN_6**  * **SUB_DESIGN_7**  * **SUB_DESIGN_8**  * **SUB_DESIGN_9**  * **SUB_DESIGN_10** | [optional]
+**card_sub_design** | **string** | Card design, applicable to multiple Card designs for product. Mapping of designs will be provided. Possible values:  * **SUB_DESIGN_1** (default if not provided)  * **SUB_DESIGN_2**  * **SUB_DESIGN_3**  * **SUB_DESIGN_4**  * **SUB_DESIGN_5**  * **SUB_DESIGN_6**  * **SUB_DESIGN_7**  * **SUB_DESIGN_8**  * **SUB_DESIGN_9**  * **SUB_DESIGN_10**  * **SUB_DESIGN_...**  * **SUB_DESIGN_...**  * **SUB_DESIGN_100** | [optional]
 **card_type** | **string** | Type of card to create. Can convert virtual to physical card at a later time:  * **PHYSICAL** (default if not provided)  * **VIRTUAL** | [optional]
 **customer_hay_id** | **string** | Unique identifier (UUID) of the Customer (cardholder) |
 **delivery_address** | [**\Shaype\Client\Model\Address**](Address.md) |  |

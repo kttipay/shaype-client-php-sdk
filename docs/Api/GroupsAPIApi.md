@@ -8,6 +8,7 @@ All URIs are relative to http://localhost:8080, except if the operation defines 
 | [**createHayAccountForGroup()**](GroupsAPIApi.md#createHayAccountForGroup) | **POST** /v0/groups/{groupHayId}/account | Create Account for Group - (To be DEPRECATED - Use POST /v1/accounts instead) |
 | [**createHayGroup()**](GroupsAPIApi.md#createHayGroup) | **POST** /v0/groups/create | Create Group |
 | [**getHayJointAccountByGroupHayId()**](GroupsAPIApi.md#getHayJointAccountByGroupHayId) | **GET** /v0/groups/{groupHayId} | Get Account by Group ID |
+| [**removeCustomerFromGroup()**](GroupsAPIApi.md#removeCustomerFromGroup) | **POST** /v0/groups/{groupHayId}/removeCustomer | Remove a Customer from a Group |
 | [**updateGroup()**](GroupsAPIApi.md#updateGroup) | **PATCH** /v0/groups/{groupHayId} | Update Group details |
 
 
@@ -225,6 +226,62 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `removeCustomerFromGroup()`
+
+```php
+removeCustomerFromGroup($group_hay_id, $remove_customer_from_group_request_body): \Shaype\Client\Model\HayJointAccount
+```
+
+Remove a Customer from a Group
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new Shaype\Client\Api\GroupsAPIApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$group_hay_id = 'group_hay_id_example'; // string | Unique identifier (UUID) of the Group
+$remove_customer_from_group_request_body = new \Shaype\Client\Model\RemoveCustomerFromGroupRequestBody(); // \Shaype\Client\Model\RemoveCustomerFromGroupRequestBody
+
+try {
+    $result = $apiInstance->removeCustomerFromGroup($group_hay_id, $remove_customer_from_group_request_body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GroupsAPIApi->removeCustomerFromGroup: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **group_hay_id** | **string**| Unique identifier (UUID) of the Group | |
+| **remove_customer_from_group_request_body** | [**\Shaype\Client\Model\RemoveCustomerFromGroupRequestBody**](../Model/RemoveCustomerFromGroupRequestBody.md)|  | |
+
+### Return type
+
+[**\Shaype\Client\Model\HayJointAccount**](../Model/HayJointAccount.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

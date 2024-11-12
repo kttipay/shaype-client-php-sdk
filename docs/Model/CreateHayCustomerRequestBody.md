@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **address** | [**\Shaype\Client\Model\Address**](Address.md) |  |
+**custom_data** | **object** | Custom data associated with customer | [optional]
 **customer_details** | [**\Shaype\Client\Model\CustomerDetails**](CustomerDetails.md) |  |
 **customer_tier** | **string** | Customer tier, will be STANDARD unless additional tiers have been agreed as part of the product offering. Possible values:  * **FOUNDER**  * **STANDARD**  * **PREMIUM** |
 **email** | **string** | Email address of the Customer |
@@ -17,8 +18,9 @@ Name | Type | Description | Notes
 **identity_document_type** | **string** | Type of Customer&#39;s identity document (if supplied). Possible values:  * **DRIVING_LICENSE**  * **PASSPORT** | [optional]
 **identity_verification_case_id** | **string** | Optional Identity Verification ID for the identity check | [optional]
 **journey_id** | **string** | Deprecated: Please do not use this field for customer creation, please refer to identityVerificationCaseId | [optional]
+**only_sanctions_check** | **bool** | Applicable only to clients using our Sanctions-Check-Only KYC functionality. Used to only perform sanctions check on the Customer as part of KYC checks. This flag cannot be used at the same time as skipKyc. | [optional]
 **phone_number** | [**\Shaype\Client\Model\PhoneNumber**](PhoneNumber.md) |  |
-**skip_kyc** | **bool** | Only applicable to Clients using Shaype KYC solution. Used to bypass KYC checks for the Customer. Must only set as &#39;true&#39; in agreed scenarios (i.e. permission to generate a dummy / test account has been granted). | [optional]
+**skip_kyc** | **bool** | Only applicable to Clients using Shaype KYC solution. Used to bypass KYC checks for the Customer. Must only set as &#39;true&#39; in agreed scenarios (i.e. permission to generate a dummy / test account has been granted). This flag cannot be used at the same time as onlySanctionsCheck. | [optional]
 **tax_obligations** | [**\Shaype\Client\Model\TaxObligation[]**](TaxObligation.md) | Captures any foreign (outside Australia) tax obligations for the Customer | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

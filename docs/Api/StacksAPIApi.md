@@ -190,7 +190,7 @@ No authorization required
 ## `getAllStackTransactions()`
 
 ```php
-getAllStackTransactions($account_id, $offset, $limit): \Shaype\Client\Model\HayStackTransaction[]
+getAllStackTransactions($account_id, $offset, $limit, $type): \Shaype\Client\Model\HayStackTransaction[]
 ```
 
 Get all Stack Transactions by Account ID
@@ -213,9 +213,10 @@ $apiInstance = new Shaype\Client\Api\StacksAPIApi(
 $account_id = 'account_id_example'; // string | Unique identifier (UUID) of the Account
 $offset = 56; // int | Offset used for paging results
 $limit = 56; // int | List fetch limit, value between 1 and 1000
+$type = 'type_example'; // string | Stack transaction type
 
 try {
-    $result = $apiInstance->getAllStackTransactions($account_id, $offset, $limit);
+    $result = $apiInstance->getAllStackTransactions($account_id, $offset, $limit, $type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StacksAPIApi->getAllStackTransactions: ', $e->getMessage(), PHP_EOL;
@@ -229,6 +230,7 @@ try {
 | **account_id** | **string**| Unique identifier (UUID) of the Account | |
 | **offset** | **int**| Offset used for paging results | |
 | **limit** | **int**| List fetch limit, value between 1 and 1000 | |
+| **type** | **string**| Stack transaction type | [optional] |
 
 ### Return type
 
@@ -306,7 +308,7 @@ No authorization required
 ## `getTransactionsForStack()`
 
 ```php
-getTransactionsForStack($account_id, $stack_id, $offset, $limit): \Shaype\Client\Model\HayStackTransaction[]
+getTransactionsForStack($account_id, $stack_id, $offset, $limit, $type): \Shaype\Client\Model\HayStackTransaction[]
 ```
 
 Get all Stack Transactions by Stack ID
@@ -328,9 +330,10 @@ $account_id = 'account_id_example'; // string | Unique identifier (UUID) of the 
 $stack_id = 'stack_id_example'; // string | Unique identifier (UUID) of the Stack
 $offset = 56; // int | Offset used for paging results
 $limit = 56; // int | List fetch limit, value between 1 and 1000
+$type = 'type_example'; // string | Stack transaction type
 
 try {
-    $result = $apiInstance->getTransactionsForStack($account_id, $stack_id, $offset, $limit);
+    $result = $apiInstance->getTransactionsForStack($account_id, $stack_id, $offset, $limit, $type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling StacksAPIApi->getTransactionsForStack: ', $e->getMessage(), PHP_EOL;
@@ -345,6 +348,7 @@ try {
 | **stack_id** | **string**| Unique identifier (UUID) of the Stack | |
 | **offset** | **int**| Offset used for paging results | |
 | **limit** | **int**| List fetch limit, value between 1 and 1000 | |
+| **type** | **string**| Stack transaction type | [optional] |
 
 ### Return type
 

@@ -181,7 +181,7 @@ No authorization required
 ## `createCase()`
 
 ```php
-createCase(): \Shaype\Client\Model\CreateCaseExternalResponse
+createCase($user_consent_request_body): \Shaype\Client\Model\CreateCaseExternalResponse
 ```
 
 Create new identity verification case and first submission
@@ -199,9 +199,10 @@ $apiInstance = new Shaype\Client\Api\KYCAPIApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
+$user_consent_request_body = new \Shaype\Client\Model\UserConsentRequestBody(); // \Shaype\Client\Model\UserConsentRequestBody
 
 try {
-    $result = $apiInstance->createCase();
+    $result = $apiInstance->createCase($user_consent_request_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling KYCAPIApi->createCase: ', $e->getMessage(), PHP_EOL;
@@ -210,7 +211,9 @@ try {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **user_consent_request_body** | [**\Shaype\Client\Model\UserConsentRequestBody**](../Model/UserConsentRequestBody.md)|  | [optional] |
 
 ### Return type
 
@@ -222,7 +225,7 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
